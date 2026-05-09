@@ -1,0 +1,4 @@
+# DROP DATABASE 命令
+
+`DROP DATABASE` 命令，626
+

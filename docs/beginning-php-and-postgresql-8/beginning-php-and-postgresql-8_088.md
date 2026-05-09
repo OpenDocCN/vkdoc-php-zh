@@ -1,0 +1,162 @@
+# 索引条目
+
+### F
+
+- `faultstring` 属性, NuSOAP, 500
+- 类继承, OOP, 162
+
+### C
+
+- 客户端
+- `children` 方法, SimpleXML, 489
+- `PDO_ATTR_CLIENT_VERSION`
+- `chown` 函数, 239
+- `attribute`, 560
+- `CIDR-ADDRESS` 字段, `pg_hba.conf` 文件, 654
+- PostgreSQL, 611–623
+- 类常量, 143
+- `clone` 关键字, OOP, 158
+- 类继承, OOP, 162
+- `clone` 方法, OOP, 160
+- 子类（派生类）, 162
+- 克隆，构造函数与继承, 164–165
+- OOP 对象克隆, 158–161
+- `extends` 关键字, 162
+- `closedir` 函数, 251
+- 父类（基类）, 162
+- `closelog` 函数, 182
+- 类实例化, 136
+- 集群，数据库与, 625
+- 类库，辅助函数, 153–155
+- `CNAME` 记录类型, DNS, 360
+- 类管理
+- `:cntrl:` 字符类, 194
+- `_autoload` 函数, 155
+- `COALESCE` 函数, PostgreSQL, 726
+- 自动加载对象, OOP, 155
+- 代码，代码复用, 259
+- `getCode` 方法，异常类, 186
+- *另请参阅* PostgreSQL 数据库类
+- 编码一致性
+- `disable_classes` 指令, 27, 519
+- PDO 特性, 557
+- `ReflectionClass` 类, 170
+- `columnCount` 方法, PDO, 567
+- 类，OOP, 135
+- 列
+- *另请参阅* 对象，OOP
+- 检查约束, 640
+- 向类字段赋值, 140
+- 复制特定列, 780
+- 特性与行为, 136
+- 默认值, 641
+- 检查类是否存在, 153
+- 主键值, 642
+- 类常量, 143
+- 设置绑定列, PDO, 570–571
+- 广义类创建语法, 136
+- `sqlite_column` 函数, 543
+- 获取类的字段, 154
+- `sqlite_fetch_column_types` 函数, 548
+- 获取已定义类的列表, 154
+- `sqlite_fetch_single` 函数, 544
+- 获取类的方法, 154
+- COM/DCOM 支持, 3
+- 获取类名, 153
+- 逗号分隔值
+- 获取父类, 154
+- *请参阅* CSV
+- 对象与类, 136
+- 命令行选项
+- 检索类变量, 142
+- 用于读取的 PEAR 包, 260
+- 静态类成员, 152–153
+
+### I
+
+- `command not found` 消息
+- 连接运算符, PostgreSQL, 721
+- 从源码安装 PostgreSQL, 582
+- 并发性
+- 多版本并发控制, 602
+- 命令行界面, PostgreSQL, 611
+- `CASE` 函数, 725
+- 命令
+- `escapeshellcmd` 函数, 527
+- `PGSQL_COMMAND_OK` 值, 674
+- `COALESCE` 函数, 726
+- 命令, PostgreSQL, 667–671
+- `NULLIF` 函数, 726
+- 命令, `psql`, 613–614
+- 条件语句, PHP, 79–81
+- 控制命令历史, 619
+- 替代语法, 80
+- 注释
+- `else` 语句, 80
+- `php.ini` 文件, 20
+- `if` 语句, 79
+- Smarty 模板引擎, 454
+- `ifelse` 语句, 80
+- 注释, PHP, 46–47
+- `switch` 语句, 81
+- `COMMIT` 命令, 771
+- `config_load` 函数
+- `commit` 方法, PDO, 571
+- 创建 Smarty 配置文件, 465
+- `PDO_ATTR_AUTOCOMMIT` 属性, 560
+- `configs` 目录
+- `commit` 方法, PHP, 772
+- 安装 Smarty, 451
+- 提交事务, 765
+- 配置指令, PHP
+- 比较值
+- *请参阅* PHP 配置指令
+- `ldap_compare` 函数, 411
+- *另请参阅* PHP 配置指令列表
+- 比较运算符, 74
+- 配置文件, Apache
+- 比较运算符, PostgreSQL, 720
+- 安装问题, 18
+- 兼容性
+- 配置文件
+- `zend.ze1_compatibility_mode` 指令, 22
+- 安装 Smarty, 451
+- 兼容正则表达式 (PCRE)
+- 引用配置变量, 466
+- 库, 3
+- Smarty 模板引擎, 465–466
+- 编译
+- 配置选项, LDAP, 418
+- 与缓存比较, 468
+- `ldap_get_option` 函数, 420
+- 撰写消息
+- `ldap_set_option` 函数, 420
+- `imap_mail_compose` 函数, 386
+- 配置选项, PostgreSQL
+- 复合数据类型, PostgreSQL, 644–645
+- 从源码安装 PostgreSQL, 583
+- 简要描述, 635
+- 配置
+- 创建, 644
+- 安全配置 PHP, 516–520
+- 删除, 645
+- 更改文档扩展名, 522
+- 修改, 645
+- 配置参数, 518–520
+- 压缩
+- `expose_php` 指令, 521
+- `zlib.output_compression` 指令, 24
+- 隐藏配置细节, 520–522
+- 压缩参数
+- 安全模式, 516–518
+- `SoapClient` 构造函数, 503
+- 阻止调用 `phpinfo`, 522
+- 连接（`.`）运算符, 71
+
+### P
+
+- PDO (PHP 数据对象), 558
+- `pgsql.auto_reset_persistent` 指令, 666
+
+
+

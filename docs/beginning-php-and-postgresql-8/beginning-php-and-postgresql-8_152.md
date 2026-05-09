@@ -1,0 +1,4 @@
+# DROP TRIGGER 命令
+
+`DROP TRIGGER` 命令，741
+

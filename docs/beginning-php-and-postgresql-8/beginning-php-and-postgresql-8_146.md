@@ -1,0 +1,4 @@
+# DROP SEQUENCE 命令
+
+`DROP SEQUENCE` 命令，635
+

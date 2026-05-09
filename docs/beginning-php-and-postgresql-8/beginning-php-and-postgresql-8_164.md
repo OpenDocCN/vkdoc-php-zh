@@ -1,0 +1,2 @@
+# DOUBLE PRECISION 数据类型，PostgreSQL
+

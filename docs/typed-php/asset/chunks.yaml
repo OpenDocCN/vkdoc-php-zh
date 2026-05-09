@@ -1,0 +1,2568 @@
+- fmt: "# Typed PHP\n\n## Stronger Types For Cleaner Code\n\n#### Christopher Pitt\n\
+    \nThis book is for sale at [http://leanpub.com/typedphp](http://leanpub.com/typedphp)\n\
+    \nThis version was published on 2014-06-23\n\n![publisher's logo](images/leanpub-logo.png)\n\
+    \n---\n\nThis is a [Leanpub](http://leanpub.com) book. Leanpub empowers authors\
+    \ and publishers with the Lean Publishing process. [Lean Publishing](http://leanpub.com/manifesto)\
+    \ is the act of publishing an in-progress ebook using lightweight tools and many\
+    \ iterations to get reader feedback, pivot until you have the right book and build\
+    \ traction once you do.\n\n---\n\n© 2013 - 2014 Christopher Pitt\n\n## Table of\
+    \ Contents\n\n* [Introduction](#chap00.xhtml#leanpub-auto-introduction)\n  * [Why\
+    \ Write This Book](#chap01.xhtml#leanpub-auto-why-write-this-book)\n  * [Who This\
+    \ Book Is For](#chap02.xhtml#leanpub-auto-who-this-book-is-for)\n  * [Procedural\
+    \ / Object Oriented](#chap03.xhtml#leanpub-auto-procedural--object-oriented)\n\
+    \    * [Procedural Programming](#chap03.xhtml#leanpub-auto-procedural-programming)\n\
+    \    * [Object Oriented Programming](#chap03.xhtml#leanpub-auto-object-oriented-programming)\n\
+    \    * [Which is the best?](#chap03.xhtml#leanpub-auto-which-is-the-best)\n  \
+    \  * [Which is PHP?](#chap03.xhtml#leanpub-auto-which-is-php)\n  * [Native Function\
+    \ Inconsistencies](#chap04.xhtml#leanpub-auto-native-function-inconsistencies)\n\
+    \    * [Sporadic Underscores](#chap04.xhtml#leanpub-auto-sporadic-underscores)\n\
+    \    * [Sporadic Abbreviation](#chap04.xhtml#leanpub-auto-sporadic-abbreviation)\n\
+    \    * [Inconsistent Argument Order](#chap04.xhtml#leanpub-auto-inconsistent-argument-order)\n\
+    \    * [Regular Expression / Strings](#chap04.xhtml#leanpub-auto-regular-expression--strings)\n\
+    \    * [Nouns / Verbs](#chap04.xhtml#leanpub-auto-nouns--verbs)\n    * [Strange\
+    \ Return Values](#chap04.xhtml#leanpub-auto-strange-return-values)\n  * [Conclusion](#chap05.xhtml#leanpub-auto-conclusion)\n\
+    * [Structure](#chap06.xhtml#leanpub-auto-structure)\n  * [Boxing](#chap07.xhtml#leanpub-auto-boxing)\n\
+    \  * [Resolving Types](#chap08.xhtml#leanpub-auto-resolving-types)\n    * [Scalar\
+    \ Types](#chap08.xhtml#leanpub-auto-scalar-types)\n    * [Functions](#chap08.xhtml#leanpub-auto-functions)\n\
+    \    * [Classes](#chap08.xhtml#leanpub-auto-classes)\n    * [Regular Expressions](#chap08.xhtml#leanpub-auto-regular-expressions)\n\
+    \  * [Namespace Functions](#chap09.xhtml#leanpub-auto-namespace-functions)\n \
+    \   * [Composer Autoload](#chap09.xhtml#leanpub-auto-composer-autoload)\n    *\
+    \ [Future Goodies](#chap09.xhtml#leanpub-auto-future-goodies)\n  * [Conclusion](#chap10.xhtml#leanpub-auto-conclusion-1)\n\
+    * [Extensions](#chap11.xhtml#leanpub-auto-extensions)\n  * [Vagrant + Phansible](#chap12.xhtml#leanpub-auto-vagrant--phansible)\n\
+    \    * [Installing](#chap12.xhtml#leanpub-auto-installing)\n    * [Provisioning](#chap12.xhtml#leanpub-auto-provisioning)\n\
+    \    * [Vagrant Commands](#chap12.xhtml#leanpub-auto-vagrant-commands)\n  * [SPL\
+    \ Types](#chap13.xhtml#leanpub-auto-spl-types)\n    * [Installing SPL Types](#chap13.xhtml#leanpub-auto-installing-spl-types)\n\
+    \    * [Using SPL Types](#chap13.xhtml#leanpub-auto-using-spl-types)\n  * [Scalar\
+    \ Objects](#chap14.xhtml#leanpub-auto-scalar-objects)\n    * [Installing Scalar\
+    \ Objects](#chap14.xhtml#leanpub-auto-installing-scalar-objects)\n    * [Using\
+    \ Scalar Objects](#chap14.xhtml#leanpub-auto-using-scalar-objects)\n  * [Zephir](#chap15.xhtml#leanpub-auto-zephir)\n\
+    \    * [Installing Zephir](#chap15.xhtml#leanpub-auto-installing-zephir)\n   \
+    \ * [Using Zephir](#chap15.xhtml#leanpub-auto-using-zephir)\n  * [Conclusion](#chap16.xhtml#leanpub-auto-conclusion-2)\n\
+    * [Design](#chap17.xhtml#leanpub-auto-design)\n  * [Which Method To Use](#chap18.xhtml#leanpub-auto-which-method-to-use)\n\
+    \    * [Namespace Methods](#chap18.xhtml#leanpub-auto-namespace-methods)\n   \
+    \ * [Scalar Objects / SPL Types](#chap18.xhtml#leanpub-auto-scalar-objects--spl-types)\n\
+    \    * [Zephir](#chap18.xhtml#leanpub-auto-zephir-1)\n  * [How To Structure The\
+    \ Types](#chap19.xhtml#leanpub-auto-how-to-structure-the-types)\n    * [Resolving\
+    \ Types](#chap19.xhtml#leanpub-auto-resolving-types-1)\n    * [Chaining](#chap19.xhtml#leanpub-auto-chaining)\n\
+    \    * [Combining Number Types](#chap19.xhtml#leanpub-auto-combining-number-types)\n\
+    \  * [How To Test](#chap20.xhtml#leanpub-auto-how-to-test)\n    * [PHPUnit](#chap20.xhtml#leanpub-auto-phpunit)\n\
+    \    * [What Should Be Tested?](#chap20.xhtml#leanpub-auto-what-should-be-tested)\n\
+    \    * [When Should Tests Be Written?](#chap20.xhtml#leanpub-auto-when-should-tests-be-written)\n\
+    \    * [Recommendations](#chap20.xhtml#leanpub-auto-recommendations)\n  * [How\
+    \ To Package](#chap21.xhtml#leanpub-auto-how-to-package)\n    * [Make A `Readme`\
+    \ File](#chap21.xhtml#leanpub-auto-make-a-readme-file)\n    * [A Few Examples](#chap21.xhtml#leanpub-auto-a-few-examples)\n\
+    \    * [Testing Instructions](#chap21.xhtml#leanpub-auto-testing-instructions)\n\
+    \    * [Installation Instructions](#chap21.xhtml#leanpub-auto-installation-instructions)\n\
+    \    * [License](#chap21.xhtml#leanpub-auto-license)\n    * [Contribution Guidelines](#chap21.xhtml#leanpub-auto-contribution-guidelines)\n\
+    \  * [Conclusion](#chap22.xhtml#leanpub-auto-conclusion-3)\n* [Designing For The\
+    \ Future](#chap23.xhtml#leanpub-auto-designing-for-the-future)\n* [Appendices](#chap24.xhtml#leanpub-auto-appendices)\n\
+    \  * [PHP Implementation](#chap25.xhtml#leanpub-auto-php-implementation)\n  *\
+    \ [Zephir Implementation](#chap26.xhtml#leanpub-auto-zephir-implementation)\n\
+    \  * [JavaScript Implementation](#chap27.xhtml#leanpub-auto-javascript-implementation)\n\
+    \n## Introduction\n\n### Why Write This Book\n\nI decided to write this book after\
+    \ spending a great deal of time working towards libraries that simplify the methods\
+    \ used when working with strings, numbers, arrays etc. They’re called Scalar Types,\
+    \ because PHP treats them differently to objects. They have no properties, no\
+    \ methods.\n\nPHP has a rich history and a dominant place on the web. It has achieved\
+    \ much despite language inconsistencies and difficulties, particularly when it\
+    \ comes to these scalar types. Bjarne Stroustrup once said: “There are only two\
+    \ kinds of languages: the ones people complain about and the ones nobody uses”.\
+    \ PHP is one of those languages that *everybody* uses, yet that’s often seen as\
+    \ a good reason to ignore the bad parts and just get stuff done.\n\nI’m all for\
+    \ getting stuff done, and to that end I have used Plain Ol’ PHP for many years.\
+    \ It’s always bugged me how procedural PHP is, in an ecosystem of OOP libraries\
+    \ and frameworks. So I decided to take a deeper look at building a stronger type\
+    \ system on top of PHP.\n\nThat’s the goal of this book. We look at using *standard*\
+    \ PHP libraries. We look at using user-land libraries. We look at using extensions\
+    \ and cross-compilers. All this works towards creating a set of reusable tools\
+    \ which unify and ease the scalar types of PHP."
+  raw: "\n\n## Typed PHP\n\n### Stronger Types For Cleaner Code\n\n#### Christopher\
+    \ Pitt\n\nThis book is for sale at [http://leanpub.com/typedphp](http://leanpub.com/typedphp)\n\
+    \nThis version was published on 2014-06-23\n\n![publisher's logo](images/leanpub-logo.png)\n\
+    \n*   *   *   *   *\n\nThis is a [Leanpub](http://leanpub.com) book. Leanpub empowers\
+    \ authors and publishers with the Lean Publishing process. [Lean Publishing](http://leanpub.com/manifesto)\
+    \ is the act of publishing an in-progress ebook using lightweight tools and many\
+    \ iterations to get reader feedback, pivot until you have the right book and build\
+    \ traction once you do.\n\n*   *   *   *   *\n\n© 2013 - 2014 Christopher Pitt\n\
+    \n## Table of Contents\n\n*   [Introduction](#chap00.xhtml#leanpub-auto-introduction)\n\
+    \    *   [Why Write This Book](#chap01.xhtml#leanpub-auto-why-write-this-book)\n\
+    \    *   [Who This Book Is For](#chap02.xhtml#leanpub-auto-who-this-book-is-for)\n\
+    \    *   [Procedural / Object Oriented](#chap03.xhtml#leanpub-auto-procedural--object-oriented)\n\
+    \        *   [Procedural Programming](#chap03.xhtml#leanpub-auto-procedural-programming)\n\
+    \        *   [Object Oriented Programming](#chap03.xhtml#leanpub-auto-object-oriented-programming)\n\
+    \        *   [Which is the best?](#chap03.xhtml#leanpub-auto-which-is-the-best)\n\
+    \        *   [Which is PHP?](#chap03.xhtml#leanpub-auto-which-is-php)\n    * \
+    \  [Native Function Inconsistencies](#chap04.xhtml#leanpub-auto-native-function-inconsistencies)\n\
+    \        *   [Sporadic Underscores](#chap04.xhtml#leanpub-auto-sporadic-underscores)\n\
+    \        *   [Sporadic Abbreviation](#chap04.xhtml#leanpub-auto-sporadic-abbreviation)\n\
+    \        *   [Inconsistent Argument Order](#chap04.xhtml#leanpub-auto-inconsistent-argument-order)\n\
+    \        *   [Regular Expression / Strings](#chap04.xhtml#leanpub-auto-regular-expression--strings)\n\
+    \        *   [Nouns / Verbs](#chap04.xhtml#leanpub-auto-nouns--verbs)\n      \
+    \  *   [Strange Return Values](#chap04.xhtml#leanpub-auto-strange-return-values)\n\
+    \    *   [Conclusion](#chap05.xhtml#leanpub-auto-conclusion)\n*   [Structure](#chap06.xhtml#leanpub-auto-structure)\n\
+    \    *   [Boxing](#chap07.xhtml#leanpub-auto-boxing)\n    *   [Resolving Types](#chap08.xhtml#leanpub-auto-resolving-types)\n\
+    \        *   [Scalar Types](#chap08.xhtml#leanpub-auto-scalar-types)\n       \
+    \ *   [Functions](#chap08.xhtml#leanpub-auto-functions)\n        *   [Classes](#chap08.xhtml#leanpub-auto-classes)\n\
+    \        *   [Regular Expressions](#chap08.xhtml#leanpub-auto-regular-expressions)\n\
+    \    *   [Namespace Functions](#chap09.xhtml#leanpub-auto-namespace-functions)\n\
+    \        *   [Composer Autoload](#chap09.xhtml#leanpub-auto-composer-autoload)\n\
+    \        *   [Future Goodies](#chap09.xhtml#leanpub-auto-future-goodies)\n   \
+    \ *   [Conclusion](#chap10.xhtml#leanpub-auto-conclusion-1)\n*   [Extensions](#chap11.xhtml#leanpub-auto-extensions)\n\
+    \    *   [Vagrant + Phansible](#chap12.xhtml#leanpub-auto-vagrant--phansible)\n\
+    \        *   [Installing](#chap12.xhtml#leanpub-auto-installing)\n        *  \
+    \ [Provisioning](#chap12.xhtml#leanpub-auto-provisioning)\n        *   [Vagrant\
+    \ Commands](#chap12.xhtml#leanpub-auto-vagrant-commands)\n    *   [SPL Types](#chap13.xhtml#leanpub-auto-spl-types)\n\
+    \        *   [Installing SPL Types](#chap13.xhtml#leanpub-auto-installing-spl-types)\n\
+    \        *   [Using SPL Types](#chap13.xhtml#leanpub-auto-using-spl-types)\n \
+    \   *   [Scalar Objects](#chap14.xhtml#leanpub-auto-scalar-objects)\n        *\
+    \   [Installing Scalar Objects](#chap14.xhtml#leanpub-auto-installing-scalar-objects)\n\
+    \        *   [Using Scalar Objects](#chap14.xhtml#leanpub-auto-using-scalar-objects)\n\
+    \    *   [Zephir](#chap15.xhtml#leanpub-auto-zephir)\n        *   [Installing\
+    \ Zephir](#chap15.xhtml#leanpub-auto-installing-zephir)\n        *   [Using Zephir](#chap15.xhtml#leanpub-auto-using-zephir)\n\
+    \    *   [Conclusion](#chap16.xhtml#leanpub-auto-conclusion-2)\n*   [Design](#chap17.xhtml#leanpub-auto-design)\n\
+    \    *   [Which Method To Use](#chap18.xhtml#leanpub-auto-which-method-to-use)\n\
+    \        *   [Namespace Methods](#chap18.xhtml#leanpub-auto-namespace-methods)\n\
+    \        *   [Scalar Objects / SPL Types](#chap18.xhtml#leanpub-auto-scalar-objects--spl-types)\n\
+    \        *   [Zephir](#chap18.xhtml#leanpub-auto-zephir-1)\n    *   [How To Structure\
+    \ The Types](#chap19.xhtml#leanpub-auto-how-to-structure-the-types)\n        *\
+    \   [Resolving Types](#chap19.xhtml#leanpub-auto-resolving-types-1)\n        *\
+    \   [Chaining](#chap19.xhtml#leanpub-auto-chaining)\n        *   [Combining Number\
+    \ Types](#chap19.xhtml#leanpub-auto-combining-number-types)\n    *   [How To Test](#chap20.xhtml#leanpub-auto-how-to-test)\n\
+    \        *   [PHPUnit](#chap20.xhtml#leanpub-auto-phpunit)\n        *   [What\
+    \ Should Be Tested?](#chap20.xhtml#leanpub-auto-what-should-be-tested)\n     \
+    \   *   [When Should Tests Be Written?](#chap20.xhtml#leanpub-auto-when-should-tests-be-written)\n\
+    \        *   [Recommendations](#chap20.xhtml#leanpub-auto-recommendations)\n \
+    \   *   [How To Package](#chap21.xhtml#leanpub-auto-how-to-package)\n        *\
+    \   [Make A `Readme` File](#chap21.xhtml#leanpub-auto-make-a-readme-file)\n  \
+    \      *   [A Few Examples](#chap21.xhtml#leanpub-auto-a-few-examples)\n     \
+    \   *   [Testing Instructions](#chap21.xhtml#leanpub-auto-testing-instructions)\n\
+    \        *   [Installation Instructions](#chap21.xhtml#leanpub-auto-installation-instructions)\n\
+    \        *   [License](#chap21.xhtml#leanpub-auto-license)\n        *   [Contribution\
+    \ Guidelines](#chap21.xhtml#leanpub-auto-contribution-guidelines)\n    *   [Conclusion](#chap22.xhtml#leanpub-auto-conclusion-3)\n\
+    *   [Designing For The Future](#chap23.xhtml#leanpub-auto-designing-for-the-future)\n\
+    *   [Appendices](#chap24.xhtml#leanpub-auto-appendices)\n    *   [PHP Implementation](#chap25.xhtml#leanpub-auto-php-implementation)\n\
+    \    *   [Zephir Implementation](#chap26.xhtml#leanpub-auto-zephir-implementation)\n\
+    \    *   [JavaScript Implementation](#chap27.xhtml#leanpub-auto-javascript-implementation)\n\
+    \n## Introduction\n\n### Why Write This Book\n\nI decided to write this book after\
+    \ spending a great deal of time working towards libraries that simplify the methods\
+    \ used when working with strings, numbers, arrays etc. They’re called Scalar Types,\
+    \ because PHP treats them differently to objects. They have no properties, no\
+    \ methods.\n\nPHP has a rich history and a dominant place on the web. It has achieved\
+    \ much despite language inconsistencies and difficulties, particularly when it\
+    \ comes to these scalar types. Bjarne Stroustrup once said: “There are only two\
+    \ kinds of languages: the ones people complain about and the ones nobody uses”.\
+    \ PHP is one of those languages that *everybody* uses, yet that’s often seen as\
+    \ a good reason to ignore the bad parts and just get stuff done.\n\nI’m all for\
+    \ getting stuff done, and to that end I have used Plain Ol’ PHP for many years.\
+    \ It’s always bugged me how procedural PHP is, in an ecosystem of OOP libraries\
+    \ and frameworks. So I decided to take a deeper look at building a stronger type\
+    \ system on top of PHP.\n\nThat’s the goal of this book. We look at using *standard*\
+    \ PHP libraries. We look at using user-land libraries. We look at using extensions\
+    \ and cross-compilers. All this is works towards creating a set of reusable tools\
+    \ which unify and ease the scalar types of PHP."
+  trans: "\n# 强类型 PHP\n\n## 更健壮的类型，更整洁的代码\n\n#### 克里斯托弗·皮特\n\n本书在 [`leanpub.com/typedphp`](http://leanpub.com/typedphp)\
+    \ 有售\n\n此版本发布于 2014 年 6 月 23 日\n\n![出版商 Logo](img/leanpub-logo.png)\n\n---\n\n\
+    这是一本 [Leanpub](http://leanpub.com) 出版的书籍。Leanpub 通过精益出版流程为作者和出版商赋能。[精益出版](http://leanpub.com/manifesto)\
+    \ 是一种使用轻量工具和多次迭代来获取读者反馈、调整方向直至写出正确书籍，并在此过程中建立影响力的进行中电子书出版方式。\n\n---\n\n© 2013\
+    \ - 2014 克里斯托弗·皮特\n\n## 目录\n\n*   引言\n  *   为何写这本书\n  *   本书面向的读者\n  *   过程式 /\
+    \ 面向对象\n    *   过程式编程\n    *   面向对象编程\n    *   哪种更好？\n    *   PHP 是哪种？\n  *  \
+    \ 原生函数的不一致性\n    *   零散的下划线\n    *   零散的缩写\n    *   不一致的参数顺序\n    *   正则表达式 /\
+    \ 字符串\n    *   名词 / 动词\n    *   奇怪的返回值\n  *   结论\n*   结构\n  *   装箱\n  *   类型解析\n\
+    \    *   标量类型\n    *   函数\n    *   类\n    *   正则表达式\n  *   命名空间函数\n    *   Composer\
+    \ 自动加载\n    *   未来的好东西\n  *   结论\n*   扩展\n  *   Vagrant + Phansible\n    *   安装\n\
+    \    *   配置\n    *   Vagrant 命令\n  *   SPL 类型\n    *   安装 SPL 类型\n    *   使用 SPL\
+    \ 类型\n  *   标量对象\n    *   安装标量对象\n    *   使用标量对象\n  *   Zephir\n    *   安装 Zephir\n\
+    \    *   使用 Zephir\n  *   结论\n*   设计\n  *   使用哪种方法\n    *   命名空间方法\n    *   标量对象\
+    \ / SPL 类型\n    *   Zephir\n  *   如何构建类型\n    *   类型解析\n    *   链式调用\n    *  \
+    \ 组合数字类型\n  *   如何进行测试\n    *   PHPUnit\n    *   应该测试什么？\n    *   何时编写测试？\n  \
+    \  *   建议\n  *   如何打包\n    *   编写 `Readme` 文件\n    *   几个示例\n    *   测试说明\n  \
+    \  *   安装说明\n    *   许可证\n    *   贡献指南\n  *   结论\n*   面向未来的设计\n*   附录\n  *   PHP\
+    \ 实现\n  *   Zephir 实现\n  *   JavaScript 实现\n\n## 引言\n\n### 为何写这本书\n\n在花费了大量时间致力于构建能够简化处理字符串、数字、数组等操作方法的库之后，我决定写这本书。它们被称为标量类型，因为\
+    \ PHP 对待它们的方式与对象不同。它们没有属性，也没有方法。\n\nPHP 有着悠久的历史，并且在网络世界中占据着主导地位。尽管存在语言上的不一致性和困难（尤其是在涉及这些标量类型时），它仍然取得了巨大的成就。比雅尼·斯特劳斯特鲁普曾说过：“只有两种编程语言：人们抱怨的和没人用的。”\
+    \ PHP 是一种*每个人*都在使用的语言，但这通常被视为忽略其糟粕、完成工作的好理由。\n\n我完全支持把事情做成，为此，我许多年来一直使用纯粹的 PHP。在一个面向对象库和框架的生态系统中，PHP\
+    \ 的过程式风格总是困扰着我。所以我决定更深入地研究如何在 PHP 之上构建一个更强大的类型系统。\n\n这就是本书的目标。我们将研究如何使用*标准* PHP\
+    \ 库，如何使用用户层面的库，以及如何使用扩展和交叉编译器。所有这些努力都是为了创建一套可复用的工具，来统一并简化 PHP 的标量类型。\n"
+- fmt: '### Who This Book Is For
+
+
+    This book assumes you have working knowledge of `PHP`. That means you understand
+    the basics of programming, and have already employed them to write `PHP` code.
+
+
+    You don’t need to know how to set up a `PHP` stack - we will cover how that can
+    easily be done (using `VirtualBox`, `Vagrant` and `Phansible`).
+
+
+    You also need to have an open mind. Many of the concepts covered by this book
+    are experimental and hardly any of them are commonplace. That’s not to say that
+    you can’t use these techniques in production applications, but it’s up to you
+    to decide if your architecture will benefit from third-party extensions (in addition
+    to `PHP` core).
+
+
+    Finally, you should have access to a decent Internet connection. The examples
+    in this book work best inside a `Vagrant` virtual machine. If you’re unfamiliar
+    with the term, don’t worry. We’ll talk about it later, but it’s basically software
+    that installs development environments. That installation happens often and benefits
+    from a fast connection.
+
+
+    ### Procedural / Object Oriented
+
+
+    `Procedural` and `Object Oriented` are different programming styles which approach
+    program execution in different ways. It’s good to understand how they work, and
+    how they define the state of scalar types.
+
+
+    #### Procedural Programming
+
+
+    `Procedural Programming` describes a top-down approach to program execution. That
+    is, procedural programs consist of a list of steps for the interpreter to take
+    (from top to bottom).
+
+
+    In pseudo-code, a Procedural image resize program may resemble:
+
+
+    1.  start execution
+
+    2.  then store a file reference returned by a `open_file` function
+
+    3.  then store a modified image returned by a `resize_image` function
+
+    4.  then close the open file
+
+    5.  then store a file reference returned by a `open_file` function
+
+    6.  then write the modified image data to the second open file
+
+    7.  then close the open file
+
+    8.  then empty the modified image variable
+
+    9.  end execution
+
+
+    `Procedural` programs can call on functions (as described in the example) and
+    can define functions. The currently executing line position can be modified by
+    things like looping constructs and `goto`-like constructs, but for the most part
+    the program is framed in a set of instructions.
+
+
+    #### Object Oriented Programming
+
+
+    `Object Oriented Programming` describes program execution as the interaction and
+    description of entities (or objects). These objects can have any combination of
+    properties (another name for owned variables) and methods (another name for owned
+    functions).
+
+
+    The code within these owned functions are still executed from top to bottom, but
+    the main idea is that the program depends on inter-object communication for its
+    coherence.
+
+
+    In pseudo-code, an Object-Oriented image resize program may resemble:
+
+
+    1.  start execution
+
+    2.  then create a file object
+
+    3.  then create an image resize object
+
+    4.  then pass the file object to the image resize object
+
+    5.  then create another file object
+
+    6.  then write the result of the image resize object’s `resize` method to the
+    second file object
+
+    7.  then close the second file object
+
+    8.  then destroy the second file object
+
+    9.  then destroy the image resize object
+
+    10. then destroy the first file object
+
+    11. end execution
+
+
+    #### Which is the best?
+
+
+    …is the wrong question to ask. Both have their strengths and weaknesses. `Object-Oriented
+    Programming` mostly leads to more code than `Procedural Programming`. `Object-oriented
+    Programming` lends itself to better separation between concerns. Stated another
+    way - it’s easier to think of objects and their behaviours than to think of the
+    whole flow of a program.
+
+
+    Ultimately, `Procedural` code can be as clean as `Object-Oriented` code.
+
+
+    “Sometimes, the elegant implementation is just a function. Not a method. Not a
+    class. Not a framework. Just a function.” - John Carmack
+
+
+    #### Which is PHP?
+
+
+    `PHP` is very procedural. That’s how Rasmus built it (back in the proverbial day)
+    and that’s how it has mostly stayed. This is apparent when it comes to how scalar
+    variables are handled and manipulated. The `PHP` types are not objects. They don’t
+    have methods or properties. If you want to do something to a `PHP` scalar variable
+    (`string`, `int`, `float`, `bool`…), you pass it to a function.
+
+
+    Before `PHP 5.3`, there were no namespaces. As a result - all of these type-specific
+    methods were added to the global namespace. They are available everywhere, and
+    (as we’ve seen) they are inconsistent.
+
+
+    This makes scalar type code ugly code.'
+  raw: '### Who This Book Is For
+
+
+    This book assumes you have working knowledge of PHP. That means you understand
+    the basics of programming, and have already employed them to write PHP code.
+
+
+    You don’t need to know how to set up a PHP stack - we will cover how that can
+    easily be done (using VirtualBox, Vagrant and Phansible).
+
+
+    You also need to have an open mind. Many of the concepts, covered by this book,
+    are experimental and hardly any of them are commonplace. That’s not to say that
+    you can’t use these techniques in production applications, but it’s up to you
+    to decide if your architecture will benefit from third-party extensions (in addition
+    to PHP core).
+
+
+    Finally, you should have access to a decent Internet connection. The examples
+    in this book work best inside a Vagrant virtual machine. If you’re unfamiliar
+    with the term, don’t worry. We’ll talk about it later, but it’s basically software
+    that installed development environments. That installation happens often and benefits
+    from a fast connection.
+
+
+    ### Procedural / Object Oriented
+
+
+    Procedural and Object Oriented are different programming styles which approach
+    program execution in different ways. It’s good to understand how they work, and
+    how they define the state of scalar types.
+
+
+    #### Procedural Programming
+
+
+    Procedural Programming describes a top-down approach to program execution. That
+    is; Procedural programs consist of a list of steps for the interpreter to take
+    (from top to bottom).
+
+
+    In pseudo-code, a Procedural image resize program may resemble:
+
+
+    1.  start execution
+
+    2.  then store a file reference returned by a `open_file` function
+
+    3.  then store a modified image returned by a `resize_image` function
+
+    4.  then close the open file
+
+    5.  then store a file reference returned by a `open_file` function
+
+    6.  then write the modified image data to the second open file
+
+    7.  then close the open file
+
+    8.  then empty the modified image variable
+
+    9.  end execution
+
+
+    Procedural programs can call on functions (as described in the example) and can
+    define functions. The currently executing line position can be modified by things
+    like looping constructs and goto-like constructs, but for the most part the program
+    is framed in a set of instructions.
+
+
+    #### Object Oriented Programming
+
+
+    Object Oriented Programming describes program execution as the interaction and
+    description of entities (or objects). These objects can have any combination of
+    properties (another name for owned variables) and methods (another name for owned
+    functions).
+
+
+    The code within these owned functions are still executed from top to bottom, but
+    the main idea is that the program depends on inter-object communication for it’s
+    coherence.
+
+
+    In pseudo-code, an Object-Oriented image resize program may resemble:
+
+
+    1.  start execution
+
+    2.  then create a file object
+
+    3.  then create an image resize object
+
+    4.  then pass the file object to the image resize object
+
+    5.  then create another file object
+
+    6.  then write the result of the image resize object’s `resize` method to the
+    second file object
+
+    7.  then close the second file object
+
+    8.  then destroy the second file object
+
+    9.  then destroy the image resize object
+
+    10.  then destroy the first file object
+
+    11.  end execution
+
+
+    #### Which is the best?
+
+
+    …is the wrong question to ask. Both have their strengths and weaknesses. Object-Oriented
+    Programming mostly leads to more code than Procedural Programming. Object-oriented
+    Programming lends itself to better separation between concerns. Stated another
+    way - it’s easier to think of objects and their behaviours than to think of the
+    whole flow of a program.
+
+
+    Ultimately, Procedural code can be as clean as Object-Oriented code.
+
+
+    “Sometimes, the elegant implementation is just a function. Not a method. Not a
+    class. Not a framework. Just a function.” - John Carmack
+
+
+    #### Which is PHP?
+
+
+    PHP is very procedural. That’s how Rasmus built it (back in the proverbial day)
+    and that’s how it has mostly stayed. This is apparent, when it comes to how scalar
+    variables are handled and manipulated. The PHP types are not objects. They don’t
+    have methods or properties. If you want to do something to a PHP scalar variable
+    (string, int, float, bool…), you pass it to a function.
+
+
+    Before PHP 5.3, there were no namespaces. As a result - all of these type-specific
+    methods were added to the global namespace. They are available everywhere, and
+    (as we’ve seen) they are inconsistent.
+
+
+    This makes scalar type code ugly code.'
+  trans: '
+
+    ### 目标读者
+
+
+    本书假定你具备 `PHP` 的实用知识。这意味着你了解编程基础，并且已经运用这些知识编写过 `PHP` 代码。
+
+
+    你不需要知道如何搭建 `PHP` 运行环境——我们会介绍如何轻松完成这项任务（使用 `VirtualBox`、`Vagrant` 和 `Phansible`）。
+
+
+    你还需要保持开放的心态。本书涉及的许多概念都处于实验阶段，几乎没有哪个是普遍采用的。这并非说你不能在生产应用中使用这些技术，而是需要你自行判断你的架构是否会从第三方扩展（除了
+    `PHP` 核心之外）中受益。
+
+
+    最后，你需要有畅通的网络连接。本书中的示例在 `Vagrant` 虚拟机中运行效果最佳。如果你不熟悉这个术语，不必担心。我们稍后会讨论它，但它本质上是一种用于安装开发环境的软件。这种安装经常发生，因此需要高速网络连接。
+
+
+    ### 过程式 / 面向对象
+
+
+    **过程式**和**面向对象**是两种不同的编程风格，它们以不同的方式处理程序执行。了解它们的工作原理以及它们如何定义标量类型的状态是很有益的。
+
+
+    #### 过程式编程
+
+
+    **过程式编程**描述了一种自上而下的程序执行方法。也就是说，过程式程序由解释器需要执行的一系列步骤（从上到下）组成。
+
+
+    用伪代码表示，一个过程式图像缩放程序可能如下所示：
+
+
+    1.  开始执行
+
+    2.  然后存储由 `open_file` 函数返回的文件引用
+
+    3.  然后存储由 `resize_image` 函数返回的修改后的图像
+
+    4.  然后关闭打开的文件
+
+    5.  然后存储由 `open_file` 函数返回的文件引用
+
+    6.  然后将修改后的图像数据写入第二个打开的文件
+
+    7.  然后关闭打开的文件
+
+    8.  然后清空修改后的图像变量
+
+    9.  结束执行
+
+
+    **过程式**程序可以调用函数（如示例所述）并可以定义函数。当前执行行的位置可以通过循环结构和类似 `goto` 的结构进行修改，但在大多数情况下，程序是由一组指令构成的框架。
+
+
+    #### 面向对象编程
+
+
+    **面向对象编程**将程序执行描述为实体（或对象）的交互和描述。这些对象可以拥有属性（即拥有的变量的另一种叫法）和方法（即拥有的函数的另一种叫法）的任意组合。
+
+
+    这些拥有函数内部的代码仍然是从上到下执行的，但主要思想在于程序依赖于对象间的通信来维持其连贯性。
+
+
+    用伪代码表示，一个面向对象的图像缩放程序可能如下所示：
+
+
+    1.  开始执行
+
+    2.  然后创建一个文件对象
+
+    3.  然后创建一个图像缩放对象
+
+    4.  然后将文件对象传递给图像缩放对象
+
+    5.  然后创建另一个文件对象
+
+    6.  然后将图像缩放对象的 `resize` 方法的结果写入第二个文件对象
+
+    7.  然后关闭第二个文件对象
+
+    8.  然后销毁第二个文件对象
+
+    9.  然后销毁图像缩放对象
+
+    10. 然后销毁第一个文件对象
+
+    11. 结束执行
+
+
+    #### 哪种最好？
+
+
+    ……问这个问题本身就不对。两者各有优缺点。**面向对象编程**通常比**过程式编程**产生更多的代码。**面向对象编程**有助于更好地实现关注点分离。换句话说——思考对象及其行为比思考整个程序的流程更容易。
+
+
+    最终，**过程式**代码可以和**面向对象**代码一样整洁。
+
+
+    “有时，优雅的实现就是一个函数。不是一个方法。不是一个类。不是一个框架。仅仅是一个函数。”——约翰·卡马克
+
+
+    #### PHP 是哪种？
+
+
+    `PHP` 非常过程式。这是拉斯马斯当初构建它的方式（在那个众所周知的年代），并且这种方式在很大程度上延续至今。这一点在标量变量如何处理和操作时表现得尤为明显。`PHP`
+    类型不是对象。它们没有方法或属性。如果你想对 `PHP` 标量变量（`string`、`int`、`float`、`bool`……）进行操作，你需要将其传递给一个函数。
+
+
+    在 `PHP 5.3` 之前，没有命名空间。因此——所有这些类型特定的方法都被添加到了全局命名空间中。它们随处可用，并且（正如我们所看到的）它们是不一致的。
+
+
+    这使得标量类型的代码变得丑陋。
+
+    '
+- fmt: "### Native Function Inconsistencies\n\nPHP is often decried because of the\
+    \ inconsistencies in the native functions. PHP is often praised because of the\
+    \ quality of the documentation. These are related! The documentation has evolved\
+    \ so well because native PHP functions are inconsistent.\n\nThis section is going\
+    \ to make me sound like a PHP-hater. That couldn’t be further from the truth!\
+    \ I love PHP and I’m committed to using it and helping others use it. To know\
+    \ what we’re building, we have to know what we’re trying to avoid building. That’s\
+    \ the point of what’s to follow.\n\n#### Sporadic Underscores\n\n- `parse_str`\n\
+    - `printf`\n- `str_pad`\n- `strcmp`\n- `strip_tags`\n- `stripslashes`\n\nThese\
+    \ functions are described at [http://php.net/manual/en/ref.strings.php](http://php.net/manual/en/ref.strings.php)\n\
+    \nThe full list contains 98 functions, 30 of which use one or more underscores.\
+    \ Sometimes functions clearly composed of multiple full words (like `setlocale`)\
+    \ don’t have underscores. Sometimes functions which do almost exactly the same\
+    \ things (`strlen` vs. `str_word_count`) are handled differently.\n\n#### Sporadic\
+    \ Abbreviation\n\n- `addslashes`\n- `chr`\n- `htmlentities`\n- `lcfirst`\n- `number_format`\n\
+    - `stroll`\n\nMost of the string functions use abbreviations of some kind. Applied\
+    \ consistently, this wouldn’t be a problem. However, the inclusion of a few non-abbreviated\
+    \ functions makes the string API difficult to memorise, which often means a round-trip\
+    \ to the documentation.\n\n#### Inconsistent Argument Order\n\n- `array_key_exists($needle,\
+    \ $haystack)`\n- `stripos($haystack , $needle)`\n\nThe natural order of arguments\
+    \ differs depending on whether you are working with array functions or string\
+    \ functions. Rasmus explains this as a result of keeping as close to the underlying\
+    \ C libraries as possible. The problem with this explanation is that it means\
+    \ nothing to developers who have never worked with C, and just want to work with\
+    \ PHP.\n\nIt’s helpful to remember that the array methods are needle/haystack\
+    \ and the string methods are haystack/needle.\n\n#### Regular Expression / Strings\n\
+    \n- `preg_filter`\n- `str_replace`\n- `preg_match`\n- `strstr`\n- `preg_split`\n\
+    - `explode`\n\nIn PHP, Regular Expressions are represented as strings but handled\
+    \ with a completely different set of functions. That’s just strange. While I can\
+    \ accept that Regular Expressions have a similar representation to strings, and\
+    \ that the functions they are given to (in the C libraries) expect to work with\
+    \ strings, developers shouldn’t need to account for this.\n\nPHP assumes a string\
+    \ is a Regular Expression, if it starts and ends with recognisable delimiters.\
+    \ You can learn more about that at [http://www.php.net/manual/en/regexp.reference.delimiters.php](http://www.php.net/manual/en/regexp.reference.delimiters.php).\n\
+    \nAlternatively, Regular Expressions should have their own representation which\
+    \ clearly separates them from strings. An example of a language which already\
+    \ has this, is JavaScript:\n\n```\n1 \"abc\".replace(\"b\", \"123\"); // \"abc\"\
+    \ becomes \"a123c\"\n2 \"def\".replace(/[e]/, \"456\"); // \"def\" becomes \"\
+    d456f\"\n```\n\nThese languages make clear the distinction between strings and\
+    \ Regular Expressions.\n\n#### Nouns / Verbs\n\n- `echo`\n- `htmlentities`\n-\
+    \ `lcfirst`\n- `md5`\n- `parse_str`\n- `soundedex`\n\nSome of the native functions\
+    \ are verbs (like `echo` and `parse_str`) while others are nouns (like `htmlentities`\
+    \ and `soundex`). This makes it tricky to reason about what the method is doing.\n\
+    \n#### Strange Return Values\n\nMany of the native functions return multiple types.\
+    \ In the case of `strstr` a string is returned if it is matched, else the function\
+    \ returns false.\n\nIn contrast to this, the `preg_match` function returns 1 if\
+    \ the pattern is found, 0 if it is not and false if an error occurred. This makes\
+    \ for a slew of type checking before any of the return values can be used for\
+    \ their intended purpose.\n\n### Conclusion\n\nPHP is a great language.\n\nBut\
+    \ if you’ve worked much with PHP, you will either have grown to ignore the sad\
+    \ state of PHP’s scalar type handling, or been frustrated at the lack of good\
+    \ alternatives.\n\nAnd for most small-to-medium sized projects, adding a revised\
+    \ type-system is unnecessary. Yet if you learned how to make (or even just use)\
+    \ a well-built type system, wouldn’t it make sense to use it in large projects?\
+    \ Or in any projects you cared enough about?\n\nThis area of PHP often chases\
+    \ developers into prettier languages. Don’t be one of those developers! Learn\
+    \ how to write cleaner code, by using a clean abstraction.\n\n## Structure\n\n\
+    ### Boxing\n\nBoxing is a term given to the practice of wrapping (enclosing) data\
+    \ within a class, so that behaviour can be added to the wrapped data. Let’s look\
+    \ at an example:\n\n```\n 1 <?php\n\n 3 class StringBox\n 4 {\n 5   /**\n 6  \
+    \  * @var string\n 7    */\n 8   protected $data;\n\n10   /**\n11    * @param\
+    \ string $data\n12    */\n13   public function __construct($data)\n14   {\n15\
+    \     $this->data = $data;\n16   }\n\n18   /**\n19    * @return string\n20   \
+    \ */\n21   public function toString()\n22   {\n23     return (string) $this->data;\n\
+    24   }\n\n26   /**\n27    * @return string\n28    */\n29   public function toUpperCase()\n\
+    30   {\n31     return strtoupper($this->data);\n32   }\n\n34   /**\n35    * @return\
+    \ string\n36    */\n37   public function toLowerCase()\n38   {\n39     return\
+    \ strtolower($this->data);\n40   }\n\n42   /**\n43    * @param string $needle\n\
+    44    * @param mixed  $offset\n45    *\n46    * @return int\n47    */\n48   public\
+    \ function getIndexOf($needle, $offset = null)\n49   {\n50     $index = strpos($this->data,\
+    \ $needle, $offset);\n\n52     if ($index === false) {\n53       return -1;\n\
+    54     }\n\n56     return $index;\n57   }\n58 }\n\n60 $box = new StringBox(\"\
+    Hello World\");\n\n62 print $box->toString();          // \"hello world\"\n63\
+    \ print $box->toUpperCase();       // \"HELLO WORLD\"\n64 print $box->toLowerCase();\
+    \       // \"hello world\"\n65 print $box->getIndexOf(\"foo\");   // -1\n66 print\
+    \ $box->getIndexOf(\"World\"); // 6\n```\n\nThis approach is fully supported by\
+    \ PHP, without any additional extensions or dependencies. It’s a simple concept,\
+    \ if you think about it. You’re using protected properties and exposing a public\
+    \ API for setting them, getting them and manipulating them.\n\nThe difficulty\
+    \ with it is that it leads to a lot more code than just using the native functions.\
+    \ You need to define wrappers. You need to define setters and getters. You have\
+    \ to use them every time you want to put *native* types in and get *native* types\
+    \ out. What do I mean by that last statement?\n\n```\n1 $helloBox = new StringBox(\"\
+    Hello\");\n2 $worldBox = new StringBox(\"World\");\n\n4 $helloWorldBox = new StringBox(\n\
+    5   $helloBox->toString() . \" \" . $worldBox->toString()\n6 );\n```\n\nThis quickly\
+    \ becomes unwieldy. It’s also more memory intensive, and slower than just using\
+    \ the native functions and types.\n\nPHP allows the use of a method called `__toString`.\
+    \ When a class defines this method (to return a string), and an instance of the\
+    \ class is used in an operation that expects a string; the `__toString` method\
+    \ is automatically called.\n\nThis isn’t enough for us to simulate an extensible\
+    \ type system, or this would be a short book.\n\n### Resolving Types\n\nPHP is\
+    \ a weakly typed language. That is, variables can be declared without specifying\
+    \ a type. Their type can be changed at any point. They can be coerced into different\
+    \ types on demand.\n\nIf we want to implement stronger type-handling, we need\
+    \ to be able to identify the type of a variable. PHP provides a number of functions\
+    \ which help with this, but they have a few issues to overcome…"
+  raw: "### Native Function Inconsistencies\n\nPHP is often decried because of the\
+    \ inconsistencies in the native functions. PHP is often praised because of the\
+    \ quality of the documentation. These are related! The documentation has evolved\
+    \ so well because native PHP functions are inconsistent.\n\nThis section is going\
+    \ to make me sound like a PHP-hater. That couldn’t be further from the truth!\
+    \ I love PHP and I’m committed to using it and helping others use it. To know\
+    \ what we’re building, we have to know what we’re trying to avoid building. That’s\
+    \ the point of what’s to follow.\n\n#### Sporadic Underscores\n\n*   `parse_str`\n\
+    *   `printf`\n*   `str_pad`\n*   `strcmp`\n*   `strip_tags`\n*   `stripslashes`\n\
+    \nThese functions are described at **[http://php.net/manual/en/ref.strings.php](http://php.net/manual/en/ref.strings.php)**\n\
+    \nThe full list contains 98 functions, 30 of which use one or more underscores.\
+    \ Sometimes functions clearly composed of multiple full words (like `setlocale`)\
+    \ don’t have underscores. Sometimes functions which do almost exactly the same\
+    \ things (`strlen` vs. `str_word_count`) are handled differently.\n\n#### Sporadic\
+    \ Abbreviation\n\n*   `addslashes`\n*   `chr`\n*   `htmlentities`\n*   `lcfirst`\n\
+    *   `number_format`\n*   `stroll`\n\nMost of the string functions use abbreviations\
+    \ of some kind. Applied consistently, this wouldn’t be a problem. However, the\
+    \ inclusion of a few non-abbreviated functions makes the string API difficult\
+    \ to memorise, which often means a round-trip to the documentation.\n\n#### Inconsistent\
+    \ Argument Order\n\n*   `array_key_exists($needle, $haystack)`\n*   `stripos($haystack\
+    \ , $needle)`\n\nThe natural order of arguments differs depending on whether you\
+    \ are working with array functions or string functions. Rasmus explains this as\
+    \ a result of keeping as close to the underlying C libraries as possible. The\
+    \ problem with this explanation is that it means nothing to developers who have\
+    \ never worked with C, and just want to work with PHP.\n\nIt’s helpful to remember\
+    \ that the array methods are needle/haystack and the string methods are haystack/needle.\n\
+    \n#### Regular Expression / Strings\n\n*   `preg_filter`\n*   `str_replace`\n\
+    *   `preg_match`\n*   `strstr`\n*   `preg_split`\n*   `explode`\n\nIn PHP, Regular\
+    \ Expressions are represented as strings but handled with a completely different\
+    \ set of functions. That’s just strange. While I can accept that Regular Expressions\
+    \ have a similar representation to strings, and that the functions they are given\
+    \ to (in the C libraries) expect to work with strings, developers shouldn’t need\
+    \ to account for this.\n\nPHP assumes a string is a Regular Expression, if it\
+    \ starts and ends with recognisable delimiters. You can learn more about that\
+    \ at **[http://www.php.net/manual/en/regexp.reference.delimiters.php](http://www.php.net/manual/en/regexp.reference.delimiters.php)**.\n\
+    \nAlternatively, Regular Expressions should have their own representation which\
+    \ clearly separates them from strings. An example of a language which already\
+    \ has this, is JavaScript:\n\n```\n1 \"abc\".replace(\"b\", \"123\"); // \"abc\"\
+    \ becomes \"a123c\"\n2 \"def\".replace(/[e]/, \"456\"); // \"def\" becomes \"\
+    d456f\"\n```\n\nThese languages make clear the distinction between strings and\
+    \ Regular Expressions.\n\n#### Nouns / Verbs\n\n*   `echo`\n*   `htmlentities`\n\
+    *   `lcfirst`\n*   `md5`\n*   `parse_str`\n*   `soundedex`\n\nSome of the native\
+    \ functions are verbs (like `echo` and `parse_str`) while others are nouns (like\
+    \ `htmlentities` and `soundex`). This makes it tricky to reason about what the\
+    \ method is doing.\n\n#### Strange Return Values\n\nMany of the native functions\
+    \ return multiple types. In the case of `strstr` a string is returned if it is\
+    \ matched, else the function returns false.\n\nIn contrast to this, the `preg_match`\
+    \ function returns 1 if the pattern is found, 0 if it is not and false if an error\
+    \ occurred. This makes for a slew of type checking before any of the return values\
+    \ can be used for their intended purpose.\n\n### Conclusion\n\nPHP is a great\
+    \ language.\n\nBut if you’ve worked much with PHP, you will either have grown\
+    \ to ignore the sad state of PHP’s scalar type handling, or been frustrated at\
+    \ the lack of good alternatives.\n\nAnd for most small-to-medium sized projects,\
+    \ adding a revised type-system is unnecessary. Yet if you learned how to make\
+    \ (or even just use) a well-built type system, wouldn’t it make sense to use it\
+    \ in large projects? Or in any projects you cared enough about?\n\nThis area of\
+    \ PHP often chases developers into prettier languages. Don’t be one of those developers!\
+    \ Learn how to write cleaner code, by using a clean abstraction.\n\n## Structure\n\
+    \n### Boxing\n\nBoxing is a term given to the practice of wrapping (enclosing)\
+    \ data within a class, so that behaviour can be added to the wrapped data. Let’s\
+    \ look at an example:\n\n```\n 1 <?php\n\n 3 class StringBox\n 4 {\n 5   /**\n\
+    \ 6    * @var string\n 7    */\n 8   protected $data;\n\n10   /**\n11    * @param\
+    \ string $data\n12    */\n13   public function __construct($data)\n14   {\n15\
+    \     $this->data = $data;\n16   }\n\n18   /**\n19    * @return string\n20   \
+    \ */\n21   public function toString()\n22   {\n23     return (string) $this->data;\n\
+    24   }\n\n26   /**\n27    * @return string\n28    */\n29   public function toUpperCase()\n\
+    30   {\n31     return strtoupper($this->data);\n32   }\n\n34   /**\n35    * @return\
+    \ string\n36    */\n37   public function toLowerCase()\n38   {\n39     return\
+    \ strtolower($this->data);\n40   }\n\n42   /**\n43    * @param string $needle\n\
+    44    * @param mixed  $offset\n45    *\n46    * @return int\n47    */\n48   public\
+    \ function getIndexOf($needle, $offset = null)\n49   {\n50     $index = strpos($this->data,\
+    \ $needle, $offset);\n\n52     if ($index === false) {\n53       return -1;\n\
+    54     }\n\n56     return $index;\n57   }\n58 }\n\n60 $box = new StringBox(\"\
+    Hello World\");\n\n62 print $box->toString();          // \"hello world\"\n63\
+    \ print $box->toUpperCase();       // \"HELLO WORLD\"\n64 print $box->toLowerCase();\
+    \       // \"hello world\"\n65 print $box->getIndexOf(\"foo\");   // -1\n66 print\
+    \ $box->getIndexOf(\"World\"); // 6\n```\n\nThis approach is fully supported by\
+    \ PHP, without any additional extensions or dependencies. It’s a simple concept,\
+    \ if you think about it. You’re using protected properties and exposing a public\
+    \ API for setting them, getting them and manipulating them.\n\nThe difficulty\
+    \ with it is that it leads to a lot more code than just using the native functions.\
+    \ You need to define wrappers. You need to define setters and getters. You have\
+    \ to use them every time you want to put *native* types in and get *native* types\
+    \ out. What do I mean by that last statement?\n\n```\n1 $helloBox = new StringBox(\"\
+    Hello\");\n2 $worldBox = new StringBox(\"World\");\n\n4 $helloWorldBox = new StringBox(\n\
+    5   $helloBox->toString() . \" \" . $worldBox->toString()\n6 );\n```\n\nThis quickly\
+    \ becomes unwieldy. It’s also more memory intensive, and slower than just using\
+    \ the native functions and types.\n\nPHP allows the use of a method called `__toString`.\
+    \ When a class defines this method (to return a string), and an instance of the\
+    \ class is used in an operation that expects a string; the `__toString` method\
+    \ is automatically called.\n\nThis isn’t enough for us to simulate an extensible\
+    \ type system, or this would be a short book.\n\n### Resolving Types\n\nPHP is\
+    \ a weakly typed language. That is, variables can be declared without specifying\
+    \ a type. Their type can be changed at any point. They can be coerced into different\
+    \ types on demand.\n\nIf we want to implement stronger type-handling, we need\
+    \ to be able to identify the type of a variable. PHP provides a number of functions\
+    \ which help with this, but they have a fe issues to overcome…"
+  trans: "\n### 原生函数的不一致性\n\nPHP 常因其原生函数的不一致性而受到批评。PHP 也常因其文档质量而受到赞扬。这两者是相关的！文档之所以能发展得如此出色，正是因为\
+    \ PHP 原生函数本身是不一致的。\n\n这一节可能会让我听起来像个 PHP 反对者。但事实远非如此！我热爱 PHP，并致力于使用它并帮助他人使用它。要了解我们在构建什么，我们必须知道我们试图避免构建什么。这就是接下来要讲述的重点。\n\
+    \n#### 零星的下划线\n\n-   `parse_str`\n-   `printf`\n-   `str_pad`\n-   `strcmp`\n\
+    -   `strip_tags`\n-   `stripslashes`\n\n这些函数在 [`php.net/manual/en/ref.strings.php`](http://php.net/manual/en/ref.strings.php)\
+    \ 中有描述。\n\n完整列表包含 98 个函数，其中 30 个使用了一个或多个下划线。有时，明显由多个完整单词组成的函数（如 `setlocale`）却没有下划线。有时，功能几乎完全相同的函数（如\
+    \ `strlen` 与 `str_word_count`）处理方式却不一致。\n\n#### 零星的缩写\n\n-   `addslashes`\n- \
+    \  `chr`\n-   `htmlentities`\n-   `lcfirst`\n-   `number_format`\n-   `stroll`\n\
+    \n大多数字符串函数都使用了某种缩写。如果应用一致，这不成问题。然而，一些非缩写函数的存在使得字符串 API 难以记忆，这通常意味着需要反复查阅文档。\n\n\
+    #### 不一致的参数顺序\n\n-   `array_key_exists($needle, $haystack)`\n-   `stripos($haystack\
+    \ , $needle)`\n\n参数的排列顺序取决于你是在处理数组函数还是字符串函数。Rasmus 解释说，这是为了尽可能接近底层 C 库的作法。这个解释的问题在于，对于那些从未使用过\
+    \ C 语言、只想使用 PHP 的开发人员来说，毫无意义。\n\n记住这一点很有帮助：数组方法是**针/草垛**（needle/haystack），而字符串方法是**草垛/针**（haystack/needle）。\n\
+    \n#### 正则表达式 / 字符串\n\n-   `preg_filter`\n-   `str_replace`\n-   `preg_match`\n\
+    -   `strstr`\n-   `preg_split`\n-   `explode`\n\n在 PHP 中，正则表达式被表示为字符串，但却用一套完全不同的函数来处理。这很奇怪。虽然我可以接受正则表达式与字符串有相似的表示形式，并且它们被传递给（C\
+    \ 库中的）函数期望处理的是字符串，但开发人员不应该需要考虑这一点。\n\n如果字符串以可识别的分隔符开头和结尾，PHP 就会将其视为正则表达式。你可以在\
+    \ [`www.php.net/manual/en/regexp.reference.delimiters.php`](http://www.php.net/manual/en/regexp.reference.delimiters.php)\
+    \ 了解更多信息。\n\n或者，正则表达式应该有自己的表示形式，以明确地与字符串区分开来。一个已经具备此特性的语言例子是 **JavaScript**：\n\
+    \n```\n1 \"abc\".replace(\"b\", \"123\"); // \"abc\" 变为 \"a123c\"\n2 \"def\".replace(/[e]/,\
+    \ \"456\"); // \"def\" 变为 \"d456f\"\n```\n\n这些语言明确区分了字符串和正则表达式。\n\n#### 名词 / 动词\n\
+    \n-   `echo`\n-   `htmlentities`\n-   `lcfirst`\n-   `md5`\n-   `parse_str`\n\
+    -   `soundedex`\n\n一些原生函数是动词（如 `echo` 和 `parse_str`），而另一些则是名词（如 `htmlentities`\
+    \ 和 `soundex`）。这使得推断方法的作用变得棘手。\n\n#### 奇怪的返回值\n\n许多原生函数返回多种类型。对于 `strstr` 函数，如果匹配到则返回字符串，否则返回\
+    \ `false`。\n\n与此相反，`preg_match` 函数在找到模式时返回 `1`，未找到时返回 `0`，如果发生错误则返回 `false`。这使得在将任何返回值用于预期目的之前，需要进行大量的类型检查。\n\
+    \n### 结论\n\nPHP 是一门伟大的语言。\n\n但是，如果你经常使用 PHP，你要么已经逐渐忽略了 PHP 在标量类型处理方面的糟糕状况，要么因为缺乏良好的替代方案而感到沮丧。\n\
+    \n对于大多数中小型项目来说，增加一个修订后的类型系统是没必要的。然而，如果你学会了如何构建（甚至只是使用）一个构建良好的类型系统，将其用于大型项目不是很有意义吗？或者用于你足够关心的任何项目？\n\
+    \nPHP 的这个领域常常会把开发者驱赶到更漂亮的语言中去。不要成为那些开发者之一！通过学习使用清晰的抽象来编写更整洁的代码。\n\n## 结构\n\n###\
+    \ 装箱\n\n**装箱（Boxing）** 是一个术语，指的是将数据包裹（封装）在一个类中的实践，以便可以为包裹的数据添加行为。让我们看一个例子：\n\n\
+    ```\n 1 <?php\n\n 3 class StringBox\n 4 {\n 5   /**\n 6    * @var string\n 7 \
+    \   */\n 8   protected $data;\n\n10   /**\n11    * @param string $data\n12   \
+    \ */\n13   public function __construct($data)\n14   {\n15     $this->data = $data;\n\
+    16   }\n\n18   /**\n19    * @return string\n20    */\n21   public function toString()\n\
+    22   {\n23     return (string) $this->data;\n24   }\n\n26   /**\n27    * @return\
+    \ string\n28    */\n29   public function toUpperCase()\n30   {\n31     return\
+    \ strtoupper($this->data);\n32   }\n\n34   /**\n35    * @return string\n36   \
+    \ */\n37   public function toLowerCase()\n38   {\n39     return strtolower($this->data);\n\
+    40   }\n\n42   /**\n43    * @param string $needle\n44    * @param mixed  $offset\n\
+    45    *\n46    * @return int\n47    */\n48   public function getIndexOf($needle,\
+    \ $offset = null)\n49   {\n50     $index = strpos($this->data, $needle, $offset);\n\
+    \n52     if ($index === false) {\n53       return -1;\n54     }\n\n56     return\
+    \ $index;\n57   }\n58 }\n\n60 $box = new StringBox(\"Hello World\");\n\n62 print\
+    \ $box->toString();          // \"hello world\"\n63 print $box->toUpperCase();\
+    \       // \"HELLO WORLD\"\n64 print $box->toLowerCase();       // \"hello world\"\
+    \n65 print $box->getIndexOf(\"foo\");   // -1\n66 print $box->getIndexOf(\"World\"\
+    ); // 6\n```\n\n这种方法完全受 PHP 支持，无需任何额外的扩展或依赖。如果你仔细想想，这是一个简单的概念。你正在使用受保护的属性，并公开一个公共\
+    \ API 来设置、获取和操作它们。\n\n它的难点在于，相比直接使用原生函数，这会导致更多的代码。你需要定义包装器。你需要定义设置器和获取器。每次你想要将*原生*类型传入并获取*原生*类型时，都必须使用它们。我最后那句是什么意思？\n\
+    \n```\n1 $helloBox = new StringBox(\"Hello\");\n2 $worldBox = new StringBox(\"\
+    World\");\n\n4 $helloWorldBox = new StringBox(\n5   $helloBox->toString() . \"\
+    \ \" . $worldBox->toString()\n6 );\n```\n\n这很快就变得笨重了。它也更耗内存，并且比直接使用原生函数和类型要慢。\n\
+    \nPHP 允许使用一个名为 `__toString` 的方法。当一个类定义了此方法（来返回一个字符串），并且该类的实例被用于期望字符串的操作中时；`__toString`\
+    \ 方法会被自动调用。\n\n这还不足以让我们模拟一个可扩展的类型系统，否则这本书就不会这么短了。\n\n### 解析类型\n\nPHP 是一种弱类型语言。也就是说，变量可以在不指定类型的情况下声明。它们的类型可以在任何时刻改变。它们可以根据需要被强制转换为不同的类型。\n\
+    \n如果我们想要实现更强的类型处理，我们需要能够识别变量的类型。PHP 提供了一些有助于此的函数，但它们有一些需要克服的问题……\n"
+- fmt: "#### Scalar Types\n\nThe `gettype()` function returns the data type of a variable.\
+    \ It can identify the following types:\n\n- `\"boolean\"`\n- `\"integer\"`\n-\
+    \ `\"double\"`\n- `\"string\"`\n- `\"array\"`\n- `\"object\"`\n- `\"resource\"\
+    `\n- `\"NULL\"`\n\nIf none of these types correctly describes the variable, `gettype()`\
+    \ will return `\"unknown type\"`. Again we see some strange inconsistencies. Firstly,\
+    \ floats are identified as `\"double\"` and null values are returned as `\"NULL\"\
+    ` (uppercase, in contrast to every other type identifier).\n\nWe can abstract\
+    \ around this function, with something resembling the following:\n\n```php\n<?php\n\
+    \nfunction type($variable) {\n  $type = gettype($variable);\n\n  switch ($type)\
+    \ {\n\n    case \"integer\":\n    case \"double\":\n      return \"number\";\n\
+    \n    case \"NULL\":\n      return \"null\";\n\n  }\n\n  return $type;\n}\n\n\
+    print type(0);    // \"number\"\nprint type(.0);   // \"number\"\nprint type(null);\
+    \ // \"null\"\n```\n\nWhat about when the variable contains a callback? In that\
+    \ case, we can use…\n\n#### Functions\n\nThe `is_callable()` function checks to\
+    \ see if something is a callable function, whether it is a string or an anonymous\
+    \ function.\n\n```php\n<?php\n\nprint is_callable(\"is_callable\"); // true\n\
+    print is_callable(function(){});  // true\nprint is_callable(null);          //\
+    \ false\n\nclass Foo\n{\n  public function bar()\n  {\n\n  }\n\n  public function\
+    \ identify()\n  {\n    return is_callable([$this, \"bar\"]);\n  }\n}\n\n$foo =\
+    \ new Foo();\n\nprint $foo->identify(); // true\n```\n\nTechnically, `is_callable()`\
+    \ identifies a valid argument to any callback-accepting function in PHP. The following\
+    \ are all valid for these kinds of functions:\n\n- An actual function (`function(){}`)\n\
+    - An array of context and method name (`[$this, \"bar\"]`)\n- The name of a function,\
+    \ as a string (`\"is_callable\"`)\n\nDue to how loose this method is, you need\
+    \ to be careful when trying to identify strings and functions in the same resolver\
+    \ function. If you’re using `is_string()` and `is_callable()` at the same time,\
+    \ your results may differ depending on the order in which these are called.\n\n\
+    For example:\n\n```php\n$variable = \"is_callable\";\n\nif (is_string($variable))\
+    \ {\n  die(\"variable is a string\");\n}\n\nif (is_callable($variable)) {\n  die(\"\
+    variable is callable\");\n}\n```\n\nThe script will terminate with the string\
+    \ `\"variable is a string\"`, because it is a string. But it’s also the name of\
+    \ a callable function, so swapping the conditional statements will make the script\
+    \ terminate in `\"variable is callable\"`.\n\nIf you want to get more specific,\
+    \ then it’s helpful to know that `gettype(function(){})` will return `\"object\"\
+    `. In that case, we can do this:\n\n```php\n<?php\n\nfunction is_function($variable)\
+    \ {\n  return is_callable($variable) and gettype($variable) === \"object\";\n\
+    }\n\nprint is_function(function(){});  //true\nprint is_function(\"is_function\"\
+    ); //false\nprint is_function(new stdClass);  //false\n```\n\n#### Classes\n\n\
+    Sometimes what we want to do is identify the type of object we’re working with.\
+    \ `gettype()` won’t tell us much more than that the variable is an object. We’ll\
+    \ have to combine that with the `get_class()` function:\n\n```php\n<?php\n\nfunction\
+    \ type($variable) {\n  $type = gettype($variable);\n\n  switch ($type) {\n\n \
+    \   case \"integer\":\n    case \"double\":\n      return \"number\";\n\n    case\
+    \ \"NULL\":\n      return \"null\";\n\n    case \"object\":\n      return get_class($variable);\n\
+    \n  }\n\n  return $type;\n}\n\nprint type(\"foo\"); // \"string\"\n\nclass Foo\n\
+    {\n\n}\n\n$foo = new Foo();\n\nprint type($foo);         // \"Foo\"\nprint type(function(){});\
+    \ // \"Closure\"\n```\n\nWe could further normalise `\"Closure\"` to something\
+    \ like `\"function\"`; if we wanted to treat it with the same gravity as the other\
+    \ types.\n\n#### Regular Expressions\n\nSince PHP has multiple sets of string\
+    \ functions (one for plain strings and a few for regular expressions), it would\
+    \ be great if we had a way to differentiate between things that look like regular\
+    \ expressions and things that don’t.\n\nIt’s important to differentiate between\
+    \ definitively identifying regular expressions and identifying things that *look\
+    \ like*. Just because something looks like a regular expression doesn’t mean that\
+    \ it is. Nor does it mean that the intention of the author was for it to be a\
+    \ regular expression.\n\nThe PHP documentation (at [http://www.php.net/manual/en/intro.pcre.php](http://www.php.net/manual/en/intro.pcre.php))\
+    \ describes expressions as [a string] enclosed in delimiters. These delimiters\
+    \ can be any non-alphanumeric that aren’t also a backslash or null byte.\n\nWe\
+    \ can cover a large majority of cases, using the following:\n\n```php\n<?php\n\
+    \nfunction is_regex($variable) {\n  return @preg_match($regex, \"\") !== false\n\
+    \    && preg_last_error() == PREG_NO_ERROR;\n}\n\nprint is_regex(\"/^.*$/\");\
+    \ // true\nprint is_regex(\"/hello world/\"); // true\nprint is_regex(\"/hello\
+    \ world/i\"); // true\nprint is_regex(\"hello world\"); // false\nprint is_regex(\"\
+    \\\\hello world\\\\\"); // false\nprint is_regex(\"\\\\x00foo\\\\x00\"); // false\n\
+    print is_regex(\"1foo1\"); // false\nprint is_regex(\"afooa\"); // false\n```\n\
+    \nThe `preg_match()` function returns a `1` for a match, `0` for no match and\
+    \ `false` if an error occurred. Assuming `preg_match()` returns `false`, the error\
+    \ could be for any number of reasons (like `PREG_INTERNAL_ERROR` or `PREG_BAD_UTF8_ERROR`).\
+    \ So then we use the `preg_last_error()` function to rule out all other errors.\n\
+    \nUsing error suppression (`@`) is generally a bad idea. There are very few instances\
+    \ when using it is considered ok. This is one of them!\n\n### Namespace Functions\n\
+    \nI’ve spoke a bit about how all these global functions are bad, and there’s a\
+    \ really simple alternative: namespace functions. You’ve probably used namespaces,\
+    \ for classes, but the same constructs work well to isolate functions:\n\n```php\n\
+    <?php\n\nnamespace Type\\String {\n  function length($string) {\n    return strlen($string);\n\
+    \  }\n}\n\nnamespace {\n  print Type\\String\\length(\"Hello World\");\n}\n```\n\
+    \n#### Composer Autoload\n\nThis kind of function definition doesn’t follow normal\
+    \ autoload patterns. In order to have Composer autoload these kinds of files is\
+    \ to explicitly define which files should be loaded:\n\n```json\n{\n  \"autoload\"\
+    \ : {\n    \"files\" : [\n      \"namespace-functions.php\"\n    ]\n  }\n}\n```\n\
+    \nFollowing this, we’ll have to dump the old autoloader, with:\n\n```\n$ composer\
+    \ dump-autoload\n\nGenerating autoload files\n```\n\nThe files (containing namespace\
+    \ functions) will now be automatically loaded, wherever the Composer autoloader\
+    \ is used.\n\n#### Future Goodies\n\nPHP 5.6 supports the `use function` construct,\
+    \ to import functions from other namespaces. It’s currently in beta (at the time\
+    \ of writing), but this feature is right up our proverbial alley.\n\nIn the meantime,\
+    \ it’s possible to partially import functions:\n\n```php\nuse Type\\String;\n\n\
+    print String\\length(\"Hello World\");\n```\n\nThis is especially useful for deeply-nested\
+    \ namespace designs. Still; it’s great to be able to omit even a little of the\
+    \ full namespace. The result is clean(er), non-colliding procedural code.\n\n\
+    ### Conclusion\n\nEven today, it’s possible to create a cleaner scalar type system/abstraction.\
+    \ We don’t need special extensions, or compilation steps. Just a little bit of\
+    \ work will clean the code right up.\n\nHaving said that, extensions can go a\
+    \ long way towards making our lives easier, while still allowing the level of\
+    \ customisation and unity that we are hoping to achieve. We’ll look at a few of\
+    \ these in the following chapter…\n\n## Extensions"
+  raw: "#### Scalar Types\n\nThe `gettype` function returns the data type of a variable.\
+    \ It can identify the following types:\n\n*   `\"boolean\"`\n*   `\"integer\"\
+    `\n*   `\"double\"`\n*   `\"string\"`\n*   `\"array\"`\n*   `\"object\"`\n*  \
+    \ `\"resource\"`\n*   `\"NULL\"`\n\nIf none of these types correctly describes\
+    \ the variable, `gettype` will return `\"unknown type\"`. Again we see some strange\
+    \ inconsistencies. Firstly, floats are identified as `\"double\"` and null values\
+    \ are returned as `\"NULL\"` (uppercase, in contrast to every other type identifier).\n\
+    \nWe can abstract around this function, with something resembling the following:\n\
+    \n```\n 1 <?php\n\n 3 function type($variable) {\n 4   $type = gettype($variable);\n\
+    \n 6   switch ($type) {\n\n 8     case \"integer\":\n 9     case \"double\":\n\
+    10       return \"number\";\n\n12     case \"NULL\":\n13       return \"null\"\
+    ;\n\n15   }\n\n17   return $type;\n18 }\n\n20 print type(0);    // \"number\"\n\
+    21 print type(.0);   // \"number\"\n22 print type(null); // \"null\"\n```\n\n\
+    What about when the variable contains a callback? In that case, we can use…\n\n\
+    #### Functions\n\nThe `is_callable` function checks to see if something is a callable\
+    \ function, whether it is a string or a anonymous function.\n\n```\n 1 <?php\n\
+    \n 3 print is_callable(\"is_callable\"); // true\n 4 print is_callable(function(){});\
+    \  // true\n 5 print is_callable(null);          // false\n\n 7 class Foo\n 8\
+    \ {\n 9   public function bar()\n10   {\n\n12   }\n\n14   public function identify()\n\
+    15   {\n16     return is_callable([$this, \"bar\"]);\n17   }\n18 }\n\n20 $foo\
+    \ = new Foo();\n\n22 print $foo->identify(); // true\n```\n\nTechnically, `is_callable`\
+    \ identifies a valid argument to any callback-accepting function in PHP. The following\
+    \ are all valid for these kinds of functions:\n\n*   An actual function (`function(){}`)\n\
+    *   An array of context and method name (`[$this, \"bar\"]`)\n*   The name of\
+    \ a function, as a string (`\"is_callable\"`)\n\nDue to how loose this method\
+    \ is, you need to be careful when trying to identify strings and functions in\
+    \ the same resolver function. If you’re using `is_string` and `is_callable` at\
+    \ the same time, your results may differ depending on the order in which these\
+    \ are called.\n\nFor example:\n\n```\n1 $variable = \"is_callable\";\n\n3 if (is_string($variable))\
+    \ {\n4   die(\"variable is a string\");\n5 }\n\n7 if (is_callable($variable))\
+    \ {\n8   die(\"variable is callable\");\n9 }\n```\n\nThe script will terminate\
+    \ with the string `\"variable is a string\"`, because it is a string. But it’s\
+    \ also the name of a callable function, so swapping the conditional statements\
+    \ will make the script terminate in `\"variable is callable\"`.\n\nIf you want\
+    \ to get more specific, then it’s helpful to know that `gettype(function(){})`\
+    \ will return `\"object\"`. In that case, we can do this:\n\n```\n1 <?php\n\n\
+    3 function is_function($variable) {\n4   return is_callable($variable) and gettype($variable)\
+    \ === \"object\";\n5 }\n\n7 print is_function(function(){});  //true\n8 print\
+    \ is_function(\"is_function\"); //false\n9 print is_function(new stdClass);  //false\n\
+    ```\n\n#### Classes\n\nSometimes what we want to do is identify the type of object\
+    \ we’re working with. `gettype` won’t tell us much more than that the variable\
+    \ is an object. We’ll have to combine that with the `get_class` function:\n\n\
+    ```\n 1 <?php\n\n 3 function type($variable) {\n 4   $type = gettype($variable);\n\
+    \n 6   switch ($type) {\n\n 8     case \"integer\":\n 9     case \"double\":\n\
+    10       return \"number\";\n\n12     case \"NULL\":\n13       return \"null\"\
+    ;\n\n15     case \"object\":\n16       return get_class($variable);\n\n18   }\n\
+    \n20   return $type;\n21 }\n\n23 print type(\"foo\"); // \"string\"\n\n25 class\
+    \ Foo\n26 {\n\n28 }\n\n30 $foo = new Foo();\n\n32 print type($foo);         //\
+    \ \"Foo\"\n33 print type(function(){}); // \"Closure\"\n```\n\nWe could further\
+    \ normalise `\"Closure\"` to something like `\"function\"`; if we wanted to treat\
+    \ it with the same gravity as the other types.\n\n#### Regular Expressions\n\n\
+    Since PHP has multiple sets of string functions (one for plain strings and a few\
+    \ for regular expressions), it would be great if we had a way to differentiate\
+    \ between things that look like regular expressions and things that don’t.\n\n\
+    It’s important to differentiate between definitively identifying regular expressions\
+    \ and identifying things that *look like*. Just because something looks like a\
+    \ regular expression doesn’t mean that it is. Nor does it mean that the intention\
+    \ of the author was for it to be a regular expression.\n\nThe PHP documentation\
+    \ (at [http://www.php.net/manual/en/intro.pcre.php](http://www.php.net/manual/en/intro.pcre.php))\
+    \ describes expressions as [a string] enclosed in delimiters. These delimiters\
+    \ can be any non-alphanumeric that aren’t also a backslash or null byte.\n\nWe\
+    \ can cover a large majority of cases, using the following:\n\n```\n 1 <?php\n\
+    \n 3 function is_regex($variable) {\n 4   return @preg_match($regex, \"\") !==\
+    \ false\n 5     && preg_last_error() == PREG_NO_ERROR;\n 6 }\n\n 8 print is_regex(\"\
+    /^.*$/\"); // true\n 9 print is_regex(\"/hello world/\"); // true\n10 print is_regex(\"\
+    /hello world/i\"); // true\n11 print is_regex(\"hello world\"); // false\n12 print\
+    \ is_regex(\"\\\\hello world\\\\\"); // false\n13 print is_regex(\"\\\\x00foo\\\
+    \\x00\"); // false\n14 print is_regex(\"1foo1\"); // false\n15 print is_regex(\"\
+    afooa\"); // false\n```\n\nThe `preg_match` function returns a `1` for a match,\
+    \ `0` for no match and `false` if an error occurred. Assuming `preg_match` returns\
+    \ false, the error could be for any number of reasons (like `PREG_INTERNAL_ERROR`\
+    \ or `PREG_BAD_UTF8_ERROR`). So then we use the `preg_last_error` function to\
+    \ rule out all other errors.\n\nUsing error suppression (`@`) is generally a bad\
+    \ idea. There are very few instances when using it is considered ok. This is one\
+    \ of them!\n\n### Namespace Functions\n\nI’ve spoke a bit about how all these\
+    \ global functions are bad, and there’s a really simple alternative: namespace\
+    \ functions. You’ve probably used namespaces, for classes, but the same constructs\
+    \ work well to isolate functions:\n\n```\n 1 <?php\n\n 3 namespace Type\\String\
+    \ {\n 4   function length($string) {\n 5     return strlen($string);\n 6   }\n\
+    \ 7 }\n\n 9 namespace {\n10   print Type\\String\\length(\"Hello World\");\n11\
+    \ }\n```\n\n#### Composer Autoload\n\nThis kind of function definition doesn’t\
+    \ follow normal autoload patterns. In order to have Composer autoload these kinds\
+    \ of files is to explicitly define which files should be loaded:\n\n```\n1 {\n\
+    2   \"autoload\" : {\n3     \"files\" : [\n4       \"namespace-functions.php\"\
+    \n5     ]\n6   }\n7 }\n```\n\nFollowing this, we’ll have to dump the old autoloader,\
+    \ with:\n\n```\n1 $ composer dump-autoload\n\n3 Generating autoload files\n```\n\
+    \nThe files (containing namespace functions) will now be automatically loaded,\
+    \ wherever the Composer autoloader is used.\n\n#### Future Goodies\n\nPHP 5.6\
+    \ supports the `use function` construct, to import functions from other namespaces.\
+    \ It’s currently in beta (at the time of writing), but this feature is right up\
+    \ our proverbial alley.\n\nIn the meantime, it’s possible to partially import\
+    \ functions:\n\n```\n1 use Type\\String;\n\n3 print String\\length(\"Hello World\"\
+    );\n```\n\nThis is especially useful for deeply-nested namespace designs. Still;\
+    \ it’s great to be able to omit even a little of the full namespace. The result\
+    \ is clean(er), non-colliding procedural code.\n\n### Conclusion\n\nEven today,\
+    \ it’s possible to create a cleaner scalar type system/abstraction. We don’t need\
+    \ special extensions, or compilation steps. Just a little bit of work will clean\
+    \ the code right up.\n\nHaving said that, extensions can go a long way towards\
+    \ making our lives easier, while still allowing the level of customisation and\
+    \ unity that we are hoping to achieve. We’ll look at a few of these in the following\
+    \ chapter…\n\n## Extensions"
+  trans: "\n#### 标量类型\n\n`gettype()` 函数用于返回变量的数据类型。它可以识别以下类型：\n\n- `\"boolean\"`\n\
+    - `\"integer\"`\n- `\"double\"`\n- `\"string\"`\n- `\"array\"`\n- `\"object\"\
+    `\n- `\"resource\"`\n- `\"NULL\"`\n\n如果这些类型都不能正确描述该变量，`gettype()` 将返回 `\"unknown\
+    \ type\"`。我们再次看到一些奇怪的不一致之处。首先，浮点数被识别为 `\"double\"`，而空值则返回为 `\"NULL\"`（大写形式，与其他所有类型标识符形成对比）。\n\
+    \n我们可以通过类似下面的代码来对这个函数进行抽象：\n\n```php\n<?php\n\nfunction type($variable) {\n  $type\
+    \ = gettype($variable);\n\n  switch ($type) {\n\n    case \"integer\":\n    case\
+    \ \"double\":\n      return \"number\";\n\n    case \"NULL\":\n      return \"\
+    null\";\n\n  }\n\n  return $type;\n}\n\nprint type(0);    // \"number\"\nprint\
+    \ type(.0);   // \"number\"\nprint type(null); // \"null\"\n```\n\n当变量包含一个回调时该怎么办？这种情况下，我们可以使用……\n\
+    \n#### 函数\n\n`is_callable()` 函数用于检查某个东西是否是一个可调用的函数，无论它是字符串还是匿名函数。\n\n```php\n\
+    <?php\n\nprint is_callable(\"is_callable\"); // true\nprint is_callable(function(){});\
+    \  // true\nprint is_callable(null);          // false\n\nclass Foo\n{\n  public\
+    \ function bar()\n  {\n\n  }\n\n  public function identify()\n  {\n    return\
+    \ is_callable([$this, \"bar\"]);\n  }\n}\n\n$foo = new Foo();\n\nprint $foo->identify();\
+    \ // true\n```\n\n从技术上讲，`is_callable()` 识别的是 PHP 中任何接受回调的函数的有效参数。对于这类函数来说，以下形式都是有效的：\n\
+    \n- 一个实际的函数（`function(){}`）\n- 一个包含上下文和方法名的数组（`[$this, \"bar\"]`）\n- 一个函数名，以字符串形式提供（`\"\
+    is_callable\"`）\n\n由于这个方法比较宽松，在同一个解析器函数中尝试识别字符串和函数时需要格外小心。如果你同时使用 `is_string()`\
+    \ 和 `is_callable()`，最终的结果可能会因为这两者的调用顺序不同而不同。\n\n例如：\n\n```php\n$variable = \"\
+    is_callable\";\n\nif (is_string($variable)) {\n  die(\"variable is a string\"\
+    );\n}\n\nif (is_callable($variable)) {\n  die(\"variable is callable\");\n}\n\
+    ```\n\n该脚本会以字符串 `\"variable is a string\"` 终止，因为它是一个字符串。但它同时也是一个可调用函数的名称，所以如果交换这两个条件语句的顺序，脚本将以\
+    \ `\"variable is callable\"` 终止。\n\n如果你想更具体地判断一下，那么了解一下 `gettype(function(){})`\
+    \ 会返回 `\"object\"` 会很有帮助。在这种情况下，我们可以这样做：\n\n```php\n<?php\n\nfunction is_function($variable)\
+    \ {\n  return is_callable($variable) and gettype($variable) === \"object\";\n\
+    }\n\nprint is_function(function(){});  //true\nprint is_function(\"is_function\"\
+    ); //false\nprint is_function(new stdClass);  //false\n```\n\n#### 类\n\n有时我们想要做的是识别出我们正在处理的对象类型。`gettype()`\
+    \ 只会告诉我们变量是一个对象，而无法提供更多信息。我们需要将其与 `get_class()` 函数结合使用：\n\n```php\n<?php\n\nfunction\
+    \ type($variable) {\n  $type = gettype($variable);\n\n  switch ($type) {\n\n \
+    \   case \"integer\":\n    case \"double\":\n      return \"number\";\n\n    case\
+    \ \"NULL\":\n      return \"null\";\n\n    case \"object\":\n      return get_class($variable);\n\
+    \n  }\n\n  return $type;\n}\n\nprint type(\"foo\"); // \"string\"\n\nclass Foo\n\
+    {\n\n}\n\n$foo = new Foo();\n\nprint type($foo);         // \"Foo\"\nprint type(function(){});\
+    \ // \"Closure\"\n```\n\n我们可以进一步将 `\"Closure\"` 规范化为类似 `\"function\"` 的形式；前提是我们希望像对待其他类型一样，以同样的重视程度来处理它。\n\
+    \n#### 正则表达式\n\n由于 PHP 有多套字符串函数（一套用于普通字符串，几套用于正则表达式），如果我们能有一种方法来区分看起来像正则表达式的东西和看起来不像的东西，那就太好了。\n\
+    \n明确区分“确定是正则表达式”和“看起来像”非常重要。仅仅因为某个东西看起来像正则表达式，并不意味着它就是一个正则表达式，也不代表作者的意图就是让它成为正则表达式。\n\
+    \nPHP 文档（位于 [`www.php.net/manual/en/intro.pcre.php`](http://www.php.net/manual/en/intro.pcre.php)）将表达式描述为[一个字符串]被包含在定界符中。这些定界符可以是任何非字母数字字符，只要不是反斜杠或空字节即可。\n\
+    \n我们可以使用以下代码覆盖绝大多数情况：\n\n```php\n<?php\n\nfunction is_regex($variable) {\n  return\
+    \ @preg_match($regex, \"\") !== false\n    && preg_last_error() == PREG_NO_ERROR;\n\
+    }\n\nprint is_regex(\"/^.*$/\"); // true\nprint is_regex(\"/hello world/\"); //\
+    \ true\nprint is_regex(\"/hello world/i\"); // true\nprint is_regex(\"hello world\"\
+    ); // false\nprint is_regex(\"\\\\hello world\\\\\"); // false\nprint is_regex(\"\
+    \\\\x00foo\\\\x00\"); // false\nprint is_regex(\"1foo1\"); // false\nprint is_regex(\"\
+    afooa\"); // false\n```\n\n`preg_match()` 函数在匹配成功时返回 `1`，没有匹配时返回 `0`，如果发生错误则返回\
+    \ `false`。假设 `preg_match()` 返回 `false`，错误可能有多种原因（例如 `PREG_INTERNAL_ERROR` 或 `PREG_BAD_UTF8_ERROR`）。因此，我们使用\
+    \ `preg_last_error()` 函数来排除所有其他错误。\n\n使用错误抑制符（`@`）通常是个坏主意。只有极少数情况下认为使用它是可以接受的。这就是其中之一！\n\
+    \n### 命名空间函数\n\n我之前谈到过所有这种全局函数都不好，其实有一个非常简单替代方案：命名空间函数。你可能已经将命名空间用于类，同样的结构也可以很好地用于隔离函数：\n\
+    \n```php\n<?php\n\nnamespace Type\\String {\n  function length($string) {\n  \
+    \  return strlen($string);\n  }\n}\n\nnamespace {\n  print Type\\String\\length(\"\
+    Hello World\");\n}\n```\n\n#### Composer 自动加载\n\n这种函数定义方式不遵循常规的自动加载模式。要让 Composer\
+    \ 自动加载这类文件，需要明确指定哪些文件需要被加载：\n\n```json\n{\n  \"autoload\" : {\n    \"files\" :\
+    \ [\n      \"namespace-functions.php\"\n    ]\n  }\n}\n```\n\n接下来，我们需要转储旧的自动加载器，命令如下：\n\
+    \n```\n$ composer dump-autoload\n\nGenerating autoload files\n```\n\n现在，只要使用了\
+    \ Composer 自动加载器，这些包含命名空间函数的文件就会被自动加载。\n\n#### 未来的便利功能\n\nPHP 5.6 支持 `use function`\
+    \ 结构，用于从其他命名空间导入函数。在撰写本文时，该功能仍处于测试阶段，但这一特性正好符合我们一直以来的期望。\n\n在此期间，也可以部分导入函数：\n\n\
+    ```php\nuse Type\\String;\n\nprint String\\length(\"Hello World\");\n```\n\n这对于深度嵌套的命名空间设计尤其有用。即使只是能省略完整命名空间的一小部分，也仍然很棒。结果就是更清晰、无冲突的面向过程代码。\n\
+    \n### 结论\n\n即使在今天，创建更清晰的标量类型系统/抽象也是可能的。我们不需要特殊的扩展或编译步骤。只需要一点点工作就可以让代码变得清晰。\n\n\
+    话虽如此，扩展仍然能在很大程度上让我们的工作更轻松，同时仍然允许我们实现所期望的自定义程度和统一性。我们将在下一章中探讨其中的几个……\n\n## 扩展\n"
+- fmt: '### Vagrant + Phansible
+
+
+    Many of the libraries we will be working with require a bit of special installation.
+    Instead of labouring away at a guide for each operating system, we’re going to
+    look at using `Vagrant` for our development environment.
+
+
+    `Vagrant` (in case you haven’t heard of it yet) is a programatic interface for
+    managing virtual machines. If you’ve ever set up a virtual machine, installed
+    the operating system, installed the development tools, you will know how much
+    time it takes to do well. This process can be automated with `Vagrant`.
+
+
+    `Vagrant` depends on underlying virtualisation providers and provisioners. We’ll
+    look at using `VirtualBox` as the virtualisation provider and `Ansible` as the
+    provisioner.
+
+
+    #### Installing
+
+
+    To get `VirtualBox` installed, go to [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+    and download the installer for your operating system.
+
+
+    ![](images/virtualbox-download.png) ![](images/virtualbox-install.png)
+
+
+    Once you have downloaded and installed `VirtualBox`, you should be able to install
+    `Vagrant`. Go to [http://www.vagrantup.com/downloads.html](http://www.vagrantup.com/downloads.html)
+    and download the installer for your operating system.
+
+
+    ![](images/vagrant-download.png) ![](images/vagrant-install.png)
+
+
+    We’ll also need to install `Ansible` so we can use play books to provision the
+    virtual machine. Go to [http://docs.ansible.com/intro_installation.html](http://docs.ansible.com/intro_installation.html)
+    and download the installer for your operating system.
+
+
+    ![](images/ansible-download.png)
+
+
+    #### Provisioning
+
+
+    Provisioning is just another word for a set of instructions that tell `Vagrant`
+    which dependencies to install for you. There are many kinds of `Vagrant` provisioners,
+    but the only one we will use is called `Ansible`.
+
+
+    We’ll use [http://phansible.com](http://phansible.com) to do most of the heavy-lifting.
+
+
+    ![](images/phansible.png)
+
+
+    Set the following options:
+
+
+    1.  Operating System: `Ubuntu Precise Pangolin 64`
+
+    2.  Webserver: `Nginx + PHP5-FPM`
+
+    3.  PHP: `5.5`
+
+    4.  Composer: `Enabled`
+
+    5.  PHP Modules: `php-pear php5-cli php5-common`
+
+
+    When you click “Generate”, you’ll start downloading an archive of files. Extract
+    these into a working directory and start up Terminal.
+
+
+    These files are instruction files (Ansible-specific YAML syntax) which describe
+    which dependencies `Vagrant` must automatically install. You shouldn’t need to
+    change them to get the `PHP` stack working, but feel free to familiarise yourself
+    with what they are doing.
+
+
+    To start the virtual machine, run the following command:
+
+
+    ```
+
+    $ vagrant up
+
+    ```
+
+
+    You may be asked to provide an administrator password, as part of setting up the
+    virtual machine. This will allow the `NFS` shared folders to be set up.
+
+
+    Once the virtual machine is initialised, you can log into it with:
+
+
+    ```
+
+    $ vagrant ssh
+
+    ```
+
+
+    You can also check the installed version of `PHP` (and that the `CLI` was installed
+    correctly) with:
+
+
+    ```
+
+    $ php -v
+
+    ```
+
+
+    #### Vagrant Commands
+
+
+    There are a few `Vagrant` commands you’re likely to use often:
+
+
+    ```
+
+    $ vagrant up
+
+    ```
+
+
+    This command will start the `Vagrant` virtual machine, and run any outstanding
+    provisioning. That means the first time you run this command, it will take longer
+    to boot (depending on the complexity of your provisioning scripts).
+
+
+    ```
+
+    $ vagrant halt
+
+    ```
+
+
+    This command will shut the virtual machine down. It will try to gracefully shut
+    the machine down.
+
+
+    ```
+
+    $ vagrant destroy
+
+    ```
+
+
+    This command will remove the virtual machine and clean up settings applied when
+    it was created. If you break something inside the virtual machine, and you want
+    to reset it to the default state, you’ll want to run this command followed by
+    `vagrant up`.
+
+
+    ```
+
+    $ vagrant ssh
+
+    ```
+
+
+    This command will take you inside the virtual machine, just as if you were connecting
+    to a remote server. Inside the virtual machine, you can run any of the commands
+    usually supported by the guest operating system, including executing `PHP` scripts
+    against the packages installed on the virtual machine.
+
+
+    [http://phansible.com](http://phansible.com) is the brain-child of [Erika Heidi](https://twitter.com/erikaheidi).
+    She is also the author of [Vagrant Cookbook](https://leanpub.com/vagrantcookbook).
+    I highly recommend reading this book, if you have any questions or simply want
+    to know more about `Vagrant`!'
+  raw: '### Vagrant + Phansible
+
+
+    Many of the libraries, we will be working with, require a bit of special installation.
+    Instead of labouring away at a guide for each operating system, we’re going to
+    look at using Vagrant for our development environment.
+
+
+    Vagrant (in case you haven’t heard of it yet) is a programatic interface for managing
+    virtual machines. If you’ve ever set up a virtual machine, installed the operating
+    system, installed the development tools, you will know how much time it takes
+    to do well. This process can be automated with Vagrant.
+
+
+    Vagrant depends on underlying virtualisation providers and provisioners. We’ll
+    look at using VirtualBox as the virtualisation provider and Ansible as the provisioner.
+
+
+    #### Installing
+
+
+    To get VirtualBox installed, go to [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
+    and download the installer for your operating system.
+
+
+    ![](images/virtualbox-download.png) ![](images/virtualbox-install.png)
+
+
+    Once you have downloaded and installed VirtualBox, you should be able to install
+    Vagrant. Go to [http://www.vagrantup.com/downloads.html](http://www.vagrantup.com/downloads.html)
+    and download the installer for your operating system.
+
+
+    ![](images/vagrant-download.png) ![](images/vagrant-install.png)
+
+
+    We’ll also need to install Ansible so we can use play books to provision the virtual
+    machine. Go to [http://docs.ansible.com/intro_installation.html](http://docs.ansible.com/intro_installation.html)
+    and download the installer for your operating system.
+
+
+    ![](images/ansible-download.png)
+
+
+    #### Provisioning
+
+
+    Provisioning is just another word for a set of instructions that tell Vagrant
+    which dependencies to install for you. There are many kinds of Vagrant provisioners,
+    but the only one we will use is called Ansible.
+
+
+    We’ll use [http://phansible.com](http://phansible.com) to do most of the heavy-lifting.
+
+
+    ![](images/phansible.png)
+
+
+    Set the following options:
+
+
+    1.  Operating System: Ubuntu Precise Pangolin 64
+
+    2.  Webserver: Nginx + PHP5-FPM
+
+    3.  PHP: 5.5
+
+    4.  Composer: Enabled
+
+    5.  PHP Modules: php-pear php5-cli php5-common
+
+
+    When you click “Generate”, you’ll start downloading an archive of files. Extract
+    these into a working directory and start up Terminal.
+
+
+    These files are instruction files (Ansible-specific YAML syntax) which describe
+    which dependencies Vagrant must automatically install. You shouldn’t need to change
+    them to get the PHP stack working, but feel free to familiarise yourself with
+    what they are doing.
+
+
+    To start the virtual machine, run the following command:
+
+
+    ```
+
+    1 $ vagrant up
+
+
+    3 Bringing machine ''default'' up with ''virtualbox'' provider...
+
+    4 ==> default: Importing base box ''precise64''...
+
+    5 ==> default: Matching MAC address for NAT networking...
+
+    6 ==> default: Setting the name of the VM: Default
+
+    7 ==> default: Clearing any previously set network interfaces...
+
+    ```
+
+
+    You may be asked to provide an administrator password, as part of setting up the
+    virtual machine. This will allow the NFS shared folders to be set up.
+
+
+    Once the virtual machine is initialised, you can log into it with:
+
+
+    ```
+
+    1 $ vagrant ssh
+
+
+    3 Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+
+    5  * Documentation:  https://help.ubuntu.com/
+
+    6 Welcome to your Vagrant-built virtual machine.
+
+    7 Last login: Tue May 27 11:16:05 2014 from 10.0.2.2
+
+
+    9 vagrant@precise64:~$
+
+    ```
+
+
+    You can also check the installed version of PHP (and that the CLI was installed
+    correctly) with:
+
+
+    ```
+
+    1 $ php -v
+
+
+    3 PHP 5.5.12-2+deb.sury.org~precise+1 (cli) (built: May 12 2014 13:46:35)
+
+    4 Copyright (c) 1997-2014 The PHP Group
+
+    5 Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
+
+    6     with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2014, by Zend Technologies
+
+    ```
+
+
+    #### Vagrant Commands
+
+
+    There are a few Vagrant commands you’re likely to use often:
+
+
+    ```
+
+    1 $ vagrant up
+
+    ```
+
+
+    This command will start the Vagrant virtual machine, and run any outstanding provisioning.
+    That means the first time you run this command, it will take longer boot (depending
+    on the complexity of your provisioning scripts).
+
+
+    ```
+
+    1 $ vagrant halt
+
+    ```
+
+
+    This command will shut the virtual machine down. It will try to gracefully shut
+    the machine down.
+
+
+    ```
+
+    1 $ vagrant destroy
+
+    ```
+
+
+    This command will remove the virtual machine and clean up settings applied when
+    it was created. If you break something inside the visual machine, and you want
+    to *reset* it to the default state, you’ll want to run this command followed by
+    `vagrant up`.
+
+
+    ```
+
+    1 $ vagrant ssh
+
+    ```
+
+
+    This command will take you inside the virtual machine, just as if you were connecting
+    to a remote server. Inside the virtual machine, you can run any of the commands
+    usually supported by the guest operating system, including executing PHP scripts
+    against the packages installed on the virtual machine.
+
+
+    [http://phansible.com](http://phansible.com) is the brain-child of [Erika Heidi](https://twitter.com/erikaheidi).
+    She is also the author of [Vagrant Cookbook](https://leanpub.com/vagrantcookbook).
+    I highly recommend reading this book, if you have any questions or simply want
+    to know more about Vagrant!'
+  trans: '
+
+    ### Vagrant + Phansible
+
+
+    我们要使用的许多库都需要一些特殊的安装步骤。为了避免针对每个操作系统编写冗长的指南，我们将改用 `Vagrant` 来搭建开发环境。
+
+
+    `Vagrant`（如果你还没听说过的话）是一个用于管理虚拟机的程序化接口。如果你曾经设置过虚拟机、安装过操作系统和开发工具，就会知道这需要花费多少时间。而这个过程可以通过
+    `Vagrant` 实现自动化。
+
+
+    `Vagrant` 依赖于底层的虚拟化提供商和配置管理工具。我们将使用 `VirtualBox` 作为虚拟化提供商，并使用 `Ansible` 作为配置管理工具。
+
+
+    #### 安装
+
+
+    要安装 `VirtualBox`，请访问 [`www.virtualbox.org/wiki/Downloads`](https://www.virtualbox.org/wiki/Downloads)
+    并下载适用于你操作系统的安装程序。
+
+
+    ![](img/virtualbox-download.png) ![](img/virtualbox-install.png)
+
+
+    下载并安装 `VirtualBox` 后，你就可以安装 `Vagrant` 了。访问 [`www.vagrantup.com/downloads.html`](http://www.vagrantup.com/downloads.html)
+    并下载适用于你操作系统的安装程序。
+
+
+    ![](img/vagrant-download.png) ![](img/vagrant-install.png)
+
+
+    我们还需要安装 `Ansible`，以便使用 playbooks 来配置虚拟机。访问 [`docs.ansible.com/intro_installation.html`](http://docs.ansible.com/intro_installation.html)
+    并下载适用于你操作系统的安装程序。
+
+
+    ![](img/ansible-download.png)
+
+
+    #### 配置
+
+
+    配置（Provisioning）不过是指一组指令，告诉 `Vagrant` 为你安装哪些依赖项。`Vagrant` 有多种配置工具，但我们只会用到 `Ansible`。
+
+
+    我们将使用 [`phansible.com`](http://phansible.com) 来完成大部分繁重的工作。
+
+
+    ![](img/phansible.png)
+
+
+    设置以下选项：
+
+
+    1.  操作系统：`Ubuntu Precise Pangolin 64`
+
+    2.  Web 服务器：`Nginx + PHP5-FPM`
+
+    3.  PHP：`5.5`
+
+    4.  Composer：`启用`
+
+    5.  PHP 模块：`php-pear php5-cli php5-common`
+
+
+    点击“Generate”后，你将开始下载一个压缩文件。将其解压到一个工作目录中，然后启动终端。
+
+
+    这些文件是指令文件（使用 Ansible 特定的 YAML 语法），描述了 `Vagrant` 必须自动安装哪些依赖项。为了让 `PHP` 环境正常运行，你无需修改它们，但欢迎你熟悉一下它们的功能。
+
+
+    要启动虚拟机，请运行以下命令：
+
+
+    ```
+
+    $ vagrant up
+
+    ```
+
+
+    在设置虚拟机的过程中，可能会要求你提供管理员密码。这将允许设置 `NFS` 共享文件夹。
+
+
+    虚拟机初始化后，你可以通过以下命令登录：
+
+
+    ```
+
+    $ vagrant ssh
+
+    ```
+
+
+    你还可以通过以下命令检查已安装的 `PHP` 版本（并确认 `CLI` 已正确安装）：
+
+
+    ```
+
+    $ php -v
+
+    ```
+
+
+    #### Vagrant 命令
+
+
+    有几个你可能会经常用到的 `Vagrant` 命令：
+
+
+    ```
+
+    $ vagrant up
+
+    ```
+
+
+    此命令将启动 `Vagrant` 虚拟机，并运行任何未完成的配置。这意味着第一次运行此命令时，启动时间会更长（取决于配置脚本的复杂程度）。
+
+
+    ```
+
+    $ vagrant halt
+
+    ```
+
+
+    此命令将关闭虚拟机。它会尝试优雅地关闭机器。
+
+
+    ```
+
+    $ vagrant destroy
+
+    ```
+
+
+    此命令将移除虚拟机并清除创建时应用的设置。如果你在虚拟机内部弄坏了某些东西，并希望将其重置为默认状态，你需要先运行此命令，然后运行 `vagrant up`。
+
+
+    ```
+
+    $ vagrant ssh
+
+    ```
+
+
+    此命令将带你进入虚拟机内部，就像你连接到一个远程服务器一样。在虚拟机内部，你可以运行客户操作系统通常支持的任何命令，包括针对虚拟机上安装的软件包执行 `PHP`
+    脚本。
+
+
+    [`phansible.com`](http://phansible.com) 是 [Erika Heidi](https://twitter.com/erikaheidi)
+    的杰作。她也是《Vagrant Cookbook》([Vagrant Cookbook](https://leanpub.com/vagrantcookbook))的作者。如果你有任何疑问，或者只是想了解更多关于
+    `Vagrant` 的知识，我强烈推荐阅读这本书！
+
+    '
+- fmt: "### SPL Types\n\n`SPL` (or Standard PHP Library) is a library of additional\
+    \ types to augment those native to core PHP. There are some popular classes (like\
+    \ `LogicException` and `ArrayObject`). Some of the `SPL` ships with *standard*\
+    \ PHP installations. The parts we’re going to look at shortly do not…\n\nYou can\
+    \ find these mystery libraries at **http://www.php.net/manual/en/book.spl-types.php**.\n\
+    \nThis section assumes you’re using the Vagrant box explained earlier. If not,\
+    \ please set that up first. These commands are Linux-specific and depend on the\
+    \ pre-installed modules explained earlier.\n\n#### Installing SPL Types\n\nTo\
+    \ install them, run the following commands:\n\n```\n1 $ sudo apt-get install libpcre3-dev\
+    \ php5-dev\n\n3 Reading package lists... Done\n4 Building dependency tree\n5 Reading\
+    \ state information... Done\n6 The following extra packages will be installed:\n\
+    7   autoconf automake autotools-dev build-essential...\n```\n\n```\n1 $ sudo pecl\
+    \ install SPL_Types\n\n3 downloading SPL_Types-0.4.0.tgz ...\n4 Starting to download\
+    \ SPL_Types-0.4.0.tgz (8,388 bytes)\n5 .....done: 8,388 bytes\n6 6 source files,\
+    \ building\n7 running: phpize...\n```\n\nThese two commands install the pre-requisites\
+    \ for compiling `PECL` extensions. `PECL` is a repository just like `PEAR`. If\
+    \ you’ve heard of neither, then don’t worry. All you need to know is that the\
+    \ `SPL` Types are hosted here, so to install them we need to be able to compile\
+    \ `PECL` extensions.\n\n```\n1 $ sudo bash -c \"echo extension=spl_types.so >>\
+    \ /etc/php5/cli/php.ini\"\n```\n\nThis command appends `extension=spl_types.so`\
+    \ to the `php.ini` file (as per the installation instructions).\n\n```\n1 $ sudo\
+    \ service php5-fpm restart\n\n3 php5-fpm stop/waiting\n4 php5-fpm start/running,\
+    \ process...\n```\n\nThis command restarts `PHP-FPM` - the process that interprets\
+    \ PHP command line instructions and `Nginx` web requests. These commands should\
+    \ have installed the `SPL` Types, but just to be sure, run the following command:\n\
+    \n```\n1 $ php -i | grep SPL_Types\n2 SPL_Types\n```\n\nIf you see that `SPL_Types`\
+    \ line, then you should be good to go!\n\n#### Using SPL Types\n\nLet’s look at\
+    \ a few examples of how these classes can be used:\n\n```\n 1 <?php\n\n 3 class\
+    \ NumberType extends SplFloat\n 4 {\n 5   /**\n 6    * @return float\n 7    */\n\
+    \ 8   public function toInteger()\n 9   {\n10     return round($this);\n11   }\n\
+    \n13   /**\n14    * @return string\n15    */\n16   public function toString()\n\
+    17   {\n18     return (string) $this;\n19   }\n20 }\n\n22 $number = new NumberType(13.86);\n\
+    \n24 print $number->toInteger(); // 14\n25 print $number->toString();  // \"13.86\"\
+    \n\n27 print (float) $number + 1.00; // 14.86\n28 print $number * 12;        \
+    \   // 156\n```\n\nThe `toInteger` and `toString` methods do similar things to\
+    \ the box classes. The magic happens when we do basic arithmetic with the `$number`\
+    \ object. `SPL` Types are automatically unboxed when they are used in arithmetic\
+    \ expressions, or cast or concatenated. Any operator that would normally with\
+    \ with a scalar type will work with the corresponding `SPL` Type.\n\nHere’s another\
+    \ example:\n\n```\n 1 <?php\n\n 3 class StringType extends SplString\n 4 {\n 5\
+    \   /**\n 6    * @param int   $start\n 7    * @param mixed $length\n 8    *\n\
+    \ 9    * @return StringType\n10    */\n11   public function slice($start = 0,\
+    \ $length = null)\n12   {\n13     if ($length === null) {\n14       return new\
+    \ static(substr($this, $start));\n15     }\n\n17     return new static(substr($this,\
+    \ $start, $length));\n18   }\n19 }\n\n21 $string = new StringType(\"Hello World\"\
+    );\n\n23 print $string->slice(6); // \"World\"\n```\n\nWe can design our types\
+    \ so that they return new instances. This gives us a simple *chaining* interface.\n\
+    \nBe careful when assuming the return type of native PHP functions. Be sure to\
+    \ check them before the call to `new static()` or you may encounter fatal errors.\n\
+    \n### Scalar Objects\n\n[Nikita Popov](https://twitter.com/nikita_ppv) is a prolific\
+    \ contributor to PHP (both core and user-land). He’s made libraries such as [PHP-Parser](https://github.com/nikic/PHP-Parser)\
+    \ which is used all over the web, and in popular frameworks (like [Laravel](http://laravel.com)).\
+    \ He’s championed many multiple RFCs, which have become parts of core PHP.\n\n\
+    He’s also created a custom extension which allows the registration of custom type\
+    \ handlers. You can find it at [https://github.com/nikic/scalar_objects](https://github.com/nikic/scalar_objects).\n\
+    \nWe’re going to install and use this module to get even closer to our ideal type\
+    \ handling situation…\n\nThis section assumes you’re using the Vagrant box explained\
+    \ earlier. If not, please set that up first. These commands are Linux-specific\
+    \ and depend on the pre-installed modules explained earlier.\n\n#### Installing\
+    \ Scalar Objects\n\nFirst up, we need to install the `Git` command-line tool:\n\
+    \n```\n1 $ sudo apt-get install git\n\n3 Reading package lists... Done\n4 Building\
+    \ dependency tree\n5 Reading state information... Done\n6 The following extra\
+    \ packages will be installed:\n7   git-man liberror-perl...\n```\n\nFollowing\
+    \ this, we can clone and build the extension:\n\n```\n1 $ git clone https://github.com/nikic/scalar_objects.git\n\
+    \n3 Cloning into 'scalar_objects'...\n4 remote: Reusing existing pack: 213, done.\n\
+    5 remote: Total 213 (delta 0), reused 0 (delta 0)\n6 Receiving objects: 100% (213/213),\
+    \ 75.36 KiB, done.\n7 Resolving deltas: 100% (112/112), done.\n```\n\n```\n1 $\
+    \ cd scalar_objects && phpize && ./configure && make && sudo make install\n```\n\
+    \nThese commands will install the Scalar Objects extension, but we still need\
+    \ to add it to the configuration: `$ sudo bash -c \"echo extension=scalar_objects.so\
+    \ >> /etc/php5/cli/php.ini\"`\n\nThis command resembles the one we used to install\
+    \ the `SPL` Types. We’re essentially doing the same thing, so we need to restart\
+    \ `PHP5-FPM`:\n\n```\n1 $ sudo service php5-fpm restart\n\n3 php5-fpm stop/waiting\n\
+    4 php5-fpm start/running, process...\n```\n\nThis should complete the process\
+    \ of installing the Scalar Objects extension, but we can make sure it’s working\
+    \ by running the following command:\n\n```\n1 $ php -i | grep scalar\n\n3 scalar_objects\n\
+    4 scalar-objects support => enabled\n```\n\n#### Using Scalar Objects\n\nThe new\
+    \ extension adds a method we can use to register these type handlers. This is\
+    \ how you we can use it:\n\n```\n 1 <?php\n\n 3 class StringHandler\n 4 {\n 5\
+    \   /**\n 6    * @param int   $start\n 7    * @param mixed $length\n 8    *\n\
+    \ 9    * @return StringType\n10    */\n11   public function slice($start = 0,\
+    \ $length = null)\n12   {\n13     if ($length === null) {\n14       return substr($this,\
+    \ $start);\n15     }\n\n17     return substr($this, $start, $length);\n18   }\n\
+    19 }\n\n21 register_primitive_type_handler(\"string\", \"StringHandler\");\n\n\
+    23 $string = \"Hello World\";\n\n25 print $string->slice(6); // \"World\"\n```\n\
+    \nThis is easier than boxing scalar types, as we don’t have to pull *native* types\
+    \ out of class instances. This is easier than `SPL` Types, as we don’t have to\
+    \ put *native* types into class instances.\n\nThere are seven supported types:\n\
+    \n*   `null`\n*   `bool`\n*   `int`\n*   `float`\n*   `string`\n*   `array`\n\
+    *   `resource`\n\nYou may be wondering whether this extension plays nicely with\
+    \ `SPL` Types. The answer is *probably not*. You shouldn’t mix these extensions\
+    \ and since the Scalar Objects extension does everything `SPL` Types you shouldn’t\
+    \ need both.\n\n### Zephir\n\n`Zephir` is a framework for writing compilable and\
+    \ installable PHP extensions, using a PHP superset language sharing some similarity\
+    \ with C code. `Zephir` isn’t strictly a PHP extension, nor are Zephir libraries\
+    \ written in true PHP.\n\nIt’s part of the same collective from which the `Phalcon`\
+    \ framework comes, and `Phalcon` is itself a PHP extension. This should get interesting!"
+  raw: "### SPL Types\n\nSPL (or Standard PHP Library) is a library of additional\
+    \ types to augment those native to core PHP. There are some popular classes (like\
+    \ `LogicException` and `ArrayObject`). Some of the SPL ships with *standard* PHP\
+    \ installations. The parts we’re going to look at shortly do not…\n\nYou can find\
+    \ these mystery libraries at **http://www.php.net/manual/en/book.spl-types.php**\n\
+    \nThis section assumes you’re using the Vagrant box explained earlier. If not,\
+    \ please set that up first. These commands are Linux-specific and depend on the\
+    \ pre-installed modules explained earlier.\n\n#### Installing SPL Types\n\nTo\
+    \ install them, run the following commands:\n\n```\n1 $ sudo apt-get install libpcre3-dev\
+    \ php5-dev\n\n3 Reading package lists... Done\n4 Building dependency tree\n5 Reading\
+    \ state information... Done\n6 The following extra packages will be installed:\n\
+    7   autoconf automake autotools-dev build-essential...\n```\n\n```\n1 $ sudo pecl\
+    \ install SPL_Types\n\n3 downloading SPL_Types-0.4.0.tgz ...\n4 Starting to download\
+    \ SPL_Types-0.4.0.tgz (8,388 bytes)\n5 .....done: 8,388 bytes\n6 6 source files,\
+    \ building\n7 running: phpize...\n```\n\nThese two commands install the pre-requisites\
+    \ for compiling PECL extensions. PECL is a repository just like PEAR. If you’ve\
+    \ heard of neither, then don’t worry. All you need to know is that the SPL Types\
+    \ are hosted here, so to install them we need to be able to compile PECL extensions.\n\
+    \n```\n1 $ sudo bash -c \"echo extension=spl_types.so >> /etc/php5/cli/php.ini\"\
+    \n```\n\nThis command appends `extension=spl_types.so` to the `php.ini` file (as\
+    \ per the installation instructions).\n\n```\n1 $ sudo service php5-fpm restart\n\
+    \n3 php5-fpm stop/waiting\n4 php5-fpm start/running, process...\n```\n\nThis command\
+    \ restarts PHP-FPM - the process that interprets PHP command line instructions\
+    \ and Nginx web requests. These commands should have installed the SPL Types,\
+    \ but just to be sure, run the following command:\n\n```\n1 $ php -i | grep SPL_Types\n\
+    2 SPL_Types\n```\n\nIf you see that `SPL_Types` line, then you should be good\
+    \ to go!\n\n#### Using SPL Types\n\nLet’s look at a few examples of how these\
+    \ classes can be used:\n\n```\n 1 <?php\n\n 3 class NumberType extends SplFloat\n\
+    \ 4 {\n 5   /**\n 6    * @return float\n 7    */\n 8   public function toInteger()\n\
+    \ 9   {\n10     return round($this);\n11   }\n\n13   /**\n14    * @return string\n\
+    15    */\n16   public function toString()\n17   {\n18     return (string) $this;\n\
+    19   }\n20 }\n\n22 $number = new NumberType(13.86);\n\n24 print $number->toInteger();\
+    \ // 14\n25 print $number->toString();  // \"13.86\"\n\n27 print (float) $number\
+    \ + 1.00; // 14.86\n28 print $number * 12;           // 156\n```\n\nThe `toInteger`\
+    \ and `toString` methods do similar things to the box classes. The magic happens\
+    \ when we do basic arithmetic with the $number object. SPL Types are automatically\
+    \ unboxed when they are used in arithmetic expressions, or cast or concatenated.\
+    \ Any operator that would normally with with a scalar type will work with the\
+    \ corresponding SPL Type.\n\nHere’s another example:\n\n```\n 1 <?php\n\n 3 class\
+    \ StringType extends SplString\n 4 {\n 5   /**\n 6    * @param int   $start\n\
+    \ 7    * @param mixed $length\n 8    *\n 9    * @return StringType\n10    */\n\
+    11   public function slice($start = 0, $length = null)\n12   {\n13     if ($length\
+    \ === null) {\n14       return new static(substr($this, $start));\n15     }\n\n\
+    17     return new static(substr($this, $start, $length));\n18   }\n19 }\n\n21\
+    \ $string = new StringType(\"Hello World\");\n\n23 print $string->slice(6); //\
+    \ \"World\"\n```\n\nWe can design our types so that they return new instances.\
+    \ This gives us a simple *chaining* interface.\n\nBe careful when assuming the\
+    \ return type of native PHP functions. Be sure to check them before the call to\
+    \ `new static()` or you may encounter fatal errors.\n\n### Scalar Objects\n\n\
+    [Nikita Popov](https://twitter.com/nikita_ppv) is a prolific contributor to PHP\
+    \ (both core and user-land). He’s made libraries such as [PHP-Parser](https://github.com/nikic/PHP-Parser)\
+    \ which is used all over the web, and in popular frameworks (like [Laravel](http://laravel.com)).\
+    \ He’s championed many multiple RFCs, which have become parts of core PHP.\n\n\
+    He’s also created a custom extension which allows the registration of custom type\
+    \ handlers. You can find it at [https://github.com/nikic/scalar_objects](https://github.com/nikic/scalar_objects).\n\
+    \nWe’re going to install and use this module to get even closer to our ideal type\
+    \ handling situation…\n\nThis section assumes you’re using the Vagrant box explained\
+    \ earlier. If not, please set that up first. These commands are Linux-specific\
+    \ and depend on the pre-installed modules explained earlier.\n\n#### Installing\
+    \ Scalar Objects\n\nFirst up, we need to install the Git command-line tool:\n\n\
+    ```\n1 $ sudo apt-get install git\n\n3 Reading package lists... Done\n4 Building\
+    \ dependency tree\n5 Reading state information... Done\n6 The following extra\
+    \ packages will be installed:\n7   git-man liberror-perl...\n```\n\nFollowing\
+    \ this, we can clone and build the extension:\n\n```\n1 $ git clone https://github.com/nikic/scalar_objects.git\n\
+    \n3 Cloning into 'scalar_objects'...\n4 remote: Reusing existing pack: 213, done.\n\
+    5 remote: Total 213 (delta 0), reused 0 (delta 0)\n6 Receiving objects: 100% (213/213),\
+    \ 75.36 KiB, done.\n7 Resolving deltas: 100% (112/112), done.\n```\n\n```\n1 $\
+    \ cd scalar_objects && phpize && ./configure && make && sudo make install\n```\n\
+    \nThese commands will the Scalar Objects extension, but we still need to add it\
+    \ to the configuration: `$ sudo bash -c \"echo extension=scalar_objects.so >>\
+    \ /etc/php5/cli/php.ini\"`\n\nThis command resembles the one we used to install\
+    \ the SPL Types. We’re essentially doing the same thing, so we need to restart\
+    \ PHP5-FPM:\n\n```\n1 $ sudo service php5-fpm restart\n\n3 php5-fpm stop/waiting\n\
+    4 php5-fpm start/running, process...\n```\n\nThis should complete the process\
+    \ of installing the Scalar Objects extension, but we can make sure it’s working\
+    \ by running the following command:\n\n```\n1 $ php -i | grep scalar\n\n3 scalar_objects\n\
+    4 scalar-objects support => enabled\n```\n\n#### Using Scalar Objects\n\nThe new\
+    \ extension adds a method we can use to register these type handlers. This is\
+    \ how you we can use it:\n\n```\n 1 <?php\n\n 3 class StringHandler\n 4 {\n 5\
+    \   /**\n 6    * @param int   $start\n 7    * @param mixed $length\n 8    *\n\
+    \ 9    * @return StringType\n10    */\n11   public function slice($start = 0,\
+    \ $length = null)\n12   {\n13     if ($length === null) {\n14       return substr($this,\
+    \ $start);\n15     }\n\n17     return substr($this, $start, $length);\n18   }\n\
+    19 }\n\n21 register_primitive_type_handler(\"string\", \"StringHandler\");\n\n\
+    23 $string = \"Hello World\";\n\n25 print $string->slice(6); // \"World\"\n```\n\
+    \nThis is easier than boxing scalar types, as we don’t have to pull *native* types\
+    \ out of class instances. This is easier than SPL Types, as we don’t have to put\
+    \ *native* types into class instances.\n\nThere are seven supported types:\n\n\
+    *   `null`\n*   `bool`\n*   `int`\n*   `float`\n*   `string`\n*   `array`\n* \
+    \  `resource`\n\nYou may be wondering whether this extension plays nicely with\
+    \ SPL Types. The answer is *probably not*. You shouldn’t mix these extensions\
+    \ and since the Scalar Objects extension does everything SPL Types you shouldn’t\
+    \ need both.\n\n### Zephir\n\nZephir is a framework for writing compilable and\
+    \ installable PHP extensions, using a PHP superset language sharing some similarity\
+    \ with C code. Zephir isn’t strictly a PHP extension, nor are Zephir libraries\
+    \ written in true PHP.\n\nIt’s part of the same collective from which the Phalcon\
+    \ framework comes, and Phalcon is itself a PHP extension. This should get interesting!"
+  trans: "\n### SPL 类型\n\n`SPL`（即标准 PHP 库）是一个附加类型库，用于增强 PHP 原生的核心类型。其中包含一些流行的类（例如\
+    \ `LogicException` 和 `ArrayObject`）。部分 `SPL` 组件随*标准* PHP 安装包一同提供。而我们即将查看的部分则并不包含在内……\n\
+    \n你可以在 **http://www.php.net/manual/en/book.spl-types.php** 找到这些神秘的库。\n\n本节假设你正在使用前面介绍的\
+    \ Vagrant 虚拟机。如果没有，请先进行配置。以下命令均为 Linux 专用，并依赖于前面介绍的预装模块。\n\n#### 安装 SPL 类型\n\n\
+    要安装它们，请运行以下命令：\n\n```\n1 $ sudo apt-get install libpcre3-dev php5-dev\n\n3 正在读取软件包列表...\
+    \ 完成\n4 正在构建依赖关系树\n5 正在读取状态信息... 完成\n6 将安装以下额外的软件包：\n7   autoconf automake autotools-dev\
+    \ build-essential...\n```\n\n```\n1 $ sudo pecl install SPL_Types\n\n3 正在下载 SPL_Types-0.4.0.tgz\
+    \ ...\n4 开始下载 SPL_Types-0.4.0.tgz (8,388 字节)\n5 .....完成：8,388 字节\n6 6 个源文件，正在构建\n\
+    7 运行：phpize...\n```\n\n这两条命令会安装编译 `PECL` 扩展所需的先决条件。`PECL` 是一个类似于 `PEAR` 的仓库。如果你对两者都不熟悉，也无需担心。你只需知道\
+    \ `SPL` 类型托管于此，因此要安装它们，我们需要能够编译 `PECL` 扩展。\n\n```\n1 $ sudo bash -c \"echo extension=spl_types.so\
+    \ >> /etc/php5/cli/php.ini\"\n```\n\n该命令会将 `extension=spl_types.so` 追加到 `php.ini`\
+    \ 文件中（按照安装说明操作）。\n\n```\n1 $ sudo service php5-fpm restart\n\n3 php5-fpm stop/waiting\n\
+    4 php5-fpm start/running, process...\n```\n\n该命令会重启 `PHP-FPM`——这是负责解释 PHP 命令行指令和处理\
+    \ `Nginx` Web 请求的进程。上述命令应该已经安装了 `SPL` 类型，但为了确保万无一失，请运行以下命令：\n\n```\n1 $ php -i\
+    \ | grep SPL_Types\n2 SPL_Types\n```\n\n如果你看到了 `SPL_Types` 这一行，那么就表示一切就绪！\n\n\
+    #### 使用 SPL 类型\n\n让我们来看几个如何使用这些类的示例：\n\n```\n 1 <?php\n\n 3 class NumberType extends\
+    \ SplFloat\n 4 {\n 5   /**\n 6    * @return float\n 7    */\n 8   public function\
+    \ toInteger()\n 9   {\n10     return round($this);\n11   }\n\n13   /**\n14   \
+    \ * @return string\n15    */\n16   public function toString()\n17   {\n18    \
+    \ return (string) $this;\n19   }\n20 }\n\n22 $number = new NumberType(13.86);\n\
+    \n24 print $number->toInteger(); // 14\n25 print $number->toString();  // \"13.86\"\
+    \n\n27 print (float) $number + 1.00; // 14.86\n28 print $number * 12;        \
+    \   // 156\n```\n\n`toInteger` 和 `toString` 方法的功能与装箱类类似。神奇之处在于我们对 `$number` 对象进行基本算术运算时发生。`SPL`\
+    \ 类型在用于算术表达式、强制类型转换或字符串拼接时，会被自动拆箱。任何通常用于标量类型的运算符，都可以与对应的 `SPL` 类型一起使用。\n\n这里是另一个示例：\n\
+    \n```\n 1 <?php\n\n 3 class StringType extends SplString\n 4 {\n 5   /**\n 6 \
+    \   * @param int   $start\n 7    * @param mixed $length\n 8    *\n 9    * @return\
+    \ StringType\n10    */\n11   public function slice($start = 0, $length = null)\n\
+    12   {\n13     if ($length === null) {\n14       return new static(substr($this,\
+    \ $start));\n15     }\n\n17     return new static(substr($this, $start, $length));\n\
+    18   }\n19 }\n\n21 $string = new StringType(\"Hello World\");\n\n23 print $string->slice(6);\
+    \ // \"World\"\n```\n\n我们可以设计自己的类型，使其返回新的实例。这为我们提供了一个简单的*链式调用*接口。\n\n在假设原生 PHP\
+    \ 函数的返回类型时要小心。在调用 `new static()` 之前一定要检查它们，否则可能会遇到致命错误。\n\n### 标量对象\n\n[Nikita\
+    \ Popov](https://twitter.com/nikita_ppv) 是 PHP（包括核心和用户层）的一位多产贡献者。他制作了诸如 [PHP-Parser](https://github.com/nikic/PHP-Parser)\
+    \ 之类的库，这些库在网络上以及流行的框架（如 [Laravel](http://laravel.com)）中被广泛使用。他倡导了许多 RFC，这些 RFC\
+    \ 已成为 PHP 核心的一部分。\n\n他还创建了一个自定义扩展，允许注册自定义类型处理器。你可以在 [`github.com/nikic/scalar_objects`](https://github.com/nikic/scalar_objects)\
+    \ 找到它。\n\n我们将安装并使用这个模块，以更接近我们理想的类型处理情况……\n\n本节假设你正在使用前面介绍的 Vagrant 虚拟机。如果没有，请先进行配置。以下命令均为\
+    \ Linux 专用，并依赖于前面介绍的预装模块。\n\n#### 安装标量对象\n\n首先，我们需要安装 `Git` 命令行工具：\n\n```\n1 $\
+    \ sudo apt-get install git\n\n3 正在读取软件包列表... 完成\n4 正在构建依赖关系树\n5 正在读取状态信息... 完成\n\
+    6 将安装以下额外的软件包：\n7   git-man liberror-perl...\n```\n\n接着，我们可以克隆并构建该扩展：\n\n```\n\
+    1 $ git clone https://github.com/nikic/scalar_objects.git\n\n3 Cloning into 'scalar_objects'...\n\
+    4 remote: Reusing existing pack: 213, done.\n5 remote: Total 213 (delta 0), reused\
+    \ 0 (delta 0)\n6 Receiving objects: 100% (213/213), 75.36 KiB, done.\n7 Resolving\
+    \ deltas: 100% (112/112), done.\n```\n\n```\n1 $ cd scalar_objects && phpize &&\
+    \ ./configure && make && sudo make install\n```\n\n这些命令会安装标量对象扩展，但我们还需要将其添加到配置文件中：`$\
+    \ sudo bash -c \"echo extension=scalar_objects.so >> /etc/php5/cli/php.ini\"`\n\
+    \n此命令与我们用于安装 `SPL` 类型的命令类似。我们本质上是在做同样的事情，因此我们需要重启 `PHP5-FPM`：\n\n```\n1 $ sudo\
+    \ service php5-fpm restart\n\n3 php5-fpm stop/waiting\n4 php5-fpm start/running,\
+    \ process...\n```\n\n这应该可以完成标量对象扩展的安装过程，但我们可以通过运行以下命令来确认它是否正常工作：\n\n```\n1 $ php\
+    \ -i | grep scalar\n\n3 scalar_objects\n4 scalar-objects support => enabled\n\
+    ```\n\n#### 使用标量对象\n\n这个新扩展添加了一个方法，我们可以用它来注册这些类型处理器。以下是如何使用它的方法：\n\n```\n 1 <?php\n\
+    \n 3 class StringHandler\n 4 {\n 5   /**\n 6    * @param int   $start\n 7    *\
+    \ @param mixed $length\n 8    *\n 9    * @return StringType\n10    */\n11   public\
+    \ function slice($start = 0, $length = null)\n12   {\n13     if ($length === null)\
+    \ {\n14       return substr($this, $start);\n15     }\n\n17     return substr($this,\
+    \ $start, $length);\n18   }\n19 }\n\n21 register_primitive_type_handler(\"string\"\
+    , \"StringHandler\");\n\n23 $string = \"Hello World\";\n\n25 print $string->slice(6);\
+    \ // \"World\"\n```\n\n这比装箱标量类型更简单，因为我们不必从类实例中提取*原生*类型。这比 `SPL` 类型更简单，因为我们不必将*原生*类型放入类实例中。\n\
+    \n支持七种类型：\n\n*   `null`\n*   `bool`\n*   `int`\n*   `float`\n*   `string`\n* \
+    \  `array`\n*   `resource`\n\n你可能想知道这个扩展是否能与 `SPL` 类型良好协作。答案是*可能不行*。你不应该混合使用这些扩展，并且由于标量对象扩展能完成\
+    \ `SPL` 类型的所有功能，你应该不需要两者都用。\n\n### Zephir\n\n`Zephir` 是一个用于编写可编译且可安装的 PHP 扩展的框架，它使用一种与\
+    \ C 代码有相似之处的 PHP 超集语言。`Zephir` 严格来说并非 PHP 扩展，使用 Zephir 编写的库也并非用真正的 PHP 写成。\n\n\
+    它属于与 `Phalcon` 框架相同的集体，而 `Phalcon` 本身就是一个 PHP 扩展。这应该会变得有趣起来！\n"
+- fmt: "### Installing Zephir\n\nZephir requires a few libraries, in order to compile\
+    \ correctly. We can install these with:\n\n```\n$ sudo apt-get install git gcc\
+    \ make re2c php5 php5-json php5-dev libpcre3-dev\n```\n\nNext, we need to install\
+    \ the JSON-C library (which Zephir uses to compile extensions):\n\n```\n$ git\
+    \ clone https://github.com/json-c/json-c.git && cd json-c && sh autogen.sh &&\
+    \ ./configure && make && sudo make install\n```\n\nThese commands will clone the\
+    \ JSON-C repository, configure and compile it. Finally, we need to install Zephir:\n\
+    \n```\n$ git clone https://github.com/phalcon/zephir && cd zephir && ./install\
+    \ -c\n```\n\nThat should have installed a usable version of Zephir. You can check\
+    \ that it’s working by heading into the clone folder and running:\n\n```\n$ zephir\
+    \ version\n```\n\n### Using Zephir\n\nUsing Zephir is relatively simple (considering\
+    \ the work that actually goes on). Let’s begin by initialising a new extension\
+    \ skeleton project:\n\n```\n$ zephir init type\n```\n\nThis will create a skeleton\
+    \ project folder in the current working directory. Navigate into the new `type`\
+    \ directory and run:\n\n```\n$ ls -la\next/ type/ config.json\n```\n\nExtension\
+    \ classes go in the `type` folder (it’s specific to the name of the extension,\
+    \ which we gave the `init` command). Make a find in there, called `StringType.zep`,\
+    \ and open that file in your editor.\n\nThe Zephir syntax is quite similar to\
+    \ PHP, but with a twist of C style. You can find a reasonable amount of documentation\
+    \ at [http://www.zephir-lang.com/index.html](http://www.zephir-lang.com/index.html).\n\
+    \nCreate the following class:\n\n```\nnamespace Type;\n\nclass StringType\n{\n\
+    \    protected data;\n\n    public function __construct(var data)\n    {\n   \
+    \     let this->data = data;\n    }\n\n    public function length()\n    {\n \
+    \       return strlen(this->data);\n    }\n}\n```\n\nOther than the missing `$`\
+    \ symbols, and the `var`/`let` keywords added, this is pretty understandable.\
+    \ Save the file and (from the base extension folder) run:\n\n```\n$ zephir build\n\
+    \nCompiling...\n/bin/bash /vagrant/zephir/type/ext/libtool --mode=compile gcc\
+    \  -I. -I/vagrant/zephir/type/ext -DPHP_ATOM_INC -I/vagrant/zephir/type/ext/include\
+    \ -I/vagrant/zephir/type/ext/main -I/vagrant/zephir/type/ext -I/usr/include/php5\
+    \ -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext\
+    \ -I/usr/include/php5/ext/date/lib  -DHAVE_CONFIG_H  -O2 -fvisibility=hidden -Wparentheses\
+    \ -flto   -c /vagrant/zephir/type/ext/type/stringtype.zep.c -o type/stringtype.lo...\n\
+    ```\n\nZephir cross-compiles the extension class files to Plain Ol’ C, and adds\
+    \ the class loading code. The end of the build output should look something like:\n\
+    \n```\nInstalling...\nExtension installed!\nAdd extension=type.so to your php.ini\n\
+    Don't forget to restart your web server\n```\n\n…So we need to add the extension\
+    \ to the `php.ini` file:\n\n```\n$ sudo bash -c \"echo extension=type.so >> /etc/php5/cli/php.ini\"\
+    \n```\n\nThis will have installed the Type extension we just created. We can check\
+    \ that it’s installed by running:\n\n```\n$ php -i | grep \"type => enabled\"\n\
+    type => enabled\n```\n\nIf you see that line returned, you know the extension\
+    \ is installed, and ready to go.\n\nUsing this new extension is as simple as:\n\
+    \n```\n<?php\n\n$string = new Type\\StringType(\"Hello World\");\n\nprint $string->length();\n\
+    ```\n\nThe namespace and class reside completely within the compiled extension\
+    \ file. Zephir extensions can use pre-existing core and extension namespaces/classes.\
+    \ The can be used by Plain Ol’ PHP code (provided the extension is registered\
+    \ by the time it’s used).\n\nZephir extensions can even override core functions,\
+    \ with better-performing versions.\n\n### Conclusion\n\nExtensions make our lives\
+    \ significantly easier, by handling things like boxing and unboxing for us. They\
+    \ let us create better-performing code (as in the case of Zephir) and stricter\
+    \ types (as in the case of SPL Types).\n\nWe don’t have to use these to make a\
+    \ cleaner system. If we do, we can expect to have a much strong type system, without\
+    \ the hard work that library-only code expects of us.\n\n## Design\n\n### Which\
+    \ Method To Use\n\nWe’ve had a look at a number of methods and extensions which\
+    \ can help us to abstract away the inconsistent type handling PHP presents to\
+    \ us. Part of creating this abstraction is deciding on which methods and/or extensions\
+    \ to use.\n\n#### Namespace Methods\n\nGenerally, we should avoid any method that\
+    \ would expose a significant amount of functions in the global scope. We don’t\
+    \ want to create any more clutter than there already is, and being able to use\
+    \ our abstraction, in addition to the standard stuff, is definitely beneficial.\n\
+    \n> We should endeavour to have all our code reside in namespaces.\n\nFurthermore,\
+    \ we should implement our code in such a way that it can be used both in procedural\
+    \ environments and object-oriented environments. Stated differently; we should\
+    \ contain the business logic within functions and call those functions (so that\
+    \ they can be used in procedural code) from within an object-oriented framework\
+    \ (so that scalar types can be used like objects).\n\n> We should build our logic\
+    \ in functions and add those functions (as methods) to scalar type objects.\n\n\
+    #### Scalar Objects / SPL Types\n\nThis means we will want to use the namespace\
+    \ functions we covered earlier, and that we will also want to use either the scalar\
+    \ objects or the SPL Types as an Object-Oriented basis for our type system.\n\n\
+    I mentioned that the Scalar Objects and SPL Types extensions shouldn’t be used\
+    \ together. That’s because they do the same thing. It’s not possible to proxy\
+    \ function calls (in the way I’ve just described) without repeating the whole\
+    \ Object-Oriented side of things for each extension.\n\nThis is due to the fact\
+    \ that the Scalar Objects extension automatically boxes variables while the SPL\
+    \ Types extension expects developers to box their own variables. It’s the different\
+    \ between `return new static(substr($this, $offset, $length));` and `return substr($this,\
+    \ $offset, $length);`\n\nWhile I love the Scalar Objects extension, I am inclined\
+    \ to suggest with the SPL Types extension. The main reason is that it doesn’t\
+    \ interfere with how PHP handles scalar types. This means we will need to box\
+    \ variables, but we’ll also enjoy the benefits of state (object-like scalar variables)\
+    \ and automatic unboxing.\n\n#### Zephir\n\nAs cool as Zephir is, it’s not PHP.\
+    \ That means any developers you want to work on your code, will need to know or\
+    \ learn another language. It also increases the time between coding, testing and\
+    \ shipping.\n\nSo, for the remainder of the book, I will show code that is built\
+    \ on top of SPL Types and not translated into Zephir extensions.\n\nThe appendices\
+    \ [will] include a PHP and a Zephir implementation. I don’t want the implementation\
+    \ to be a focus of the book, but I will enjoy making it!"
+  raw: "#### Installing Zephir\n\nZephir requires a few libraries, in order to compile\
+    \ correctly. We can install these with:\n\n```\n1 $ sudo apt-get install git gcc\
+    \ make re2c php5 php5-json php5-dev libpcre3-dev\n```\n\nNext, we need to install\
+    \ the JSON-C library (which Zephir uses to compile extensions):\n\n```\n1 $ git\
+    \ clone https://github.com/json-c/json-c.git && cd json-c && sh autogen.sh\\\n\
+    2  && ./configure && make && sudo make install\n```\n\nThese commands will clone\
+    \ the JSON-C repository, configure and compile it. Finally, we need to install\
+    \ Zephir:\n\n```\n1 $ git clone https://github.com/phalcon/zephir && cd zephir\
+    \ && ./install -c\n```\n\nThat should have installed a usable version of Zephir.\
+    \ You can check that it’s working by heading into the clone folder and running:\n\
+    \n```\n1 $ zephir version\n```\n\n#### Using Zephir\n\nUsing Zephir is relatively\
+    \ simple (considering the work that actually goes on). Let’s begin by initialising\
+    \ a new extension skeleton project:\n\n```\n1 $ zephir init type\n```\n\nThis\
+    \ will create a skeleton project folder in the current working directory. Navigate\
+    \ into the new `type` directory and run:\n\n```\n1 $ ls -la\n\n3 ext/ type/ config.json\n\
+    ```\n\nExtension classes go in the `type` folder (it’s specific to the name of\
+    \ the extension, which we gave the `init` command). Make a find in there, called\
+    \ `StringType.zep`, and open that file in your editor.\n\nThe Zephir syntax is\
+    \ quite similar to PHP, but with a twist of C style. You can find a reasonable\
+    \ amount of documentation at [http://www.zephir-lang.com/index.html](http://www.zephir-lang.com/index.html).\n\
+    \nCreate the following class:\n\n```\n 1 namespace Type;\n\n 3 class StringType\n\
+    \ 4 {\n 5   protected data;\n\n 7   public function __construct(var data)\n 8\
+    \   {\n 9     let this->data = data;\n10   }\n\n12   public function length()\n\
+    13   {\n14     return strlen(this->data);\n15   }\n16 }\n```\n\nOther than the\
+    \ missing `$` symbols, and the `var`/`let` keywords added, this is pretty understandable.\
+    \ Save the file and (from the base extension folder) run:\n\n```\n 1 $ zephir\
+    \ build\n\n 3 Compiling...\n 4 /bin/bash /vagrant/zephir/type/ext/libtool --mode=compile\
+    \ gcc  -I. -I/vagrant/\\\n 5 zephir/type/ext -DPHP_ATOM_INC -I/vagrant/zephir/type/ext/include\
+    \ -I/vagrant/z\\\n 6 ephir/type/ext/main -I/vagrant/zephir/type/ext -I/usr/include/php5\
+    \ -I/usr/incl\\\n 7 ude/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend\
+    \ -I/usr/include\\\n 8 /php5/ext -I/usr/include/php5/ext/date/lib  -DHAVE_CONFIG_H\
+    \  -O2 -fvisibility=\\\n 9 hidden -Wparentheses -flto   -c /vagrant/zephir/type/ext/type/stringtype.zep.c\\\
+    \n10  -o type/stringtype.lo...\n```\n\nZephir cross-compiles the extension class\
+    \ files to Plain Ol’ C, and adds the class loading code. The end of the build\
+    \ output should look something like:\n\n```\n1 Installing...\n2 Extension installed!\n\
+    3 Add extension=type.so to your php.ini\n4 Don't forget to restart your web server\n\
+    ```\n\n…So we need to add the extension to the `php.ini` file:\n\n```\n1 $ sudo\
+    \ bash -c \"echo extension=type.so >> /etc/php5/cli/php.ini\"\n```\n\nThis will\
+    \ have installed the Type extension we just created. We can check that it’s installed\
+    \ by running:\n\n```\n1 $ php -i | grep \"type => enabled\"\n\n3 type => enabled\n\
+    ```\n\nIf you see that line returned, you know the extension is installed, and\
+    \ ready to go.\n\nUsing this new extension is as simple as:\n\n```\n1 <?php\n\n\
+    3 $string = new Type\\StringType(\"Hello World\");\n\n5 print $string->length();\n\
+    ```\n\nThe namespace and class reside completely within the compiled extension\
+    \ file. Zephir extensions can use pre-existing core and extension namespaces/classes.\
+    \ The can be used by Plain Ol’ PHP code (provided the extension is registered\
+    \ by the time it’s used).\n\nZephir extensions can even override core functions,\
+    \ with better-performing versions.\n\n### Conclusion\n\nExtensions make our lives\
+    \ significantly easier, by handling things like boxing and unboxing for us. They\
+    \ let us create better-performing code (as in the case of Zephir) and stricter\
+    \ types (as in the case of SPL Types).\n\nWe don’t have to use these to make a\
+    \ cleaner system. If we do, we can expect to have a much strong type system, without\
+    \ the hard work that library-only code expects of us.\n\n## Design\n\n### Which\
+    \ Method To Use\n\nWe’ve had a look at a number of methods and extensions which\
+    \ can help us to abstract away the inconsistent type handling PHP presents to\
+    \ us. Part of creating this abstraction is deciding on which methods and/or extensions\
+    \ to use.\n\n#### Namespace Methods\n\nGenerally, we should avoid any method that\
+    \ would expose a significant amount of functions in the global scope. We don’t\
+    \ want to create any more clutter than there already is, and being able to use\
+    \ our abstraction, in addition to the standard stuff, is definitely beneficial.\n\
+    \n> We should endeavour to have all our code reside in namespaces.\n\nFurthermore,\
+    \ we should implement our code in such a way that it can be used both in procedural\
+    \ environments and object-oriented environments. Stated differently; we should\
+    \ contain the business logic within functions and call those functions (so that\
+    \ they can be used in procedural code) from within an object-oriented framework\
+    \ (so that scalar types can be used like objects).\n\n> We should build our logic\
+    \ in functions and add those functions (as methods) to scalar type objects.\n\n\
+    #### Scalar Objects / SPL Types\n\nThis means we will want to use the namespace\
+    \ functions we covered earlier, and that we will also want to use either the scalar\
+    \ objects or the SPL Types as an Object-Oriented basis for our type system.\n\n\
+    I mentioned that the Scalar Objects and SPL Types extensions shouldn’t be used\
+    \ together. That’s because they do the same thing. It’s not possible to proxy\
+    \ function calls (in the way I’ve just described) without repeating the whole\
+    \ Object-Oriented side of things for each extension.\n\nThis is due to the fact\
+    \ that the Scalar Objects extension automatically boxes variables while the SPL\
+    \ Types extension expects developers to box their own variables. It’s the different\
+    \ between `return new static(substr($this, $offset, $length));` and `return substr($this,\
+    \ $offset, $length);`\n\nWhile I love the Scalar Objects extension, I am inclined\
+    \ to suggest with the SPL Types extension. The main reason is that it doesn’t\
+    \ interfere with how PHP handles scalar types. This means we will need to box\
+    \ variables, but we’ll also enjoy the benefits of state (object-like scalar variables)\
+    \ and automatic unboxing.\n\n#### Zephir\n\nAs cool as Zephir is, it’s not PHP.\
+    \ That means any developers you want to work on your code, will need to know or\
+    \ learn another language. It also increases the time between coding, testing and\
+    \ shipping.\n\nSo, for the remainder of the book, I will show code that is built\
+    \ on top of SPL Types and not translated into Zephir extensions.\n\nThe appendices\
+    \ [will] include a PHP and a Zephir implementation. I don’t want the implementation\
+    \ to be a focus of the book, but I will enjoy making it!"
+  trans: "好的，作为一名高级文档工程师和翻译员，我将遵循您的注意事项，将给定的英文文本翻译成中文。\n\n\n### 安装 Zephir\n\nZephir\
+    \ 需要一些库才能正确编译。我们可以通过以下命令安装它们：\n\n```\n$ sudo apt-get install git gcc make re2c\
+    \ php5 php5-json php5-dev libpcre3-dev\n```\n\n接下来，我们需要安装 JSON-C 库（Zephir 使用它来编译扩展）：\n\
+    \n```\n$ git clone https://github.com/json-c/json-c.git && cd json-c && sh autogen.sh\
+    \ && ./configure && make && sudo make install\n```\n\n这些命令会克隆 JSON-C 仓库，并进行配置和编译。最后，我们需要安装\
+    \ Zephir：\n\n```\n$ git clone https://github.com/phalcon/zephir && cd zephir &&\
+    \ ./install -c\n```\n\n这应该已经安装了一个可用的 Zephir 版本。您可以通过进入克隆文件夹并运行以下命令来检查它是否正常工作：\n\
+    \n```\n$ zephir version\n```\n\n### 使用 Zephir\n\n使用 Zephir 相对简单（考虑到实际发生的后台工作）。让我们从初始化一个新的扩展框架项目开始：\n\
+    \n```\n$ zephir init type\n```\n\n这将在当前工作目录中创建一个框架项目文件夹。进入新的 `type` 目录并运行：\n\n\
+    ```\n$ ls -la\next/ type/ config.json\n```\n\n扩展类放在 `type` 文件夹中（该文件夹的名称特定于我们提供给\
+    \ `init` 命令的扩展名）。在其中创建一个名为 `StringType.zep` 的文件，并在编辑器中打开它。\n\nZephir 的语法与 PHP\
+    \ 非常相似，但带有 C 风格的变体。您可以在 [`www.zephir-lang.com/index.html`](http://www.zephir-lang.com/index.html)\
+    \ 找到相当多的文档。\n\n创建以下类：\n\n```\nnamespace Type;\n\nclass StringType\n{\n    protected\
+    \ data;\n\n    public function __construct(var data)\n    {\n        let this->data\
+    \ = data;\n    }\n\n    public function length()\n    {\n        return strlen(this->data);\n\
+    \    }\n}\n```\n\n除了缺少 `$` 符号以及添加了 `var`/`let` 关键字之外，这部分代码相当容易理解。保存文件并从扩展基础文件夹运行：\n\
+    \n```\n$ zephir build\n\nCompiling...\n/bin/bash /vagrant/zephir/type/ext/libtool\
+    \ --mode=compile gcc  -I. -I/vagrant/zephir/type/ext -DPHP_ATOM_INC -I/vagrant/zephir/type/ext/include\
+    \ -I/vagrant/zephir/type/ext/main -I/vagrant/zephir/type/ext -I/usr/include/php5\
+    \ -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext\
+    \ -I/usr/include/php5/ext/date/lib  -DHAVE_CONFIG_H  -O2 -fvisibility=hidden -Wparentheses\
+    \ -flto   -c /vagrant/zephir/type/ext/type/stringtype.zep.c -o type/stringtype.lo...\n\
+    ```\n\nZephir 将扩展类文件交叉编译成普通 C 语言，并添加类加载代码。构建输出的结尾应该类似于：\n\n```\nInstalling...\n\
+    Extension installed!\nAdd extension=type.so to your php.ini\nDon't forget to restart\
+    \ your web server\n```\n\n……因此我们需要将扩展添加到 `php.ini` 文件中：\n\n```\n$ sudo bash -c\
+    \ \"echo extension=type.so >> /etc/php5/cli/php.ini\"\n```\n\n这将安装我们刚刚创建的 Type\
+    \ 扩展。我们可以通过运行以下命令来检查它是否已安装：\n\n```\n$ php -i | grep \"type => enabled\"\ntype\
+    \ => enabled\n```\n\n如果您看到那一行返回，说明扩展已安装并可以使用了。\n\n使用这个新扩展非常简单：\n\n```\n<?php\n\
+    \n$string = new Type\\StringType(\"Hello World\");\n\nprint $string->length();\n\
+    ```\n\n命名空间和类完全存在于编译后的扩展文件中。Zephir 扩展可以使用预先存在的核心和扩展命名空间/类。它们可以被普通的 PHP 代码使用（前提是在使用时扩展已注册）。\n\
+    \nZephir 扩展甚至可以用性能更好的版本覆盖核心函数。\n\n### 结论\n\n扩展通过为我们处理诸如装箱和拆箱之类的事情，让我们的生活变得更加轻松。它们让我们能够创建性能更好的代码（如\
+    \ Zephir 的情况）和更严格的类型（如 SPL Types 的情况）。\n\n我们不必使用这些来构建一个更干净的系统。如果我们使用了，就可以期望拥有一个更强大的类型系统，而无需像纯库代码那样付出艰苦的努力。\n\
+    \n## 设计\n\n### 使用哪种方法\n\n我们已经了解了许多方法和扩展，它们可以帮助我们抽象化 PHP 向我们呈现的不一致的类型处理。创建这种抽象的一部分工作是决定使用哪些方法和/或扩展。\n\
+    \n#### 命名空间方法\n\n通常，我们应该避免任何会在全局作用域中暴露大量函数的方法。我们不想制造比现有更多的混乱，并且能够在使用标准内容的同时使用我们的抽象，这无疑是有益的。\n\
+    \n> 我们应该努力使所有代码都位于命名空间中。\n\n此外，我们应该以一种既能用于过程式环境，也能用于面向对象环境的方式来实现代码。换句话说；我们应该将业务逻辑包含在函数中，并从面向对象的框架内调用这些函数（以便它们可以在过程式代码中使用），以便标量类型可以像对象一样使用。\n\
+    \n> 我们应该在函数中构建逻辑，并将这些函数（作为方法）添加到标量类型对象中。\n\n#### 标量对象 / SPL Types\n\n这意味着我们将希望使用之前介绍的命名空间函数，并且也希望使用标量对象或\
+    \ SPL Types 作为我们类型系统的面向对象基础。\n\n我提到过，不应同时使用标量对象和 SPL Types 扩展。这是因为它们做的是同样的事情。如果不为每个扩展重复整个面向对象的部分，就不可能（以我刚才描述的方式）代理函数调用。\n\
+    \n这是因为标量对象扩展会自动对变量进行装箱，而 SPL Types 扩展则期望开发者自己进行变量装箱。区别在于 `return new static(substr($this,\
+    \ $offset, $length));` 和 `return substr($this, $offset, $length);`\n\n虽然我喜欢标量对象扩展，但我倾向于建议使用\
+    \ SPL Types 扩展。主要原因是它不会干扰 PHP 处理标量类型的方式。这意味着我们需要对变量进行装箱，但我们也将享受到状态（类似对象的标量变量）和自动拆箱的好处。\n\
+    \n#### Zephir\n\n尽管 Zephir 很酷，但它不是 PHP。这意味着任何你希望他们处理你代码的开发者，都需要知道或学习另一种语言。这也增加了编码、测试和发布之间的时间。\n\
+    \n因此，在本书的其余部分，我将展示构建在 SPL Types 之上、并且没有转换为 Zephir 扩展的代码。\n\n附录 [将] 包含 PHP 和 Zephir\
+    \ 的实现。我不想让实现成为本书的重点，但我会很享受制作它的过程！\n"
+- fmt: '# How To Structure The Types
+
+
+    We’ve already decided to use namespaced functions as the basis, so we need to
+    decide how to use these from within classes.
+
+
+    ## Resolving Types
+
+
+    We’ll often need to resolve types, within the type methods. Any arguments could
+    potentially be the wrong type. It makes sense for the type resolution/conversion
+    functions to be in their own namespace:
+
+
+    - `Type\isString`
+
+    - `Type\isStringObject`
+
+    - `Type\isExpression`
+
+    - …
+
+    - `Type\toStringObject`
+
+    - `Type\toExpression`
+
+    - …
+
+
+    We should proxy to the creation methods:
+
+
+    ```
+
+    1 class StringObject extends SPLString
+
+    2 {
+
+    3   public function trim($mask = "\t\n\r\0\x0B")
+
+    4   {
+
+    5     $isString       = Type\isString($mask);
+
+    6     $isStringObject = Type\isStringObject($mask);
+
+    8     if ($isString or $isStringObject) {
+
+    9       if (Type\isExpression($mask)) {
+
+    10         $raw = Type\String\trimWithExpression(
+
+    11           $this,
+
+    12           $mask
+
+    13         );
+
+    14       } else {
+
+    15         $raw = Type\String\trimWithString(
+
+    16           $this,
+
+    17           $mask
+
+    18         );
+
+    19       }
+
+    21       return Type\toStringObject($raw);
+
+    22     }
+
+    24     throw new LogicException("mask is not a string");
+
+    25   }
+
+    26 }
+
+    ```
+
+
+    ## Chaining
+
+
+    One of the benefits of the object-oriented approach we’re taking is that we can
+    chain calls on the types. You may have noticed how this is implemented (from the
+    previous example), but in-case you didn’t:
+
+
+    ```
+
+    1 return Type\toStringObject($raw);
+
+    ```
+
+
+    The manipulation methods should return plain PHP types - because we want people
+    to be able to use the types interchangeably. So it falls to the classes (proxies)
+    to wrap plain PHP types within the SPL Types.
+
+
+    ## Combining Number Types
+
+
+    I’ve already alluded to my desire of a single number type, and that’s exactly
+    what I want to achieve here. For that reason, we’ll completely ignore the `SPLNumber`
+    class in favour of `SPLFloat`.
+
+
+    The reason is simple - numbers should be able to handle decimal points, without
+    a separate set of methods or additional mental overhead. This will lead to additional
+    casting in numeric operations, but that’s not the end of the world.
+
+
+    # How To Test
+
+
+    Testing is an essential part of supplanting the native type handling system. The
+    good news is that it will be easy to do!
+
+
+    ## PHPUnit
+
+
+    `PHPUnit` is a unit-testing library which makes the process of testing small units
+    of code super easy:
+
+
+    ```
+
+    1 class StringObjectTest extends PHPUnit_Framework_TestCase
+
+    2 {
+
+    3   /** @test */
+
+    4   public function trimWorksWithStrings()
+
+    5   {
+
+    6     $subject = Type\toStringObject("Hello World...");
+
+    8     $this->assertEquals(
+
+    9       "Hello World",
+
+    10       $object->trim(".")
+
+    11     );
+
+    12   }
+
+    13 }
+
+    ```
+
+
+    This kind of testing can be done with a number of testing frameworks. At the end
+    of the day, as long as you are writing tests, whichever testing framework you
+    use is up to you.
+
+
+    ## What Should Be Tested?
+
+
+    The short answer is: everything.
+
+
+    We’re aiming to build something solid, and it’s pretty low-level. That means we
+    need to be sure things continue to work as expected. It’s not even that hard when
+    you consider how simple the methods are that we are going to make.
+
+
+    We should aim to have good coverage of the namespaced functions, and a few tests
+    to ensure that these are correctly called from the (proxy) classes.
+
+
+    ## When Should Tests Be Written?
+
+
+    This is really up to you. Maybe you want to write your tests first, and follow
+    the red-green-refactor cycle. Maybe you want to write all of your library code
+    first, and then make sure everything works as you expected it to (by writing tests
+    for the library code).
+
+
+    The important thing is to write tests.
+
+
+    ## Recommendations
+
+
+    I highly recommend the following books:
+
+
+    - [Clean Code, by Robert C. Martin](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+    - [The Grumpy Programmer’s PHPUnit Cookbook, by Chris Hartjes](https://leanpub.com/grumpy-phpunit)
+
+
+    # How To Package
+
+
+    If you want your code to be used (by anyone else), you’d be wise to package it
+    in such a way that others will want to use it.
+
+
+    ## Make A `Readme` File
+
+
+    It sounds simple, but you’d be surprised how few developers actually do this!
+    When other developers stumble across your repository (on Github/BitBucket/what-have-you),
+    they won’t be impressed to see a bare-bones directory structure and nothing else.
+
+
+    Make a `Readme` file, and include the following…
+
+
+    ## A Few Examples
+
+
+    Show what your library can do. There are few things more frustrating than being
+    enticed (to learn more about a library) by some marketing, only to have to figure
+    it out from tests and/or source-code.
+
+
+    Those things are excellent places to learn, but they must be sought out, whereas
+    a few examples (in your `Readme` file) are easy to find. Include examples covering
+    the major aspects of your library.
+
+
+    In our case, this means an example (or two) about the procedural code underpinning
+    the library. It means an example (or two) about the object-oriented wrappers,
+    which provide fluent interfaces to traditionally procedural actions. It means
+    providing an example (or two) about who to subclass the types for further customisation.
+
+
+    It’s not hard to make these - they can even be extracted from your unit tests…
+
+
+    ## Testing Instructions
+
+
+    Developers want to know how solid your code is. Sure you’re using [SemVer](http://semver.org),
+    but how much test coverage do you have? Do your tests pass? Can I trust you?
+
+
+    The easiest want to answer these questions is to write the unit tests, and then
+    provide instructions for how they can be run. You don’t require anything elaborate:
+
+
+    ```
+
+    1 $ composer install && phpunit
+
+    ```
+
+
+    That’s how you might be running your unit tests, and it’s easy to tell others
+    how to run them.
+
+
+    ## Installation Instructions
+
+
+    Ok - you’ve convinced someone to use your [hopefully] well-tested library. The
+    examples provide its value. So how do they install your library?
+
+
+    This is where you make a `composer.json` file and include Composer installation
+    instructions. This will require a round-trip to [Packagist](https://packagist.org),
+    but you’ll be all the better for it.
+
+
+    Then just a simple set of instructions is all you need add:
+
+
+    ```
+
+    1 $ composer require "vendor/library:1.0.0"
+
+    ```
+
+
+    ## License
+
+
+    Include an open-source license. Something friendly like [MIT](http://opensource.org/licenses/MIT)
+    will do nicely. Specify this in your `Readme` file, and include a clearly-named
+    file (like `LICENSE` or `license.md`) which contains the full license.
+
+
+    ## Contribution Guidelines
+
+
+    This is optional, but greatly increases the chance that other developers will
+    send compatible pull-requests. If you are fussy about code style (and you should
+    be), then be sure to tell people how you want their submissions to look.
+
+
+    # Conclusion
+
+
+    Building a new type system is only partly about code. There’s a lot of design
+    consideration that goes into well-crafted libraries. Take the time to decide on
+    a reasonable structure - one that allows consumers the most flexibility.
+
+
+    Test well. Package well. Be clear.
+
+
+    ## Designing For The Future
+
+
+    This chapter is incomplete.
+
+
+    ## Appendices
+
+
+    ### PHP Implementation
+
+
+    This section is incomplete.
+
+
+    ### Zephir Implementation
+
+
+    This section is incomplete.
+
+
+    ### JavaScript Implementation
+
+
+    This section is incomplete.'
+  raw: "### How To Structure The Types\n\nWe’ve already decided to use namespaced\
+    \ functions as the basis, so we need to decide how to use these from within classes.\n\
+    \n#### Resolving Types\n\nWe’ll often need to resolve types, within the type methods.\
+    \ Any arguments could potentially be the wrong type. It makes sense for the type\
+    \ resolution/conversion functions to be in their own namespace:\n\n*   `Type\\\
+    isString`\n*   `Type\\isStringObject`\n*   `Type\\isExpression`\n*   …\n*   `Type\\\
+    toStringObject`\n*   `Type\\toExpression`\n*   …\n\nWe should proxy to the creation\
+    \ methods:\n\n```\n 1 class StringObject extends SPLString\n 2 {\n 3   public\
+    \ function trim($mask = \"\\t\\n\\r\\0\\x0B\")\n 4   {\n 5     $isString     \
+    \  = Type\\isString($mask);\n 6     $isStringObject = Type\\isStringObject($mask);\n\
+    \n 8     if ($isString or $isStringObject) {\n 9       if (Type\\isExpression($mask))\
+    \ {\n10         $raw = Type\\String\\trimWithExpression(\n11           $this,\n\
+    12           $mask\n13         );\n14       } else {\n15         $raw = Type\\\
+    String\\trimWithString(\n16           $this,\n17           $mask\n18         );\n\
+    19       }\n\n21       return Type\\toStringObject($raw);\n22     }\n\n24    \
+    \ throw new LogicException(\"mask is not a string\");\n25   }\n26 }\n```\n\n####\
+    \ Chaining\n\nOne of the benefits of the object-oriented approach we’re taking\
+    \ is that we can chain calls on the types. You may have noticed how this is implemented\
+    \ (from the previous example), but in-case you didn’t:\n\n```\n1 return Type\\\
+    toStringObject($raw);\n```\n\nThe manipulation methods should return plain PHP\
+    \ types - because we want people to be able to use the types interchangeably.\
+    \ So it falls to the classes (proxies) to wrap plain PHP types within the SPL\
+    \ Types.\n\n#### Combining Number Types\n\nI’ve already alluded to my desire of\
+    \ a single number type, and that’s exactly what I want to achieve here. For that\
+    \ reason, we’ll completely ignore the `SPLNumber` class in favour of `SPLFloat`.\n\
+    \nThe reason is simple - numbers should be able to handle decimal points, without\
+    \ a separate set of methods or additional mental overhead. This will lead to additional\
+    \ casting in numeric operations, but that’s not the end of the world.\n\n### How\
+    \ To Test\n\nTesting is an essential part of supplanting the native type handling\
+    \ system. The good news is that it will be easy to do!\n\n#### PHPUnit\n\nPHPUnit\
+    \ is a unit-testing library which makes the process of testing small units of\
+    \ code super easy:\n\n```\n 1 class StringObjectTest extends PHPUnit_Framework_TestCase\n\
+    \ 2 {\n 3   /** @test */\n 4   public function trimWorksWithStrings()\n 5   {\n\
+    \ 6     $subject = Type\\toStringObject(\"Hello World...\");\n\n 8     $this->assertEquals(\n\
+    \ 9       \"Hello World\",\n10       $object->trim(\".\")\n11     );\n12   }\n\
+    13 }\n```\n\nThis kind of testing can be done with a number of testing frameworks.\
+    \ At the end of the day, as long as you are writing tests, whichever testing framework\
+    \ you use is up to you.\n\n#### What Should Be Tested?\n\nThe short answer is:\
+    \ everything.\n\nWe’re aiming to build something solid, and it’s pretty low-level.\
+    \ That means we need to be sure things continue to work as expected. It’s not\
+    \ even that hard when you consider how simple the methods are that we are going\
+    \ to make.\n\nWe should aim to have good coverage of the namespaced functions,\
+    \ and a few tests to ensure that these are correctly called from the (proxy) classes.\n\
+    \n#### When Should Tests Be Written?\n\nThis is really up to you. Maybe you want\
+    \ to write your tests first, and follow the red-green-refactor cycle. Maybe you\
+    \ want to write all of your library code first, and then make sure everything\
+    \ works as you expected it to (by writing tests for the library code).\n\nThe\
+    \ important thing is to write tests.\n\n#### Recommendations\n\nI highly recommend\
+    \ the following books:\n\n*   [Clean Code, by Robert C. Martin](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)\n\
+    *   [The Grumpy Programmer’s PHPUnit Cookbook, by Chris Hartjes](https://leanpub.com/grumpy-phpunit)\n\
+    \n### How To Package\n\nIf you want your code to be used (by anyone else), you’d\
+    \ be wise to package it in such a way that others will want to use it.\n\n####\
+    \ Make A `Readme` File\n\nIt sounds simple, but you’d be surprised how few developers\
+    \ actually do this! When other developers stumble across your repository (on Github/BitBucket/what-have-you),\
+    \ they won’t be impressed to see a bare-bones directory structure and nothing\
+    \ else.\n\nMake a `Readme` file, and include the following…\n\n#### A Few Examples\n\
+    \nShow what your library can do. There are few things more frustrating than being\
+    \ enticed (to learn more about a library) by some marketing, only to have to figure\
+    \ it out from tests and/or source-code.\n\nThose things are excellent places to\
+    \ learn, but they must be sought out, whereas a few examples (in your `Readme`\
+    \ file) are easy to find. Include examples covering the major aspects of your\
+    \ library.\n\nIn our case, this means an example (or two) about the procedural\
+    \ code underpinning the library. It means an example (or two) about the object-oriented\
+    \ wrappers, which provide fluent interfaces to traditionally procedural actions.\
+    \ It means providing an example (or two) about who to subclass the types for further\
+    \ customisation.\n\nIt’s not hard to make these - they can even be extracted from\
+    \ your unit tests…\n\n#### Testing Instructions\n\nDevelopers want to know how\
+    \ solid your code is. Sure you’re using [SemVer](http://semver.org), but how much\
+    \ test coverage do you have? Do your tests pass? Can I trust you?\n\nThe easiest\
+    \ want to answer these questions is to write the unit tests, and then provide\
+    \ instructions for how they can be run. You don’t require anything elaborate:\n\
+    \n```\n1 $ composer install && phpunit\n```\n\nThat’s how you might be running\
+    \ your unit tests, and it’s easy to tell others how to run them.\n\n#### Installation\
+    \ Instructions\n\nOk - you’ve convinced someone to use your [hopefully] well-tested\
+    \ library. The examples provide its value. So how do they install your library?\n\
+    \nThis is where you make a `composer.json` file and include Composer installation\
+    \ instructions. This will require a round-trip to [Packagist](https://packagist.org),\
+    \ but you’ll be all the better for it.\n\nThen just a simple set of instructions\
+    \ is all you need add:\n\n```\n1 $ composer require \"vendor/library:1.0.0\"\n\
+    ```\n\n#### License\n\nInclude an open-source license. Something friendly like\
+    \ [MIT](http://opensource.org/licenses/MIT) will do nicely. Specify this in your\
+    \ `Readme` file, and include a clearly-named file (like `LICENSE` or `license.md`)\
+    \ which contains the full license.\n\n#### Contribution Guidelines\n\nThis is\
+    \ optional, but greatly increases the chance that other developers will send compatible\
+    \ pull-requests. If you are fussy about code style (and you should be), then be\
+    \ sure to tell people how you want their submissions to look.\n\n### Conclusion\n\
+    \nBuilding a new type system is only partly about code. There’s a lot of design\
+    \ consideration that goes into well-crafted libraries. Take the time to decide\
+    \ on a reasonable structure - one that allows consumers the most flexibility.\n\
+    \nTest well. Package well. Be clear.\n\n## Designing For The Future\n\nThis chapter\
+    \ is incomplete.\n\n## Appendices\n\n### PHP Implementation\n\nThis section is\
+    \ incomplete.\n\n### Zephir Implementation\n\nThis section is incomplete.\n\n\
+    ### JavaScript Implementation\n\nThis section is incomplete."
+  trans: "\n# 如何构建类型结构\n\n我们已经决定将基于命名空间的函数作为基础，因此需要确定如何在类中使用这些函数。\n\n## 类型解析\n\n在类型方法中，我们经常需要解析类型。任何参数都可能是错误类型。将类型解析/转换函数放在它们自己的命名空间中是有意义的：\n\
+    \n- `Type\\isString`\n- `Type\\isStringObject`\n- `Type\\isExpression`\n- …\n\
+    - `Type\\toStringObject`\n- `Type\\toExpression`\n- …\n\n我们应该代理到这些创建方法：\n\n```\n\
+    class StringObject extends SPLString\n{\n  public function trim($mask = \"\\t\\\
+    n\\r\\0\\x0B\")\n  {\n    $isString       = Type\\isString($mask);\n    $isStringObject\
+    \ = Type\\isStringObject($mask);\n\n    if ($isString or $isStringObject) {\n\
+    \      if (Type\\isExpression($mask)) {\n        $raw = Type\\String\\trimWithExpression(\n\
+    \          $this,\n          $mask\n        );\n      } else {\n        $raw =\
+    \ Type\\String\\trimWithString(\n          $this,\n          $mask\n        );\n\
+    \      }\n\n      return Type\\toStringObject($raw);\n    }\n\n    throw new LogicException(\"\
+    mask is not a string\");\n  }\n}\n```\n\n## 链式调用\n\n我们采用的面向对象方法的好处之一是可以在类型上链式调用方法。你可能已经注意到这是如何实现的（从前面的例子中），但以防你没注意到：\n\
+    \n```\nreturn Type\\toStringObject($raw);\n```\n\n操作方法应返回纯 PHP 类型——因为我们希望人们能够互换使用这些类型。因此，由类（代理）将纯\
+    \ PHP 类型包装到 SPL 类型中。\n\n## 组合数字类型\n\n我已经暗示过我希望使用单一数字类型，这正是我在这里想要实现的。出于这个原因，我们将完全忽略\
+    \ `SPLNumber` 类，转而使用 `SPLFloat`。\n\n原因很简单——数字应该能够处理小数点，而无需额外的方法集或额外的认知负担。这虽会导致数值运算中存在额外的类型转换，但这并非世界末日。\n\
+    \n# 如何测试\n\n测试是取代原生类型处理系统的重要组成部分。好消息是这很容易做到！\n\n## PHPUnit\n\n`PHPUnit` 是一个单元测试库，它使测试小块代码的过程变得超级简单：\n\
+    \n```\nclass StringObjectTest extends PHPUnit_Framework_TestCase\n{\n  /** @test\
+    \ */\n  public function trimWorksWithStrings()\n  {\n    $subject = Type\\toStringObject(\"\
+    Hello World...\");\n\n    $this->assertEquals(\n      \"Hello World\",\n     \
+    \ $object->trim(\".\")\n    );\n  }\n}\n```\n\n这种测试可以通过多种测试框架完成。归根结底，只要你编写测试，使用哪个测试框架由你决定。\n\
+    \n## 应该测试什么？\n\n简短的回答是：一切。\n\n我们的目标是构建一个稳固的东西，而且它是相当底层的。这意味着我们需要确保事情继续按预期工作。考虑到我们要编写的方法是多么简单，这甚至不是那么困难。\n\
+    \n我们应该努力对命名空间函数有良好的覆盖率，并进行一些测试，以确保这些函数从（代理）类中被正确调用。\n\n## 何时编写测试？\n\n这真的取决于你。也许你想先编写测试，遵循红-绿-重构循环。也许你想先编写所有库代码，然后确保一切按预期工作（通过为库代码编写测试）。\n\
+    \n重要的是要编写测试。\n\n## 推荐阅读\n\n我强烈推荐以下书籍：\n\n- [《代码整洁之道》，作者：Robert C. Martin](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)\n\
+    - [《暴躁程序员的 PHPUnit 烹饪书》，作者：Chris Hartjes](https://leanpub.com/grumpy-phpunit)\n\
+    \n# 如何打包\n\n如果你希望你的代码被（其他人）使用，明智的做法是以他人愿意使用的方式来打包它。\n\n## 编写 `Readme` 文件\n\n这听起来很简单，但你会惊讶于实际这样做的开发者竟然这么少！当其他开发者偶然发现你的仓库（在\
+    \ Github/BitBucket 或其他平台上）时，看到一个光秃秃的目录结构而别无他物，他们不会留下好印象。\n\n编写一个 `Readme` 文件，并包含以下内容……\n\
+    \n## 几个示例\n\n展示你的库能做什么。没有什么比被一些宣传所吸引（去了解一个库），结果却不得不从测试和/或源代码中摸索出用法更令人沮丧的了。\n\n\
+    这些是学习的好地方，但它们需要主动去寻找，而几个示例（在你的 `Readme` 文件中）则很容易找到。涵盖你的库主要方面的示例。\n\n在我们的案例中，这意味着提供一个（或两个）关于支持库的过程式代码的示例。这意味着提供一个（或两个）关于面向对象包装器的示例，这些包装器为传统的过程式操作提供了流畅的接口。这意味着提供一个（或两个）关于如何子类化类型以进行进一步定制的示例。\n\
+    \n制作这些并不难——它们甚至可以从你的单元测试中提取出来……\n\n## 测试说明\n\n开发者想知道你的代码有多稳固。当然你使用了[语义化版本控制](http://semver.org)，但你的测试覆盖率是多少？你的测试通过了吗？我能信任你吗？\n\
+    \n回答这些问题最简单的方法是编写单元测试，然后提供如何运行它们的说明。你不需要任何复杂的东西：\n\n```\n$ composer install &&\
+    \ phpunit\n```\n\n这就是你运行单元测试的方式，并且很容易告诉其他人如何运行它们。\n\n## 安装说明\n\n好的——你已经说服某人使用你的[希望是]经过良好测试的库。示例展示了它的价值。那么他们如何安装你的库呢？\n\
+    \n这就是你制作 `composer.json` 文件并包含 Composer 安装说明的地方。这需要到 [Packagist](https://packagist.org)\
+    \ 一趟，但你将因此变得更好。\n\n然后，你只需要添加一组简单的说明：\n\n```\n$ composer require \"vendor/library:1.0.0\"\
+    \n```\n\n## 许可证\n\n包含一个开源许可证。像 [MIT](http://opensource.org/licenses/MIT) 这样友好的许可证就很合适。在你的\
+    \ `Readme` 文件中指定这一点，并包含一个名称清晰的文件（如 `LICENSE` 或 `license.md`），其中包含完整的许可证文本。\n\n\
+    ## 贡献指南\n\n这是可选的，但会大大增加其他开发者发送兼容合并请求的机会。如果你对代码风格很挑剔（你应该如此），那么请务必告诉人们你希望他们的提交是什么样子的。\n\
+    \n# 结论\n\n构建一个新的类型系统仅仅部分关乎代码。精心设计的库需要大量的设计考量。花时间决定一个合理的结构——一个能给使用者最大灵活性的结构。\n\n\
+    做好测试。做好打包。清晰明确。\n\n## 面向未来设计\n\n本章节不完整。\n\n## 附录\n\n### PHP 实现\n\n此部分不完整。\n\n\
+    ### Zephir 实现\n\n此部分不完整。\n\n### JavaScript 实现\n\n此部分不完整。\n"

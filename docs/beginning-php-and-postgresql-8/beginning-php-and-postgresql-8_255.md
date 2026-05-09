@@ -1,0 +1,2 @@
+# 在 Linux 上安装 PostgreSQL，584
+

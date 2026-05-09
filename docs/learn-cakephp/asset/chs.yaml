@@ -1,0 +1,4436 @@
+- "\n![](img/A978-1-4842-1212-7_CoverFigure.jpg)\n\n![A978-1-4842-1212-7_CoverFigure.jpg](img/A978-1-4842-1212-7_CoverFigure.jpg)拉达拉迪亚·达萨《使用单元测试学习\
+  \ CakePHP》第二版\n\n![A337704_2_En_BookFrontmatter_Figa_HTML.png](img/A337704_2_En_BookFrontmatter_Figa_HTML.png)\n\
+  \n作者在本书中引用的任何源代码或其他补充材料，读者可在 [`www.apress.com/9781484212134`](http://www.apress.com/9781484212134)\
+  \ 获取。有关如何查找本书源代码的详细信息，请访问 [`www.apress.com/source-code/`](http://www.apress.com/source-code/)。读者也可在\
+  \ SpringerLink 各章节的“补充材料”部分获取源代码。\n\nISBN 978-1-4842-1213-4  \ne-ISBN 978-1-4842-1212-7\
+  \  \nDOI 10.1007/978-1-4842-1212-7  \n美国国会图书馆控制号：2016949500\n\n© 2016 年，Sándor Gömöri\
+  \ 版权所有\n\n《使用单元测试学习 CakePHP》第二版\n\n常务董事：Welmoed Spahr  \n首席编辑：Steve Anglin  \n技术审校：Massimo\
+  \ Nardone  \n编辑委员会：Steve Anglin, Pramila Balan, Louise Corrigan, Jonathan Gennick,\
+  \ Robert Hutchinson, Celestin Suresh John, James Markham, Susan McDermott, Matthew\
+  \ Moodie, Ben Renow-Clarke, Gwenan Spearing  \n协调编辑：Mark Powers  \n文字编辑：Michael\
+  \ G. Laraque  \n排版：SPi Global  \n索引制作：SPi Global  \n美术设计：SPi Global\n\n如需了解翻译相关信息，请发送电子邮件至\
+  \ `rights@apress.com`，或访问 [`www.apress.com`](http://www.apress.com)。\n\nApress 和\
+  \ friends of ED 系列图书可批量购买用于学术、企业或促销用途。大部分图书也提供电子版及相应许可。更多信息，请参阅我们的批量销售与电子书许可网页：[`www.apress.com/bulk-sales`](http://www.apress.com/bulk-sales)。\n\
+  \n本作品受版权保护。出版者保留所有权利，无论全部或部分内容，具体包括翻译、重印、插图再利用、朗诵、广播、微缩胶卷复制或任何其他物理形式复制，以及电子改编、计算机软件，或通过目前已知或今后开发的类似或不同方法进行的信息传输、存储和检索。\n\
+  \n本书中可能出现商标名称、标识及图像。我们仅在编辑性表述中使用这些名称、标识和图像，以维护商标所有者权益，无意侵犯其商标权。本书中使用商品名称、商标、服务标志及类似术语（即便未明确标识）亦不构成对相关权利归属的评判。\n\
+  \n尽管本书中的建议和信息在出版时被认为是真实准确的，但作者、编辑及出版者不对任何可能出现的错误或疏漏承担法律责任。出版者对本书内容不作任何明示或暗示的担保。\n\
+  \n印刷于无酸纸\n\n本书通过纽约 Springer Science+Business Media 公司全球发行，地址：233 Spring Street,\
+  \ 6th Floor, New York, NY 10013。电话：1-800-SPRINGER，传真：(201) 348-4505，电子邮件：`orders-ny@springer-sbm.com`，或访问\
+  \ `www.springeronline.com`。\n\nApress Media, LLC 是加州有限责任公司，其唯一成员（所有者）为 Springer\
+  \ Science + Business Media Finance Inc（SSBM Finance Inc）。SSBM Finance Inc 是特拉华州公司。\n\
+  \n高喊 Gouranga，快乐永相随\n\n## 引言\n\n我热爱 Web 编程，但不喜欢查找自己制造的 Bug。而我讨厌——我是说真心讨厌——查找别人制造的\
+  \ Bug。\n\n大多数时候，我们的代码依赖于他人。我们使用由他人创建和维护的框架、工具和对象。所有第三方代码都可归入此类。作为 Web 开发者，我们都会升级代码以实现新功能、修复\
+  \ Bug，或让作品兼容新服务器版本。任何升级都可能引入新行为、新接口，当然还有新 Bug。无论你是独立工作还是团队协作，我们都依赖于彼此的代码。\n\n写代码不像给奶奶写信。实际上，写代码根本就不是“写”。如果我们花足够时间规划，并且需求明确且在开发过程中不变，写代码或许有点像写信。但现实中完全不同。当我们编写代码时，通常是先写一小部分，然后检查它、修改它、再次检查，再编写与第一部分相关的其他内容，也同样检查，再回头检查第一部分，当出错时再次修改，再次检查，如此循环往复。听起来很熟悉？\n\
+  \n你是否只是因为写了两行代码，就反复按浏览器刷新按钮来检查输出？你是否厌倦了用不同输入值反复填写同一个表单，只为了检查服务器端如何处理？`var_dump`\
+  \ 和 `debug()` 是不是你最好的朋友？开发环境一切正常，但安装后却毫无反应？或者更糟——生产环境中只有少量功能无法运行，但你完全不知道原因？又或者，你只是想学习一种新方法，让代码更优秀、更简洁、更易维护。也许你在寻找能帮你定位\
+  \ Bug 并节省时间的方法。如果是这样，请继续往下读。\n\n## 关于本书\n\n本书的读者对象包括：具备编程技能并希望提升代码质量的人；听说过单元测试但仍不清楚其概念或工作原理的人；热爱\
+  \ CakePHP 并希望充分利用其优势的人；以及第三方的升级后花费大量时间查找 Bug 的人。\n\n本书示例使用 CakePHP，但前半部分内容不局限于特定框架或语言。我希望单元测试以及本书介绍的理念能像帮助我一样，同样帮助到你。\n\
+  \n\n\n### 我为何撰写本书\n\n我在 CakePHP 1.1 版本时开始使用它。这个框架非常出色，而且不断完善，拥有开放且乐于助人的团队和社区。它帮助我成为了一名更优秀的程序员。\n\
+  \n刚开始写代码时，我所有事情都从零开始。我对编程模式、实用工具或库一无所知。即便如此，我还是用这种方式构建了中等规模的系统。\n\n过了一段时间，我认定将应用逻辑和表现逻辑混合在一起弊大于利，于是开始使用\
+  \ [Smarty](http://smarty.net/) 模板引擎。Smarty 帮了大忙。随着时间的推移，它让我认识到，我自认为的最佳实践其实是最糟糕的实践。我知道我需要更强大的东西。\n\
+  \n我意识到，在大多数 Web 应用中，我需要一些共通的特性。我开始思考自己的编码方式，一段时间后，竟然在完全不知道框架存在的情况下，自己捣鼓出了一个极其简单且乏味的“框架”。\n\
+  \n就在那时，我听说了 MVC（模型-视图-控制器）模式。起初，这似乎给代码带来了不必要的复杂性，但我还是想尝试一下。在试图理解 MVC 时，我找到了一些关于框架的资料。我试用了\
+  \ [CodeIgniter](http://ellislab.com/codeigniter)，然后又试用了 [CakePHP](http://cakephp.org/)。\n\
+  \n第一次接触 CakePHP 感觉糟透了，尤其因为我过去（现在也）是 `bake` 自动代码生成功能的忠实粉丝。我深信整个框架能节省大量时间，并生成更清晰、更易于维护的代码。\n\
+  \n但后来，我打算用 CakePHP 编写一个在线会计系统。这涉及金钱，所以代码必须始终按预期工作。我花了大量时间测试——点击链接、填写表单、一遍又一遍输入测试数据——试图理解代码失败的原因。但这没问题。这就是让事情运转起来的方法。\n\
+  \nCakePHP 1.3 版本发布了，接着是 Cake 2。我想升级，但升级似乎非常麻烦。我很抗拒。我不知道升级要花多少时间，也不清楚代码中会隐藏多少 bug。当第三方代码的基础框架发生变化时，依赖错误信息来排查简直是场噩梦。\n\
+  \n我曾听说过单元测试，但实际并不在意。用代码来测试我的代码？听起来很傻。但我还是试着去理解，并找到了许多支持单元测试的文章。你可以在第 2 章的“论据”部分自行阅读。最后，我尝试了单元测试，它们确实管用。而且帮了大忙。\n\
+  \n我想很多读者都有过类似的经历。让我们试着缩短学习曲线。\n\n我希望这本书能帮到你，也希望我的建议能为你节省一些时间。\n\n### 我的开发环境\n\n\
+  我尽量使用与环境无关的代码示例，但众所周知，这不可能。鉴于此，我列出了我使用的系统和软件：\n\n-   Ubuntu 16.04\n-   PHP 7.0.4\n\
+  -   CakePHP 3.2.8\n-   PHPUnit 5.3.2\n-   MySQL 5.0.12\n-   MySQL Workbench 6.3.4\n\
+  -   PHPStorm 10\n-   xdebug 2.4.0\n\n### 本书读者对象\n\n本书面向新手和中级程序员。假定你已经对 PHP 和面向对象编程（OOP）有了基本了解。\n\
+  \n如果你熟悉 CakePHP，特别是阅读后续章节时，会很有帮助。但即使不熟悉，你可能也仍然能够理解大部分原则和代码。\n\n### 致谢\n\n感谢你花时间阅读本书。\n\
+  \n我还想感谢 CakePHP 的核心团队以及每一位为这个优秀框架做出或大或小贡献的人。\n\n最后，特别感谢意大利的披萨和匈牙利的 Túró Rudi——它们对\
+  \ Web 开发来说都至关重要。\n\n\n\n## 目录\n\n- 第 1 章：什么是 CakePHP？ 3\n    - 主要特性 3\n    - 学习曲线短\
+  \ 4\n    - 约定优于配置 4\n    - 易于安装 4\n    - MIT 许可 4\n    - 自动代码生成 4\n    - 内置验证 5\n\
+  \    - MVC 架构 5\n    - 简洁的 URL 和路由 5\n    - 灵活的缓存 5\n    - 内置本地化 5\n    - 集成单元测试\
+  \ 6\n    - 更多功能 6\n    - 小结 6\n- 第 2 章：什么是单元测试？ 9\n    - 从手动测试到单元测试 9\n    - 争论\
+  \ 9\n        - 论点 #1：不可能测试所有变体 10\n        - 论点 #2：编写测试太耗时 10\n        - 论点 #3：编写测试很困难\
+  \ 10\n        - 论点 #4：我不需要测试，我了解自己的代码 10\n        - 论点 #5：这纯粹是浪费时间 10\n        -\
+  \ 论点 #6：测试本身可能含有 bug 11\n        - 论点 #7：开发过程会破坏测试 11\n    - 为什么我们应该编写测试？ 11\n \
+  \       - 测试功能 11\n        - 重构 12\n        - 获取快速反馈 12\n        - 编写高质量代码 12\n\
+  \        - 充分利用你的大脑 12\n        - 节省时间和金钱 13\n    - 小结 13\n- 第 3 章：整洁代码 15\n   \
+  \ - 如何编写整洁代码 15\n        - 注释 15\n        - 命名 16\n        - 方法 16\n        - 代码格式\
+  \ 16\n        - MVC 16\n    - 测试如何帮助编写整洁代码 17\n        - 规划 17\n        - 重构 17\n\
+  \    - 小结 17\n- 第 4 章：测试驱动开发 19\n    - PHP 测试驱动开发工具 19\n        - PHPUnit 19\n \
+  \       - Codeception 19\n        - SimpleTest 19\n        - Atoum 20\n        -\
+  \ Selenium 20\n    - 测试驱动开发周期 20\n        - 步骤 #1：编写测试 20\n        - 步骤 #2：编写代码\
+  \ 20\n        - 步骤 #3：重构 20\n        - 步骤 #4：再次测试 21\n        - 步骤 #5：为新功能编写代码 21\n\
+  \    - 小结 21\n- 第 5 章：开发周期 23\n    - 敏捷 23\n    - 敏捷宣言 23\n    - 宣言背后的 12 条原则 24\n\
+  \    - CakePHP 如何支持敏捷开发 24\n    - 敏捷价值路线图 25\n        - 产品愿景 25\n        - 产品路线图\
+  \ 25\n        - 发布计划 25\n        - 冲刺规划 25\n        - 每日站会 25\n        - 冲刺评审 26\n\
+  \        - 冲刺回顾 26\n    - 小结 26\n- 第 6 章：为测试做准备 29\n    - 安装 29\n        - 安装 Web\
+  \ 服务器 29\n        - 安装 MySQL 30\n        - 安装 PHP 30\n        - 安装后配置 31\n     \
+  \   - 安装 Composer 32\n        - 安装 CakePHP 32\n        - 安装 PHPUnit 33\n       \
+  \ - 安装 phpMyAdmin 34\n        - 检查测试设置 34\n    - 准备 35\n        - 设置调试级别 35\n  \
+  \      - 设置测试数据库 35\n        - 设置会话处理 42\n        - 创建默认布局 42\n        - CakePHP\
+  \ 模型 42\n        - CakePHP 控制器 44\n        - CakePHP 视图 44\n        - 烘焙 44\n  \
+  \      - 清理 46\n        - 动手实践 46\n    - 小结 47\n- 第 7 章：Fixtures 49\n    - 创建 Fixtures\
+  \ 49\n        - 即时创建 49\n        - 导入现有模型 schema 53\n        - 将 Fixtures 加载到测试中\
+  \ 55\n    - 小结 57\n- 第 8 章：模型测试 59\n    - 测试函数命名 61\n    - 断言 61\n        - 先失败\
+  \ 61\n        - 通过测试 62\n        - 测试与胖模型 63\n        - 测试回调 63\n    - 小结 64\n-\
+  \ 第 9 章：控制器测试 1 67\n    - 烘焙控制器的概览 67\n    - Bake 背后的魔法 72\n    - 创建控制器测试 72\n \
+  \   - 关于集成测试 76\n    - 断言方法 76\n    - 设置请求数据 77\n    - 小结 78\n- 第 10 章：模拟 81\n \
+  \   - 模拟会话 81\n    - 模拟模型方法 82\n        - 预期方法 83\n        - 更复杂的模拟示例 84\n     \
+  \   - 模拟核心 PHP 函数 85\n    - 小结 87\n- 第 11 章：控制器测试 2 89\n    - 使用身份验证进行测试 89\n  \
+  \  - 测试 JSON 响应 91\n    - 小结 93\n- 第 12 章：测试套件 95\n    - 使用 TestSuite 95\n    -\
+  \ 使用 phpunit.xml 96\n    - 小结 96\n- 第 13 章：从命令行进行测试 99\n    - 调试消息 99\n    - 运行所有测试\
+  \ 99\n    - 运行测试套件 99\n    - 运行文件中的所有测试 100\n    - 过滤测试用例 100\n    - 理解失败测试的输出 100\n\
+  \    - 中断测试 103\n    - 小结 103\n- 第 14 章：实用工具 105\n    - 代码覆盖率 105\n    - Fixtures\
+  \ 数据 107\n    - 测试私有方法 107\n    - 测试视图 108\n    - 测试组件 108\n    - 测试助手 109\n   \
+  \ - 测试插件 110\n    - 小结 110\n- 附录 A：各章节参考文献 111\n    - 什么是单元测试？ 111\n    - 整洁代码 111\n\
+  \    - 测试驱动开发 111\n    - 开发周期 112\n    - 其他 112\n    - 索引 113\n\n## 内容一览\n\n- 关于作者\
+  \ xv\n- 关于技术审校者 xvii\n- 致谢 xix\n- 引言 xxi\n- 关于本书 xxiii\n- 第 1 章：什么是 CakePHP？ 3\n\
+  - 第 2 章：什么是单元测试？ 9\n- 第 3 章：整洁代码 15\n- 第 4 章：测试驱动开发 19\n- 第 5 章：开发周期 23\n- 第 6 章：为测试做准备\
+  \ 29\n- 第 7 章：Fixtures 49\n- 第 8 章：模型测试 59\n- 第 9 章：控制器测试 1 67\n- 第 10 章：模拟 81\n\
+  - 第 11 章：控制器测试 2 89\n- 第 12 章：测试套件 95\n- 第 13 章：从命令行进行测试 99\n- 第 14 章：实用工具 105\n\
+  - 附录 A：各章节参考文献 111\n- 索引 113\n\n## 关于作者与关于技术审校者\n\n### 关于作者\n\n### 关于技术审校者\n\n\n\
+  \n"
+- '# 1. 什么是 CakePHP？
+
+
+  电子补充材料 本章的在线版本 (doi:[10.1007/978-1-4842-1212-7_1](http://dx.doi.org/10.1007/978-1-4842-1212-7_1))
+  包含补充材料，仅供授权用户使用。
+
+
+  ![A337704_2_En_1_Figa_HTML.jpg](img/A337704_2_En_1_Figa_HTML.jpg)
+
+
+  蛋糕行业的秘密
+
+
+  PHP 在网站领域的市场份额超过 80%。¹ 为什么它如此流行？因为它简单易学，速度快，几乎可以在所有网络服务器上使用，并且被用于众多流行的应用程序。它拥有大量优秀的框架，例如
+  `Zend`、² `Symfony`、³ 以及可能是我们最钟爱的 `CakePHP`。
+
+
+  这些框架在方法、复杂性和风格上各不相同。我认为 `CakePHP` 脱颖而出，得益于其较短的学习曲线，并专注于快速开发。
+
+
+  框架能帮助你加快开发速度，提供组织良好、可维护、可复用的代码，以及用于处理安全、本地化等方面的资源。
+
+
+  `CakePHP` 手册⁴（或称“食谱”）中指出：“`CakePHP` 是一个免费的⁵、开源的⁶、快速开发的⁷ PHP⁹ 框架⁸。”
+
+
+  我认为 `CakePHP` 最出名的是它的十分钟博客教程。没错，这是真的：使用 `CakePHP`，你可以在十分钟内构建一个可运行的博客！而且，你也能以同样快的速度构建更大的
+  Web 应用程序，而无需牺牲灵活性。
+
+
+  ## 主要特性
+
+
+  大多数流行的 PHP 框架都试图解决相同的问题。因此，选择一个并不容易。大多数开发者只使用一个框架，并对其他少数几个框架有所了解。当然，每个人都认为他们正在使用的框架是最好的。那么，在接下来的章节中，让我们看看我为什么选择
+  `CakePHP`。
+
+
+  ### 学习曲线短
+
+
+  `CakePHP` 的学习曲线很短。你可以在一个星期内熟悉主要的 API 方法，并在一个月内获得深入的理解。`CakePHP 3` 代表了一次重大变革，我认为它让学习曲线变得更短。
+
+
+  ### 约定优于配置
+
+
+  如果你实际遵循 `CakePHP` 的约定，几乎无需进行任何配置，这要归功于框架“约定优于配置”的理念。Cake 的约定简单易学易用。
+
+
+  控制器类名是复数形式、采用驼峰式大小写（CamelCased），并以“Controller”结尾。因此，Post 的控制器将是 `PostsController`。它位于
+  `/src/PostsController.php` 文件中。其对应的模型文件位于 `/src/Model/Table/PostsTable.php`，该文件会链接到数据库中的
+  `posts` 表。其视图文件位于 `/src/Template/Posts` 文件夹中。
+
+
+  表类名是复数形式、采用驼峰式大小写；与 `CakePHP` 模型对应的表名是英文复数形式并使用下划线分隔。
+
+
+  视图模板文件以其所显示的控制器函数命名，采用下划线形式，并且会根据 URL 自动映射。
+
+
+  如果你无法遵循约定（或者在某些罕见情况下，你不想遵循），你也可以轻松地配置一切。
+
+
+  ### 易于安装
+
+
+  你将在第 6 章看到如何安装 `CakePHP`。实际上，只需一行代码，你就可以下载并安装 `CakePHP`。因此，安装过程大约只需两秒钟甚至更短。
+
+
+  ### MIT 许可¹⁰
+
+
+  MIT（[麻省理工学院](https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology)）许可证是一种[自由软件许可证](https://en.wikipedia.org/wiki/Free_software_license)。它也允许在[专有和自由软件](https://en.wikipedia.org/wiki/Proprietary_software)中复用代码。MIT
+  许可证还与许多 [copyleft](https://en.wikipedia.org/wiki/Copyleft) 许可证（例如 [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License)）[兼容](https://en.wikipedia.org/wiki/License_compatibility)。
+
+
+  [Ruby on Rails](https://en.wikipedia.org/wiki/Ruby_on_Rails)、[Node.js](https://en.wikipedia.org/wiki/Node.js)、[jQuery](https://en.wikipedia.org/wiki/JQuery)
+  以及许多其他框架都采用 MIT 许可证。
+
+
+  ### 自动代码生成
+
+
+  `CakePHP` 有一个内置的控制台 shell，名为 `bake`，通过它我们可以生成基本的模型、控制器和视图文件。我认为它是快速开发中最好的工具之一。通过使用
+  `bake`，你可以在开发的非常早期阶段就开始拥有一个可运行的骨架。如果你遵循 Cake 的约定，`bake` 将检测你的数据库表和字段，并据此为你生成代码——这总是一个好的开端。你将在第
+  6 章看到自动代码生成的实际应用。
+
+
+  ### 内置[验证](http://en.wikipedia.org/wiki/Data_validation)¹¹
+
+
+  验证输入数据非常重要。验证确保应用程序处理的是干净、正确且有用的数据。这意味着验证可以从安全角度检查数据——检查数据是否可接受，例如是否在特定范围内、格式是否正确等等。
+
+
+  由 `bake` 生成的模型具有验证规则，它们是熟悉验证的一个良好起点。
+
+
+  ### MVC¹² 架构
+
+
+  也许 MVC（模型-视图-控制器）架构并非 `CakePHP` 的非凡特性，因为几乎所有 PHP 框架都遵循相同的模式。但作为一种范式、一种思维方式，它仍然能帮助你编写出更好的代码。
+
+
+  ### 简洁的 URL 和路由
+
+
+  Cake 帮助你创建简单、干净的 URL，并且实际上赋予你 100% 的自由来操控你的 Web 应用程序的 URL。默认情况下，URL 的构建方式如下：`/controller/method/parameter`，因此
+  `posts/edit/1` 将被映射到 `PostsController` 的 `edit` 方法，并将其唯一参数 `1` 传递给它。
+
+
+  ### 灵活的缓存¹³
+
+
+  `CakePHP` 内置了六种不同的缓存引擎，例如 `FileCache`、`Memcached`、`Redis` 等。由于它们具有相同的接口，你可以随时平滑地更换缓存引擎。如果你想要一些非常特别的缓存方式，你也可以添加自己的缓存系统。
+
+
+  ### 内置本地化
+
+
+  本地化和国际化要么是一场噩梦，要么非常简单。Cake 提供了一种非常好的方式，让你无需费力就能同时实现两者。你只需要以 `gettext` 格式创建翻译文件，并在想要向屏幕输出内容时使用
+  `__()` 方法即可。
+
+
+  ### 集成单元测试
+
+
+  对我们来说，`CakePHP` 最重要的方面可能是它拥有一个集成的单元测试系统。它使用 `PHPUnit`，并为我们提供了一些非常有用的测试类和方法。
+
+
+  ### 更多优点
+
+
+  `CakePHP` 还拥有一个活跃、友好且乐于助人的[开发者](http://cakephp.lighthouseapp.com/contributors) [团队](http://cakephp.lighthouseapp.com/contributors)¹⁴
+  和社区。当你遇到难题时，社区非常重要。`CakePHP` 社区在 stack overflow 上解答了数以万计的与 `CakePHP` 相关的问题，拥有一个活跃的
+  Google 邮件组和 Google+ 群组，以及一个在线论坛。¹⁵
+
+
+  `CakePHP` 是最著名的 PHP 框架之一，被数以千计的网站和应用程序使用，并受到世界各地许多开发者的喜爱和频繁使用。
+
+
+  `CakePHP` 让构建 Web 应用程序更简单、更快速、更轻松。
+
+
+
+
+  '
+- '# 摘要
+
+
+  本章首先带您总体了解 PHP 框架，然后深入探讨了 CakePHP 及其主要特性。我详细介绍了该框架的核心约定，借助这些约定我们可以避免各种配置问题。在 Cake
+  的主要特性中，我重点强调了自动代码生成（或许还包括集成单元测试），因为这是本书的核心主题。
+
+
+  脚注 1
+
+
+  W³（网络技术调查），“PHP 网站的使用统计与市场份额”，[`https://w3techs.com/technologies/details/pl-php/all/all`](https://w3techs.com/technologies/details/pl-php/all/all)，2009–2016
+  年。
+
+
+  2
+
+  [`http://framework.zend.com/`](http://framework.zend.com/)
+
+
+  3
+
+  [`https://symfony.com/`](https://symfony.com/)
+
+
+  4
+
+  [`http://book.cakephp.org`](http://book.cakephp.org)
+
+
+  5
+
+  [`http://en.wikipedia.org/wiki/MIT_License`](http://en.wikipedia.org/wiki/MIT_License)
+
+
+  6
+
+  [`http://en.wikipedia.org/wiki/Open_source`](http://en.wikipedia.org/wiki/Open_source)
+
+
+  7
+
+  [`http://en.wikipedia.org/wiki/Rapid_application_development`](http://en.wikipedia.org/wiki/Rapid_application_development)
+
+
+  8
+
+  [`http://en.wikipedia.org/wiki/Application_framework`](http://en.wikipedia.org/wiki/Application_framework)
+
+
+  9
+
+  [`http://www.php.net/`](http://www.php.net/)
+
+
+  10
+
+  [`http://en.wikipedia.org/wiki/MIT_License`](http://en.wikipedia.org/wiki/MIT_License)
+
+
+  11
+
+  [`http://en.wikipedia.org/wiki/Data_validation`](http://en.wikipedia.org/wiki/Data_validation)
+
+
+  12
+
+  [`http://en.wikipedia.org/wiki/Model-view-controller`](http://en.wikipedia.org/wiki/Model-view-controller)
+
+
+  13
+
+  [`​en.​wikipedia.​org/​wiki/​Web_​cache`](http://en.wikipedia.org/wiki/Web_cache)
+
+
+  14
+
+  [`http://cakephp.lighthouseapp.com/contributors`](http://cakephp.lighthouseapp.com/contributors)
+
+
+  15
+
+  [`http://discourse.cakephp.org/`](http://discourse.cakephp.org/)
+
+
+  '
+- '# 2. 什么是单元测试？
+
+
+  ![A337704_2_En_2_Figa_HTML.jpg](img/A337704_2_En_2_Figa_HTML.jpg)
+
+
+  把手给我，宝贝
+
+
+  单元测试允许你对软件进行隔离测试。通常情况下，单元测试规模小、运行快，只测试一小段代码——即一个单元——例如一个函数。单元测试本身也是代码，旨在测试其他代码。
+
+
+  它有助于保持代码简洁、易于理解和阅读。同时，它也有助于编写更易于维护的代码。最终，这有助于创建缺陷更少的软件。单元测试将测试过程自动化。
+
+
+  单独依靠单元测试并不能保证应用程序完美无缺、毫无缺陷，但它们确实能带来很大帮助。
+
+
+  ## 从手动测试到单元测试
+
+
+  当你编写代码时，必须确保它能完成预期工作。由于我们讨论的是 PHP 测试，新手应在浏览器中进行测试。编写代码；打开浏览器；输入不同数据；检查输出是否符合预期。听起来很熟悉？这被称为手动测试，通过这种方式，我们测试的是功能，而非代码本身。
+
+
+  下一步是建立一个自动化测试系统，这样你就不必在浏览器中手动点击各处来检查软件了。有许多工具可以完成这项工作。两种主要方法是测试驱动开发（TDD）和行为驱动开发（BDD）。
+
+
+  简而言之，TDD 要求在编写代码之前先编写测试。这种方法依赖于单元测试。
+
+
+  由于单元测试针对的是小段代码，编写起来很容易，并且你的代码也很容易被它们覆盖。
+
+
+  在 BDD 中，任何单元的测试都应基于该单元的期望行为来指定。
+
+
+  ## 争论
+
+
+  关于反对编写单元测试，存在一些常见论点。我想通过回应这些论点，并分享我在这些问题上的个人经验，来强调单元测试的优势。然后，你可以亲自尝试单元测试，并做出自己的判断。
+
+
+  ### 论点 #1：不可能测试所有变体
+
+
+  是的，确实如此。你无法测试所有可能的变体。但至少单元测试能显示你的测试覆盖了哪些变体。如果你能确定应用程序因某个未覆盖的变体而失败，只需扩展测试即可。
+
+
+  例如，如果我的测试能在正整数上成功运行，那么日后必要时，我可以将其扩展为测试 0、负整数或浮点数。
+
+
+  ### 论点 #2：编写测试太耗时
+
+
+  编写（以及维护）额外的代码确实需要时间。这显而易见。但编写本身只是众多耗时因素之一。还有哪些？花费在理解自己三、四个月前所写代码上的时间；花费在理解他人代码上的时间；花费在寻找包含
+  bug 的特定代码片段上的时间；每当第三方代码变更时，花费在重新审查代码上的时间。当我们把所有这些事情花费的时间加起来，就会发现单元测试似乎能够节省时间。节省时间意味着节省成本，但要小心。单元测试**可能**节省时间，并非**绝对**会节省时间。你必须正确使用测试。
+
+
+  学习使用单元测试本身也需要时间。但我认为学习曲线很短暂，并且即使在你第一次使用时，也会有所回报。
+
+
+  ### 论点 #3：编写测试很难
+
+
+  编写**测试**很容易。编写**好的测试**才难。但这只需要一点练习。
+
+
+  有一个例外。为面条式代码，或做很多事情的函数编写测试，确实很难。因此，当你遇到困难的测试时，应意识到这可能表明你的代码需要重构。
+
+
+  ### 论点 #4：我不需要测试；我了解自己的代码
+
+
+  大约 99.9% 的情况下，你并非独自编码。我们经常使用第三方代码。而且，随着时间的推移，我们往往会忘记或改变自己对编码方式的思考。也许当初编写代码时思路很清晰，但一段时间后，我们可能需要花费几分钟（甚至几小时）来理解自己当时做了什么。
+
+
+  很多时候，我会为自己仅五六行的辅助函数编写测试。当你的代码运行在不同的服务器、不同的 PHP 版本上时，这些函数测试起来要简单得多。测试不同的输入——甚至包括那些根本不应该出现的数据——比如除零错误，也更简单。
+
+
+  ### 论点 #5：这纯粹是浪费时间
+
+
+  这个论点通常来自那些刚开始编写单元测试，且心中抱有论点 #4 想法的 Web 开发者。他们常说：“我写了一些单元测试，但运行时一个 bug 都没发现。我觉得这是在浪费时间。”
+
+
+  好吧，现在你有了测试。这意味着你手头有了一项资产，它可以在你进行某些修改或重构后，帮助你检查代码的相同部分。至少，为此你无需再回到手动测试。编写更多的测试，三个月后再回到你的代码，看看有什么不同。编写代码和维护代码是两件不同的事。有了单元测试，你在维护代码上浪费的时间会比没有它们时少得多。
+
+
+  ### 论点 #6：测试本身可能也有 bug
+
+
+  是的。任何代码都可能存在 bug。但是单元测试通常很短，因此更容易编写成无 bug 的版本。完全有可能编写出即使本应失败的测试也能通过的通过测试。再次强调，解决方案在于练习。
+
+
+  永远不要忘记：测试能证明错误的存在，但不能证明错误不存在。
+
+
+
+
+  ### 论点 #7：开发过程会破坏测试
+
+
+  随着你在开发周期中不断添加新层，你同样需要维护你的测试。当代码发生变化时，相应的测试也应随之改变；否则，测试将会失败。不过，既然你修改了代码，你就应该知道如何修改测试。
+
+
+  实际上，这正是拥有测试的优势之一。当我重构代码时，测试应该能够成功运行。如果我修改了代码的签名或返回值，测试会失败，或者也可能成功运行。如果失败，你就能看到代码在哪些地方可能会产生问题或
+  bug。因此，它促进了安全的修改。
+
+
+  ## 我们为什么要编写测试？
+
+
+  测试能显著缩短测试时间，这最终会节省成本。测试有助于编写高质量的代码，并且是重构过程中的重要资产。它们将改变你对代码的思考方式。
+
+
+  ### 测试功能
+
+
+  当我们首次编写代码时，应该检查它是否真的实现了我们想要的功能。我们所有人都会这样做——无论有没有单元测试。实际上，`var_dump` 及其同类工具也算是一种测试。只是它们无法满足测试的真正目的。
+
+
+  一段时间后，你必然需要对旧代码进行修改，要么是因为存在 bug，要么仅仅是因为你想优化之前的工作。在这种情况下，你也需要一些手段来测试代码是否依然满足你的需求。手动测试既枯燥、缓慢又低效。
+
+
+  与任何其他测试系统相比，手动测试耗时都多得多，至少在你认真细致地操作时是如此。同一个方法可能在应用程序的许多地方被调用，你需要测试所有地方，以确保你的应用程序按预期工作。除此之外，你还应该列出可能的输入列表，例如“我应该用负数、零、字母、特殊字符来测试它。”
+  也许在部署到生产环境之前，你忽略了测试所有情况。不，这种情况绝对不会发生！
+
+
+  ### 重构
+
+
+  重命名变量或函数可以提高代码的可读性。但你必须注意，重命名不会引入新的 bug 或冲突。修改方法的签名或返回值也是如此。测试能为你提供帮助。
+
+
+  有时候，代码中会存在一些与代码目标毫无关联，或者根本不做任何事情的片段。显然，你想要移除这些代码，但之后你必须检查代码的主体部分是否仍然能正常工作。如果你的代码有测试覆盖，你就可以安全地移除那些不需要的代码片段，因为如果你移除了有用的部分，测试就会失败。
+
+
+  在另一些时候，你可能知道自己的代码有问题，但不想花时间去修复。于是，你只是在代码中留下一段注释，比如 `// TODO: 如果 $num = 0 将会出错`。而一个失败的测试则要清晰得多。
+
+
+  有句名言：“如果没坏，就别修它。” 你可能会问：我辛苦写出来的代码运行得好好的，你在说什么呢？但简单来说，这句话对于软件开发并不适用。重构是开发中非常重要的一部分。通过成功地重构代码，你最终会得到和没有重构时相同的结果，但你的代码将变得可复用、可维护、更快、更整洁，并且质量更高。
+
+
+  ### 获取快速反馈
+
+
+  快速反馈非常重要。开发人员没有时间点击每一个链接，以所有可能的顺序按每一个按钮，多次按浏览器的“返回”按钮，用各种数据（甚至是恶意数据）填写表单，或者部署新代码然后等待客户反馈。
+
+
+  我认为 Firebug ( [`getfirebug.com`](https://getfirebug.com) ) 是一个很好的例子。我打开 HTML 选项卡并更改一些内容，我立刻就能在浏览器中看到结果。
+
+
+  还有其他语言的工具，它们通过在每一个分号后或每次保存文件时实际运行测试来提供即时反馈。这些都是极其强大的开发工具。虽然 PHP 中没有这样的工具，但无论如何，测试是实现这一目标的最佳工具。
+
+
+  ### 高质量的代码
+
+
+  测试是在隔离环境中运行的。因此，通过运行一个测试，你正在验证一个不依赖于其他代码段的特定代码片段。但这很容易违反单一职责原则。测试为我们的代码编写过程增加了一个视角。更多内容可参见第
+  3 章。
+
+
+  ### 发挥大脑的最佳状态
+
+
+  在压力之下，即使是最聪明的人（是的，甚至包括程序员）也会犯愚蠢的错误。
+
+
+  你曾经写过像 `if(3 < 5)` 这样的代码吗？从来没有？我保证，你会的。即使是最微不足道的代码或代码变更，你也很可能会破坏某些东西。你是否总是放松？你是否总是有足够的时间编写代码？你的老板是否总是开心？你的客户是否总是耐心？你是否总是有明确的规格说明？你的孩子是否整夜安睡？如果答案是否定的，你就会犯愚蠢的错误。测试能帮助你以一种简单的方式检查你的代码。
+
+
+  ### 节省时间和金钱
+
+
+  正如我之前提到的，无论通过何种方式，你终究会测试你的代码。但你可以选择一种更有效的方法。你可以选择一种让你花更少时间修复 bug 和重构，而花更多时间实际编写代码的方法。节省时间很有趣——你总是可以把这些时间用来追你最喜欢的下一集电视剧——而节省时间也就意味着节省金钱。
+
+
+  ## 总结
+
+
+  在本章中，你学习了我们为什么要测试，什么是单元测试，以及反对它的论点是什么。由此，你了解到你可以节省维护代码的时间——因为几个月后的代码对你来说可能就像别人写的一样陌生——以及测试如何帮助你发挥大脑的最佳状态。
+
+
+  '
+- '# 3. 整洁代码
+
+
+  ![A337704_2_En_3_Figa_HTML.jpg](img/A337704_2_En_3_Figa_HTML.jpg)
+
+
+  我们的 API 似乎存在一些沟通问题
+
+
+  谁在意代码呢？只要它能运行，那就没问题了。对吧？我不这么认为。
+
+
+  有几个理由让你应该关注代码质量。
+
+
+  首先，你代码的质量将决定软件的质量。如果你认为可以用混乱的代码构建出优秀的软件，那你是在做梦。其次，整洁代码节省时间。你花在阅读代码上的时间将多于编写它的时间。你团队中的其他人也会花相当一部分时间来阅读你的代码。你同样会花时间阅读别人的代码。整洁代码易于阅读，因此整洁代码能节省时间。第三，你的代码是你自身的反映。如果你不重视代码的质量，你就不会被录用。混乱的代码意味着你对自己或自己的作品没有坚持高标准。客户和雇主都要求质量。
+
+
+  整洁代码是可维护的。它易于阅读和理解。这意味着它易于使用和修改。整洁代码是直截了当的。
+
+
+  ## 如何编写整洁代码
+
+
+  编写整洁代码不需要花费大量时间。编写整洁代码是一种习惯，在编写和重构过程中需要多加注意。幸运的是，这是一种可以学会的习惯。
+
+
+  永远不要忘记：我们为机器和人编写代码。人更重要。
+
+
+  以下是关于如何编写整洁代码的一些提示。当你在团队中工作时，至少应该明确这些选项。
+
+
+
+
+  '
+- '# 注释
+
+
+  有些人认为单元测试可以替代注释。另一些人则说“不要注释——重构”。两种方法各有千秋，但注释对于编写更好的代码大有裨益。
+
+
+  了解何时以及如何添加注释需要时间。我认为最好的方法是将注释视为代码中的便利贴。因此，如果某段代码不直观或需要花时间理解，就给它加上注释。例如，大多数时候，我会为正则表达式添加注释。但别忘了：修改代码后，你也应该更新注释。否则，可能会遇到具有误导性或令人困惑的注释。
+
+
+  使用 PHPDoc (`www.phpdoc.org/`) 是一个最佳实践，并被 CakePHP 的核心所采用。PHPDoc 使得直接从源代码生成文档成为可能。它促进了所有类和方法的标准注释。
+
+
+  '
+- '# 命名
+
+
+  我们应该为类、方法、变量、参数等进行命名。名称应该具有描述性和意义。“Foo” 和 “bar” 在简短的代码示例中还行，但在生产代码中可能会非常令人困惑。
+
+
+  当你完全沉浸在代码中时，一个名为 `$lld` 的变量可能很清楚，但 `$last_login_date` 难道不是更具可读性、更容易理解吗？
+
+
+  按照惯例，CakePHP 对数据库表、字段名和视图文件使用下划线命名。对于类名，它使用驼峰命名法（CamelCase）。对于变量名和参数名，你可以选择其中任何一种，但请坚持使用一种。因此，如果你更喜欢带下划线的变量名，那么所有变量名都使用下划线，不要混用驼峰命名。
+
+
+  最好遵循 PHP 标准建议 (PSR) (`www.php-fig.org/psr`)。`PSR-1` 建议使用驼峰命名的方法名。使用动词作为方法名是一个最佳实践。
+
+
+  '
+- '# 方法
+
+
+  方法应该只做一件事，且要做好。这就是单一职责原则。这意味着方法应该简短，这也就意味着它们易于理解。有些开发者推荐每个方法最多不超过三行代码。
+
+
+  如果一个函数接受超过两个参数，那它就是重构的理想候选。
+
+
+  CakePHP 的 ORM 是使用方法链的一个很好的例子。它可以显著提高代码的可读性，也可能使其变得一团糟。所以，请从好的范例中学习。
+
+
+  '
+- '# 代码格式
+
+
+  历史学家说，历史上最血腥的战役是 1942 年的斯大林格勒战役。他们这么说是因为他们从未参加过开发人员试图就新项目中要遵循的代码风格达成一致的会议。
+
+
+  多亏了 `PSR-2`，这场战役结束了，我们有了一个可以遵循的建议。
+
+
+  代码格式涵盖缩进、左右花括号的位置、换行的位置等。
+
+
+  '
+- '# MVC
+
+
+  正如 MVC（模型-视图-控制器）所强调的，不要将模型、控制器和视图的功能混在同一个文件或类中。这也有助于保持代码整洁。
+
+
+  也许你还可以做很多其他事情来确保代码整洁，但在此列出并介绍所有选项超出了本书的范围。你可以使用一些巧妙的工具，例如 PHP Mess Detector (`https://phpmd.org/`)，来帮助你编写整洁的代码。
+
+
+  '
+- '# 测试如何帮助编写整洁的代码
+
+
+  即使你在应用中使用单元测试，代码仍然可能变得混乱。单元测试不会替你完成工作。我将在第 `4` 章更详细地讨论这个话题。
+
+
+  ## 规划
+
+
+  规划是创建优秀软件中非常重要的一部分，但像我和你这样的人常常缺乏耐心，无法将每个细节都规划周全。我们喜欢尽快动手。不幸的是，这种编码方式会制造问题。使用单元测试会促使我们在开发过程中进行深思熟虑（或规划）。如果我想给一个
+  Web 应用添加新功能，我当然会思考它如何运作。如果连这点规划都没有，我就无法编写代码。当代码能运行时，我的工作就完成了——至少是直到有人发现 bug 之前。当我编写测试时，我不得不思考可能且可接受的输入、输出以及返回值。编写测试有助于我们从远处、在更抽象的层面上思考，而测试驱动开发（TDD）则能帮助我们从中获得最大收益。
+
+
+  ## 重构
+
+
+  只要你的测试没有失败，你就可以确信你测试过的代码按预期运行。测试有助于检查代码中的修改是否破坏了什么。因为单元测试是隔离运行的，它们有助于生成更好、更简单的代码。
+
+
+  有了测试，你无需担心改变函数签名或返回值的类型。测试会指出在哪些地方需要为函数调用进行相应修改。
+
+
+  如果你的测试不只是几行代码，这可能是你的代码中违反了单一职责原则的标志。如果你在重构代码后修改了测试，这种情况常常发生。记住这一点，你最终将得到更整洁的代码。
+
+
+  '
+- '# 总结
+
+
+  在本章中，我介绍了整洁代码的理念和重要性。你学习了一些用于确保代码整洁的应遵循的原则，以及为什么命名或代码格式很重要。最后，你了解了单元测试如何有助于编写更简洁的代码。
+
+
+  '
+- '# 4. 测试驱动开发
+
+
+  ![A337704_2_En_4_Figa_HTML.jpg](img/A337704_2_En_4_Figa_HTML.jpg)
+
+
+  让我们通过尝试和实践来开始吧。
+
+
+  严重依赖单元测试的开发人员使用一种称为“测试驱动开发”或 TDD 的技术。
+
+
+  TDD 是一个软件开发过程，你在实现代码之前先编写测试。因此，测试引导开发者编写代码本身。TDD 是一个循环过程，包含 4+1 个步骤：编写测试、编写代码、重构、再次测试，然后重复此过程。
+
+
+  ## PHP TDD 工具
+
+
+  有许多工具对 PHP 中的 TDD 非常有帮助。
+
+
+  ### PHPUnit
+
+
+  PHPUnit (`https://phpunit.de/`) 是 PHP 进行单元测试和 TDD 的事实标准工具。它已集成到 CakePHP 中，因此你很快就会熟悉它的使用。
+
+
+  然而，还有其他工具也拥有不断增长的社区并提供支持。
+
+
+  ### Codeception
+
+
+  Codeception (`http://codeception.com/`) 支持编写单元测试、功能测试和验收测试。它已集成到几个 PHP 开发框架中，例如
+  Zend、Symfony、Laravel 等。
+
+
+  ### SimpleTest
+
+
+  SimpleTest (`http://simpletest.org/`) 是一个易于使用的框架，支持 SSL、代理和认证。JUnit 的用户会熟悉其界面。
+
+
+  ### Atoum
+
+
+  Atoum (`https://github.com/atoum`) 是一个相对较新的参与者，它使用了 PHP 5.3 版本中引入的新 PHP 特性。
+
+
+  ### Selenium
+
+
+  Selenium (`http://www.seleniumhq.org/`) 实际上比前面提到的工具更全面，因为它是一个自动化浏览器的复杂、健壮的系统。使用它可以对整个
+  Web 应用进行测试。
+
+
+  ## TDD 开发周期
+
+
+  TDD 需要一种不同的思维方式以及不同的编码风格。让我们看看它需要什么。对于手头的 CakePHP 来说，你无需从头开始。它的框架已经包含了许多优秀的功能。所以，现在我们只需专注于我们的应用开发。
+
+
+
+
+  '
+- '# 步骤 #1：编写测试
+
+
+  为你尚不存在的代码编写一个单元测试。在编写测试时——以及在你真正编写任何代码之前——要考虑到所有可能的输入、错误和输出。这一步增加了一个额外的、抽象的但重要的层次。
+
+
+  当你第一次运行单元测试时，它会失败。它应该失败，因为你正在测试的代码还不存在。
+
+
+  通过单一测试方法，你会基于可能的输入或错误生成一个或多个断言。
+
+
+  大多数情况下，我会从编写模型测试开始。我会创建一个测试方法，该方法调用相应模型的一个方法（例如，`getUserComments()`），即使该方法当前并不存在。我知道期望得到什么结果，因此我会做出断言。这意味着我必须确定该方法返回值的数据类型。
+
+
+  '
+- '# 步骤 #2：编写代码
+
+
+  现在你已经写好了测试，就可以开始编写代码了。在这一步中，我会创建模型类的 `getUserComments()` 方法。当我认为它没问题时，就直接运行测试，看看它是否会失败。
+
+
+  当你的所有测试都通过时，你的代码就准备好了。
+
+
+  在编写代码时，或许最好遵循第 3 章中描述的原则。
+
+
+  '
+- '# 步骤 #3：重构
+
+
+  一旦你所有的测试都成功通过，你就可以开始重构代码，清理不必要的变量、函数调用等。
+
+
+  这是很重要的一部分。当我们专注于小的代码片段，并且处于理解其问题及解决方案的最佳心态时，这就是重新思考解决方案并尽可能保持其简单性的最佳时机。
+
+
+  '
+- '# 步骤 #4：再次测试
+
+
+  现在重新运行你的测试。如果一个或多个测试没有通过，说明你在重构过程中引入了新的错误。如果你所有的测试都通过了，你的代码可能就没问题。但不要忘记第 2 章中的论点
+  #1 和 #6。
+
+
+  '
+- '# 步骤 #5：为新功能编写代码
+
+
+  这一步要求你重新开始同样的过程，但针对另一个任务。不要忘记也要彻底测试这一部分。你在代码任何地方所做的更改都可能影响这一部分，反之亦然。这意味着处理某个功能可能会在别处引发错误或导致测试失败。
+
+
+  ## 总结
+
+
+  在本章中，你学习了什么是测试驱动开发，以及它如何与单元测试相关联。我列出了一些主要的便于 TDD 的 PHP 工具。其中，PHPUnit 对我们来说最重要，因为它已集成到
+  CakePHP 中。然后，我介绍了 TDD 的开发周期，无论是在 CakePHP 中，还是在一般情况下。
+
+
+  '
+- '# 5. 开发周期
+
+
+  ![A337704_2_En_5_Figa_HTML.jpg](img/A337704_2_En_5_Figa_HTML.jpg)
+
+
+  伟大的生命循环
+
+
+  开发模型有很多种。在我看来，选择合适的模型可能是开发过程中的重要一环，尤其是在习惯和实践方式确实存在差异的情况下。处理 Web 应用程序和桌面应用程序也有不同的方法。我们都有自己偏爱的实践方式。让我来分享一下我的做法：那就是敏捷软件开发。
+
+
+  ## 敏捷
+
+
+  敏捷软件开发是一套[软件开发](https://en.wikipedia.org/wiki/Software_development)原则，其需求和解决方案源自团队协作。它提倡适应性规划、渐进式开发、早期交付和持续改进，并鼓励对变化做出快速而灵活的反应。
+
+
+  敏捷宣言（ [`http://agilemanifesto.org/`](http://agilemanifesto.org/) ）简短而明了。
+
+
+  ### 敏捷宣言
+
+
+  “我们正在通过实践并帮助他人实践，揭示更好的软件开发方法。通过这项工作，我们开始重视：
+
+
+  1.  个体和互动 高于 流程和工具
+
+  2.  可工作的软件 高于 详尽的文档
+
+  3.  客户合作 高于 合同谈判
+
+  4.  响应变化 高于 遵循计划
+
+
+  也就是说，虽然右项也有其价值，但我们更重视左项的价值。”
+
+
+  ### 宣言背后的 12 条原则
+
+
+  敏捷宣言背后有 12 条原则。
+
+
+  1.  我们的最高优先事项是通过尽早并持续地交付有价值的软件来满足客户。
+
+  2.  欢迎不断变化的需求，即使是在开发后期。敏捷流程利用变化为客户创造竞争优势。
+
+  3.  频繁地交付可工作的软件，交付间隔可以从几周到几个月，倾向于采用更短的时间尺度。
+
+  4.  业务人员和开发人员必须在项目期间每天一起工作。
+
+  5.  项目由有动力的个体构建。给予他们所需的环境和支持，并信任他们能够完成工作。
+
+  6.  向开发团队传达信息或在团队内部传达信息，最高效且最有效的方法是面对面的交谈。
+
+  7.  可工作的软件是衡量进度的首要标准。
+
+  8.  敏捷流程促进可持续的开发。赞助人、开发者和用户应该能够无限期地保持恒定的节奏。
+
+  9.  持续关注技术卓越和良好设计能增强敏捷性。
+
+  10.  简单性——最大化未完成工作的艺术——是至关重要的。
+
+  11.  最好的架构、需求和设计源自自组织团队。
+
+  12.  团队定期反思如何能变得更有效，然后相应地调整其行为。
+
+
+  ### CakePHP 如何支持敏捷开发
+
+
+  正如你所见，上述某些原则需要特定的思维模式、思考方式，而有些原则实际上需要一些技术支持。
+
+
+  烘焙是在短时间内让某些东西可见的好方法。因此，它有助于遵循原则 1、4 和 7。
+
+
+  得益于 CakePHP 的 MVC 模式以及 CakePHP3 中引入的优秀新 ORM，至少在模型层面，后期更改变得很容易。即使在后期阶段，处理数据库表或字段的更改也很简单。因此，它符合原则
+  2 和 7。
+
+
+  定期交付（原则 3）与其说是一个技术问题，不如说是一个习惯或工作流程组织问题。尽管如此，由于前面提到的两点，CakePHP 为我们实现这一目标提供了一些帮助。
+
+
+  TDD 能帮助你遵循原则 9 和 10。
+
+
+  ## 通往价值的敏捷路线图
+
+
+  任何项目都需要一些步骤或阶段。在敏捷中，“通往价值的路线图”提供了项目的高层概览。该路线图包含七个阶段。
+
+
+  ### 产品愿景
+
+
+  在第 1 阶段，产品负责人概述产品愿景：项目的定义，它将如何服务于用户（或公司）的目标，以及目标用户是谁。
+
+
+  一个例子：对于想要一个简单易用博客的人来说，`cakeBlog` 是一个提供专注于博客的最小化功能的博客引擎。与其他功能过多的引擎不同，我们的软件是真正为小白设计的。
+
+
+  据我估计，有 90–95% 的情况，客户并不确切知道自己想要什么。他们有一些想法，但远非具体。这没问题，这不是问题——记住原则 2。
+
+
+  ### 产品路线图
+
+
+  产品负责人在第 2 阶段创建产品路线图。这是产品需求的高层视图，并包含对这些需求何时开发的大致估算时间表。
+
+
+  ### 发布计划
+
+
+  在第 3 阶段，产品负责人制定发布计划，这实际上是可工作软件发布的时间表。它会有多次发布，优先级最高的功能会最先推出。
+
+
+  ### 冲刺规划
+
+
+  冲刺是创建软件的迭代周期。在第 4 阶段，团队规划冲刺。冲刺规划在每个冲刺开始时进行，团队在此决定本次冲刺应包含哪些需求。
+
+
+
+
+  ### 每日站会
+
+
+  在每个冲刺周期中，团队都会召开每日站会。这是阶段 5。会议不超过 15 分钟，内容涉及昨天完成了什么、今天要做什么，以及任何潜在的障碍。
+
+
+  ### 冲刺评审
+
+
+  在每个冲刺周期结束时，会展示冲刺过程中创建的可运行产品。这是阶段 6。
+
+
+  ### 冲刺回顾
+
+
+  在每个冲刺回顾（即阶段 7）结束时，会召开一次会议，团队在会上讨论冲刺的进展以及下个冲刺的改进想法。
+
+
+  ## 总结
+
+
+  在本章中，我介绍了敏捷软件开发的原则和阶段。你了解了 CakePHP 如何支持敏捷开发。即使你遵循其他开发方法，CakePHP 也为你提供了有用的工具。
+
+
+  '
+- "# 6. 准备测试\n\n![A337704_2_En_6_Figa_HTML.jpg](img/A337704_2_En_6_Figa_HTML.jpg)\n\
+  \n比尔觉得自己的训练还不够完整。\n\n## 安装\n\n为了让一切都能正常运行，你需要安装 Web 服务器、MySQL 服务器、PHP、CakePHP（`http://book.cakephp.org`）和\
+  \ PHPUnit（`http://phpunit.de`）。我将以 Ubuntu 16.04 为例，逐一讲解这些步骤。其他系统，如 MacOS 或 Windows，甚至其他\
+  \ Linux 系统，都有不同的安装方法。\n\n我们将通过终端安装所有软件，为此你需要系统的 root 密码。\n\n### 安装 Web 服务器\n\nWeb\
+  \ 服务器，或 HTTP 服务器，是一种处理浏览器请求的软件。它的主要功能是存储、交付和处理网页。最广泛使用的是 Apache（`https://httpd.apache.org/`）。\n\
+  \n打开终端并执行以下命令。如果系统尚未安装，该命令将安装最新的 Apache Web 服务器。\n\n```\n$ sudo apt-get install\
+  \ apache2\n```\n\n结果会很长，但开头和结尾应该类似如下内容：\n\n```\nReading package lists... Done\n\
+  Building dependency tree\nReading state information... Done\nThe following package\
+  \ was automatically installed and is no longer required:\n...\nProcessing triggers\
+  \ for libc-bin (2.23-0ubuntu3) ...\nProcessing triggers for systemd (229-4ubuntu6)\
+  \ ...\nProcessing triggers for ureadahead (0.100.0-19) ...\nProcessing triggers\
+  \ for ufw (0.35-0ubuntu2) ...\n```\n\n### 安装 MySQL\n\nMySQL 是 Web 应用程序中最流行的开源关系型数据库系统。如果你需要一个数据库来存储应用程序数据，MySQL\
+  \ 是最简单的选择。\n\n打开终端并执行以下命令来安装 MySQL 服务器：\n\n```\n$ sudo apt-get install mysql-server\n\
+  ```\n\n结果也很长，所以我省略了中间部分。\n\n```\nReading package lists...\nBuilding dependency tree...\n\
+  Reading state information...\nThe following package was automatically installed\
+  \ and is no longer required:\nlibnghttp2-14\n...\nPreparing to unpack .../mysql-server_5.7.12-0ubuntu1_all.deb\
+  \ ...\nUnpacking mysql-server (5.7.12-0ubuntu1) ...\nSetting up mysql-server (5.7.12-0ubuntu1)\
+  \ ...\n```\n\n### 安装 PHP\n\nPHP 是一种主要针对 Web 开发而设计的服务器端脚本语言。它非常流行：超过 80% 的 Web 服务器都安装了\
+  \ PHP。它易于学习、灵活且健壮，并且可能是 CakePHP 所使用的底层语言。\n\n最新版本是 PHP 7，它代表了 PHP 5 之后的一次重大飞跃。PHP\
+  \ 7 引入了标量类型声明、返回类型声明、null 合并运算符、太空船运算符、匿名类以及许多其他特性。\n\n为了确保一切正常工作，PHP 应与一些模块一起安装。我们将\
+  \ PHP 作为 Apache 模块运行，并安装 MySQL、mbstring、intl 和 xml 模块。\n\n```\n$ sudo apt-get install\
+  \ php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-mbstring php7.0-intl php7.0-xml\n\
+  ```\n\n输出结果同样做了删减。\n\n```\nReading package lists...\nBuilding dependency tree...\n\
+  Reading state information...\nThe following packages were automatically installed\
+  \ and are no longer required:\nlibjs-excanvas mercurial mercurial-common php-cli-prompt\
+  \ php-composer-semver\n...\nCreating config file /etc/php/7.0/mods-available/xsl.ini\
+  \ with new version\nProcessing triggers for libapache2-mod-php7.0 (7.0.4-7ubuntu2.1)\
+  \ ...\n```\n\n### 安装后配置\n\n为了充分利用 CakePHP 的路由功能，我们应该启用 `mod_rewrite`。由于是在开发服务器上，我们将\
+  \ CakePHP 安装到用户目录，因此我们也需要启用并配置它。\n\n首先，让我们启用 `userdir`。\n\n```\n$ sudo a2enmod userdir\n\
+  ```\n\n编辑 `/etc/apache2/mods-enabled/userdir.conf` 并粘贴以下代码：\n\n```\n2     UserDir\
+  \ public_html\n3     UserDir disabled root\n\n6       AllowOverride FileInfo AuthConfig\
+  \ Limit Indexes\n7       Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec\n\
+  \n9         Require all granted\n\n12       Require all denied\n```\n\n下一个要编辑的文件是\
+  \ `/etc/apache2/mods-available/php7.0.conf`。在 Ubuntu 上，默认禁用了在用户目录中运行 PHP 脚本，因此我们应该启用它。注释掉该文件的最后五行。\n\
+  \n```\n21  #\n22  #    \n23  #        php_admin_flag engine Off\n24  #    \n25 \
+  \ #\n```\n\n让我们启用并配置 `mod_rewrite`。\n\n```\n$ sudo a2enmod rewrite\n```\n\n为了让所有功能加载并正常工作，我们应该重启\
+  \ Apache。\n\n```\n$ sudo service apache2 restart\n```\n\n### 安装 Composer\n\nComposer\
+  \ 是 PHP 的应用程序级包管理器，它提供了管理 PHP 软件及其所需库依赖关系的标准格式。它是任何 PHP 开发必不可少的工具。由于 Composer 是安装\
+  \ CakePHP 的推荐方式，我们将首先安装它。\n\n打开终端并执行以下命令，通过 `curl` 下载 Composer 并安装到当前目录。\n\n```\n\
+  $ curl -s https://getcomposer.org/installer | php\n```\n\n### 安装 CakePHP\n\n作为示例，我们将使用一个博客来熟悉\
+  \ CakePHP 单元测试。首先，使用 Composer 创建一个新的 CakePHP 项目。\n\n```\n$ cd ~/public_html\n$ php\
+  \ composer.phar create-project --prefer-dist cakephp/app cakeBlog\n```\n\n这将在当前工作目录下创建一个\
+  \ `cakeBlog` 文件夹，并下载最新版本的 `cakephp`（撰写本文时为 3.2.8）以及所有必需的包。\n\n安装完成后，你应该为 Web 服务器用户设置\
+  \ `/tmp` 和 `/logs` 文件夹的写入权限。\n\nComposer 会在项目目录中创建 `composer.json` 和 `composer.lock`\
+  \ 文件。这些文件描述了项目的标识数据、依赖关系以及其他与依赖相关的设置。\n\n由于我们通过 Apache 和 PHP 启用了用户目录，我将它放在了我的主目录（`/home/rrd`）下的\
+  \ `public_html` 文件夹中，因此我将通过 `http://localhost/~rrd/cakeBlog/` 访问我的应用程序，并在示例中使用此\
+  \ URL。\n\n如果一切正常，你应该能够通过浏览器导航到你的安装路径。你将看到类似图 6-1 的内容。\n\n![A337704_2_En_6_Fig1_HTML.jpg](img/A337704_2_En_6_Fig1_HTML.jpg)\n\
+  \n**图 6-1.** 安装后的博客\n\n暂时不必担心有关数据库连接的错误消息。我很快就会回到这个问题。\n\n### 安装 PHPUnit\n\nPHPUnit\
+  \ 是 PHP 单元测试的事实标准。PHPUnit 已集成到 CakePHP 中用于单元测试。得益于 Composer，安装它及其所有必需的包非常简单。我们不需要在生产服务器上安装\
+  \ PHPUnit，因此我们将使用 `--dev` 选项。\n\n```\n$ cd ~/public_html/cakeBlog\n$ php composer.phar\
+  \ require --dev phpunit/phpunit\n```\n\n如果你使用 `--dev` 选项，Composer 会将此依赖项放入 `composer.json`\
+  \ 的 `require-dev` 部分。然后，在生产服务器上，你可以通过使用以下命令跳过这些仅在开发时需要的依赖项的安装：\n\n```\n$ php composer.phar\
+  \ --no-dev install\n```\n\n\n\n### 安装 phpMyAdmin\n\n`phpMyAdmin` 是一款免费开源的 PHP 工具，旨在通过\
+  \ Web 浏览器管理 MySQL 数据库。它可以执行各种任务，例如创建、修改或删除数据库、表、字段或行；执行 SQL 语句；或者管理用户和权限。\n\n打开您的终端并执行以下命令：\n\
+  \n```\n$ sudo apt-get install phpmyadmin\n```\n\n这将启动安装向导，指导您完成整个安装过程。当系统提示您在 Apache\
+  \ 和 Lighttpd 之间选择时，请选择 Apache。\n\n安装成功后，您应该能够通过浏览器访问 `phpMyAdmin`，地址为 `http://localhost/phpmyadmin`。\n\
+  \n### 检查测试配置\n\n要检查一切是否顺利，请在您的应用程序根目录（在我的例子中，是 `public_html/cakeBlog`）下运行以下命令：\n\
+  \n```\n$ vendor/bin/phpunit\n```\n\n您应该会看到类似于图 6-2 的输出。\n\n![A337704_2_En_6_Fig2_HTML.jpg](img/A337704_2_En_6_Fig2_HTML.jpg)\n\
+  \n图 6-2.\n\nPHPUnit 首次测试\n\n![A337704_2_En_6_Figb_HTML.jpg](img/A337704_2_En_6_Figb_HTML.jpg)\
+  \ 您可能会收到如下错误信息：\n\n`Warning Error: SplFileInfo::openFile(/home/rrd/public_html/cakeBlog/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s):\
+  \ failed to open stream: Permission denied in [/home/rrd/public_html/cakeBlog/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php,\
+  \ line 395]`\n\n这意味着您对位于 `cakeBlog/tmp` 的 cake `tmp` 目录中的不同文件没有写入权限。例如，在 Ubuntu\
+  \ 上，这些文件归 `www-data` 用户及其组所有。您应该将自己添加到这个组，或者递归地设置自己为 `tmp` 目录的所有者。如果任何时候遇到权限错误，请首先检查\
+  \ `tmp` 文件夹，因为这里会创建许多新文件。\n\n图 6-2 显示三项测试均成功运行，并进行了十八次断言。这三项测试是为 `PagesController`\
+  \ 自动生成的。相应的测试文件位于 `/tests/TestCase/Controller/PagesControllerTest.php`。如果您有兴趣，可以查看一下。稍后，我将描述该文件的内容。目前，只需知道绿色代表通过即可。测试结束时我们看到了绿色条，说明一切顺利。\n\
+  \n## 准备\n\n我们需要设置一些东西，以便开始单元测试。\n\n### 设置调试级别\n\n在 `/config/app.php` 中，您的调试级别默认设置为\
+  \ `true`。\n\n```\n'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),\n\
+  ```\n\n暂时保持这个设置。这对于单元测试并非强制要求，但错误和调试信息在测试中与在编码中一样有用。\n\n### 设置测试数据库\n\n如果您的应用程序需要与数据库交互（大多数应用都会），那么您需要一个默认数据库和一个测试数据库。所有与数据库相关的测试都将使用测试数据库。\n\
+  \n![A337704_2_En_6_Figc_HTML.jpg](img/A337704_2_En_6_Figc_HTML.jpg) CakePHP 会在测试运行结束时删除您数据库中的表。所以，**不要**为\
+  \ `default` 和 `test` 使用同一个数据库；否则，您将丢失数据而不会收到任何警告。\n\n在您的 `/config/app.php` 文件中找到\
+  \ `Datasources` 定义，并至少更改您默认和测试数据源的用户名、密码和数据库的值。假设我的默认数据库是 `cake_blog`，用户名为 `rrd`，密码为\
+  \ Gouranga。我的测试数据库是 `cake_blog_test`，使用相同的用户名和密码。\n\n```\napp.php\n1  'Datasources'\
+  \ => [\n2      'default' => [\n3          'className' => 'Cake\\Database\\Connection',\n\
+  4          'driver' => 'Cake\\Database\\Driver\\Mysql',\n5          'persistent'\
+  \ => false,\n6          'host' => 'localhost',\n7          //'port' => 'non_standard_port_number',\n\
+  8          'username' => 'rrd',\n9          'password' => 'Gouranga',\n10      \
+  \    'database' => 'cake_blog',\n11          'encoding' => 'utf8',\n12         \
+  \ 'timezone' => 'UTC',\n13          'flags' => [],\n14          'cacheMetadata'\
+  \ => true,\n15          'log' => false,\n16          'quoteIdentifiers' => false,\n\
+  \n18          //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],\n\n20   \
+  \       'url' => env('DATABASE_URL', null),\n21      ],\n\n23      /**\n24     \
+  \  * 测试连接用于测试套件。\n25       */\n26      'test' => [\n27          'className' => 'Cake\\\
+  Database\\Connection',\n28          'driver' => 'Cake\\Database\\Driver\\Mysql',\n\
+  29          'persistent' => false,\n30          'host' => 'localhost',\n31     \
+  \     //'port' => 'non_standard_port_number',\n32          'username' => 'rrd',\n\
+  33          'password' => 'Gouranga',\n34          'database' => 'cake_blog_test',\n\
+  35          'encoding' => 'utf8',\n36          'timezone' => 'UTC',\n37        \
+  \  'cacheMetadata' => true,\n38          'quoteIdentifiers' => false,\n39      \
+  \    'log' => false,\n40          //'init' => ['SET GLOBAL innodb_stats_on_metadata\
+  \ = 0'],\n41          'url' => env('DATABASE_TEST_URL', null),\n42      ],\n43 \
+  \ ],\n```\n\n对于我们的博客，我们希望管理用户，这些用户可以撰写文章并对自己和他人的文章进行评论。文章可以被标记和分类。经过一些规划后，我们得到了如图\
+  \ 6-3 所示的数据库模式。\n\n![A337704_2_En_6_Fig3_HTML.jpg](img/A337704_2_En_6_Fig3_HTML.jpg)\n\
+  \n图 6-3.\n\n数据库模式\n\n您的应用程序将使用[默认数据](http://book.cakephp.org/)源，而测试将使用测试数据源。这些键是自描述的。它们定义了用于访问数据库的类和驱动程序、连接类型、主机和端口、数据库名称、MySQL\
+  \ 用户和密码、字符编码等。\n\n打开您的浏览器，访问 `localhost/phpmyadmin` ([`phpmyadmin.net`](http://phpmyadmin.net))，然后创建默认数据库和测试数据库。您可以通过从顶部标签页中选择“数据库”，然后使用创建数据库表单来完成。或者，从顶部标签页中选择“SQL”，然后复制并粘贴。\n\
+  \n使用以下 SQL 语句创建两个数据库及其表：\n\n```\n1   SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;\n\
+  2   SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS,\n3     FOREIGN_KEY_CHECKS=0;\n\
+  4   SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';\n\n6   CREATE SCHEMA IF\
+  \ NOT EXISTS `cake_blog`\n7     DEFAULT CHARACTER SET latin1;\n```\n\n首先，我们创建默认数据库，即\
+  \ `cake_blog`。\n\n```\n8   USE `cake_blog`;\n```\n\n\n\n10  -- -----------------------------------------------------\n\
+  11  -- 表 `cake_blog`.`users`\n12  -- -----------------------------------------------------\n\
+  13  CREATE TABLE IF NOT EXISTS `cake_blog`.`users` (\n14    `id` INT(10) UNSIGNED\
+  \ NOT NULL AUTO_INCREMENT ,\n15    `username` VARCHAR(50) NULL DEFAULT NULL ,\n\
+  16    `password` VARCHAR(50) NULL DEFAULT NULL ,\n17    `role` VARCHAR(20) NULL\
+  \ DEFAULT NULL ,\n18    `created` DATETIME NULL DEFAULT NULL ,\n19    `modified`\
+  \ DATETIME NULL DEFAULT NULL ,\n20    PRIMARY KEY (`id`) )\n21  ENGINE = InnoDB\n\
+  22  DEFAULT CHARACTER SET = latin1;\n\n然后我们添加用户表，该表用于存储博客的用户。\n\n```\n25  -- -----------------------------------------------------\n\
+  26  -- 表 `cake_blog`.`categories`\n27  -- -----------------------------------------------------\n\
+  28  CREATE TABLE IF NOT EXISTS `cake_blog`.`categories` (\n29    `id` INT UNSIGNED\
+  \ NOT NULL AUTO_INCREMENT ,\n30    `category` VARCHAR(45) NULL ,\n31    PRIMARY\
+  \ KEY (`id`) )\n32  ENGINE = InnoDB;\n```\n\n我们的博客文章可以与分类相关联，因此我们为分类创建了一个数据库表。\n\
+  \n```\n35  -- -----------------------------------------------------\n36  -- 表 `cake_blog`.`posts`\n\
+  37  -- -----------------------------------------------------\n38  CREATE TABLE IF\
+  \ NOT EXISTS `cake_blog`.`posts` (\n39    `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT\
+  \ ,\n40    `category_id` INT UNSIGNED NOT NULL ,\n41    `user_id` INT(10) UNSIGNED\
+  \ NOT NULL ,\n42    `title` VARCHAR(50) NULL DEFAULT NULL ,\n43    `body` TEXT NULL\
+  \ DEFAULT NULL ,\n44    `created` DATETIME NULL DEFAULT NULL ,\n45    `modified`\
+  \ DATETIME NULL DEFAULT NULL ,\n46    PRIMARY KEY (`id`) ,\n47    INDEX `fk_posts_users`\
+  \ (`user_id` ASC) ,\n48    INDEX `fk_posts_categories1` (`category_id` ASC) ,\n\
+  49    CONSTRAINT `fk_posts_users`\n50      FOREIGN KEY (`user_id` )\n51      REFERENCES\
+  \ `cake_blog`.`users` (`id` )\n52      ON DELETE RESTRICT\n53      ON UPDATE RESTRICT,\n\
+  54    CONSTRAINT `fk_posts_categories1`\n55      FOREIGN KEY (`category_id` )\n\
+  56      REFERENCES `cake_blog`.`categories` (`id` )\n57      ON DELETE RESTRICT\n\
+  58      ON UPDATE RESTRICT)\n59  ENGINE = InnoDB\n60  AUTO_INCREMENT = 4\n61  DEFAULT\
+  \ CHARACTER SET = latin1;\n```\n\n博客文章同样需要存储在数据库表中。我们为 `user_id` 和 `category_id`\
+  \ 字段添加了索引以及外键约束。\n\n```\n64  -- -----------------------------------------------------\n\
+  65  -- 表 `cake_blog`.`tags`\n66  -- -----------------------------------------------------\n\
+  67  CREATE TABLE IF NOT EXISTS `cake_blog`.`tags` (\n68    `id` INT UNSIGNED NOT\
+  \ NULL AUTO_INCREMENT ,\n69    `tag` VARCHAR(45) NULL ,\n70    PRIMARY KEY (`id`)\
+  \ )\n71  ENGINE = InnoDB;\n```\n\n我们希望在文章中使用标签功能，因此还需要一个用于存储标签的表。\n\n```\n74  --\
+  \ -----------------------------------------------------\n75  -- 表 `cake_blog`.`posts_tags`\n\
+  76  -- -----------------------------------------------------\n77  CREATE TABLE IF\
+  \ NOT EXISTS `cake_blog`.`posts_tags` (\n78    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,\n\
+  79    `post_id` INT(10) UNSIGNED NOT NULL ,\n80    `tag_id` INT UNSIGNED NOT NULL\
+  \ ,\n81    PRIMARY KEY (`id`),\n82    INDEX `fk_posts_has_tags_tags1` (`tag_id`\
+  \ ASC) ,\n83    INDEX `fk_posts_has_tags_posts1` (`post_id` ASC) ,\n84    CONSTRAINT\
+  \ `fk_posts_has_tags_posts1`\n85      FOREIGN KEY (`post_id` )\n86      REFERENCES\
+  \ `cake_blog`.`posts` (`id` )\n87      ON DELETE RESTRICT\n88      ON UPDATE RESTRICT,\n\
+  89    CONSTRAINT `fk_posts_has_tags_tags1`\n90      FOREIGN KEY (`tag_id` )\n91\
+  \      REFERENCES `cake_blog`.`tags` (`id` )\n92      ON DELETE RESTRICT\n93   \
+  \   ON UPDATE RESTRICT)\n94  ENGINE = InnoDB\n95  DEFAULT CHARACTER SET = latin1;\n\
+  ```\n\n接下来需要创建文章表和标签表之间的关联表。\n\n```\n98  -- -----------------------------------------------------\n\
+  99  -- 表 `cake_blog`.`comments`\n100  -- -----------------------------------------------------\n\
+  101  CREATE TABLE IF NOT EXISTS `cake_blog`.`comments` (\n102    `id` INT UNSIGNED\
+  \ NOT NULL AUTO_INCREMENT ,\n103    `comment` TEXT NULL ,\n104    `user_id` INT(10)\
+  \ UNSIGNED NOT NULL ,\n105    `post_id` INT(10) UNSIGNED NOT NULL ,\n106    PRIMARY\
+  \ KEY (`id`) ,\n107    INDEX `fk_comments_users1` (`user_id` ASC) ,\n108    INDEX\
+  \ `fk_comments_posts1` (`post_id` ASC) ,\n109    CONSTRAINT `fk_comments_users1`\n\
+  110      FOREIGN KEY (`user_id` )\n111      REFERENCES `cake_blog`.`users` (`id`\
+  \ )\n112      ON DELETE RESTRICT\n113      ON UPDATE RESTRICT,\n114    CONSTRAINT\
+  \ `fk_comments_posts1`\n115      FOREIGN KEY (`post_id` )\n116      REFERENCES `cake_blog`.`posts`\
+  \ (`id` )\n117      ON DELETE RESTRICT\n118      ON UPDATE RESTRICT)\n119  ENGINE\
+  \ = InnoDB;\n```\n\n最后，我们创建评论表，评论将存储在该表中。\n\n```\n123  SET SQL_MODE=@OLD_SQL_MODE;\n\
+  124  SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;\n125  SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;\n\
+  ```\n\n作为最后一步，我们还需要创建测试数据库。目前，`cake_blog_test` 可以没有任何数据库表。\n\n```\n127  CREATE SCHEMA\
+  \ IF NOT EXISTS `cake_blog_test`\n128    DEFAULT CHARACTER SET latin1;\n```\n\n\
+  如果一切按计划进行，你应该会看到类似图 6-4 所示的内容。\n\n![A337704_2_En_6_Fig4_HTML.jpg](img/A337704_2_En_6_Fig4_HTML.jpg)\n\
+  \n图 6-4.\n\n数据库创建后的 `phpMyAdmin`\n\n### 设置会话处理\n\n正如我们在真实的中型应用中所做的那样，我们将为此项目使用 CakePHP\
+  \ 的数据库会话处理。\n\nCakePHP 提供了四种不同的现成会话处理机制。\n\n默认选项是 `php`，此时会话处理由 PHP 按照 `php.ini`\
+  \ 定义的方式进行。我通常不选择此选项。\n\n第二个选项是 `cake`，会话数据将存储在 `/tmp/sessions` 文件夹的文件中。当应用非常简单且不使用任何数据库时，我会使用此选项。\n\
+  \n第三个选项是 `database`，会话数据存储在数据库的 `sessions` 表中。在大多数情况下，我会使用此选项。\n\n最后一个选项是 `cache`，会话存储在诸如\
+  \ APC、Memcached 或 XCache 这类缓存中。如果你计划开发一个高使用率的应用，推荐使用此选项。\n\nCake 使得随时更改会话处理变得极其简单。因此，随着你的应用受欢迎程度增长，你可以从\
+  \ `database` 切换到 `cache`。\n\n打开你的 `/config/app.php` 文件，将会话处理的默认值更改为 `database`。\n\
+  \n```\n1  'Session' => [\n2       'defaults' => 'database',\n3   ],\n```\n\n用于会话的数据库表的\
+  \ SQL 脚本位于 `app/config/schema/sessions.sql`。你应该将此表添加到 `default` 数据库。\n\n你无需向测试数据库添加任何数据库表。CakePHP\
+  \ 的测试套件会自动完成此操作。\n\n### 创建默认布局\n\n如果需要，可以更改 `/src/Template/Layout` 目录下的 `default.ctp`\
+  \ 文件。这不是必需的，但在某个时候，我们会想更改 CakePHP 的默认布局。为什么不现在就开始呢？\n\n\n\n### CakePHP 模型（Models）\n\
+  \n模型是 MVC 中的 M。作为我们 Web 应用的基础，它们负责数据的存储、访问和操作。CakePHP 的 `Model` 类文件分为 `Table` 和\
+  \ `Entity` 对象。`Table` 对象提供对存储在特定数据表中的实体集合的访问。CakePHP 支持 MySQL、SQLite、PostgreSQL、SQLServer\
+  \ 和 Oracle。\n\n模型继承自 CakePHP 的 `Model` 类，因此它们开箱即用就具备了许多功能。它们拥有诸如 `Model.beforeFind`、`Model.beforeSave`、`Model.afterSave`\
+  \ 等事件。它们还继承了如 `find()`、`get()`、`save()` 等方法。\n\n#### 数据库查询\n\n最常用的模型方法是 `find()`，它返回一个查询对象。\n\
+  \n```\n1  $query = $posts\n2      ->find()\n3      ->select(['id', 'title'])\n4\
+  \      ->where(['id  100])\n5      ->order(['created' => 'DESC']);\n```\n\n如你所见，`find()`\
+  \ 可以与其他模型方法（如 `select()`、`where()` 等）链式调用。这是 CakePHP 3 新对象关系映射（ORM）特性的一部分，该特性非常方便且自解释性强。通过这个查询，我们可以选择\
+  \ `id` 小于 100 的帖子的 `id` 和 `title`，并且结果集将按 `created` 字段排序。这个查询将生成类似于以下 SQL 语句的内容：\n\
+  \n```\nSELECT id, title FROM posts WHERE id < 100 ORDER BY created DESC;\n```\n\n\
+  查询对象可以在之后被修改，因为它们实际上是在我们调用 `execute()`、对查询进行迭代或调用 `all()` 时才执行的。\n\n#### 模型关联\n\n\
+  在 CakePHP 应用中，数据库表之间的关系由模型关联处理。共有四种关联类型。一对一关系由 `hasOne` 关联处理，一对多关系由 `hasMany` 处理，多对一关系由\
+  \ `belongsTo` 处理，多对多关系由 `belongsToMany` 处理。\n\n##### HasOne 关联\n\n在我们的博客数据库中，没有\
+  \ `hasOne` 关联。我们可以创建一个 profiles 数据表和模型，如果一个用户只有一个个人资料，那么他就与个人资料建立了 `hasOne` 关联。在这种情况下，个人资料表应该有一个\
+  \ `user_id` 字段来描述它与用户之间的联系。\n\n##### HasMany 关联\n\n在我们的博客数据库分类中，`hasMany` 帖子意味着一个分类可以拥有多个帖子。\n\
+  \n##### BelongsTo 关联\n\n这是 `hasOne` 或 `hasMany` 关联的另一端。因此，在前面的例子中，个人资料 `belongsTo`\
+  \ 一个用户，而帖子 `belongsTo` 一个分类。\n\n##### BelongsToMany 关联\n\n在我们的博客数据库中，帖子与标签之间存在 `belongsToMany`\
+  \ 关联，这意味着一个帖子可以有多个标签，并且一个标签可以被分配给多个帖子。\n\n### CakePHP 控制器（Controllers）\n\n控制器是 MVC\
+  \ 中的 C。控制器是模型和视图之间的中间件。你的控制器应负责解释请求数据。通常，一个控制器用于管理一个模型的逻辑。\n\n控制器应继承 Cake 的 `Controller`\
+  \ 类。控制器提供了许多方法，这些方法被称为动作（actions）。默认情况下，控制器中的每个公共方法都是一个动作，并且可以通过 URL 访问。动作负责解释请求、创建响应并为视图设置变量。\n\
+  \n### CakePHP 视图（Views）\n\n视图是 MVC 中的 V。视图用于呈现响应，主要是创建 HTML 文档。布局是视图的主容器。每个控制器动作都应在\
+  \ `/src/Template/` 文件夹中有其对应的视图文件。\n\n让我们了解如何自动创建模型、控制器和视图。\n\n### 烘焙（Baking）\n\n\
+  在我看来，CakePHP 最好的特性之一就是烘焙，它本身就值得写一本书。\n\n我在此不深入细节，但 `bake` 是一个用于为你的博客自动生成基本代码的工具。使用\
+  \ `bake`，你可以自动生成模型、控制器和模板文件，以及许多其他文件，例如 fixtures、shells 等。\n\n打开终端，进入你的 `app` 文件夹，然后启动\
+  \ CakePHP 的 `bake` 脚本。\n\n```\n1  $ cd ∼/public_html/cakeBlog/\n2  $ bin/cake bake\n\
+  ```\n\n如果看到关于文件权限的错误信息，请忽略它。因为 Web 服务器通常以与你不同的用户身份运行，所以它具有不同的文件权限。你可以通过手动清空 `app/tmp/cache`\
+  \ 文件夹的子文件夹或修复其权限来消除这些错误信息。\n\n你将看到如图 6-5 所示的屏幕。\n\n![A337704_2_En_6_Fig5_HTML.jpg](img/A337704_2_En_6_Fig5_HTML.jpg)\n\
+  \n图 6-5.\n\n`bake` 脚本运行中\n\n现在让我们一次性生成所有模型的数据表和实体文件、对应的 fixtures 以及测试文件。为此，我们将为\
+  \ `bake` 使用 `model all` 参数。这将在 `/src/Model/Entity`、`/src/Model/Table`、`/tests/Fixture`\
+  \ 和 `/tests/TestCase/Model/Table` 目录下创建文件。`Bake` 将为这些文件夹中的每个数据库表生成一个文件。\n\n```\n\
+  1  $ bin/cake bake model all\n```\n\n我们可以对控制器和视图使用相同的过程。通过以下命令，所有控制器和视图文件将由 `bake`\
+  \ 创建：\n\n```\n1  $ bin/cake controller all\n2  $ bin/cake template all\n```\n\n\
+  如果你收到如 `Error: Cannot generate views for models with no primary key` 这样的错误信息，那是因为会话模型导致的。在这种情况下，请手动烘焙你的标签和用户模板。\n\
+  \n```\n1  $ bin/cake template tags\n2  $ bin/cake template users\n```\n\n### 清理工作\n\
+  \n一些文件是多余的，应该被删除。`Bake` 会为会话和连接表生成文件。由于我们的博客将非常简单，我们不希望连接表有任何多余的内容，因此我们不需要这些文件。\n\
+  \n- `src/Controller/PostsTagsController.php`\n- `src/Controller/SessionsController.php`\n\
+  - `src/Model/Entity/Session.php`\n- `src/Model/Table/SessionsTable.php`\n- `tests/TestCase/Controller/SessionsControllerTest.php`\n\
+  - `tests/TestCase/Controller/PostsTagsControllerTest.php`\n- `tests/TestCase/Model/Table/SessionsTableTest.php`\n\
+  - `tests/Fixture/SessionsFixture.php`\n\n你可以在将会话表添加到数据库之前烘焙你的模型。在这种情况下，将不会生成与会话相关的文件，因此你无需删除它们。\n\
+  \n你可以在不使用 `all` 参数的情况下烘焙模型、控制器和视图，然后逐一选择你的对象。你也可以跳过 `join` 模型，这样就不会为 `PostsTags`\
+  \ 生成任何内容。\n\n我认为我的方法是这三个选项中速度最快的。\n\n### 让我们来试试\n\n浏览到 `http://localhost/~rrd/cakeBlog/users`。你应该会看到类似于图\
+  \ 6-6 的内容，并且能够添加一个用户。\n\n![A337704_2_En_6_Fig6_HTML.jpg](img/A337704_2_En_6_Fig6_HTML.jpg)\n\
+  \n图 6-6.\n\n烘焙后的用户页面\n\n你也可以添加、修改和删除分类、标签、帖子以及评论。所有这些代码都是由 `bake` 自动生成的。我们一行代码都还没写呢。很酷吧？\n\
+  \n再次运行 `vendor/bin/phpunit`，检查一切是否顺利。在图 6-7 中，点表示成功的测试；I 表示不完整的测试。\n\n![A337704_2_En_6_Fig7_HTML.jpg](img/A337704_2_En_6_Fig7_HTML.jpg)\n\
+  \n图 6-7.\n\n使用 `bake` 生成代码后的测试结果\n\n暂时不用担心不完整的测试。所以，`bake` 生成了 43 个测试。其中，18 个是断言，40\
+  \ 个是不完整的测试。\n\n现在是时候看看这里都是由什么组成的了。让我们从测试数据 fixtures 开始。\n\n## 总结\n\n在本章中，我们更深入地了解了测试。我们安装了所有必要的服务器、PHP\
+  \ 和 Composer，并通过 Composer 和我们的数据库创建了应用骨架。你学会了如何使用 `bake` 脚本自动生成代码。我们还为博客设置了一种会话处理方法。\n\
+  \n\n\n"
+- '# 7. 测试夹具
+
+
+  ![A337704_2_En_7_Figa_HTML.jpg](img/A337704_2_En_7_Figa_HTML.jpg)
+
+
+  菲利克斯总觉得自已有点与众不同
+
+
+  大多数情况下，应用程序都会处理数据。用户会添加新文章和评论或编辑它们，管理员会创建新标签和分类等。测试夹具是为测试用例生成的样本数据。为什么需要它们？操作应用程序数据是个坏主意。我们可能在开发过程中意外删除或修改数据，也可能破坏数据库关系。这可不是个好主意。测试夹具是另一层隔离。一个更小、更清晰的数据集有助于确保我们的代码返回预期结果并快速运行。这绝对是个好主意。
+
+
+  CakePHP 使用 `config/app.php` 配置文件中名为 `$test` 的连接。CakePHP 会为测试夹具创建表，向表中填充数据，并在（运行测试方法后）清空测试夹具表，并从测试数据库中移除测试夹具表。
+
+
+  ## 创建测试夹具
+
+
+  有几种方法可以创建测试夹具。你应该在 `/app/Test/Fixture` 文件夹中创建你的测试夹具。
+
+
+  ### 即时创建
+
+
+  由于我们已经烘焙了模型，所以我们在 `/tests/Fixture` 目录下已经有了测试夹具文件，例如 `UsersFixture.php`。让我们检查一下之前生成的文件。
+
+
+  ```
+
+  1   [
+
+  21              ''type'' => ''integer'', ''length'' => 10, ''unsigned'' => true,
+
+  22              ''null'' => false, ''default'' => null, ''comment'' => '''',
+
+  23              ''autoIncrement'' => true, ''precision'' => null
+
+  24              ],
+
+  25          ''username'' => [
+
+  26              ''type'' => ''string'', ''length'' => 50, ''null'' => true,
+
+  27              ''default'' => null, ''comment'' => '''', ''precision'' => null,
+
+  28              ''fixed'' => null
+
+  29              ],
+
+  30          ''password'' => [
+
+  31              ''type'' => ''string'', ''length'' => 50, ''null'' => true,
+
+  32              ''default'' => null, ''comment'' => '''', ''precision'' => null,
+
+  33              ''fixed'' => null
+
+  34              ],
+
+  35          ''role'' => [
+
+  36              ''type'' => ''string'', ''length'' => 20, ''null'' => true,
+
+  37              ''default'' => null, ''comment'' => '''', ''precision'' => null,
+
+  38              ''fixed'' => null
+
+  39              ],
+
+  40          ''created'' => [
+
+  41              ''type'' => ''datetime'', ''length'' => null, ''null'' => true,
+
+  42              ''default'' => null, ''comment'' => '''', ''precision'' => null
+
+  43              ],
+
+  44          ''modified'' => [
+
+  45              ''type'' => ''datetime'', ''length'' => null, ''null'' => true,
+
+  46              ''default'' => null, ''comment'' => '''', ''precision'' => null
+
+  47              ],
+
+  48          ''_constraints'' => [
+
+  49              ''primary'' => [
+
+  50                ''type'' => ''primary'', ''columns'' => [''id''], ''length'' =>
+  []
+
+  51                  ],
+
+  52          ],
+
+  53          ''_options'' => [
+
+  54              ''engine'' => ''InnoDB'',
+
+  55              ''collation'' => ''latin1_swedish_ci''
+
+  56          ],
+
+  57      ];
+
+  58      // @codingStandardsIgnoreEnd
+
+
+  60      /**
+
+  61       * 记录
+
+  62       *
+
+  63       * @var array
+
+  64       */
+
+  65      public $records = [
+
+  66          [
+
+  67              ''id'' => 1,
+
+  68              ''username'' => ''Lorem ipsum dolor sit amet'',
+
+  69              ''password'' => ''Lorem ipsum dolor sit amet'',
+
+  70              ''role'' => ''Lorem ipsum dolor '',
+
+  71              ''created'' => ''2016-04-24 18:39:32'',
+
+  72              ''modified'' => ''2016-04-24 18:39:32''
+
+  73          ],
+
+  74      ];
+
+  75  }
+
+  ```
+
+
+  `$fields` 数组描述了模型 `Users` 的表模式。它描述了所有字段、它们的数据类型和长度、默认值以及其他一些值。它还包括了使用的索引。
+
+
+  `$records` 数组包含一条样本记录，但你可以根据需要添加任意多条。使用这种方法，你可以在应用程序数据库中还没有任何数据之前——甚至在你完全没有数据库之前——就开始编写单元测试。这在开发的早期阶段测试数据库结构变更时非常有用。
+
+
+  在数据库结构已确定的后期开发阶段，拥有不会改变的记录对于测试也至关重要。
+
+
+  当你运行一个导入了此测试夹具的测试时，CakePHP 会在测试数据库中创建一个 `Users` 表，其中包含此处描述的字段，并从 `$records` 数组中插入记录。模型测试将在测试期间使用这些数据。
+
+
+  你也可以在测试夹具中使用动态数据。为此，只需使用 `init()` 函数即可。
+
+
+  ```
+
+  1   [
+
+  21              ''type'' => ''integer'', ''length'' => 10, ''unsigned'' => true,
+
+  22              ''null'' => false, ''default'' => null, ''comment'' => '''',
+
+  23              ''autoIncrement'' => true, ''precision'' => null
+
+  24              ],
+
+  25          ''username'' => [
+
+  26              ''type'' => ''string'', ''length'' => 50, ''null'' => true,
+
+  27              ''default'' => null, ''comment'' => '''', ''precision'' => null,
+
+  28              ''fixed'' => null
+
+  29              ],
+
+  30          ''password'' => [
+
+  31              ''type'' => ''string'', ''length'' => 50, ''null'' => true,
+
+  32              ''default'' => null, ''comment'' => '''', ''precision'' => null,
+
+  33              ''fixed'' => null
+
+  34              ],
+
+  35          ''role'' => [
+
+  36              ''type'' => ''string'', ''length'' => 20, ''null'' => true,
+
+  37              ''default'' => null, ''comment'' => '''', ''precision'' => null,
+
+  38              ''fixed'' => null
+
+  39              ],
+
+  40          ''created'' => [
+
+  41              ''type'' => ''datetime'', ''length'' => null, ''null'' => true,
+
+  42              ''default'' => null, ''comment'' => '''', ''precision'' => null
+
+  43              ],
+
+  44          ''modified'' => [
+
+  45              ''type'' => ''datetime'', ''length'' => null, ''null'' => true,
+
+  46              ''default'' => null, ''comment'' => '''', ''precision'' => null
+
+  47              ],
+
+  48          ''_constraints'' => [
+
+  49              ''primary'' => [
+
+  50                ''type'' => ''primary'', ''columns'' => [''id''], ''length'' =>
+  []
+
+  51                  ],
+
+  52          ],
+
+  53          ''_options'' => [
+
+  54              ''engine'' => ''InnoDB'',
+
+  55              ''collation'' => ''latin1_swedish_ci''
+
+  56          ],
+
+  57      ];
+
+  58      // @codingStandardsIgnoreEnd
+
+
+  60      public function init()
+
+  61      {
+
+  62            $this->records = [
+
+  63              [
+
+  64                  ''id'' => 1,
+
+  65                  ''username'' => ''Lorem ipsum dolor sit amet'',
+
+  66                  ''password'' => ''Lorem ipsum dolor sit amet'',
+
+  67                  ''role'' => ''Lorem ipsum dolor '',
+
+  68                  ''created'' => date(''Y-m-d H:i:s''),
+
+  69                  ''modified'' => date(''Y-m-d H:i:s'')
+
+  70              ],
+
+  71          ];
+
+  72      }
+
+  73  }
+
+  ```
+
+
+  如你所见，文件的开头与上一个示例相同。但是在创建 `$fields` 数组之后，我们并没有创建 `$records` 数组，而是在 `init()` 方法中创建它。我们这样做是因为我们想要将动态数据插入到
+  `created` 和 `modified` 字段中。因此，这些数据在每次测试运行时都会基于当前系统时间而不同。
+
+
+
+
+  ### 导入现有模型架构
+
+
+  如果你已经创建了数据库模型，可以将其导入到测试固件中，而无需包含任何现有数据记录。这在早期开发阶段（数据库结构频繁变化时）非常有用。如果不这样做，所有数据库更改都必须在固件中手动进行修改。这会增加一些开销，因此在后期开发阶段，前面的示例会更快。
+
+
+  ```
+
+  1   ''Users''];
+
+  4  }
+
+  5  ?>
+
+  ```
+
+
+  如果你有数据表但没有模型，则应使用以下代码示例。这在创建插件或库时很有用。
+
+
+  ```
+
+  1   ''users''];
+
+  4  }
+
+  5  ?>
+
+  ```
+
+
+  不要忘记手动向固件中添加记录。由于测试应尽可能快地运行，请尽量只添加足够的记录。请记住：插入和删除测试记录需要时间。记录越多，所需时间就越长，因此只需添加绝对必要的记录。假设在应用程序的某处，我们希望列出所有用户名以给定字母开头的用户。那么我们的模型中会有一个`getUsersByName($ch)`方法来处理此需求。
+
+
+  在这种场景下，我们的用户固件中应该至少有三条具有不同用户名的记录。
+
+
+  ```
+
+  65      public $records = [
+
+  66          [
+
+  67              ''id'' => 1,
+
+  68              ''username'' => ''rrd'',
+
+  69              ''password'' => ''Lorem ipsum dolor sit amet'',
+
+  70              ''role'' => ''Lorem ipsum dolor '',
+
+  71              ''created'' => ''2016-04-24 18:39:32'',
+
+  72              ''modified'' => ''2016-04-24 18:39:32''
+
+  73          ],
+
+  74          [
+
+  75              ''id'' => 2,
+
+  76              ''username'' => ''gauranga'',
+
+  77              ''password'' => ''Lorem ipsum dolor sit amet'',
+
+  78              ''role'' => ''Lorem ipsum dolor '',
+
+  79              ''created'' => ''2016-04-24 18:39:32'',
+
+  80              ''modified'' => ''2016-04-24 18:39:32''
+
+  81          ],
+
+  74          [
+
+  75              ''id'' => 3,
+
+  76              ''username'' => ''r2d2'',
+
+  77              ''password'' => ''Lorem ipsum dolor sit amet'',
+
+  78              ''role'' => ''Lorem ipsum dolor '',
+
+  79              ''created'' => ''2016-04-24 18:39:32'',
+
+  80              ''modified'' => ''2016-04-24 18:39:32''
+
+  81          ],
+
+  82      ];
+
+  ```
+
+
+  有了这三条记录，我们就可以为`getUsersByName($ch)`编写测试了。如果`$ch`是“g”，我们应该得到记录 2；如果`$ch`是“r”，我们应该得到记录
+  1 和 3；其他情况则不应得到任何记录。
+
+
+  如果你不喜欢手动输入记录，可以通过`phpMyAdmin`从现有数据库表中导入。只需使用`export`功能，并选择`PHP array`作为导出格式，如图[7-1]所示。
+
+
+  ![A337704_2_En_7_Fig1_HTML.jpg](img/A337704_2_En_7_Fig1_HTML.jpg)
+
+
+  图 7-1.
+
+
+  通过 `phpMyAdmin` 导出记录
+
+
+  这会为你生成一个数组，你可以将其复制粘贴作为你的`$records`数组。这可以轻松获得大量记录，但仍应尽量保持记录数量尽可能少。
+
+
+  ## 将固件加载到测试中
+
+
+  让我们来看看`tests/TestCase/Model/Table/UsersTableTest.php`文件，该文件也是由`bake`生成的，正如上一章所述。
+
+
+  ```
+
+  1  <?php
+
+  2  namespace App\Test\TestCase\Model\Table;
+
+  ```
+
+
+  命名空间是在 PHP 5.3 中引入的，也是 PHP 7 应用程序中推荐使用的语言特性。命名空间最简单的定义是它是一种封装项目的方式。
+
+
+  ```
+
+  4  use App\Model\Table\UsersTable;
+
+  5  use Cake\ORM\TableRegistry;
+
+  6  use Cake\TestSuite\TestCase;
+
+  ```
+
+
+  通过`use`操作符，我们导入其他命名空间。
+
+
+  ```
+
+  8  /**
+
+  9   * App\Model\Table\UsersTable Test Case
+
+  10   */
+
+  11  class UsersTableTest extends TestCase
+
+  12  {
+
+  ```
+
+
+  模型测试扩展了 CakePHP 的`TestCase`类。
+
+
+  ```
+
+  14      /**
+
+  15       * Test subject
+
+  16       *
+
+  17       * @var \App\Model\Table\UsersTable
+
+  18       */
+
+  19      public $Users;
+
+  21      /**
+
+  22       * Fixtures
+
+  23       *
+
+  24       * @var array
+
+  25       */
+
+  26      public $fixtures = [
+
+  27          ''app.users'',
+
+  28          ''app.comments'',
+
+  29          ''app.posts'',
+
+  30          ''app.categories'',
+
+  31          ''app.tags'',
+
+  32          ''app.posts_tags''
+
+  33      ];
+
+  ```
+
+
+  `$fixtures`数组定义了应该为测试加载哪些固件。如你所见，`bake`导入了与`User`模型相关的固件。现在，先删除相关模型，保持简单。将代码修改如下：
+
+
+  ```
+
+  26  public $fixtures = [''app.users''];
+
+  ```
+
+
+  如果你的任何模型查询不会尝试检索相关的数据库表，这就足够了。由于只有这里添加的固件才会加载到测试数据库中，因此相关的数据库表将不存在，尝试查询它们会产生错误。
+
+
+  始终保持测试简单，只加载绝对必要的固件，这是一个好习惯。
+
+
+  ## 总结
+
+
+  在本章中，你学习了固件的概念，并了解了如何编写、生成固件并将其加载到测试中。最重要的经验之一是尽量保持固件简短，并且只在测试中加载必要的固件。
+
+
+  '
+- '# 8. 模型测试
+
+
+  ![A337704_2_En_8_Figa_HTML.jpg](img/A337704_2_En_8_Figa_HTML.jpg)
+
+
+  我们是重量级模型的忠实粉丝
+
+
+  好了。我不想再折磨你了。让我们编写第一个单元测试。
+
+
+  在你的`UserFixture.php`文件中使用以下示例代码。
+
+
+  ```
+
+  1   ''Users''];
+
+  11     public $records = [
+
+  12          [
+
+  13              ''id'' => 1,
+
+  14              ''username'' => ''rrd'',
+
+  15              ''password'' => ''Gouranga'',
+
+  16              ''role'' => ''admin'',
+
+  17              ''created'' => ''2016-05-01 12:00:00'',
+
+  18              ''modified'' => ''2016-05-01 12:00:00''
+
+  19          ],
+
+  20      ];
+
+  21  }
+
+  ```
+
+
+  如你所见，这非常简单。我们导入`Users`模型，并只创建了一条记录，即一个用户。
+
+
+  假设我们想显示最后注册的用户是谁。由于我们采用测试驱动开发（TDD），首先我们创建测试。打开`/tests/TestCase/Model/Table/UsersTableTest.php`，并在文件末尾添加第一个测试函数。
+
+
+  ```
+
+  1  public function testIfWeGetRrdAsLastRegisteredUser()
+
+  2  {
+
+  3      $actual = $this->Users->getLastRegistered();
+
+  4      $expected = ''rrd'';
+
+  5      $this->assertEquals($expected, $actual->username);
+
+  6  }
+
+  ```
+
+
+  我可能应该对此稍作解释。但在深入探讨之前，请先创建模型方法本身并运行测试。
+
+
+  因为我们是重量级模型的忠实粉丝，我们会将此功能放入`Users`模型中。打开`/src/Model/Table/UsersTable.php`，并在文件末尾添加一个新函数。
+
+
+  ```
+
+  1  public function getLastRegistered(){
+
+  2      return true;
+
+  3  }
+
+  ```
+
+
+  这很蠢，但正是我们目前所需要的。让我们运行它。结果应类似于图[8-1]所示。
+
+
+  ![A337704_2_En_8_Fig1_HTML.jpg](img/A337704_2_En_8_Fig1_HTML.jpg)
+
+
+  图 8-1.
+
+
+  测试失败
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit --filter testIfWeGetRrdAsLastRegisteredUser tests/TestCase/Model/Table/UsersTableTest.php
+
+  ```
+
+
+  恭喜！你刚刚编写了第一个单元测试。让我们探索一下这里发生了什么，以及为什么我们对测试失败感到高兴。
+
+
+  ![A337704_2_En_8_Figb_HTML.jpg](img/A337704_2_En_8_Figb_HTML.jpg)
+
+
+  你可能会收到如下错误消息：
+
+
+  `Warning Error: SplFileInfo::openFile(/home/rrd/public_html/cakeBlog/tmp/cache/models/myapp_cake_model_default_users):
+  failed to open stream: Permission denied in [/home/rrd/public_html/cakeBlog/vendor/cakephp/cakephp/src/Cache/Engine/FileEngine.php,
+  line 395]`
+
+
+  这意味着你没有写入缓存文件的权限。请更改`/tmp`文件夹中所有文件的权限和所有权。
+
+
+
+
+  '
+- '# 测试函数命名
+
+
+  测试函数名应以`test`开头。
+
+
+  不要害怕使用描述性函数名，即使它们很长。它们非常有帮助。我们想检查谁是最后注册的用户，根据我们的测试数据，我们知道应该是唯一用户`''rrd''`。因此，我们使用了`testIfWeGetRrdAsLastRegisteredUser`作为方法名。请记住，当向测试数据添加新用户时，也应更新此测试。
+
+
+  '
+- '# 断言
+
+
+  在测试函数中，我们会做一些简单的事情：获取期望值，然后检查函数返回值是否等于该值。还有其他有用的断言方法，例如`assertTrue`、`assertFalse`和`assertContains`。你可以在
+  PHPUnit API（[`https://phpunit.de/manual/current/en/appendixes.assertions.html`](https://phpunit.de/manual/current/en/appendixes.assertions.html)）中查看所有断言方法。
+
+
+  '
+- '# 先失败
+
+
+  你还记得 TDD 的过程吗？首先，编写一个会失败的测试。我们已经准备好了，这应该不会令人意外，因为我们的模型方法只返回`true`。现在，让我们编写正确的代码。
+
+
+  '
+- '# 通过测试
+
+
+  好的。我们的测试失败了。现在将实际代码添加到用户模型。
+
+
+  ```
+
+  1  public function getLastRegistered()
+
+  2  {
+
+  3      return $this->find()
+
+  4          ->order(''created'')
+
+  5          ->first();
+
+  6  }
+
+  ```
+
+
+  我们通过调用`Users`模型的`find()`方法请求最后注册用户的数据，按`created`字段排序结果，并返回第一条结果。
+
+
+  重新运行测试应显示通过测试的报告，并带有绿色条（图 8-2）。
+
+
+  ![A337704_2_En_8_Fig2_HTML.jpg](img/A337704_2_En_8_Fig2_HTML.jpg)
+
+
+  图 8-2. 通过测试
+
+
+  那么，我们的测试实际发生了什么？
+
+
+  ```
+
+  1  public function testIfWeGetRrdAsLastRegisteredUser()
+
+  2  {
+
+  3      $actual = $this->Users->getLastRegistered();
+
+  ```
+
+
+  该方法将返回一个从测试数据库填充的`User`对象。
+
+
+  ```
+
+  4      $expected = ''rrd'';
+
+  ```
+
+
+  我们定义期望值。
+
+
+  ```
+
+  5      $this->assertEquals($expected, $actual->username);
+
+  6  }
+
+  ```
+
+
+  然后进行断言。如果一切正常，`$actual->username`应为`''rrd''`。
+
+
+  打开你的`UsersFixture.php`文件并添加一条新记录。如果第二个用户的创建时间早于`rrd`，你的测试将通过。如果创建时间晚于`rrd`，你的测试将失败。完成实验后，请确保代码能让测试通过。测试失败意味着出了问题。
+
+
+  我们的测试耗时 798 毫秒完成。测试应运行快速。始终关注执行时间。
+
+
+  '
+- '# 测试与胖模型
+
+
+  编写更好代码的一个概念是拥有胖模型和薄控制器。
+
+
+  这意味着控制器应该非常薄，仅作为请求和响应之间的转换层。因此，业务逻辑放在模型中，由控制器频繁使用。
+
+
+  另一个概念是越小越好。这意味着我们应该有短小的方法。有人主张每个方法最多三行，另一些人则推荐最多十行。短方法更易于阅读、理解、维护和测试。长方法容易违反单一职责原则。
+
+
+  所有这些意味着我们将拥有包含许多短小方法的胖模型，每个方法只负责一件事。而且你可能会为所有模型方法编写测试。
+
+
+  测试将帮助你识别自己遵循的导致问题的糟糕编码模式。
+
+
+  CakePHP 遵循模型-视图-控制器（MVC）模式，即使编程模式对你来说很陌生，它也提供了良好的支持并帮助你遵循。假设我们想要一个按用户名首字母分组的用户列表。例如，A:
+  Amindala，B: Ben Kenobi，Boba Fett，等等。也许我们想要一个链接列表，以便用户点击某人的名字时，会被重定向到该用户的个人资料页面。
+
+
+  为满足此需求，我们应该查询用户表以获取用户名，然后将结果提供给视图，并构建 HTML 列表。
+
+
+  与数据库的通信应在模型中进行。所有`find()`调用都应放在模型中。
+
+
+  控制器将检查用户权限，并设置变量供视图显示或闪现错误消息。
+
+
+  视图应实际构建 HTML 列表和链接。视图不应执行任何业务逻辑，只应输出内容。如果在控制器或模型中使用了`print`（或`echo`）语句，就破坏了 MVC
+  模式。同时，大多数视图代码应仅输出内容，不做其他事情。计算表格汇总或平均值是例外情况。
+
+
+  '
+- '# 测试回调
+
+
+  你可能已经注意到有些函数是由`bake`自动生成的。这些是测试回调。CakePHP 的单元测试包含以下回调方法：
+
+
+  *   `setUp`在每个`test`方法之前调用，因此这是初始化通用对象的最佳位置。应始终调用`parent::setUp()`。
+
+  *   `tearDown`在每个`test`方法之后调用。不要忘记调用`parent::tearDown`。
+
+
+  `tearDownAfterClass`在测试用例中的测试方法启动后调用一次。此方法必须是`static`的。
+
+
+  '
+- '# 总结
+
+
+  在本章中，我们编写了第一个单元测试。起初它失败了，因为我们遵循了 TDD。你学习了测试方法的主要原则：断言如何工作。你还学习了胖模型以及模型、控制器和视图之间的区别。最后，你学习了测试回调。
+
+
+  '
+- '# 9. 控制器测试 1
+
+
+  ![A337704_2_En_9_Figa_HTML.jpg](img/A337704_2_En_9_Figa_HTML.jpg)
+
+
+  是的，通过尝试和实践来学习是编码的根本
+
+
+  在第 7 章中，你看到模型测试继承自`TestCase`。控制器测试继承自`IntegrationTestCase`。使用这些基类将模拟`get`、`post`调用，并检查响应对象。
+
+
+
+
+  '
+- '# Baked 控制器概览
+
+
+  看看我们先前通过 `bake` 生成的 `/src/Controllers/PostsController.php` 文件。
+
+
+  ```php
+
+  1   <?php
+
+  2   namespace App\Controller;
+
+  ```
+
+
+  所有控制器共享同一个命名空间，即 `App\Controller`。
+
+
+  ```php
+
+  4   use App\Controller\AppController;
+
+  ```
+
+
+  使用 `use` 操作符，我们引入了 `App\Controller\AppController` 命名空间。
+
+
+  ```php
+
+  6   /**
+
+  7    * Posts Controller
+
+  8    *
+
+  9    * @property \App\Model\Table\PostsTable $Posts
+
+  10   */
+
+  11  class PostsController extends AppController
+
+  12  {
+
+  ```
+
+
+  所有控制器类都继承自 `AppController` 类，该类是 Cake 的 `Controller` 类的扩展。这确保了我们能够使用组件，并拥有用于重定向等方法。
+
+
+  ```php
+
+  14      /**
+
+  15       * Index method
+
+  16       *
+
+  17       * @return \Cake\Network\Response|null
+
+  18       */
+
+  19      public function index()
+
+  20      {
+
+  ```
+
+
+  由 `bake` 生成的 `index` 方法用于列出所有文章。
+
+
+  ```php
+
+  21          $this->paginate = [
+
+  22              ''contain'' => [''Categories'', ''Users'']
+
+  23          ];
+
+  24          $posts = $this->paginate($this->Posts);
+
+  ```
+
+
+  我们希望在视图中使用分页功能，以便在文章很多时允许用户进行分页。我们加载了关联的 `Categories` 和 `Users` 模型来查看文章的相关数据。
+
+
+  ```php
+
+  26          $this->set(compact(''posts''));
+
+  27          $this->set(''_serialize'', [''posts'']);
+
+  28      }
+
+  ```
+
+
+  然后我们设置视图所需的变量。我们只设置了一个变量 `post`，然后设置了 `_serialize` 变量，因为它在 JSON 响应中可能很有用。
+
+
+  ```php
+
+  30      /**
+
+  31       * View method
+
+  32       *
+
+  33       * @param string|null $id Post id.
+
+  34       * @return \Cake\Network\Response|null
+
+  35       * @throws \Cake\Datasource\Exception\RecordNotFoundException
+
+  36       *    When record not found.
+
+  37       */
+
+  ```
+
+
+  `view` 方法用于获取单独一篇文章及其所有关联数据，并为视图设置 `post` 变量。
+
+
+  ```php
+
+  38      public function view($id = null)
+
+  39      {
+
+  40          $post = $this->Posts->get($id, [
+
+  41              ''contain'' => [''Categories'', ''Users'', ''Tags'', ''Comments'']
+
+  42          ]);
+
+  44          $this->set(''post'', $post);
+
+  45          $this->set(''_serialize'', [''post'']);
+
+  46      }
+
+  ```
+
+
+  由 `bake` 生成的下一个方法是 `add`。此方法用于添加新文章。
+
+
+  ```php
+
+  48      /**
+
+  49       * Add method
+
+  50       *
+
+  51       * @return \Cake\Network\Response|void Redirects on successful
+
+  52       *    add, renders view otherwise.
+
+  53       */
+
+  54      public function add()
+
+  55      {
+
+  56          $post = $this->Posts->newEntity();
+
+  ```
+
+
+  首先，我们为新文章创建一个新的实体对象。
+
+
+  ```php
+
+  57          if ($this->request->is(''post'')) {
+
+  58              $post = $this->Posts->patchEntity(
+
+  59                  $post,
+
+  60                  $this->request->data
+
+  61              );
+
+  ```
+
+
+  如果在请求中已经收到了一些文章数据，我们将其加载到 `$post` 实体对象中。
+
+
+  ```php
+
+  62              if ($this->Posts->save($post)) {
+
+  63                  $this->Flash->success(__(''The post has been saved.''));
+
+  64                  return $this->redirect([''action'' => ''index'']);
+
+  65              } else {
+
+  66                  $this->Flash->error(
+
+  67                      __(''The post not saved. Please, try again.'')
+
+  68                  );
+
+  69              }
+
+  70          }
+
+  ```
+
+
+  接下来，我们尝试保存新文章，并设置成功或错误消息。如果保存操作成功，我们将用户重定向到 `posts/index` URL。
+
+
+  ```php
+
+  71          $categories = $this->Posts->Categories
+
+  72              ->find(''list'', [''limit'' => 200]);
+
+  73          $users = $this->Posts->Users->find(''list'', [''limit'' => 200]);
+
+  74          $tags = $this->Posts->Tags->find(''list'', [''limit'' => 200]);
+
+  75          $this->set(compact(''post'', ''categories'', ''users'', ''tags''));
+
+  76          $this->set(''_serialize'', [''post'']);
+
+  77      }
+
+  ```
+
+
+  然后我们为视图设置所有变量。
+
+
+  由 `bake` 生成的下一个方法是 `edit`，用于编辑之前保存的文章。
+
+
+  ```php
+
+  79      /**
+
+  80       * Edit method
+
+  81       *
+
+  82       * @param string|null $id Post id.
+
+  83       * @return \Cake\Network\Response|void Redirects
+
+  84       *      on successful edit, renders view otherwise.
+
+  85       * @throws \Cake\Network\Exception\NotFoundException
+
+  86       *      When record not found.
+
+  87       */
+
+  88      public function edit($id = null)
+
+  89      {
+
+  90          $post = $this->Posts->get($id, [
+
+  91              ''contain'' => [''Tags'']
+
+  92          ]);
+
+  ```
+
+
+  首先，我们通过其 id 从模型中获取文章。
+
+
+  ```php
+
+  93          if ($this->request->is([''patch'', ''post'', ''put''])) {
+
+  94              $post = $this->Posts->patchEntity(
+
+  95                  $post,
+
+  96                  $this->request->data
+
+  97              );
+
+  98              if ($this->Posts->save($post)) {
+
+  99                  $this->Flash->success(__(''The post has been saved.''));
+
+  100                  return $this->redirect([''action'' => ''index'']);
+
+  101              } else {
+
+  102                  $this->Flash->error(
+
+  103                      __(''The post not saved. Please, try again.'')
+
+  104                  );
+
+  105              }
+
+  106          }
+
+  ```
+
+
+  如果通过 HTTP `patch`、`post` 或 `put` 方法在请求中接收到文章数据，我们尝试保存文章。
+
+
+  ```php
+
+  107          $categories = $this->Posts->Categories
+
+  108              ->find(''list'', [''limit'' => 200]);
+
+  109          $users = $this->Posts->Users->find(''list'', [''limit'' => 200]);
+
+  110          $tags = $this->Posts->Tags->find(''list'', [''limit'' => 200]);
+
+  111          $this->set(compact(''post'', ''categories'', ''users'', ''tags''));
+
+  112          $this->set(''_serialize'', [''post'']);
+
+  113      }
+
+  ```
+
+
+  然后，和前面方法一样，我们设置将在相应视图中使用的变量。
+
+
+  由 `bake` 生成的最后一个方法是 `delete`，用于删除已保存的文章。
+
+
+  ```php
+
+  115      /**
+
+  116       * Delete method
+
+  117       *
+
+  118       * @param string|null $id Post id.
+
+  119       * @return \Cake\Network\Response|null Redirects to index.
+
+  120       * @throws \Cake\Datasource\Exception\RecordNotFoundException
+
+  121       *      When record not found.
+
+  122       */
+
+  123      public function delete($id = null)
+
+  124      {
+
+  125          $this->request->allowMethod([''post'', ''delete'']);
+
+  126          $post = $this->Posts->get($id);
+
+  127          if ($this->Posts->delete($post)) {
+
+  128              $this->Flash->success(__(''The post has been deleted.''));
+
+  129          } else {
+
+  130              $this->Flash->error(
+
+  131                  __(''The post not deleted. Please, try again.'')
+
+  132              );
+
+  133          }
+
+  134          return $this->redirect([''action'' => ''index'']);
+
+  135      }
+
+  136  }
+
+  ```
+
+
+  这个方法很直接：我们删除由其 id 标识的文章，然后将用户重定向到 `posts/index`。
+
+
+
+
+  '
+- '# Bake 背后的魔法
+
+
+  CakePHP 团队运用了大量巧妙的编程工具，才打造出像 `bake` 这样便捷的工具。如前面的示例所示，它确实能为我们编写代码。
+
+
+  当我们烘焙模型时，它会检测数据库字段类型，并据此创建实体类和模型类。实体对象代表数据库中的一行，而模型对象则代表数据库表，包含其关联关系、验证规则和方法。由于模型继承了
+  CakePHP 的 `Table` 类，它们也继承了许多有用的方法。这就是为什么我们可以直接使用像 `get`、`save` 和 `delete` 这样的方法，而无需自己创建它们。这些方法是由框架本身提供的。
+
+
+  当我们烘焙控制器时，会生成 `index`、`edit`、`view` 和 `delete` 这些最常用的操作方法。这些方法会使用到相关的模型。
+
+
+  烘焙还会为所有控制器方法生成视图。例如，对于 `index` 方法，就会生成对应的 index 视图。在视图中，我们能够访问那些在控制器中设置的变量。
+
+
+  正如你所见，通过继承和 `bake`，我们直接从“烤箱”里得到了很多东西。不过，有一点你需要牢记在心：由 `bake` 生成的代码只是为了让你尽快得到一个可运行的基础骨架。它不会处理权限或用户认证问题，因此任何人都可以创建和删除东西。CakePHP
+  对这些功能也提供了良好的支持，但它们并不会由 `bake` 自动生成。
+
+
+  ## 创建控制器测试
+
+
+  在概述了生成的控制器之后，我们来为它创建一些测试。首先，我们必须为分类（categories）、标签（tags）和文章（posts）模型创建测试固件（fixtures）。我们从分类开始。第
+  7 章已经提供了固件的概述，所以下面的代码示例应该很容易理解。
+
+
+  ```
+
+  1   ''Categories''];
+
+
+  11      public $records = [
+
+  12          [
+
+  13              ''id'' => 1,
+
+  14              ''category'' => ''Category 1''
+
+  15          ],
+
+  16          [
+
+  17              ''id'' => 2,
+
+  18              ''category'' => ''Category 2''
+
+  19          ],
+
+  20      ];
+
+  21  }
+
+  ```
+
+
+  我们将 `Categories` 模型导入到固件中，并创建了两条分类记录。这段代码应该放在 `/tests/Fixture/CategoriesFixture.php`
+  文件中。该文件是由 `bake` 生成的。你可以随意修改它，或者直接用上面的内容创建一个新文件。
+
+
+  ```
+
+  1   ''Tags''];
+
+
+  10      public $records = [
+
+  11          [
+
+  12              ''id'' => 1,
+
+  13              ''tag'' => ''Tag 1''
+
+  14          ],
+
+  15          [
+
+  16              ''id'' => 2,
+
+  17              ''tag'' => ''Tag 2''
+
+  18          ],
+
+  19          [
+
+  20              ''id'' => 3,
+
+  21              ''tag'' => ''Tag 3''
+
+  22          ],
+
+  23      ];
+
+  24  }
+
+  ```
+
+
+  对于标签，我们也应该做同样的操作。在这个例子中，我们创建了三个标签。它应该放在 `/tests/Fixture/TagsFixture.php` 文件中。
+
+
+  ```
+
+  1   ''Posts''];
+
+
+  10      public $records = [
+
+  11          [
+
+  12              ''id'' => 1,
+
+  13              ''category_id'' => 1,
+
+  14              ''user_id'' => 1,
+
+  15              ''title'' => ''First Post Tilte'',
+
+  16              ''body'' => ''This is the body of the first post...'',
+
+  17              ''created'' => ''2016-05-01 13:00:00'',
+
+  18              ''modified'' => ''2016-05-01 13:00:00''
+
+  19          ],
+
+  20      ];
+
+  21  }
+
+  ```
+
+
+  对于文章，我们也应该做同样的操作。目前，一条 `记录` 就足够了。这段代码应该放在 `/tests/Fixture/PostsFixture.php` 文件中。
+
+
+  文章和标签之间存在 `belongsToMany` （多对多）关联，意味着一篇文章可以有多个标签，一个标签也可以被分配给多篇文章。为了存储这些数据，我们在默认数据源中创建了一个名为
+  `posts_tags` 的数据库表。既然现在我们想在测试中使用它，那么我们也需要为连接表创建固件。
+
+
+  ```
+
+  1   ''PostsTags''];
+
+
+  10      public $records = [
+
+  11          [
+
+  12              ''post_id'' => 1,
+
+  13              ''tag_id'' => 1
+
+  14          ],
+
+  15          [
+
+  16              ''post_id'' => 1,
+
+  17              ''tag_id'' => 3
+
+  18          ],
+
+  19      ];
+
+  20  }
+
+  ```
+
+
+  你可以看到，`id 为 1` 的那篇文章拥有两个标签，分别是 `id 为 1` 和 `3` 的标签。
+
+
+  现在我们已经拥有了所有必需的固件。之前我们已经通过烘焙生成了 `/tests/TestCase/Controller/PostsControllerTest.php`
+  文件，但为了找点乐子，我们把它删掉，然后从头开始创建一个新的。
+
+
+  我们的测试用例应该有它自己的命名空间，并且会使用 `PostsController` 和 `IntegrationTestCase`，所以我们需要加载它们。
+
+
+  ```
+
+  1  <?php
+
+  2  namespace App\Test\TestCase\Controller;
+
+
+  4  use App\Controller\PostsController;
+
+  5  use Cake\TestSuite\IntegrationTestCase;
+
+
+  ```
+
+
+  让我们创建基础类。
+
+
+  ```
+
+  7  class PostsControllerTest extends IntegrationTestCase
+
+  8  {
+
+
+  ```
+
+
+  我们将固件加载到测试用例中。
+
+
+  ```
+
+  10  public $fixtures = [
+
+  11        ''app.posts'',
+
+  12        ''app.categories'',
+
+  13        ''app.users'',
+
+  14        ''app.tags'',
+
+  15        ''app.posts_tags''
+
+  16  ];
+
+
+  ```
+
+
+  我们没有加载 `comments` 固件，因为在本测试中不会用到它。加载它既无必要，还会拖慢测试运行速度。
+
+
+  最后，为了遵循测试驱动开发（TDD）的原则，我们创建一个空的测试函数。
+
+
+  ```
+
+  18     public function testIndex()
+
+  19     {
+
+  20         $this->markTestIncomplete(''Not implemented yet.'');
+
+  21     }
+
+  22  }
+
+  ```
+
+
+  `markTestIncomplete` 方法继承自 `IntegrationTestCase`，并且是在 `PHPUnit` 中定义的。它的目的很简单，也不会让人意外：就是标记该测试未完成。实际的测试函数需要稍多解释，我们稍后会添加它。
+
+
+  ## 关于集成测试
+
+
+  集成测试允许你在更高层次上测试你的应用程序。它模拟一个发送到你应用的 HTTP 请求。测试你的控制器时，也会同时测试与特定请求相关的所有组件、模型和辅助器。
+
+
+  以下方法可用于模拟 HTTP 请求：
+
+
+  - `get()` 发送 `GET` 请求
+
+  - `post()` 发送 `POST` 请求
+
+  - `put()` 发送 `PUT` 请求
+
+  - `delete()` 发送 `DELETE` 请求
+
+  - `patch()` 发送 `PATCH` 请求
+
+
+  ## 断言方法
+
+
+  通过使用 `IntegrationTestCase`，我们可以访问许多不同的断言方法。以下是一些最常用的方法：
+
+
+  - `$this->assertResponseOk();` 检查调用控制器后是否得到 `2xx` 响应码。
+
+  - `$this->assertResponseSuccess();` 检查调用控制器后是否得到 `2xx` 或 `3xx` 响应码。
+
+  - `$this->assertResponseError();` 检查调用控制器后是否得到 `4xx` 响应码。
+
+  - `$this->assertResponseFailure();` 检查调用控制器后是否得到 `5xx` 响应码。
+
+  - `$this->assertResponseCode(404);` 检查响应码是否为 404。
+
+  - `$this->assertRedirectContains(''/posts/edit/'');` 检查重定向的 `location` 头部的一部分内容。
+
+  - `$this->assertResponseEquals(''Call out Gouranga and be Happy!'');` 检查响应内容是否等于给定值。
+
+  - `$this->assertResponseContains(''Gouranga!'');` 检查响应内容是否包含给定值。
+
+  - `$this->assertResponseNotContains(''You are logged in!'');` 检查响应内容是否不包含给定值。
+
+  - `$this->assertSession(1, ''Auth.User.id'');` 检查 `session` 变量。
+
+  - `$this->assertEquals(''rrd'', $this->viewVariable(''username''));` 检查 `view` 变量。
+
+  - `$this->assertContentType(''application/json'');` 检查内容类型。
+
+
+
+
+  '
+- '# 设置请求数据
+
+
+  大多数情况下，我们需要控制器中的数据来处理来自`get`、`post`、`cookie`或`session`的内容。
+
+
+  ```
+
+  1  public function testAdd()
+
+  2  {
+
+  3      $data = [
+
+  4          ''category_id'' => 2,
+
+  5          ''user_id'' => 1,
+
+  6          ''title'' => ''Test Post Title'',
+
+  7          ''body'' => ''Test post body with same sample text'',
+
+  8          ''created'' => ''2016-05-01 14:00:00'',
+
+  9          ''modified'' => ''2016-05-01 14:00:00'',
+
+  10          ''tags'' => [
+
+  11              [''id'' => 1],
+
+  12              [''id'' => 2],
+
+  13          ]
+
+  14      ];
+
+  15      $this->post(''/posts/add/'', $data);
+
+  16
+
+  17      $this->assertResponseSuccess();
+
+  ```
+
+
+  首先，我们创建一个数据数组以 POST 方式发送到控制器。然后发送数据并检查是否收到成功响应状态码。
+
+
+  ```
+
+  19      $posts = TableRegistry::get(''Posts'');
+
+  20      $query = $posts->find()->where([''title'' => $data[''title'']]);
+
+  21      $this->assertEquals(1, $query->count());
+
+  ```
+
+
+  在上一章中，我们创建了帖子的固定数据集。因此，我们知道只有这个新帖子的标题与数据数组中的标题相同，所以计数应返回 1。
+
+
+  ```
+
+  23      $result = $query->toArray();
+
+  24      $poststags = TableRegistry::get(''PostsTags'');
+
+  25      $query = $poststags->find()->where([''post_id'' => $result[0]->id]);
+
+  26      $result = $query->toArray();
+
+  27      $this->assertEquals(1, $result[0]->tag_id);
+
+  28      $this->assertEquals(2, $result[1]->tag_id);
+
+  29  }
+
+  ```
+
+
+  在最后一个断言中，我们检查这个新帖子是否包含两个标签：1 和 2。（见图 9-1。）
+
+
+  ![A337704_2_En_9_Fig1_HTML.jpg](img/A337704_2_En_9_Fig1_HTML.jpg)
+
+
+  图 9-1. `testAdd` 的结果
+
+
+  测试 `GET` 数据非常简单。只需将查询字符串添加到 `get` 调用的第一个参数中即可。（见图 9-2。）
+
+
+  ![A337704_2_En_9_Fig2_HTML.jpg](img/A337704_2_En_9_Fig2_HTML.jpg)
+
+
+  图 9-2. `testEdit` 的结果
+
+
+  ```
+
+  1  public function testEdit()
+
+  2  {
+
+  3      $this->get(''/posts/edit/1'');
+
+  4      $this->assertResponseOk();
+
+  5  }
+
+  ```
+
+
+  ## 小节
+
+
+  本章概述了由 `bake` 生成的控制器。我们探讨了 `bake` 的工作原理及其局限性。随后创建了控制器测试，并引入了集成测试和控制器特定的断言方法。
+
+
+  '
+- '# 10. 模拟对象
+
+
+  ![A337704_2_En_10_Figa_HTML.jpg](img/A337704_2_En_10_Figa_HTML.jpg)
+
+
+  小猪，小猪，让我进去
+
+
+  我们经常需要模拟组件、模型、对象，甚至核心 PHP 函数。你可以在任何测试函数中创建模拟对象，或者如果所有测试函数都需要模拟对象，可以在 `setUp()` 方法中创建。
+
+
+  模拟对象确保你的测试运行得更快，而不必实际拥有所有必需的对象。
+
+
+  ## 模拟会话
+
+
+  `IntegrationTestCase` 类提供了一些辅助方法来模拟请求对象，包括会话、Cookie、标头等。
+
+
+  让我们来看一个会话变量的示例。其他方法的操作类似。
+
+
+  首先创建测试方法。修改 `/tests/TestCase/Controller/CategoriesControllerTest.php` 文件中的 `testIndex()`
+  方法。
+
+
+  ```
+
+  1  public function testIndex()
+
+  2  {
+
+  3      $this->get(''/categories'');
+
+  4      $this->assertResponseNotContains(''Category 2'');
+
+  5
+
+  6      $this->session([''isAdmin'' => true]);
+
+  7      $this->get(''/categories'');
+
+  8      $this->assertResponseContains(''Category 2'');
+
+  9  }
+
+  ```
+
+
+  我们定义了两个断言。两者都调用 `/categories`，第一个没有定义会话变量，第二个定义了会话变量。因此，第一个不应包含 `Category 2`，而第二个应包含。值
+  `Category 2` 来自我们在第 9 章中创建的固定数据集。
+
+
+  更新 `/src/Controller/CategoriesController.php` 文件中的 `index()` 方法。
+
+
+  ```
+
+  1  public function index()
+
+  2  {
+
+  3      if (!$this->request->session()->read(''isAdmin'')) {
+
+  4          $this->paginate[''limit''] = 1;
+
+  5      }
+
+  6      $categories = $this->paginate($this->Categories);
+
+  7      $this->set(compact(''categories''));
+
+  8      $this->set(''_serialize'', [''categories'']);
+
+  9  }
+
+  ```
+
+
+  如果你没有 `isAdmin` 会话变量，则将分类列表限制为 1。这个例子有点傻，但它向你展示了如何模拟会话变量。
+
+
+  ## 模拟模型方法
+
+
+  有时，为了节省时间或简化操作，你可能想模拟模型方法。在测试驱动开发（TDD）中，即使在方法尚未编写时，模拟也能帮助你进行测试。模拟可以提供所需的返回值，这样当其他团队成员正在开发被模拟的方法时，你可以继续编写测试。让我们看几个如何使用模拟的示例。
+
+
+  在 `CategoriesTableTest.php` 文件中创建一个新的测试。
+
+
+  ```
+
+  1  public function testDoSomething()
+
+  2  {
+
+  3      $this->assertTrue($this->Categories->doSomething());
+
+  4  }
+
+  ```
+
+
+  让我们在 `/src/Model/Table/CategoriesTable.php` 文件中创建被测试的方法本身。
+
+
+  ```
+
+  1  public function doSomething()
+
+  2  {
+
+  3      if ($this->slowFunction()) {
+
+  4          return true;
+
+  5      } else {
+
+  6          return false;
+
+  7      }
+
+  8  }
+
+  9
+
+  10  public function slowFunction ()
+
+  11  {
+
+  12      sleep(30);
+
+  13      return true;
+
+  14  }
+
+  ```
+
+
+  同样，这是一个傻例子，但它说明了我们的意图。`doSomething()` 方法调用了另一个运行很慢的函数。如果我们运行测试，它会成功，但需要超过 30 秒才能完成。显然，我们不想多次运行它。在
+  `testDoSomething()` 中，我们想测试 `doSomething()`，而不是 `slowFunction()`。让我们模拟它。
+
+
+  或许我们也应该测试 `slowFunction()`，但那是另一个话题了。
+
+
+  ```
+
+  1  public function testDoSomething ()
+
+  2  {
+
+  3      $model = $this->getMockForModel(''Categories'', [''slowFunction'']);
+
+  4      $model->expects($this->once())
+
+  5          ->method(''slowFunction'')
+
+  6          ->will($this->returnValue(true));
+
+  7      $this->assertTrue($model->doSomething());
+
+  8  }
+
+  ```
+
+
+  让我解释一下这里发生了什么。
+
+
+  我们将模拟直接放在 `test` 方法中，因为我们只在需要它；否则，我们可以将其放在 `setUp()` 方法中，使其对所有测试都可用。
+
+
+  然后，我们通过调用 `getMockForModel()` 方法来生成模拟对象。该方法的第一个参数是被模拟的表类的别名。第二个参数是要模拟的方法数组，在我们的例子中，只有
+  `slowFunction()` 方法。
+
+
+  然后，通过 `expects()` 调用，我们确保当模型首次调用 `$this->slowFunction()` 时，它应返回 `true`。之后，我们调用 `$model->doSomething()`
+  进行断言。它将调用被模拟的 `slowFunction()` 方法。
+
+
+  ## expects 方法
+
+
+  `expects` 方法接受以下参数值：
+
+
+  - `once()` 如果方法恰好被调用一次，则测试通过。
+
+  - `never()` 如果方法曾被调用，则测试失败。
+
+  - `any()` 如果方法被调用零次或多次，则测试通过。
+
+  - `at($index)` 匹配第 `$index` 次调用。该索引值会在每次调用模拟方法时递增，而不仅仅是在调用指定方法时。
+
+  - `exactly($times)` 仅当方法被调用 `$times` 次时，测试通过。
+
+  - `atLeastOnce()` 如果方法被调用超过一次，则测试通过。
+
+
+
+
+  ### 更复杂的模拟示例
+
+
+  模拟可以根据测试需求，像上一个示例那样简单，也可以更加复杂。请记住，过于复杂的模拟会降低测试的可读性，因此更好的做法是使用简单的模拟，并通过更多的测试方法来覆盖不同的场景。无论如何，下面是一个更复杂的模拟示例：
+
+
+  ```
+
+  1  $model = $this->getMockForModel(''Categories'', [''hasPostsCount'']);
+
+  2  $model->expects($this->any())
+
+  3      ->method(''hasPostsCount'')
+
+  4      ->with($this->logicalOr(5, 10, $this->anything()))
+
+  5      ->will(
+
+  6          $this->returnCallback(
+
+  7              function ($param) {
+
+  8                  if ($param == 5) {
+
+  9                      return [5, 10, 15];
+
+  10                  } elseif ($param == 10) {
+
+  11                      return [10, 20, 30];
+
+  12                  } else {
+
+  13                      return false;
+
+  14                  }
+
+  15              }
+
+  16          )
+
+  17      );
+
+  18  $model->expects($this->any())
+
+  19      ->method(''hasPostsCount'')
+
+  20      ->will($this->returnValue(null));
+
+  21  $this->assertEquals([5, 10, 15],$model->hasPostsCount(5));
+
+  22  $this->assertEquals([10, 20, 30], $model->hasPostsCount(10));
+
+  23  $this->assertEquals(false, $model->hasPostsCount(1));
+
+  ```
+
+
+  我认为这个示例足够直观。如果 `model` 调用：
+
+
+  *   `hasPostsCount(5)`，将返回 `[5, 10, 15]`
+
+  *   `hasPostsCount(10)`，将返回 `[10, 20, 30]`
+
+  *   `hasPostsCount(任何其他值)`，将返回 `false`。
+
+
+  请记住：我们的 `Categories` 表类中实际上并没有 `hasPostsCount()` 方法。因此，通过模拟，我们甚至可以在编写方法之前就使用它们。
+
+
+  查看 PHPUnit 手册（`www.phpunit.de/manual/3.0/en/api.html`）以获取 `expects` 方法的完整列表。
+
+
+  ### 模拟核心 PHP 函数
+
+
+  有时，虽然很少见，我们不得不模拟核心 PHP 函数，例如，测试文件上传、处理流、时间和日期等。因此，当代码依赖于测试环境中不具备的条件时，这项技术就很有用。
+
+
+  让我们看一个例子。在我们的博客应用中，我们希望构建一个 CSV 导入功能，用户可以通过该功能上传标签，因为手动创建大量标签会很无聊。
+
+
+  将以下代码行添加到 `/tests/TestCase/Model/Table/TagsTableTest.php` 文件的末尾。
+
+
+  ```
+
+  1  public function testProcessFile()
+
+  2  {
+
+  3      $actual = $this->Tags->processFile(''noFile'');
+
+  4      $this->assertTrue($actual);
+
+  5  }
+
+  ```
+
+
+  或许我们应该先创建 `processFile` 方法本身。将以下代码添加到 `/src/Model/Table/TagsTable.php` 文件中：
+
+
+  ```
+
+  1  public function processFile($file)
+
+  2  {
+
+  3      if (is_uploaded_file($file)) {
+
+  4          //处理文件
+
+  5          return true;
+
+  6      }
+
+  7      return false;
+
+  8  }
+
+  ```
+
+
+  该方法目前不对文件做任何处理，因为文件处理不是当前讨论的主题。唯一有趣的是我们调用了 PHP 核心函数 `is_uploaded_file`。
+
+
+  让我们运行测试。
+
+
+  ```
+
+  vendor/bin/phpunit --filter testProcessFile tests/TestCase/Model/Table/TagsTableTest.php
+
+  ```
+
+
+  不出所料。测试失败了，因为我们并没有上传任何内容（见图 10-1）。问题是，我们根本不想上传任何文件，因为我们要测试的是文件处理，而不是文件上传。因此，我们希望
+  `is_uploaded_file` 返回 `true`，尽管我们没有上传文件。
+
+
+  ![A337704_2_En_10_Fig1_HTML.jpg](img/A337704_2_En_10_Fig1_HTML.jpg)
+
+
+  图 10-1. 核心 PHP 函数测试失败
+
+
+  PHP 命名空间允许我们专门为该命名空间重新声明或覆盖 PHP 核心函数，这样就不会污染代码的其他部分。
+
+
+  ![A337704_2_En_10_Figb_HTML.jpg](img/A337704_2_En_10_Figb_HTML.jpg) 以下解决方案只是一种变通方法。在单个文件中使用多个命名空间是一种不好的实践。
+
+
+  将以下代码行添加到 `TagsTableTest.php` 文件的开头：
+
+
+  ```
+
+  1  <?php
+
+  2  namespace {
+
+  3      // 这允许我们配置“全局模拟”的行为
+
+  4      $mockIsUploadedFile = false;
+
+  5  }
+
+  ```
+
+
+  在第 4 行，我们为全局命名空间创建了一个变量 `$mockIsUploadedFile`。我们使用这个变量来切换 PHP 核心函数 `is_uploaded_file`
+  和其对应的重新定义的命名空间变体。
+
+
+  ```
+
+  7  namespace App\Model\Table {
+
+  8      function is_uploaded_file()
+
+  9      {
+
+  10          global $mockIsUploadedFile;
+
+  11          if ($mockIsUploadedFile === true) {
+
+  12              return true;
+
+  13          } else {
+
+  14              return call_user_func_array(
+
+  15                  ''\is_uploaded_file'',
+
+  16                  func_get_args()
+
+  17              );
+
+  18          }
+
+  19      }
+
+  20  }
+
+  ```
+
+
+  在第 8 行，我们为 `\App\Model\Table` 命名空间重新声明了 `is_uploaded_file` 函数。如果 `$mockIsUploadedFile`
+  为 `true`，我们直接返回 `true` 作为模拟结果；否则，我们调用 PHP 的核心函数 `is_uploaded_file`。
+
+
+  在这个文件中，我们需要做的最后一件事是将原来的简单命名空间声明替换为花括号语法。
+
+
+  在第 22 行，我们有如下的简单声明：
+
+
+  ```
+
+  22  namespace App\Test\TestCase\Model\Table;
+
+  ```
+
+
+  这应改为花括号声明，如下所示：
+
+
+  ```
+
+  22  namespace App\Test\TestCase\Model\Table {
+
+  ```
+
+
+  这可能意味着我们需要在文件末尾添加一个闭合的花括号——并将此命名空间中的所有内容缩进一级。
+
+
+  此时，我们的测试应该能够成功运行并显示绿色条。
+
+
+  ### 小结
+
+
+  本章介绍了模拟的概念。您学习了如何模拟会话、请求数据以及模型方法。还提供了一个模拟核心 PHP 函数的示例，并学习了何时使用它。
+
+
+  ### 控制器测试 2
+
+
+  ![A337704_2_En_11_Figa_HTML.jpg](img/A337704_2_En_11_Figa_HTML.jpg)
+
+
+  我感到有些紧张
+
+
+
+
+  '
+- '# 使用身份验证进行测试
+
+
+  在控制器中使用身份验证的可能性很大。这里暂时不会引入身份验证，因此我不会详细解释相关代码。在我们的博客中，任何人都可以编辑和删除任何内容，即使未登录也可以。身份验证是让用户登录并区分已登录和未登录用户的方法。授权是处理权限的方式，例如管理员可以编辑所有文章，而用户只能编辑自己的文章。
+
+
+  CakePHP 为处理身份验证和授权提供了良好的支持。
+
+
+  在你的 `/src/Controller/CommentsController.php` 文件中，应有以下代码。简而言之，这段代码确保未认证的用户无法访问任何与评论相关的
+  URL，除了无需身份验证即可访问的 `index` 和 `add`。
+
+
+  ```
+
+  1  public function initialize()
+
+  2  {
+
+  3      parent::initialize();
+
+  4      $this->loadComponent(
+
+  5          ''Auth'',
+
+  6          [
+
+  7              ''loginRedirect'' => [
+
+  8                  ''controller'' => ''Users'',
+
+  9                  ''action'' => ''login''
+
+  10              ]
+
+  11          ]
+
+  12      );
+
+  13  }
+
+
+  15  public function beforeFilter(Event $event)
+
+  16  {
+
+  17      parent::beforeFilter($event);
+
+  18      $this->Auth->allow([''index'', ''add'']);
+
+  19  }
+
+  ```
+
+
+  别忘了在该文件的开头添加 `use Cake\Event\Event;`，因为我们在 `beforeFilter()` 方法中使用了 `Event` 类。
+
+
+  你的浏览器访问 `http://localhost/∼rrd/cakeBlog/comments` 时，如果有评论则会显示，但访问 `http://localhost/∼rrd/cakeBlog/comments/view/1`
+  时，由于未登录，会被重定向到 `http://localhost/∼rrd/cakeBlog/users/login`。我们尚未创建登录功能。
+
+
+  现在在 `/tests/TestCase/Controller/CommentsControllerTest.php` 文件中创建一个测试。以下测试应能成功运行：
+
+
+  ```
+
+  1  public function testIndex()
+
+  2  {
+
+  3      $this->get(''/comments'');
+
+  4      $this->assertResponseOk();
+
+  5  }
+
+  ```
+
+
+  让我们探讨一个需要身份验证的方法测试。由于未进行身份验证，我们应被重定向到登录页面。我们通过调用 `assertRedirect()` 方法来检查这一点。
+
+
+  ```
+
+  1  public function testViewUnauthenticated()
+
+  2  {
+
+  3      $this->get(''/comments/view/1'');
+
+  4      $this->assertRedirect(
+
+  5          [
+
+  6              ''controller'' => ''Users'',
+
+  7              ''action'' => ''login''
+
+  8          ]
+
+  9      );
+
+  10  }
+
+  ```
+
+
+  你已经见过如何模拟 `session` 变量，这里正好需要它，因为登录数据存储在 `session` 中。
+
+
+  ```
+
+  1  public function testViewAuthenticated()
+
+  2  {
+
+  3      $this->session([
+
+  4          ''Auth'' => [
+
+  5              ''User'' => [
+
+  6                  ''id'' => 1,
+
+  7                  ''username'' => ''rrd'',
+
+  8                  ''role'' => 10
+
+  9              ]
+
+  10          ]
+
+  11      ]);
+
+  12      $this->get(''/comments/view/1'');
+
+  13      $this->assertResponseOk();
+
+  14  }
+
+  ```
+
+
+  如果已登录，我们应得到正常的 OK 响应，而不是重定向。
+
+
+  ## 测试 JSON 响应
+
+
+  JSON（JavaScript Object Notation）是一种标准格式，使用人类可读的文本传输由属性-值对组成的数据对象。JSON 是一种与语言无关的数据格式。它最初是为
+  JavaScript 创建的，但许多编程语言都能生成和解析 `JSON-format` 数据。JSON 文件扩展名是 `.json`。
+
+
+  以下是一个 JSON 字符串示例：
+
+
+  ```
+
+  {
+
+  "name": "rrd",
+
+  "isAlive": true,
+
+  "age": 40,
+
+  "phoneNumbers": [
+
+  {
+
+  "type": "home",
+
+  "number": "987 654 3210"
+
+  },
+
+  {
+
+  "type": "mobile",
+
+  "number": "123 456 7890"
+
+  }
+
+  ],
+
+  "children": [],
+
+  "spouse": "syj"
+
+  }
+
+  ```
+
+
+  你可以在根目录下找到一个真实的 JSON 示例文件，因为 `composer` 将其 `composer.json` 放在那里。
+
+
+  Web 服务的 Ajax 调用响应格式为 JSON 或 XML。为了测试这些响应，我们首先需要将 `RequestHandler` 组件添加到控制器的 `initialize()`
+  方法中，如下所示。
+
+
+  ```
+
+  1  $this->loadComponent(''RequestHandler'');
+
+  ```
+
+
+  我们需要在 `/config/routes.php` 文件的第 45 行附近添加以下代码，以使其处理 `json` 扩展名。
+
+
+  ```
+
+  1  Router::extensions([''json'']);
+
+  ```
+
+
+  让我们在 `CommentsControllerTest.php` 文件中创建测试方法。
+
+
+  ```
+
+  1  public function testAdd()
+
+  2  {
+
+  3      $this->configRequest(
+
+  4          [
+
+  5              ''headers'' => [''Accept'' => ''application/json'']
+
+  6          ]
+
+  7      );
+
+  8      $data = [
+
+  9          ''comment'' => ''Call out Gouranga and be happy'',
+
+  10          ''user_id'' => 1,
+
+  11          ''post_id'' => 1,
+
+  12          ''category_id'' => 2
+
+  13      ];
+
+  14      $this->post(''/comments/add.json'', $data);
+
+  15      $this->assertResponseSuccess();
+
+
+  17      $expected = [
+
+  18          ''comment'' => [
+
+  19              ''comment'' => ''Call out Gouranga and be happy'',
+
+  20              ''user_id'' => 1,
+
+  21              ''post_id'' => 1,
+
+  22              ''category_id'' => 2,
+
+  23              ''id'' => 2
+
+  24          ],
+
+  25      ];
+
+  26      $expected = json_encode($expected, JSON_PRETTY_PRINT);
+
+  27      $this->assertEquals($expected, $this->_response->body());
+
+  28  }
+
+  ```
+
+
+  首先，我们模拟请求头，然后模拟 POST 数据，最后检查响应的 HTTP 头部代码及其内容。
+
+
+  在你的 `CommentsController.php` 文件的 `add()` 方法中，删除（或注释掉）以下代码行：
+
+
+  ```
+
+  1  return $this->redirect([''action'' => ''index'']);
+
+  ```
+
+
+  你的代码应该类似这样：
+
+
+  ```
+
+  1  public function add()
+
+  2  {
+
+  3      $comment = $this->Comments->newEntity();
+
+  4      if ($this->request->is(''post'')) {
+
+  5          $comment = $this->Comments->patchEntity(
+
+  6              $comment,
+
+  7              $this->request->data
+
+  8          );
+
+  9          if ($this->Comments->save($comment)) {
+
+  10              $this->Flash->success(__(''The comment has been saved.''));
+
+  11              //return $this->redirect([''action'' => ''index'']);
+
+  12          } else {
+
+  13              $this->Flash->error(
+
+  14                  __(''The comment not saved. Please, try again.'')
+
+  15              );
+
+  16          }
+
+  17      }
+
+  18      $users = $this->Comments->Users->find(''list'', [''limit'' => 200]);
+
+  19      $posts = $this->Comments->Posts->find(''list'', [''limit'' => 200]);
+
+  20      $this->set(compact(''comment'', ''users'', ''posts''));
+
+  21      $this->set(''_serialize'', [''comment'']);
+
+  22  }
+
+  ```
+
+
+  现在我们的测试应该可以成功运行了。
+
+
+  ## 总结
+
+
+  在本章中，你学习了如何通过模拟来测试身份验证背后的功能。然后，你看到了一个测试控制器响应的示例，该控制器除了返回 HTML 外，还响应 JSON 数据。
+
+
+  '
+- '# 12. 测试套件
+
+
+  ![A337704_2_En_12_Figa_HTML.jpg](img/A337704_2_En_12_Figa_HTML.jpg)
+
+
+  这套衣服真的很适合我
+
+
+  在开发特定功能时，我们会运行某些测试。在部署之前，我们应该运行所有测试，以确保没有破坏任何东西。这就是测试套件发挥作用的地方。
+
+
+  ## 使用 TestSuite
+
+
+  `TestSuite` 提供了一些方法，可以基于文件系统轻松创建测试套件。
+
+
+  要为所有模型表格测试创建一个测试套件，我们需要在 `/tests/TestCase/` 目录下创建一个名为 `AllModelTableTest.php` 的文件。
+
+
+  ```
+
+  1  <?php
+
+  2  use Cake\TestSuite\TestSuite;
+
+  3
+
+  4  class AllModelTableTest extends TestSuite
+
+  5  {
+
+  6      public static function suite()
+
+  7      {
+
+  8          $suite = new TestSuite(''所有模型表格测试'');
+
+  9          $suite->addTestDirectory(TESTS . ''TestCase/Model/Table'');
+
+  10         return $suite;
+
+  11     }
+
+  12 }
+
+  ```
+
+
+  上述代码将 `/tests/TestCase/Model/Table` 文件夹中的所有测试用例组合在一起。
+
+
+  现在，你可以一次性运行所有模型表格测试。
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit tests/TestCase/AllModelTableTest.php
+
+  ```
+
+
+  你可以用同样的方式为所有控制器等创建测试套件。
+
+
+  如果你只想添加几个文件，可以使用 `$suite->addTestFile($filename)`。
+
+
+  你可以通过 `$suite->addTestDirectoryRecursive(TESTS . ''TestCase'');` 递归添加 `/tests/TestCase`
+  下的目录，这样可以一次性运行所有测试。别忘了，直接使用 `vendor/bin/phpunit` 也能达到同样的效果。
+
+
+
+
+  '
+- '# 使用 `phpunit.xml`
+
+
+  创建测试套件的另一种方式是将它们添加到 `/phpunit.xml.dist` 文件中。当我们通过 `composer` 安装 `cakephp` 时，会自动创建该文件。默认情况下，PHPUnit
+  会在你运行它的目录中查找名为 `phpunit.xml` 或 `phpunit.xml.dist` 的文件，并使用其中的值来改变自身的行为。在 CakePHP
+  中，此文件位于我们应用的根目录中。
+
+
+  这个 XML 文件描述了测试的不同设置。其中有一个 `<testsuites>` 部分，你可以在其中定义新的测试套件。让我们将以下行添加为 `<testsuites>`
+  元素的新子元素。
+
+
+  ```
+
+  2      src/Model/Table
+
+  3      src/Model/Table/CommentsTableTest.php
+
+  4      tests/TestCase/Controller/CommentsControllerTest.php
+
+  ```
+
+
+  我们新的测试套件名为 `ExcitingFeature`，因为我们把那些与我们正在开发的新功能相关的测试都归组到了一起。
+
+
+  可以存在多个 `<directory>` 元素。PHPUnit 会递归地添加该目录中的所有测试。
+
+
+  可以存在多个 `<exclude>` 元素。这并不令人意外，但这些文件将被排除在外。
+
+
+  也可以存在多个 `<file>` 元素。这些文件将被添加到测试套件中。
+
+
+  ## 总结
+
+
+  我将这简短的一章专门用于测试套件。你学会了如何使用 `TestSuite` 对象或 `phpunit.xml` 文件来对特定测试进行分组。
+
+
+  '
+- '# 13. 从命令行进行测试
+
+
+  ![A337704_2_En_13_Figa_HTML.jpg](img/A337704_2_En_13_Figa_HTML.jpg)
+
+
+  你需要合适的工具才能做好工作
+
+
+  运行测试可能很耗时，但这不需要任何用户交互。因此，测试是自动化的理想目标。CakePHP 有一个内置的测试 shell，我们在前面的章节中已经使用过。如前所述，在浏览器中进行测试很无聊、耗时，而且不是最佳选择。通过单元测试，你可以在不接触浏览器的情况下进行开发。这一点可以显著缩短开发时间。
+
+
+  ### 调试消息
+
+
+  调试消息会写入控制台，因此你可以通过执行测试来查看它们。所以，如果你的代码中有 `debug($result);`，那么此调用的输出将显示在控制台中。
+
+
+  ### 运行所有测试
+
+
+  在部署之前，你将运行所有测试，以检查一切是否正确。以下命令将运行你所有的测试：
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit
+
+  ```
+
+
+  一个测试覆盖率良好的中型项目可能需要 30 分钟到 2 到 3 小时才能运行完毕。
+
+
+  ### 运行测试套件
+
+
+  下一级是运行测试套件。当你正在开发某个功能并为此功能设置了测试套件时，就需要运行它。
+
+
+  如果你使用了 `TestSuite`，那么你将运行类似如下的命令：
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit tests/TestCase/AllModelTableTest.php
+
+  ```
+
+
+  如果你在 `phpunit.xml.dist` 中定义了测试套件，则需要使用以下命令：
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit --testsuite ExcitingFeature
+
+  ```
+
+
+  ### 运行文件中的所有测试
+
+
+  当你想要运行一个测试文件中的所有测试时，例如，在你的 `UsersTableTest.php` 文件中，你应该运行以下命令：
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit tests/TestCase/Model/Table/UsersTableTest.php
+
+  ```
+
+
+  当你只处理一个模型时，你会用到这个命令。你的模型是松散耦合的，因此你只想检查一个模型。
+
+
+  ### 过滤测试用例
+
+
+  在开发过程中，大多数时候，你只会针对当前正在处理的内容运行一个测试。`--filter` 选项就用于此目的。
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit --filter testDoSomething tests/TestCase/Model/Table/CategoriesTableTest.php
+
+  ```
+
+
+  ### 理解失败测试的输出
+
+
+  PHPUnit 会显示断言中实际结果与预期结果之间的差异。
+
+
+  我们已经创建了 `/tests/Fixture/CommentsFixture.php`，所以现在是时候更改 `$records` 数组了。
+
+
+  ```
+
+  1  public $records = [
+
+  2      [
+
+  3          ''id'' => 1,
+
+  4          ''comment'' => ''这是我的第一条评论。'',
+
+  5          ''user_id'' => 1,
+
+  6          ''post_id'' => 1
+
+  7      ],
+
+  8      [
+
+  9          ''id'' => 2,
+
+  10          ''comment'' => ''这是其他人写的另一条评论。'',
+
+  11          ''user_id'' => 2,
+
+  12          ''post_id'' => 1
+
+  13      ],
+
+  14      [
+
+  15          ''id'' => 3,
+
+  16          ''comment'' => ''大声喊出 Gouranga，快乐起来'',
+
+  17          ''user_id'' => 1,
+
+  18          ''post_id'' => 1
+
+  19      ],
+
+  20  ];
+
+  ```
+
+
+  因此，我们有三个评论，它们都属于第一篇文章。评论 1 和 3 由用户 1 创建；评论 2 由用户 2 创建。
+
+
+  向 `/tests/TestCase/Model/Table/CommentsTableTest.php` 添加一个新的测试函数，如下所示：
+
+
+  ```
+
+  1  public function testGetCommentsOfUser()
+
+  2  {
+
+  3      $actual = $this->Comments->getCommentsOfUser(2);
+
+  4      $expected = [
+
+  5          [
+
+  6              ''id'' => 5,
+
+  7              ''comment'' => ''这是其他人写的另一条评论。'',
+
+  8              ''user_id'' => 2,
+
+  9              ''post_id'' => 2
+
+  10          ]
+
+  11      ];
+
+  12      $this->assertEquals(
+
+  13          $expected,
+
+  14          $actual->hydrate(false)->toArray()
+
+  15      );
+
+  16  }
+
+  ```
+
+
+  当我们调用 `getCommentsOfUser()` 方法时，我们期望得到前面的数组。
+
+
+  最后，在 `/src/Model/Table/CommentsTable.php` 中创建 `getCommentsOfUser()` 方法。
+
+
+  ```
+
+  1  public function getCommentsOfUser($userId)
+
+  2  {
+
+  3      return $this->find()
+
+  4          ->where([''user_id'' => $userId]);
+
+  5  }
+
+  ```
+
+
+  现在是时候进行测试了。
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit --filter testGetCommentsOfUser tests/TestCase/Model/Table/CommentsTableTest.php
+
+  ```
+
+
+  我们将得到以下输出，如图 13-1 所示：
+
+
+  ![A337704_2_En_13_Fig1_HTML.jpg](img/A337704_2_En_13_Fig1_HTML.jpg)
+
+
+  图 13-1. 失败的测试
+
+
+  红色的字母 F 表示我们的测试失败了。
+
+
+  下一行显示测试的执行时间和使用的内存。
+
+
+  我们可以看到哪个测试文件的哪个方法失败了，以及一条描述失败原因的消息。
+
+
+  然后我们可以看到预期结果和实际结果之间的差异。减号 (-) 表示预期结果；加号 (+) 表示实际结果。
+
+
+  因此，该图显示我们期望一个只包含一个成员的数组，该成员是另一个数组。这是符合预期的。
+
+
+  预期的 id 是 5，但实际的 id 是 2。`comment` 和 `user_id` 在预期数组和实际数组中相等，但 `post_id` 再次不同。
+
+
+  然后下一行显示失败断言的行号。
+
+
+  最后，我们可以看到所运行测试的汇总报告。
+
+
+  ### 中断测试
+
+
+  你可以随时通过按下 `Ctrl+C` 在控制台停止正在运行的测试。如果这样做，请不要忘记检查你的测试数据库，因为如果你在测试移除所有条目之前中断了测试的执行，数据库条目可能会残留下来。
+
+
+  ### 总结
+
+
+  在本章中，你学习了如何使用 `debug` 提供的信息，如何一次性运行所有测试，以及如何过滤测试。提供了测试输出的概述，并且你学习了如何中断测试。
+
+
+  '
+- '# 14. 额外福利
+
+
+  ![A337704_2_En_14_Figa_HTML.jpg](img/A337704_2_En_14_Figa_HTML.jpg)
+
+
+  还有其他好东西
+
+
+
+
+  '
+- '# 代码覆盖率
+
+
+  代码覆盖率有助于识别未经过测试覆盖的代码部分。理论上可以达到 100%的覆盖率，但大多数情况下，你会低于这个百分比。
+
+
+  生成代码覆盖率非常简单，就像小菜一碟。我们可以使用前一章所述相同的选项，为所有测试、测试套件或仅针对测试文件生成覆盖率。
+
+
+  ```
+
+  $ cd ∼/public_html/cakeBlog
+
+  $ vendor/bin/phpunit --coverage-html webroot/coverage tests/TestCase/Model/Table/UsersTableTest.php
+
+  ```
+
+
+  现在，打开浏览器并查看应用的 `coverage/index.html` 文件。在我的例子中，该文件位于 `http://localhost/∼rrd/cakeBlog/coverage/index.html`（图
+  14-1）。
+
+
+  ![A337704_2_En_14_Fig1_HTML.jpg](img/A337704_2_En_14_Fig1_HTML.jpg)
+
+
+  图 14-1.
+
+
+  代码覆盖率索引页面
+
+
+  你可以看到代码覆盖率的摘要信息。由于我们只针对一个模型文件生成了覆盖率，因此覆盖率非常低。你可以点击 Model 查看其详细内容。我们可以看到只有 `TagsTable.php`
+  有测试覆盖（图 14-2）。
+
+
+  ![A337704_2_En_14_Fig2_HTML.jpg](img/A337704_2_En_14_Fig2_HTML.jpg)
+
+
+  图 14-2.
+
+
+  模型的代码覆盖率
+
+
+  点击此处可以深入查看。在页面顶部，我们可以看到有哪些方法，哪些方法被测试覆盖，以及有多少行代码被测试覆盖（图 14-3）。
+
+
+  ![A337704_2_En_14_Fig3_HTML.jpg](img/A337704_2_En_14_Fig3_HTML.jpg)
+
+
+  图 14-3.
+
+
+  Tags 模型的代码覆盖率
+
+
+  如果我们向下滚动，可以看到 `processFile()` 方法被部分覆盖（图 14-4）。
+
+
+  ![A337704_2_En_14_Fig4_HTML.jpg](img/A337704_2_En_14_Fig4_HTML.jpg)
+
+
+  图 14-4.
+
+
+  方法级代码覆盖率
+
+
+  绿色线条表示已覆盖，红色线条表示未覆盖，白色线条表示不可执行。
+
+
+  ## 测试夹具数据
+
+
+  创建测试夹具很乏味，而自动生成的测试夹具中充斥着无用的数据。我们需要一个既简单又智能的解决方案，能够使用真实数据维护表关系。
+
+
+  PHPMyAdmin（[`http://phpmyadmin.net`](http://phpmyadmin.net)）提供了一种导出表数据的方法。选择 `PHP
+  array` 作为格式，选择 `custom` 作为类型。然后你可以定义要从现有记录中提取多少行数据。
+
+
+  虽然 PHPMyAdmin 是一个完整的 MySQL 管理工具，可以用来创建、编辑和删除数据库、表、字段和记录，但它不仅仅用于为测试夹具导出数据。如果你对它还不熟悉，现在正是熟悉它的时候。如果你已经习惯了终端操作，也可以学习使用
+  MySQL 控制台。
+
+
+  ## 测试私有方法
+
+
+  我们已经看到了很多测试 `public` 方法的例子。测试 `protected` 方法与之相同。
+
+
+  如果我们尝试测试一个 `private` 方法，将会收到一个报错信息，提示该方法不存在。
+
+
+  让我们在 `/src/Model/Table/PostsTable.php` 中创建一个 `private` 方法：
+
+
+  ```
+
+  1  private function getPostsInCategory($categoryId)
+
+  2  {
+
+  3      return $this->find()
+
+  4          ->where([''category_id'' => $categoryId]);
+
+  5  }
+
+  ```
+
+
+  再次说明，虽然这是一个关于 `private` 方法的简单示例，但它足以用来演示如何测试 `private` 方法。
+
+
+  为了能够进行测试，`Private` 方法应该通过反射类进行实例化。将以下代码粘贴到 `/tests/TestCase/Model/Table/PostsTableTest.php`
+  中：
+
+
+  ```
+
+  1  public function testGetPostsInCategory()
+
+  2  {
+
+  3      $class = new ReflectionClass($this->Posts);
+
+  4      $method = $class->getMethod(''getPostsInCategory'');
+
+  5      $method->setAccessible(true);
+
+  6      $actual = $method->invoke($this->Posts, 1);
+
+  7      $expected = 1;
+
+  8      $this->assertEquals($expected, $actual->toArray()[0]->id);
+
+  9  }
+
+  ```
+
+
+  为了让其工作，我们需要在文件的开头包含 `ReflectionClass`。
+
+
+  ```
+
+  1  use ReflectionClass;
+
+  ```
+
+
+  许多开发者说你不应该测试 `private` 方法。这里我不深入讨论他们的论点细节，由你自己决定是否测试它们。
+
+
+  ## 测试视图
+
+
+  通常，我们不像测试模型和控制器那样测试视图。HTML 容易发生变更，而且大部分内容无法进行测试。如果你想检查视图中的数据，最好的方法是依赖 `assertContains`
+  方法。Selenium（[`http://seleniumhq.org/`](http://seleniumhq.org/)）是一个用于测试视图的工具。
+
+
+  ## 测试组件
+
+
+  如果你在 `/src/Controller/Component/YourComponent.php` 创建了自己的组件，那么应该将其测试文件放在 `/tests/TestCase/Controller/Component/YourComponentTest.php`
+  中。
+
+
+  在你的测试类的 `setUp()` 方法中，你应该模拟（Mock）Cake 的 `Controller` 类并注册你的组件。
+
+
+  一个示例 `setUp()` 方法如下：
+
+
+  ```
+
+  1  public function setUp()
+
+  2  {
+
+  3      parent::setUp();
+
+  4      $request = new Request();
+
+  5      $response = new Response();
+
+  6      $this->controller = $this->getMock(
+
+  7          ''Cake\Controller\Controller'',
+
+  8          null,
+
+  9          [$request, $response]
+
+  10      );
+
+  11      $registry = new ComponentRegistry($this->controller);
+
+  12      $this->component = new YourComponent($registry);
+
+  13  }
+
+  ```
+
+
+  在 `tearDown()` 方法中，我们应该解除由 `setup()` 创建的类变量。
+
+
+  ```
+
+  1  public function tearDown()
+
+  2  {
+
+  3      parent::tearDown();
+
+  4      unset($this->component, $this->controller);
+
+  5  }
+
+  ```
+
+
+  假设 `YourComponent` 处理分页逻辑。它有一个 `textToNumber()` 方法，该方法根据文本参数将分页的显示数量设置为不同的数值。例如，如果调用了
+  `textToNumber(''long'')`，分页的显示数量将被设置为 100。在这种情况下，我们的测试方法将如下所示：
+
+
+  ```
+
+  1  public function testTextToNumberLong()
+
+  2  {
+
+  3      $this->component->textToNumber(''long'');
+
+  4      $this->assertEquals(100, $this->controller->paginate[''limit'']);
+
+  5  }
+
+  ```
+
+
+  我们调用了组件的 `textToNumber()` 方法，然后通过断言检查了控制器的分页显示数量值。
+
+
+  ## 测试帮助器
+
+
+  假设我们有一个帮助器，它根据自千禧年以来经过的天数创建一个日期字符串。将以下代码粘贴到 `/src/View/Helper/EasyDateHelper.php`
+  中：
+
+
+  ```
+
+  1  namespace App\View\Helper;
+
+
+  3  use Cake\View\Helper;
+
+
+  5  class EasyDateHelper extends Helper
+
+  6  {
+
+  7      public function add($days)
+
+  8      {
+
+  9          return ''D: '' . date(''Y-m-d'', mktime(0, 0, 0, 1, $days, 2000));
+
+  10      }
+
+  11  }
+
+  ```
+
+
+  对应的测试文件应该是 `/tests/TestCase/View/Helper/EasyDateHelperTest.php`。它与模型测试非常相似，区别在于我们需要在
+  `setUp()` 方法中调用帮助器的构造函数。
+
+
+  ```
+
+  1  namespace App\Test\TestCase\View\Helper;
+
+
+  3  use App\View\Helper\EasyDateHelper;
+
+  4  use Cake\TestSuite\TestCase;
+
+  5  use Cake\View\View;
+
+
+  7  class EasyDateHelperTest extends TestCase
+
+  8  {
+
+
+  10    public $helper = null;
+
+
+  12    public function setUp()
+
+  13    {
+
+  14        parent::setUp();
+
+  15        $View = new View();
+
+  16        $this->helper = new EasyDateHelper($View);
+
+  17     }
+
+
+  19     public function testAdd()
+
+  20     {
+
+  21        $this->assertEquals(''D: 2000-01-15'', $this->helper->add(15));
+
+  22        $this->assertEquals(''D: 2000-04-09'', $this->helper->add(100));
+
+  23        $this->assertEquals(''D: 2002-09-26'', $this->helper->add(1000));
+
+  24     }
+
+  25  }
+
+  ```
+
+
+  当你测试一个使用了其他帮助器的 `Helper` 时，请确保模拟（Mock）`View` 类的 `loadHelpers` 方法。
+
+
+  ## 测试插件
+
+
+  如果你在 `/src/plugins` 目录下有一个名为 Pizza 的插件，你应该将所有的测试放在 `/src/plugins/Pizza/tests` 文件夹中，并使用与
+  `/tests` 目录下相同的子文件夹结构。
+
+
+  ```
+
+  1  namespace Pizza\Test\TestCase\Model\Table;
+
+
+  3  use Pizza\Model\Table\PizzaSlicesTable;
+
+  4  use Cake\TestSuite\TestCase;
+
+
+  6  class PizzaSlicesTableTest extends TestCase
+
+  7  {
+
+  8      public $fixtures = [''plugin.pizza.pizza_slices''];
+
+
+  10      public function testTaste()
+
+  11      {
+
+  12          // 测试比萨片的口感
+
+  13      }
+
+  14  }
+
+  ```
+
+
+
+
+  '
+- '# 总结
+
+
+  在本章中，你品尝了一些“干货”。首先，你了解了如何生成和使用代码覆盖率，然后发现了一种生成测试固件的简便方法。你还学会了如何测试私有方法、视图、组件、辅助函数和插件。
+
+
+  这是我关于 CakePHP 与单元测试的书的结尾。希望你能充分利用本书中的大量信息，并帮助你成为一名更优秀的 Web 开发者。
+
+
+  ## 什么是单元测试？
+
+
+  *   [异端软件开发](http://www.contrariansoftware.com/2008/11/unit-testing-sucks.html)
+  [`www.contrariansoftware.com/2008/11/unit-testing-sucks.html`](http://www.contrariansoftware.com/2008/11/unit-testing-sucks.html)
+
+  *   [IPL](http://www.ipl.com/pdf/p0828.pdf) [`www.ipl.com/pdf/p0828.pdf`](http://www.ipl.com/pdf/p0828.pdf)
+
+  *   [佩特里·凯努莱宁](http://www.petrikainulainen.net/programming/unit-testing/wrong-reasons-not-to-write-unit-tests/)
+  [`www.petrikainulainen.net/programming/unit-testing/wrong-reasons-not-to-write-unit-tests/`](http://www.petrikainulainen.net/programming/unit-testing/wrong-reasons-not-to-write-unit-tests/)
+
+  *   Weblabor [`http://weblabor.hu/cikkek/php-osztalyok-egysegtesztelese`](http://weblabor.hu/cikkek/php-osztalyok-egysegtesztelese)
+
+  *   [TDD 的禅意与艺术](http://vimeo.com/49092644) [`http://vimeo.com/49092644`](http://vimeo.com/49092644)
+
+
+  ## 整洁代码
+
+
+  *   整洁代码之道：软件工艺 [`www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882`](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+
+  ## 测试驱动开发
+
+
+  *   [Net tuts+](http://net.tutsplus.com/sessions/test-driven-php/) [`http://net.tutsplus.com/sessions/test-driven-php/`](http://net.tutsplus.com/sessions/test-driven-php/)
+
+  *   [TDD](http://www.youtube.com/watch?v=fkrpMLzxWOo) [`www.youtube.com/watch?v=fkrpMLzxWOo`](http://www.youtube.com/watch?v=fkrpMLzxWOo)
+
+
+  ## 开发周期
+
+
+  *   软件开发过程 [`http://en.wikipedia.org/wiki/Software_development_process`](http://en.wikipedia.org/wiki/Software_development_process)
+
+
+  ## 其他
+
+
+  *   Webmania [`http://webmania.cc`](http://webmania.cc)
+
+  *   Cakephp PHPUnit 测试 [`www.youtube.com/watch?v=L-lLSi4lXEY`](http://www.youtube.com/watch?v=L-lLSi4lXEY)
+
+  *   [马克·斯托里](http://mark-story.com/posts/view/getting-familiar-with-phpunit-mocks)
+  [`http://mark-story.com/posts/view/getting-familiar-with-phpunit-mocks`](http://mark-story.com/posts/view/getting-familiar-with-phpunit-mocks)
+
+
+  ## 索引
+
+
+  A 断言 认证 B 烘焙 缺陷修复 C 回调 命令行 组件 Composer 约定 覆盖 CRUD D 数据库 调试 设计 E 错误信息 期望 F 测试失败 失败的测试
+  胖模型 过滤 固件 G 获取 H HTTP 请求 I 安装 集成测试 隔离 J, K, L JSON M 可维护性 混乱检测器 模拟 模型-视图-控制器（MVC）
+  N, O 命名 P PHP 标准建议（PSR） PHPUnit `phpunit.xml` 规划 POST 私有方法 PSR 参见 PHP 标准建议（PSR）
+  Q 质量代码 R 重构 请求 响应 S 节省时间 服务 会话 T, U 测试驱动开发（TDD） 测试组 V, W, X, Y, Z 验证
+
+  '

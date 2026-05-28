@@ -180,77 +180,77 @@ The source code for this book is available to readers at [http://www.apress.com.
 
 Contents at a Glance
 
-About the Author [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii](#index_split_000.html#p18)
+About the Author [. . . . xvii](#index_split_000.html#p18)
 
-About the Technical Reviewer [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xviii](#index_split_000.html#p19)
+About the Technical Reviewer [. . . xviii](#index_split_000.html#p19)
 
-Acknowledgments [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xix](#index_split_000.html#p20)
+Acknowledgments [. . . xix](#index_split_000.html#p20)
 
 ■**CHAPTER 1**
 
-Introduction [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1](#index_split_000.html#p23)
+Introduction [. . 1](#index_split_000.html#p23)
 
 PART 1 ■ ■ ■ Getting Started
 
 ■**CHAPTER 2**
 
-Installing and Running CakePHP [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9](#index_split_000.html#p31)
+Installing and Running CakePHP [. . 9](#index_split_000.html#p31)
 
 ■**CHAPTER 3**
 
-Creating a To-Do List Application[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17](#index_split_000.html#p39)
+Creating a To-Do List Application[. 17](#index_split_000.html#p39)
 
 PART 2 ■ ■ ■ Developing CakePHP Applications
 
 ■**CHAPTER 4**
 
-Naming Files and Designing the Database . . . . . . . . . . . . . . . . . . . . . . [29](#index_split_000.html#p51)
+Naming Files and Designing the Database . . [29](#index_split_000.html#p51)
 
 ■**CHAPTER 5**
 
-Creating Simple Views and Baking in the Console [. . . . . . . . . . . . . . 55](#index_split_001.html#p77)
+Creating Simple Views and Baking in the Console [. . . . 55](#index_split_001.html#p77)
 
 ■**CHAPTER 6**
 
-Customizing Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [73](#index_split_001.html#p95)
+Customizing Views . . . . [73](#index_split_001.html#p95)
 
 ■**CHAPTER 7**
 
-Working with Controllers and Models[. . . . . . . . . . . . . . . . . . . . . . . . . . . 89](#index_split_001.html#p111)
+Working with Controllers and Models[. . 89](#index_split_001.html#p111)
 
 ■**CHAPTER 8**
 
-Implementing Ajax Features [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113](#index_split_002.html#p135)
+Implementing Ajax Features [. . . . 113](#index_split_002.html#p135)
 
 PART 3 ■ ■ ■ Advanced CakePHP
 
 ■**CHAPTER 9**
 
-Helpers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [137](#index_split_002.html#p159)
+Helpers[137](#index_split_002.html#p159)
 
 ■**CHAPTER 10**
 
-Routes [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175](#index_split_003.html#p197)
+Routes [175](#index_split_003.html#p197)
 
 ■**CHAPTER 11**
 
-Components and Utilities [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187](#index_split_003.html#p209)
+Components and Utilities [. . 187](#index_split_003.html#p209)
 
 ■**CHAPTER 12**
 
-Vendors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [207](#index_split_004.html#p229)
+Vendors . . . . [207](#index_split_004.html#p229)
 
 ■**CHAPTER 13**
 
-Plugins [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219](#index_split_004.html#p241)
+Plugins [219](#index_split_004.html#p241)
 
 ■**CHAPTER 14**
 
-DataSources and Behaviors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241](#index_split_005.html#p263)
+DataSources and Behaviors [241](#index_split_005.html#p263)
 
 ■**CHAPTER 15**
 
-Wrapping Up the Application [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273](#index_split_005.html#p295)
+Wrapping Up the Application [. . . . 273](#index_split_005.html#p295)
 
 [**iv**](#index_split_000.html#p5)
 
@@ -260,13 +260,13 @@ PART 4 ■ ■ ■ Appendixes
 
 ■**APPENDIX A**
 
-Installation Issues [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281](#index_split_005.html#p303)
+Installation Issues [. . . . 281](#index_split_005.html#p303)
 
 ■**APPENDIX B**
 
-How CakePHP Compares with Other Frameworks[. . . . . . . . . . . . . . 289](#index_split_006.html#p311)
+How CakePHP Compares with Other Frameworks[. . . . 289](#index_split_006.html#p311)
 
-■**INDEX** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295](#index_split_006.html#p317)
+■**INDEX** [. 295](#index_split_006.html#p317)
 
 [**v**](#index_split_000.html#p6)
 
@@ -276,65 +276,65 @@ How CakePHP Compares with Other Frameworks[. . . . . . . . . . . . . . 289](#ind
 
 Contents
 
-About the Author [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii](#index_split_000.html#p18)
+About the Author [. . . . xvii](#index_split_000.html#p18)
 
-About the Technical Reviewer [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xviii](#index_split_000.html#p19)
+About the Technical Reviewer [. . . xviii](#index_split_000.html#p19)
 
-Acknowledgments [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xix](#index_split_000.html#p20)
+Acknowledgments [. . . xix](#index_split_000.html#p20)
 
 ■**CHAPTER 1**
 
-**Introduction** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1](#index_split_000.html#p23)
+**Introduction** [1](#index_split_000.html#p23)
 
-From Novice to Professional [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2](#index_split_000.html#p24)
+From Novice to Professional [. . . . 2](#index_split_000.html#p24)
 
-Why Cake? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [2](#index_split_000.html#p24)
+Why Cake? . . . . [2](#index_split_000.html#p24)
 
-It’s PHP! . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [2](#index_split_000.html#p24)
+It’s PHP! . . [2](#index_split_000.html#p24)
 
-Rapid Development [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3](#index_split_000.html#p25)
+Rapid Development [. . 3](#index_split_000.html#p25)
 
-Model-View-Controller . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [3](#index_split_000.html#p25)
+Model-View-Controller . . . . [3](#index_split_000.html#p25)
 
-CRUD Operations and the Bake Script [. . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+CRUD Operations and the Bake Script [. 5](#index_split_000.html#p27)
 
-Scaffolding [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+Scaffolding [. . . . 5](#index_split_000.html#p27)
 
-Helpers [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+Helpers [. . 5](#index_split_000.html#p27)
 
-Customizable Elements [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6](#index_split_000.html#p28)
+Customizable Elements [. . . 6](#index_split_000.html#p28)
 
-Large Community [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6](#index_split_000.html#p28)
+Large Community [. . . 6](#index_split_000.html#p28)
 
-More Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [6](#index_split_000.html#p28)
+More Features . [6](#index_split_000.html#p28)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6](#index_split_000.html#p28)
+Summary[. 6](#index_split_000.html#p28)
 
 PART 1 ■ ■ ■ **Getting Started**
 
 ■**CHAPTER 2**
 
-**Installing and Running CakePHP**[. . . . . . . . . . . . . . . . . . . . . . . . . . . . 9](#index_split_000.html#p31)
+**Installing and Running CakePHP**[. . . 9](#index_split_000.html#p31)
 
-A Simple Start: Running Cake on a Localhost Environment. . . . . . . . . . . . . [9](#index_split_000.html#p31)
+A Simple Start: Running Cake on a Localhost Environment. . . [9](#index_split_000.html#p31)
 
-Getting Cake [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10](#index_split_000.html#p32)
+Getting Cake [. . 10](#index_split_000.html#p32)
 
-Launching Cake . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [10](#index_split_000.html#p32)
+Launching Cake . . . . [10](#index_split_000.html#p32)
 
-Running the Setup Routines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [13](#index_split_000.html#p35)
+Running the Setup Routines . . . [13](#index_split_000.html#p35)
 
 Preparing the tmp Folder for Cake to Read and
 
-Write Temp Files[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13](#index_split_000.html#p35)
+Write Temp Files[. 13](#index_split_000.html#p35)
 
-Changing the Security.salt Value [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13](#index_split_000.html#p35)
+Changing the Security.salt Value [. . . . 13](#index_split_000.html#p35)
 
-Entering MySQL Connection Settings[. . . . . . . . . . . . . . . . . . . . . . . . . . 14](#index_split_000.html#p36)
+Entering MySQL Connection Settings[. 14](#index_split_000.html#p36)
 
-Designing Your Database Schema [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 15](#index_split_000.html#p37)
+Designing Your Database Schema [. . . 15](#index_split_000.html#p37)
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [16](#index_split_000.html#p38)
+Summary . . . . [16](#index_split_000.html#p38)
 
 [**vii**](#index_split_000.html#p8)
 
@@ -346,67 +346,67 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■**CHAPTER 3**
 
-**Creating a To-Do List Application**[. . . . . . . . . . . . . . . . . . . . . . . . . . 17](#index_split_000.html#p39)
+**Creating a To-Do List Application**[. 17](#index_split_000.html#p39)
 
-Exploring the MVC Structure [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17](#index_split_000.html#p39)
+Exploring the MVC Structure [. . . 17](#index_split_000.html#p39)
 
-The To-Do List’s MVC Layout [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19](#index_split_000.html#p41)
+The To-Do List’s MVC Layout [. . 19](#index_split_000.html#p41)
 
-Designing and Creating the Database [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19](#index_split_000.html#p41)
+Designing and Creating the Database [19](#index_split_000.html#p41)
 
-Creating Models[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20](#index_split_000.html#p42)
+Creating Models[. . . . 20](#index_split_000.html#p42)
 
-What’s Happening in This Model[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21](#index_split_000.html#p43)
+What’s Happening in This Model[21](#index_split_000.html#p43)
 
-Model Possibilities [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21](#index_split_000.html#p43)
+Model Possibilities [. . 21](#index_split_000.html#p43)
 
-Creating Controllers [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21](#index_split_000.html#p43)
+Creating Controllers [21](#index_split_000.html#p43)
 
-What’s Happening in This Controller [. . . . . . . . . . . . . . . . . . . . . . . . . . 22](#index_split_000.html#p44)
+What’s Happening in This Controller [. 22](#index_split_000.html#p44)
 
-Controller Possibilities[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22](#index_split_000.html#p44)
+Controller Possibilities[. . . . 22](#index_split_000.html#p44)
 
-Launching the Application . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [22](#index_split_000.html#p44)
+Launching the Application [22](#index_split_000.html#p44)
 
-How Cake Resolves URLs[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23](#index_split_000.html#p45)
+How Cake Resolves URLs[. 23](#index_split_000.html#p45)
 
-Creating the Scaffolding[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23](#index_split_000.html#p45)
+Creating the Scaffolding[. . 23](#index_split_000.html#p45)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25](#index_split_000.html#p47)
+Summary[25](#index_split_000.html#p47)
 
 PART 2 ■ ■ ■ **Developing CakePHP Applications**
 
 ■**CHAPTER 4**
 
-**Naming Files and Designing the Database** [. . . . . . . . . . . . . . . . 29](#index_split_000.html#p51)
+**Naming Files and Designing the Database** [. 29](#index_split_000.html#p51)
 
-Convention Over Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [29](#index_split_000.html#p51)
+Convention Over Configuration . [29](#index_split_000.html#p51)
 
-Intercepting Cake. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [29](#index_split_000.html#p51)
+Intercepting Cake. . . [29](#index_split_000.html#p51)
 
-Starting with the Database. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [30](#index_split_000.html#p52)
+Starting with the Database[30](#index_split_000.html#p52)
 
-MVC Default Behaviors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30](#index_split_000.html#p52)
+MVC Default Behaviors [. . . 30](#index_split_000.html#p52)
 
-Naming Conventions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31](#index_split_000.html#p53)
+Naming Conventions [31](#index_split_000.html#p53)
 
-Naming Controllers [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31](#index_split_000.html#p53)
+Naming Controllers [. 31](#index_split_000.html#p53)
 
-Naming Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [32](#index_split_000.html#p54)
+Naming Models . . . . [32](#index_split_000.html#p54)
 
-Naming Views. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [33](#index_split_000.html#p55)
+Naming Views. [33](#index_split_000.html#p55)
 
-More Than One Word in the Name . . . . . . . . . . . . . . . . . . . . . . . . . . . . [33](#index_split_000.html#p55)
+More Than One Word in the Name . . . [33](#index_split_000.html#p55)
 
-Naming Other Cake Resources [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34](#index_split_000.html#p56)
+Naming Other Cake Resources [. 34](#index_split_000.html#p56)
 
-Best Practices[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 37](#index_split_000.html#p59)
+Best Practices[. 37](#index_split_000.html#p59)
 
-Poorly Designed Databases [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39](#index_split_000.html#p61)
+Poorly Designed Databases [. . . . 39](#index_split_000.html#p61)
 
-Why Good Database Design Matters [. . . . . . . . . . . . . . . . . . . . . . . . . . 39](#index_split_000.html#p61)
+Why Good Database Design Matters [. 39](#index_split_000.html#p61)
 
-Feature Creep and Cake . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [40](#index_split_000.html#p62)
+Feature Creep and Cake . . [40](#index_split_000.html#p62)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page ix
 
@@ -414,81 +414,81 @@ Feature Creep and Cake . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 [**ix**](#index_split_000.html#p10)
 
-Table Associations[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40](#index_split_000.html#p62)
+Table Associations[. . 40](#index_split_000.html#p62)
 
-The Database Design [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40](#index_split_000.html#p62)
+The Database Design [. . . . 40](#index_split_000.html#p62)
 
-“Belongs To” [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41](#index_split_000.html#p63)
+“Belongs To” [. 41](#index_split_000.html#p63)
 
-“Has One” [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43](#index_split_000.html#p65)
+“Has One” [. . . . 43](#index_split_000.html#p65)
 
-“Has Many” [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44](#index_split_000.html#p66)
+“Has Many” [. . 44](#index_split_000.html#p66)
 
-Testing the Associations[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45](#index_split_000.html#p67)
+Testing the Associations[. . 45](#index_split_000.html#p67)
 
-Conventions for Establishing Table Associations [. . . . . . . . . . . . . . . . 47](#index_split_001.html#p69)
+Conventions for Establishing Table Associations [. 47](#index_split_001.html#p69)
 
-“Has and Belongs to Many” [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48](#index_split_001.html#p70)
+“Has and Belongs to Many” [. . . . 48](#index_split_001.html#p70)
 
-Beyond the Scaffold [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52](#index_split_001.html#p74)
+Beyond the Scaffold [52](#index_split_001.html#p74)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53](#index_split_001.html#p75)
+Summary[53](#index_split_001.html#p75)
 
 ■**CHAPTER 5**
 
-**Creating Simple Views and Baking in the Console** [. . . . . . . 55](#index_split_001.html#p77)
+**Creating Simple Views and Baking in the Console** [. . 55](#index_split_001.html#p77)
 
-Introducing Layouts[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55](#index_split_001.html#p77)
+Introducing Layouts[. 55](#index_split_001.html#p77)
 
-Writing the default.ctp File [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56](#index_split_001.html#p78)
+Writing the default.ctp File [56](#index_split_001.html#p78)
 
-Creating Individual Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [59](#index_split_001.html#p81)
+Creating Individual Views . [59](#index_split_001.html#p81)
 
-Adding Actions to the Controller [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59](#index_split_001.html#p81)
+Adding Actions to the Controller [59](#index_split_001.html#p81)
 
-Using Bake to Create Views[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61](#index_split_001.html#p83)
+Using Bake to Create Views[. . . . 61](#index_split_001.html#p83)
 
-Configuring the Console’s Profile to Run Bake [. . . . . . . . . . . . . . . . . . 62](#index_split_001.html#p84)
+Configuring the Console’s Profile to Run Bake [. . . 62](#index_split_001.html#p84)
 
-Launching Bake [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63](#index_split_001.html#p85)
+Launching Bake [. . . . 63](#index_split_001.html#p85)
 
-Using Bake to Generate CRUD Views . . . . . . . . . . . . . . . . . . . . . . . . . . [64](#index_split_001.html#p86)
+Using Bake to Generate CRUD Views . [64](#index_split_001.html#p86)
 
-Editing Baked Views [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68](#index_split_001.html#p90)
+Editing Baked Views [68](#index_split_001.html#p90)
 
-Considering Internationalization [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70](#index_split_001.html#p92)
+Considering Internationalization [70](#index_split_001.html#p92)
 
-Using Commands for Faster Baking. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [70](#index_split_001.html#p92)
+Using Commands for Faster Baking. . [70](#index_split_001.html#p92)
 
-Customizing Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [70](#index_split_001.html#p92)
+Customizing Views . [70](#index_split_001.html#p92)
 
-Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [71](#index_split_001.html#p93)
+Summary[71](#index_split_001.html#p93)
 
 ■**CHAPTER 6**
 
-**Customizing Views**[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73](#index_split_001.html#p95)
+**Customizing Views**[. . 73](#index_split_001.html#p95)
 
-Handling User Interactions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [73](#index_split_001.html#p95)
+Handling User Interactions[73](#index_split_001.html#p95)
 
-A Simple Page Request[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73](#index_split_001.html#p95)
+A Simple Page Request[. . . 73](#index_split_001.html#p95)
 
-A Form Submission Sequence. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [75](#index_split_001.html#p97)
+A Form Submission Sequence. . [75](#index_split_001.html#p97)
 
-Filling Form Fields for Editing or Updating[. . . . . . . . . . . . . . . . . . . . . . 78](#index_split_001.html#p100)
+Filling Form Fields for Editing or Updating[. . 78](#index_split_001.html#p100)
 
-An Asynchronous Sequence [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79](#index_split_001.html#p101)
+An Asynchronous Sequence [. . . 79](#index_split_001.html#p101)
 
-Writing Individual View Files [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80](#index_split_001.html#p102)
+Writing Individual View Files [. . . 80](#index_split_001.html#p102)
 
-Using the Debug Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82](#index_split_001.html#p104)
+Using the Debug Function [82](#index_split_001.html#p104)
 
-Customizing the View File from Scratch [. . . . . . . . . . . . . . . . . . . . . . . 83](#index_split_001.html#p105)
+Customizing the View File from Scratch [. . . 83](#index_split_001.html#p105)
 
-Customizing an HTML Form[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84](#index_split_001.html#p106)
+Customizing an HTML Form[. . . . 84](#index_split_001.html#p106)
 
-Using Other Helpers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [86](#index_split_001.html#p108)
+Using Other Helpers [86](#index_split_001.html#p108)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87](#index_split_001.html#p109)
+Summary [. . . . 87](#index_split_001.html#p109)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page x
 
@@ -498,79 +498,79 @@ Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 ■**CHAPTER 7**
 
-**Working with Controllers and Models** [. . . . . . . . . . . . . . . . . . . . . 89](#index_split_001.html#p111)
+**Working with Controllers and Models** [. 89](#index_split_001.html#p111)
 
-Building an Extensive Blog[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89](#index_split_001.html#p111)
+Building an Extensive Blog[89](#index_split_001.html#p111)
 
-Working with Actions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90](#index_split_001.html#p112)
+Working with Actions [. . . . 90](#index_split_001.html#p112)
 
-Using Variables in Actions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90](#index_split_001.html#p112)
+Using Variables in Actions [90](#index_split_001.html#p112)
 
-Requesting Actions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91](#index_split_001.html#p113)
+Requesting Actions [. 91](#index_split_001.html#p113)
 
-How Callback Actions Work in the Controller [. . . . . . . . . . . . . . . . . . . 92](#index_split_001.html#p114)
+How Callback Actions Work in the Controller [. . . . 92](#index_split_001.html#p114)
 
-Customizing the Controller for the Blog[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92](#index_split_001.html#p114)
+Customizing the Controller for the Blog[. . . . 92](#index_split_001.html#p114)
 
-Recursive[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93](#index_split_001.html#p115)
+Recursive[93](#index_split_001.html#p115)
 
-Pagination [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93](#index_split_001.html#p115)
+Pagination [. . . . 93](#index_split_001.html#p115)
 
-The find() Function[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93](#index_split_001.html#p115)
+The find() Function[. . 93](#index_split_001.html#p115)
 
-Displaying the Most Recent Posts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . [96](#index_split_001.html#p118)
+Displaying the Most Recent Posts. . . . [96](#index_split_001.html#p118)
 
-The View Action [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97](#index_split_001.html#p119)
+The View Action [. . . . 97](#index_split_001.html#p119)
 
-The read() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97](#index_split_001.html#p119)
+The read() Function [. 97](#index_split_001.html#p119)
 
-The setFlash() Function[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98](#index_split_001.html#p120)
+The setFlash() Function[. . . 98](#index_split_001.html#p120)
 
-The redirect() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99](#index_split_001.html#p121)
+The redirect() Function [. . . 99](#index_split_001.html#p121)
 
-Creating a Model for the Blog [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100](#index_split_002.html#p122)
+Creating a Model for the Blog [. 100](#index_split_002.html#p122)
 
-The Add Action [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101](#index_split_002.html#p123)
+The Add Action [. . . . 101](#index_split_002.html#p123)
 
-The save() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [101](#index_split_002.html#p123)
+The save() Function [101](#index_split_002.html#p123)
 
-Validating Data [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102](#index_split_002.html#p124)
+Validating Data [. . . . 102](#index_split_002.html#p124)
 
-Writing Custom Model Functions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106](#index_split_002.html#p128)
+Writing Custom Model Functions [. . . 106](#index_split_002.html#p128)
 
-Trimming Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [109](#index_split_002.html#p131)
+Trimming Results . [109](#index_split_002.html#p131)
 
-The unbindModel() Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [109](#index_split_002.html#p131)
+The unbindModel() Function . . [109](#index_split_002.html#p131)
 
-The bindModel() Function[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110](#index_split_002.html#p132)
+The bindModel() Function[110](#index_split_002.html#p132)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111](#index_split_002.html#p133)
+Summary[. . . . 111](#index_split_002.html#p133)
 
 ■**CHAPTER 8**
 
-**Implementing Ajax Features** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [113](#index_split_002.html#p135)
+**Implementing Ajax Features** [113](#index_split_002.html#p135)
 
-How Ajax Works. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [113](#index_split_002.html#p135)
+How Ajax Works. . . [113](#index_split_002.html#p135)
 
-Working with Ajax Frameworks. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [114](#index_split_002.html#p136)
+Working with Ajax Frameworks[114](#index_split_002.html#p136)
 
-Using the Ajax Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115](#index_split_002.html#p137)
+Using the Ajax Helper [. . . 115](#index_split_002.html#p137)
 
-Preparing the Ajax Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116](#index_split_002.html#p138)
+Preparing the Ajax Helper [. . . . 116](#index_split_002.html#p138)
 
-Installing Prototype [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116](#index_split_002.html#p138)
+Installing Prototype [116](#index_split_002.html#p138)
 
-Including the JavaScript Helper in the App Controller File [. . . . . . . 116](#index_split_002.html#p138)
+Including the JavaScript Helper in the App Controller File [. . 116](#index_split_002.html#p138)
 
-Making Helpers Available for the Whole Application . . . . . . . . . . . . [117](#index_split_002.html#p139)
+Making Helpers Available for the Whole Application . . [117](#index_split_002.html#p139)
 
-Adding Comments to the Blog[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117](#index_split_002.html#p139)
+Adding Comments to the Blog[. 117](#index_split_002.html#p139)
 
-Working Ajax into the View . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [118](#index_split_002.html#p140)
+Working Ajax into the View . . . [118](#index_split_002.html#p140)
 
-Displaying Comments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [118](#index_split_002.html#p140)
+Displaying Comments . . . [118](#index_split_002.html#p140)
 
-Using an Ajax Form [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120](#index_split_002.html#p142)
+Using an Ajax Form [120](#index_split_002.html#p142)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page xi
 
@@ -578,73 +578,73 @@ Using an Ajax Form [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [**xi**](#index_split_000.html#p12)
 
-Working Ajax into the Controller [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121](#index_split_002.html#p143)
+Working Ajax into the Controller [. . . . 121](#index_split_002.html#p143)
 
-Rendering for Ajax [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122](#index_split_002.html#p144)
+Rendering for Ajax [. 122](#index_split_002.html#p144)
 
-Using Other Ajax Helper Functions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123](#index_split_002.html#p145)
+Using Other Ajax Helper Functions [. . 123](#index_split_002.html#p145)
 
-The submit() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124](#index_split_002.html#p146)
+The submit() Function [. . . 124](#index_split_002.html#p146)
 
-The link() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124](#index_split_002.html#p146)
+The link() Function [. 124](#index_split_002.html#p146)
 
-Doing More with the Ajax Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129](#index_split_002.html#p151)
+Doing More with the Ajax Helper [. . . 129](#index_split_002.html#p151)
 
-Passing JavaScript with the Options Array [. . . . . . . . . . . . . . . . . . . . 130](#index_split_002.html#p152)
+Passing JavaScript with the Options Array [130](#index_split_002.html#p152)
 
-Prototype vs. jQuery [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130](#index_split_002.html#p152)
+Prototype vs. jQuery [. . . . 130](#index_split_002.html#p152)
 
-Uploading Files with jQuery [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131](#index_split_002.html#p153)
+Uploading Files with jQuery [. . . 131](#index_split_002.html#p153)
 
-Installing jQuery and the Form Plugin [. . . . . . . . . . . . . . . . . . . . . . . . 131](#index_split_002.html#p153)
+Installing jQuery and the Form Plugin [. . . . 131](#index_split_002.html#p153)
 
-Creating the Posts Add Action [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131](#index_split_002.html#p153)
+Creating the Posts Add Action [. 131](#index_split_002.html#p153)
 
-Creating the Posts Controller Text Action . . . . . . . . . . . . . . . . . . . . . [132](#index_split_002.html#p154)
+Creating the Posts Controller Text Action . [132](#index_split_002.html#p154)
 
-Writing the Text View [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133](#index_split_002.html#p155)
+Writing the Text View [. . . 133](#index_split_002.html#p155)
 
-More Ajax Features [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134](#index_split_002.html#p156)
+More Ajax Features [134](#index_split_002.html#p156)
 
-Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [134](#index_split_002.html#p156)
+Summary. . . . [134](#index_split_002.html#p156)
 
 PART 3 ■ ■ ■ **Advanced CakePHP**
 
 ■**CHAPTER 9**
 
-**Helpers**. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [137](#index_split_002.html#p159)
+**Helpers**. . . . [137](#index_split_002.html#p159)
 
-Installing Helpers [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137](#index_split_002.html#p159)
+Installing Helpers [. . 137](#index_split_002.html#p159)
 
-Using Cake’s Built-in Helpers [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138](#index_split_002.html#p160)
+Using Cake’s Built-in Helpers [. 138](#index_split_002.html#p160)
 
-Explain Every Helper Function? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [138](#index_split_002.html#p160)
+Explain Every Helper Function? [138](#index_split_002.html#p160)
 
-Working with the HTML Helper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [139](#index_split_002.html#p161)
+Working with the HTML Helper [139](#index_split_002.html#p161)
 
-Using the HTML Helper in the Default Layout . . . . . . . . . . . . . . . . . . [149](#index_split_003.html#p171)
+Using the HTML Helper in the Default Layout . . . [149](#index_split_003.html#p171)
 
-Working with the Form Helper. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [150](#index_split_003.html#p172)
+Working with the Form Helper. [150](#index_split_003.html#p172)
 
-Using Other Built-in Helpers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [157](#index_split_003.html#p179)
+Using Other Built-in Helpers . . [157](#index_split_003.html#p179)
 
-The Ajax Helper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [157](#index_split_003.html#p179)
+The Ajax Helper . . . [157](#index_split_003.html#p179)
 
-The JavaScript Helper[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157](#index_split_003.html#p179)
+The JavaScript Helper[. . . 157](#index_split_003.html#p179)
 
-The Number Helper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [158](#index_split_003.html#p180)
+The Number Helper [158](#index_split_003.html#p180)
 
-The Paginator Helper[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158](#index_split_003.html#p180)
+The Paginator Helper[. . . . 158](#index_split_003.html#p180)
 
-The RSS Helper . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [159](#index_split_003.html#p181)
+The RSS Helper . . . [159](#index_split_003.html#p181)
 
-The Session Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160](#index_split_003.html#p182)
+The Session Helper [160](#index_split_003.html#p182)
 
-The Text Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160](#index_split_003.html#p182)
+The Text Helper [. . . 160](#index_split_003.html#p182)
 
-The Time Helper[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161](#index_split_003.html#p183)
+The Time Helper[. . . 161](#index_split_003.html#p183)
 
-The XML Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162](#index_split_003.html#p184)
+The XML Helper [. . . 162](#index_split_003.html#p184)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page xii
 
@@ -652,77 +652,77 @@ The XML Helper [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■C O N T E N T S
 
-Creating Custom Helpers [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162](#index_split_003.html#p184)
+Creating Custom Helpers [162](#index_split_003.html#p184)
 
-Using the App Helper[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163](#index_split_003.html#p185)
+Using the App Helper[. . . . 163](#index_split_003.html#p185)
 
-Creating the Helper File [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163](#index_split_003.html#p185)
+Creating the Helper File [. 163](#index_split_003.html#p185)
 
-Using Outside Helper Functions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164](#index_split_003.html#p186)
+Using Outside Helper Functions [. . . . 164](#index_split_003.html#p186)
 
-Making a Helper for Your Blog[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164](#index_split_003.html#p186)
+Making a Helper for Your Blog[. 164](#index_split_003.html#p186)
 
-Customizing Helper Variables [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171](#index_split_003.html#p193)
+Customizing Helper Variables [. 171](#index_split_003.html#p193)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 173](#index_split_003.html#p195)
+Summary[. . . . 173](#index_split_003.html#p195)
 
 ■**CHAPTER 10**
 
-**Routes** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175](#index_split_003.html#p197)
+**Routes** [. . . . 175](#index_split_003.html#p197)
 
-The Basic Route[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175](#index_split_003.html#p197)
+The Basic Route[. . . 175](#index_split_003.html#p197)
 
-Arguments [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176](#index_split_003.html#p198)
+Arguments [. . 176](#index_split_003.html#p198)
 
-Reverse Routing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [177](#index_split_003.html#p199)
+Reverse Routing. . . [177](#index_split_003.html#p199)
 
-Lookups [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177](#index_split_003.html#p199)
+Lookups [177](#index_split_003.html#p199)
 
-Rewriting URLs in the Router[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177](#index_split_003.html#p199)
+Rewriting URLs in the Router[. . 177](#index_split_003.html#p199)
 
-Admin Routing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [178](#index_split_003.html#p200)
+Admin Routing . . . . [178](#index_split_003.html#p200)
 
-Choosing an Admin Prefix [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179](#index_split_003.html#p201)
+Choosing an Admin Prefix [. . . . 179](#index_split_003.html#p201)
 
-Linking Admin Actions and Views [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 179](#index_split_003.html#p201)
+Linking Admin Actions and Views [. . . 179](#index_split_003.html#p201)
 
-Baking Admin Routes [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179](#index_split_003.html#p201)
+Baking Admin Routes [. . . 179](#index_split_003.html#p201)
 
-Route Parameters [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180](#index_split_003.html#p202)
+Route Parameters [. 180](#index_split_003.html#p202)
 
-Magic Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [180](#index_split_003.html#p202)
+Magic Variables . . . [180](#index_split_003.html#p202)
 
-Custom Expressions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181](#index_split_003.html#p203)
+Custom Expressions [. . . . 181](#index_split_003.html#p203)
 
-The Pass Key [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181](#index_split_003.html#p203)
+The Pass Key [181](#index_split_003.html#p203)
 
-Parsing Files with Extensions Other Than .php . . . . . . . . . . . . . . . . . . . . . [182](#index_split_003.html#p204)
+Parsing Files with Extensions Other Than .php . [182](#index_split_003.html#p204)
 
-The Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [182](#index_split_003.html#p204)
+The Process . [182](#index_split_003.html#p204)
 
-Creating the RSS Feed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [183](#index_split_003.html#p205)
+Creating the RSS Feed . . [183](#index_split_003.html#p205)
 
-Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [185](#index_split_003.html#p207)
+Summary. . . . [185](#index_split_003.html#p207)
 
 ■**CHAPTER 11**
 
-**Components and Utilities**[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187](#index_split_003.html#p209)
+**Components and Utilities**[. . . . 187](#index_split_003.html#p209)
 
-Why Use Components? [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187](#index_split_003.html#p209)
+Why Use Components? [. . 187](#index_split_003.html#p209)
 
-Using Components. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [188](#index_split_003.html#p210)
+Using Components. [188](#index_split_003.html#p210)
 
-Using Built-in Components [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188](#index_split_003.html#p210)
+Using Built-in Components [. . . 188](#index_split_003.html#p210)
 
-Authentication [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189](#index_split_003.html#p211)
+Authentication [. . . . 189](#index_split_003.html#p211)
 
-Session [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 194](#index_split_004.html#p216)
+Session [194](#index_split_004.html#p216)
 
-Cookie [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 195](#index_split_004.html#p217)
+Cookie [. 195](#index_split_004.html#p217)
 
-Email [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 196](#index_split_004.html#p218)
+Email [. . 196](#index_split_004.html#p218)
 
-Other Components[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198](#index_split_004.html#p220)
+Other Components[. 198](#index_split_004.html#p220)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page xiii
 
@@ -730,81 +730,81 @@ Other Components[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 [**xiii**](#index_split_000.html#p14)
 
-Utility Classes[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198](#index_split_004.html#p220)
+Utility Classes[198](#index_split_004.html#p220)
 
-Configure[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199](#index_split_004.html#p221)
+Configure[. . . . 199](#index_split_004.html#p221)
 
-File and Folder [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199](#index_split_004.html#p221)
+File and Folder [. . . . 199](#index_split_004.html#p221)
 
-HTTP Socket [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201](#index_split_004.html#p223)
+HTTP Socket [. 201](#index_split_004.html#p223)
 
-Localization and Internationalization [. . . . . . . . . . . . . . . . . . . . . . . . . 202](#index_split_004.html#p224)
+Localization and Internationalization [202](#index_split_004.html#p224)
 
-Sanitize [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 204](#index_split_004.html#p226)
+Sanitize [204](#index_split_004.html#p226)
 
-Third-Party Components [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 204](#index_split_004.html#p226)
+Third-Party Components [204](#index_split_004.html#p226)
 
-Creating Custom Components[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205](#index_split_004.html#p227)
+Creating Custom Components[. 205](#index_split_004.html#p227)
 
-Using the Initialize and Startup Functions [. . . . . . . . . . . . . . . . . . . . . 205](#index_split_004.html#p227)
+Using the Initialize and Startup Functions [. 205](#index_split_004.html#p227)
 
-Writing Vendor Files Instead of Components [. . . . . . . . . . . . . . . . . . 206](#index_split_004.html#p228)
+Writing Vendor Files Instead of Components [. . . 206](#index_split_004.html#p228)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 206](#index_split_004.html#p228)
+Summary[. . . . 206](#index_split_004.html#p228)
 
 ■**CHAPTER 12**
 
-**Vendors** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207](#index_split_004.html#p229)
+**Vendors** [. . . 207](#index_split_004.html#p229)
 
-Using Vendors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207](#index_split_004.html#p229)
+Using Vendors [. . . . 207](#index_split_004.html#p229)
 
-Dealing with File Names. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [209](#index_split_004.html#p231)
+Dealing with File Names. [209](#index_split_004.html#p231)
 
-Dealing with Nested Folders [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209](#index_split_004.html#p231)
+Dealing with Nested Folders [. . 209](#index_split_004.html#p231)
 
-Making No Assumptions for Third-Party Scripts [. . . . . . . . . . . . . . . . . . . . 209](#index_split_004.html#p231)
+Making No Assumptions for Third-Party Scripts [209](#index_split_004.html#p231)
 
-Unidirectional Scripting[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210](#index_split_004.html#p232)
+Unidirectional Scripting[. . 210](#index_split_004.html#p232)
 
-Installing a Third-Party Script [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 210](#index_split_004.html#p232)
+Installing a Third-Party Script [. 210](#index_split_004.html#p232)
 
-Including Textile . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [210](#index_split_004.html#p232)
+Including Textile . . . [210](#index_split_004.html#p232)
 
-Instantiating and Running Textile [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 211](#index_split_004.html#p233)
+Instantiating and Running Textile [. . . 211](#index_split_004.html#p233)
 
-Writing Posts with Textile [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 211](#index_split_004.html#p233)
+Writing Posts with Textile [211](#index_split_004.html#p233)
 
-Using Other Frameworks with CakePHP . . . . . . . . . . . . . . . . . . . . . . . . . . . [211](#index_split_004.html#p233)
+Using Other Frameworks with CakePHP . . [211](#index_split_004.html#p233)
 
-Zend Framework . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [212](#index_split_004.html#p234)
+Zend Framework . . [212](#index_split_004.html#p234)
 
-Summary. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [217](#index_split_004.html#p239)
+Summary. . . . [217](#index_split_004.html#p239)
 
 ■**CHAPTER 13**
 
-**Plugins**[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219](#index_split_004.html#p241)
+**Plugins**[. . . . 219](#index_split_004.html#p241)
 
-Installing a Third-Party Plugin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [219](#index_split_004.html#p241)
+Installing a Third-Party Plugin . [219](#index_split_004.html#p241)
 
-Creating Custom Plugins [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 221](#index_split_004.html#p243)
+Creating Custom Plugins [221](#index_split_004.html#p243)
 
-Naming Convention for Plugin Elements . . . . . . . . . . . . . . . . . . . . . . [221](#index_split_004.html#p243)
+Naming Convention for Plugin Elements . . [221](#index_split_004.html#p243)
 
-Running Plugin Actions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223](#index_split_004.html#p245)
+Running Plugin Actions [. . 223](#index_split_004.html#p245)
 
-Using Plugin Layouts [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223](#index_split_004.html#p245)
+Using Plugin Layouts [. . . . 223](#index_split_004.html#p245)
 
-The Calendar Plugin [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224](#index_split_004.html#p246)
+The Calendar Plugin [. . . . 224](#index_split_004.html#p246)
 
-Setting Up the Files and Folders [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224](#index_split_004.html#p246)
+Setting Up the Files and Folders [. . . . 224](#index_split_004.html#p246)
 
-Create the Events Table [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225](#index_split_004.html#p247)
+Create the Events Table [. 225](#index_split_004.html#p247)
 
-Create the Event Model[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225](#index_split_004.html#p247)
+Create the Event Model[. . 225](#index_split_004.html#p247)
 
-Create the Events Controller . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [225](#index_split_004.html#p247)
+Create the Events Controller . . [225](#index_split_004.html#p247)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 240](#index_split_005.html#p262)
+Summary [. . . 240](#index_split_005.html#p262)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page xiv
 
@@ -814,75 +814,75 @@ Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 ■**CHAPTER 14**
 
-**DataSources and Behaviors** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 241](#index_split_005.html#p263)
+**DataSources and Behaviors** [. 241](#index_split_005.html#p263)
 
-Extending the Model with DataSources and Behaviors [. . . . . . . . . . . . . . 243](#index_split_005.html#p265)
+Extending the Model with DataSources and Behaviors [. . . . 243](#index_split_005.html#p265)
 
-Working with DataSources[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243](#index_split_005.html#p265)
+Working with DataSources[. . . . 243](#index_split_005.html#p265)
 
-Using Built-in DataSources [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244](#index_split_005.html#p266)
+Using Built-in DataSources [. . . 244](#index_split_005.html#p266)
 
-Building a Custom DataSource [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 246](#index_split_005.html#p268)
+Building a Custom DataSource [246](#index_split_005.html#p268)
 
-Working with Behaviors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254](#index_split_005.html#p276)
+Working with Behaviors [. 254](#index_split_005.html#p276)
 
-Using the Tree Behavior to Categorize Blog Posts [. . . . . . . . . . . . . . 255](#index_split_005.html#p277)
+Using the Tree Behavior to Categorize Blog Posts [. . . . 255](#index_split_005.html#p277)
 
-Using Other Tree Behavior Functions [. . . . . . . . . . . . . . . . . . . . . . . . . 263](#index_split_005.html#p285)
+Using Other Tree Behavior Functions [263](#index_split_005.html#p285)
 
-Using the ACL and Translate Behaviors [. . . . . . . . . . . . . . . . . . . . . . . 265](#index_split_005.html#p287)
+Using the ACL and Translate Behaviors [. . . 265](#index_split_005.html#p287)
 
-Using the Containable Behavior [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265](#index_split_005.html#p287)
+Using the Containable Behavior [. . . . 265](#index_split_005.html#p287)
 
-Attaching and Detaching Behaviors . . . . . . . . . . . . . . . . . . . . . . . . . . [267](#index_split_005.html#p289)
+Attaching and Detaching Behaviors . [267](#index_split_005.html#p289)
 
-Writing Custom Behaviors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 268](#index_split_005.html#p290)
+Writing Custom Behaviors [. . . . 268](#index_split_005.html#p290)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270](#index_split_005.html#p292)
+Summary[. . . . 270](#index_split_005.html#p292)
 
 ■**CHAPTER 15**
 
-**Wrapping Up the Application**[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273](#index_split_005.html#p295)
+**Wrapping Up the Application**[273](#index_split_005.html#p295)
 
-Designing the Home Page [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273](#index_split_005.html#p295)
+Designing the Home Page [. . . . 273](#index_split_005.html#p295)
 
-Using the Pages Controller to Produce a Single View [. . . . . . . . . . . 273](#index_split_005.html#p295)
+Using the Pages Controller to Produce a Single View [. 273](#index_split_005.html#p295)
 
-Making an Action the Starting Point . . . . . . . . . . . . . . . . . . . . . . . . . . [274](#index_split_005.html#p296)
+Making an Action the Starting Point . [274](#index_split_005.html#p296)
 
-Generating Dynamic Navigation [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 275](#index_split_005.html#p297)
+Generating Dynamic Navigation [. . . . 275](#index_split_005.html#p297)
 
-Customizing the Overall Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [276](#index_split_005.html#p298)
+Customizing the Overall Design . . . . [276](#index_split_005.html#p298)
 
-Debugging the Application. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [276](#index_split_005.html#p298)
+Debugging the Application. . . . [276](#index_split_005.html#p298)
 
-Running the Application on a Remote Host. . . . . . . . . . . . . . . . . . . . . . . . . [277](#index_split_005.html#p299)
+Running the Application on a Remote Host[277](#index_split_005.html#p299)
 
-Summary[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 278](#index_split_005.html#p300)
+Summary[. . . . 278](#index_split_005.html#p300)
 
 PART 4 ■ ■ ■ **Appendixes**
 
 ■**APPENDIX A**
 
-**Installation Issues** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281](#index_split_005.html#p303)
+**Installation Issues** [. 281](#index_split_005.html#p303)
 
-Developing in a Localhost Environment[. . . . . . . . . . . . . . . . . . . . . . . . . . . . 281](#index_split_005.html#p303)
+Developing in a Localhost Environment[. . . 281](#index_split_005.html#p303)
 
-Using the Localhost First, Remote Last [. . . . . . . . . . . . . . . . . . . . . . . 281](#index_split_005.html#p303)
+Using the Localhost First, Remote Last [. . . 281](#index_split_005.html#p303)
 
-Why Doing It All Remotely Is Bad [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 282](#index_split_005.html#p304)
+Why Doing It All Remotely Is Bad [. . . 282](#index_split_005.html#p304)
 
-Setting Up a Localhost [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 282](#index_split_005.html#p304)
+Setting Up a Localhost [. . 282](#index_split_005.html#p304)
 
-Setting Up on a Mac . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [282](#index_split_005.html#p304)
+Setting Up on a Mac . . . . [282](#index_split_005.html#p304)
 
-Setting Up on Windows[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284](#index_split_005.html#p306)
+Setting Up on Windows[. . 284](#index_split_005.html#p306)
 
-Running MySQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [286](#index_split_006.html#p308)
+Running MySQL . . . [286](#index_split_006.html#p308)
 
-Where to Find Other MySQL Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . [286](#index_split_006.html#p308)
+Where to Find Other MySQL Tools . . [286](#index_split_006.html#p308)
 
-Typical Settings When Running MySQL [. . . . . . . . . . . . . . . . . . . . . . . 287](#index_split_006.html#p309)
+Typical Settings When Running MySQL [. . . 287](#index_split_006.html#p309)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page xv
 
@@ -892,21 +892,21 @@ Typical Settings When Running MySQL [. . . . . . . . . . . . . . . . . . . . . .
 
 ■**APPENDIX B**
 
-**How CakePHP Compares with Other Frameworks** [. . . . . . . 289](#index_split_006.html#p311)
+**How CakePHP Compares with Other Frameworks** [. . 289](#index_split_006.html#p311)
 
-PHP Frameworks [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289](#index_split_006.html#p311)
+PHP Frameworks [. . 289](#index_split_006.html#p311)
 
-Using the Various Frameworks [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290](#index_split_006.html#p312)
+Using the Various Frameworks [290](#index_split_006.html#p312)
 
-CakePHP [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290](#index_split_006.html#p312)
+CakePHP [. . . . 290](#index_split_006.html#p312)
 
-CodeIgniter [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 291](#index_split_006.html#p313)
+CodeIgniter [. . 291](#index_split_006.html#p313)
 
-Symfony[. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 292](#index_split_006.html#p314)
+Symfony[292](#index_split_006.html#p314)
 
-Zend Framework [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293](#index_split_006.html#p315)
+Zend Framework [. . 293](#index_split_006.html#p315)
 
-■**INDEX** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295](#index_split_006.html#p317)
+■**INDEX** [. 295](#index_split_006.html#p317)
 
 09775fmfinal.qxd 7/1/08 9:55 PM Page xvi
 

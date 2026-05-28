@@ -82,105 +82,105 @@ The source code for this book is available to readers at http://www.apress.com i
 
 Contents at a Glance
 
-About the Authors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxv About the Technical Reviewers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxvii Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxix Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxxi
+About the Authors . xxv About the Technical Reviewers . . . . xxvii Acknowledgments xxix Introduction . xxxi
 
 ■**CHAPTER 1**
 
-An Introduction to PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+An Introduction to PHP 1
 
 ■**CHAPTER 2**
 
-Installing and Configuring Apache and PHP . . . . . . . . . . . . . . . . . . . . 9
+Installing and Configuring Apache and PHP 9
 
 ■**CHAPTER 3**
 
-PHP Basics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+PHP Basics 43
 
 ■**CHAPTER 4**
 
-Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+Functions . 91
 
 ■**CHAPTER 5**
 
-Arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+Arrays . . . 103
 
 ■**CHAPTER 6**
 
-Object-Oriented PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+Object-Oriented PHP 133
 
 ■**CHAPTER 7**
 
-Advanced OOP Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Advanced OOP Features . 157
 
 ■**CHAPTER 8**
 
-Error and Exception Handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+Error and Exception Handling . 177
 
 ■**CHAPTER 9**
 
-Strings and Regular Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+Strings and Regular Expressions . . . 191
 
-■**CHAPTER 10** Working with the File and Operating System . . . . . . . . . . . . . . . . . 229
+■**CHAPTER 10** Working with the File and Operating System . . 229
 
-■**CHAPTER 11** PEAR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+■**CHAPTER 11** PEAR . . . . 259
 
-■**CHAPTER 12** Date and Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+■**CHAPTER 12** Date and Time 271
 
-■**CHAPTER 13** Forms and Navigational Cues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+■**CHAPTER 13** Forms and Navigational Cues . 303
 
-■**CHAPTER 14** Authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+■**CHAPTER 14** Authentication 325
 
-■**CHAPTER 15** Handling File Uploads . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+■**CHAPTER 15** Handling File Uploads . . . . 345
 
-■**CHAPTER 16** Networking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 359
+■**CHAPTER 16** Networking . . . 359
 
-■**CHAPTER 17** PHP and LDAP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+■**CHAPTER 17** PHP and LDAP . 399
 
-■**CHAPTER 18** Session Handlers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+■**CHAPTER 18** Session Handlers . . . 425
 
-■**CHAPTER 19** Templating with Smarty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 447
+■**CHAPTER 19** Templating with Smarty . 447
 
-■**CHAPTER 20** Web Services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+■**CHAPTER 20** Web Services . 473
 
-■**CHAPTER 21** Secure PHP Programming . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+■**CHAPTER 21** Secure PHP Programming 515
 
-■**CHAPTER 22** SQLite . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535
+■**CHAPTER 22** SQLite . . . 535
 
 **v**
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
-■**CHAPTER 23** Introducing PDO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 555
+■**CHAPTER 23** Introducing PDO . . . . 555
 
-■**CHAPTER 24** Introducing PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 573
+■**CHAPTER 24** Introducing PostgreSQL . . 573
 
-■**CHAPTER 25** Installing PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 579
+■**CHAPTER 25** Installing PostgreSQL . . . . 579
 
-■**CHAPTER 26** PostgreSQL Administration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 593
+■**CHAPTER 26** PostgreSQL Administration . . . . 593
 
-■**CHAPTER 27** The Many PostgreSQL Clients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+■**CHAPTER 27** The Many PostgreSQL Clients . 611
 
-■**CHAPTER 28** From Databases to Datatypes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 625
+■**CHAPTER 28** From Databases to Datatypes . 625
 
-■**CHAPTER 29** Securing PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 649
+■**CHAPTER 29** Securing PostgreSQL . . . . 649
 
-■**CHAPTER 30** PHP’s PostgreSQL Functionality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665
+■**CHAPTER 30** PHP’s PostgreSQL Functionality . . . . 665
 
-■**CHAPTER 31** Practical Database Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 689
+■**CHAPTER 31** Practical Database Queries . . . 689
 
-■**CHAPTER 32** Views and Rules . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 707
+■**CHAPTER 32** Views and Rules . . . . 707
 
-■**CHAPTER 33** PostgreSQL Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 719
+■**CHAPTER 33** PostgreSQL Functions . . . 719
 
-■**CHAPTER 34** PostgreSQL Triggers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 739
+■**CHAPTER 34** PostgreSQL Triggers 739
 
-■**CHAPTER 35** Indexes and Searching . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 749
+■**CHAPTER 35** Indexes and Searching . . . 749
 
-■**CHAPTER 36** Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 765
+■**CHAPTER 36** Transactions . . 765
 
-■**CHAPTER 37** Importing and Exporting Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 777
+■**CHAPTER 37** Importing and Exporting Data . 777
 
-■**INDEX** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 787
+■**INDEX** . . . 787
 
 **vi**
 
@@ -188,57 +188,57 @@ Strings and Regular Expressions . . . . . . . . . . . . . . . . . . . . . . . . 
 
 Contents
 
-About the Authors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxv About the Technical Reviewers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxvii Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxix Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxxi
+About the Authors . xxv About the Technical Reviewers . . . . xxvii Acknowledgments xxix Introduction . xxxi
 
 ■**CHAPTER 1**
 
-**An Introduction to PHP** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+**An Introduction to PHP** . 1
 
-History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+History 1
 
-PHP 4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+PHP 4 . . 2
 
-PHP 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+PHP 5 . . 3
 
-General Language Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+General Language Features . . . 4
 
-Practicality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Practicality . . . 5
 
-Power . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Power . . 5
 
-Possibility. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Possibility. . . . 6
 
-Price . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Price . . . 7
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Summary . . . 7
 
 ■**CHAPTER 2**
 
-**Installing and Configuring Apache and PHP** . . . . . . . . . . . . . . 9
+**Installing and Configuring Apache and PHP** . . . . 9
 
-Installation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Installation . . 9
 
-Obtaining the Distributions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Obtaining the Distributions . . . . 9
 
-The Installation Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+The Installation Process . 11
 
-Testing Your Installation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+Testing Your Installation. 16
 
-Customizing the Unix Build . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Customizing the Unix Build . . . 17
 
-Customizing the Windows Build . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Customizing the Windows Build . . . . 17
 
-Common Pitfalls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+Common Pitfalls . . 18
 
-Viewing and Downloading the Documentation . . . . . . . . . . . . . . . . . 18
+Viewing and Downloading the Documentation . . 18
 
-Configuration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+Configuration . . . . 19
 
-Managing PHP’s Configuration Directives . . . . . . . . . . . . . . . . . . . . . 19
+Managing PHP’s Configuration Directives . 19
 
-PHP’s Configuration Directives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+PHP’s Configuration Directives 21
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41
+Summary . . 41
 
 **vii**
 
@@ -250,81 +250,81 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■**CHAPTER 3**
 
-**PHP Basics** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+**PHP Basics** . . . 43
 
-Escaping to PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+Escaping to PHP . 43
 
-Default Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Default Syntax . . . . 44
 
-Short-Tags. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Short-Tags. . 44
 
-Script . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Script . 45
 
-ASP-Style . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+ASP-Style . . . 45
 
-Embedding Multiple Code Blocks . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+Embedding Multiple Code Blocks . . . 45
 
-Comments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+Comments . 46
 
-Single-line C++ Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+Single-line C++ Syntax . 46
 
-Shell Syntax. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+Shell Syntax. 46
 
-Multiple-Line C Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+Multiple-Line C Syntax . . 46
 
-Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+Output . . . . 47
 
-print() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+print() . 47
 
-echo() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+echo() . 48
 
-printf(). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+printf(). 49
 
-sprintf(). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+sprintf()50
 
-Datatypes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+Datatypes . . 50
 
-Scalar Datatypes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50
+Scalar Datatypes. . 50
 
-Compound Datatypes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Compound Datatypes . . . 52
 
-Special Datatypes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Special Datatypes . 53
 
-Type Casting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54
+Type Casting 54
 
-Type Juggling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+Type Juggling . . . . 55
 
-Type-Related Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
+Type-Related Functions . 56
 
-Type Identifier Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Type Identifier Functions 57
 
-Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Identifiers . . 57
 
-Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+Variables . . 58
 
-Variable Declaration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+Variable Declaration . . . . 58
 
-Variable Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+Variable Scope . . . 60
 
-PHP’s Superglobal Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+PHP’s Superglobal Variables . . 63
 
-Variable Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+Variable Variables . 67
 
-Constants . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+Constants . . 68
 
-Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+Expressions 68
 
-Operands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Operands . . . 69
 
-Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Operators . . . 69
 
-String Interpolation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+String Interpolation . . . . 75
 
-Double Quotes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+Double Quotes. . . . 75
 
-Single Quotes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+Single Quotes . . . . 76
 
-Heredoc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+Heredoc . . . . 77
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -332,73 +332,73 @@ Heredoc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **ix**
 
-Control Structures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Control Structures 78
 
-Execution Control Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+Execution Control Statements . 78
 
-Conditional Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
+Conditional Statements . 79
 
-Looping Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Looping Statements . . . . 81
 
-File Inclusion Statements. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+File Inclusion Statements86
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+Summary . . 89
 
 ■**CHAPTER 4**
 
-**Functions** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+**Functions** . . . . 91
 
-Invoking a Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
+Invoking a Function . . . 91
 
-Creating a Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+Creating a Function . . . 92
 
-Passing Arguments by Value . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
+Passing Arguments by Value . . 92
 
-Passing Arguments by Reference . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+Passing Arguments by Reference . . . 93
 
-Default Argument Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Default Argument Values 94
 
-Optional Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+Optional Arguments . . . . 94
 
-Returning Values from a Function. . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Returning Values from a Function. . . 95
 
-Nesting Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 96
+Nesting Functions . 96
 
-Recursive Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+Recursive Functions . . . . 97
 
-Variable Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+Variable Functions 99
 
-Function Libraries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+Function Libraries . . . . 100
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+Summary . 101
 
 ■**CHAPTER 5**
 
-**Arrays** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+**Arrays** . . 103
 
-What Is an Array? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+What Is an Array? . . . . 104
 
-Outputting Arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Outputting Arrays . . . . 105
 
-Creating an Array . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+Creating an Array . . . . 106
 
-Testing for an Array . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+Testing for an Array . . 108
 
-Adding and Removing Array Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+Adding and Removing Array Elements . . 109
 
-Locating Array Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+Locating Array Elements . . . 111
 
-Traversing Arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+Traversing Arrays . . . . 112
 
-Determining Array Size and Uniqueness . . . . . . . . . . . . . . . . . . . . . . . . . 116
+Determining Array Size and Uniqueness 116
 
-Sorting Arrays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+Sorting Arrays . . 118
 
-Merging, Slicing, Splicing, and Dissecting Arrays . . . . . . . . . . . . . . . . . . 124
+Merging, Slicing, Splicing, and Dissecting Arrays . . . 124
 
-Other Useful Array Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
+Other Useful Array Functions 129
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+Summary . 131
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -408,75 +408,75 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■**CHAPTER 6**
 
-**Object-Oriented PHP** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+**Object-Oriented PHP** . . 133
 
-The Benefits of OOP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+The Benefits of OOP . . 134
 
-Encapsulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+Encapsulation . . . 134
 
-Inheritance. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+Inheritance. 134
 
-Polymorphism . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+Polymorphism . . . 135
 
-Key OOP Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+Key OOP Concepts . . . 135
 
-Classes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+Classes. . . . 135
 
-Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+Objects . . . . 136
 
-Fields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
+Fields 137
 
-Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+Properties . 140
 
-__set() . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+__set() . . . . 140
 
-Constants. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+Constants. . 143
 
-Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 143
+Methods . . . 143
 
-Type Hinting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Type Hinting . . . 147
 
-Constructors and Destructors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Constructors and Destructors . . . . 148
 
-Constructors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+Constructors . . . . 148
 
-Destructors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+Destructors 151
 
-Static Class Members . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152
+Static Class Members 152
 
-The instanceof Keyword . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+The instanceof Keyword . . . . 153
 
-Helper Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+Helper Functions 153
 
-Autoloading Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+Autoloading Objects . . 155
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+Summary . 156
 
 ■**CHAPTER 7**
 
-**Advanced OOP Features** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+**Advanced OOP Features** . . . 157
 
-Advanced OOP Features Not Supported by PHP . . . . . . . . . . . . . . . . . . . 157
+Advanced OOP Features Not Supported by PHP . . . . 157
 
-Object Cloning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+Object Cloning . . 158
 
-Cloning Example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+Cloning Example . 158
 
-The __clone() Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+The __clone() Method . 160
 
-Inheritance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+Inheritance 161
 
-Class Inheritance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+Class Inheritance 162
 
-Inheritance and Constructors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+Inheritance and Constructors 164
 
-Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+Interfaces . 165
 
-Implementing a Single Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+Implementing a Single Interface . . . 167
 
-Implementing Multiple Interfaces . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Implementing Multiple Interfaces . . 168
 
-Abstract Classes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 168
+Abstract Classes 168
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -484,73 +484,73 @@ Abstract Classes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 **xi**
 
-Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+Reflection . 169
 
-Writing the ReflectionClass Class . . . . . . . . . . . . . . . . . . . . . . . . . . . 170
+Writing the ReflectionClass Class . . 170
 
-Writing the ReflectionMethod Class . . . . . . . . . . . . . . . . . . . . . . . . . 172
+Writing the ReflectionMethod Class 172
 
-Writing the ReflectionParameter Class. . . . . . . . . . . . . . . . . . . . . . . 174
+Writing the ReflectionParameter Class. . . 174
 
-Writing the ReflectionProperty Class . . . . . . . . . . . . . . . . . . . . . . . . 175
+Writing the ReflectionProperty Class . . . . 175
 
-Other Reflection Applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Other Reflection Applications 176
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 176
+Summary . 176
 
 ■**CHAPTER 8**
 
-**Error and Exception Handling** . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+**Error and Exception Handling** . . 177
 
-Configuration Directives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177
+Configuration Directives . . . . 177
 
-Error Logging . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180
+Error Logging . . . 180
 
-Exception Handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+Exception Handling . . . 183
 
-Why Exception Handling Is Handy. . . . . . . . . . . . . . . . . . . . . . . . . . . 183
+Why Exception Handling Is Handy. . 183
 
-PHP’s Exception-Handling Implementation . . . . . . . . . . . . . . . . . . . 185
+PHP’s Exception-Handling Implementation . . . . 185
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189
+Summary . 189
 
 ■**CHAPTER 9**
 
-**Strings and Regular Expressions** . . . . . . . . . . . . . . . . . . . . . . . . 191
+**Strings and Regular Expressions** . . . . 191
 
-Complex (Curly) Offset Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 191
+Complex (Curly) Offset Syntax . . . . 191
 
-Regular Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192
+Regular Expressions . . 192
 
-Regular Expression Syntax (POSIX). . . . . . . . . . . . . . . . . . . . . . . . . . 193
+Regular Expression Syntax (POSIX). 193
 
-PHP’s Regular Expression Functions (POSIX Extended) . . . . . . . . . 195
+PHP’s Regular Expression Functions (POSIX Extended) . . . . 195
 
-Regular Expression Syntax (Perl Style). . . . . . . . . . . . . . . . . . . . . . . 198
+Regular Expression Syntax (Perl Style). . . 198
 
-Other String-Specific Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Other String-Specific Functions . . 205
 
-Determining the Length of a String . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Determining the Length of a String 205
 
-Comparing Two Strings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 206
+Comparing Two Strings 206
 
-Manipulating String Case. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 208
+Manipulating String Case. . . . 208
 
-Converting Strings to and from HTML . . . . . . . . . . . . . . . . . . . . . . . 209
+Converting Strings to and from HTML . . . 209
 
-Alternatives for Regular Expression Functions . . . . . . . . . . . . . . . . 214
+Alternatives for Regular Expression Functions . 214
 
-Padding and Stripping a String . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Padding and Stripping a String . . . . 222
 
-Counting Characters and Words . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Counting Characters and Words . . . 224
 
-Taking Advantage of PEAR: Validate_US . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Taking Advantage of PEAR: Validate_US 226
 
-Installing Validate_US. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Installing Validate_US. . 226
 
-Using Validate_US . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Using Validate_US . . . . 227
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227
+Summary . 227
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -558,81 +558,81 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CON TEN TS
 
-■**CHAPTER 10 Working with the File and Operating System** . . . . . . . . . . . 229
+■**CHAPTER 10 Working with the File and Operating System** . 229
 
-Learning About Files and Directories . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Learning About Files and Directories . . . 230
 
-Parsing Directory Paths . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 230
+Parsing Directory Paths 230
 
-File Types and Links. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 232
+File Types and Links. . . 232
 
-Calculating File, Directory, and Disk Sizes . . . . . . . . . . . . . . . . . . . 235
+Calculating File, Directory, and Disk Sizes . . . . 235
 
-Access and Modification Times . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+Access and Modification Times . . . 238
 
-File Ownership and Permissions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 239
+File Ownership and Permissions . . 239
 
-File I/O . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+File I/O . . . 242
 
-The Concept of a Resource . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+The Concept of a Resource . . 242
 
-Newline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+Newline . . . 242
 
-End-of-File. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+End-of-File. 242
 
-Opening and Closing a File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 242
+Opening and Closing a File . . 242
 
-Reading from a File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+Reading from a File . . . 244
 
-Moving the File Pointer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249
+Moving the File Pointer 249
 
-Writing to a File . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 250
+Writing to a File . . 250
 
-Reading Directory Contents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 251
+Reading Directory Contents . . 251
 
-Executing Shell Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 252
+Executing Shell Commands . 252
 
-PHP’s Built-in System Commands . . . . . . . . . . . . . . . . . . . . . . . . . . 252
+PHP’s Built-in System Commands . 252
 
-System-Level Program Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+System-Level Program Execution . 254
 
-Sanitizing the Input. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+Sanitizing the Input. . . . 254
 
-PHP’s Program Execution Functions. . . . . . . . . . . . . . . . . . . . . . . . . 255
+PHP’s Program Execution Functions255
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258
+Summary . 258
 
-■**CHAPTER 11 PEAR** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+■**CHAPTER 11 PEAR** . . . 259
 
-Popular PEAR Packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+Popular PEAR Packages . . . . 259
 
-Converting Numeral Formats. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 261
+Converting Numeral Formats. 261
 
-Installing and Updating PEAR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Installing and Updating PEAR . . . . 262
 
-Installing PEAR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262
+Installing PEAR . . 262
 
-PEAR and Hosting Companies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+PEAR and Hosting Companies 263
 
-Updating PEAR . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+Updating PEAR . . 264
 
-Using the PEAR Package Manager . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+Using the PEAR Package Manager 264
 
-Viewing Installed Packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 264
+Viewing Installed Packages . . 264
 
-Learning More About an Installed Package . . . . . . . . . . . . . . . . . . . 265
+Learning More About an Installed Package . . . . 265
 
-Installing a Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 266
+Installing a Package . . . 266
 
-Using a Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+Using a Package . 267
 
-Upgrading a Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 268
+Upgrading a Package . . 268
 
-Uninstalling a Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Uninstalling a Package . 269
 
-Downgrading a Package . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 269
+Downgrading a Package . . . . 269
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Summary . 270
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -640,73 +640,73 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **xiii**
 
-■**CHAPTER 12 Date and Time** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+■**CHAPTER 12 Date and Time** . . . 271
 
-The Unix Timestamp . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+The Unix Timestamp . . 271
 
-PHP’s Date and Time Library . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 272
+PHP’s Date and Time Library 272
 
-Date Fu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 279
+Date Fu . . . 279
 
-Displaying the Localized Date and Time . . . . . . . . . . . . . . . . . . . . . 279
+Displaying the Localized Date and Time . 279
 
-Displaying the Web Page’s Most Recent Modification Date . . . . . 283
+Displaying the Web Page’s Most Recent Modification Date 283
 
-Determining the Number Days in the Current Month . . . . . . . . . . . 283
+Determining the Number Days in the Current Month . 283
 
-Calculating the Date X Days from the Present Date . . . . . . . . . . . . 284
+Calculating the Date X Days from the Present Date . . 284
 
-Creating a Calendar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 285
+Creating a Calendar . . . 285
 
-PHP 5.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 288
+PHP 5.1 . . 288
 
-Date Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+Date Fundamentals . . . 289
 
-The Date Constructor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+The Date Constructor . . 289
 
-Accessors and Mutators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 290
+Accessors and Mutators . . . . 290
 
-Validators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293
+Validators . . 293
 
-Manipulation Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 294
+Manipulation Methods . 294
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Summary . 301
 
-■**CHAPTER 13 Forms and Navigational Cues** . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+■**CHAPTER 13 Forms and Navigational Cues** . . 303
 
-PHP and Web Forms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+PHP and Web Forms . . 303
 
-A Simple Example. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 304
+A Simple Example304
 
-Passing Form Data to a Function . . . . . . . . . . . . . . . . . . . . . . . . . . . 306
+Passing Form Data to a Function . . 306
 
-Working with Multivalued Form Components . . . . . . . . . . . . . . . . . 307
+Working with Multivalued Form Components . . 307
 
-Generating Forms with PHP. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 308
+Generating Forms with PHP. . 308
 
-Autoselecting Forms Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 310
+Autoselecting Forms Data . . . 310
 
-PHP, Web Forms, and JavaScript . . . . . . . . . . . . . . . . . . . . . . . . . . . 311
+PHP, Web Forms, and JavaScript . . 311
 
-Navigational Cues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+Navigational Cues . . . . 313
 
-User-Friendly URLs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313
+User-Friendly URLs . . . . 313
 
-Breadcrumb Trails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+Breadcrumb Trails . . . . 317
 
-Creating Custom Error Handlers . . . . . . . . . . . . . . . . . . . . . . . . . . . . 321
+Creating Custom Error Handlers . . . 321
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 323
+Summary . 323
 
-■**CHAPTER 14 Authentication** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+■**CHAPTER 14 Authentication** . . . 325
 
-HTTP Authentication Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+HTTP Authentication Concepts . . . 325
 
-PHP Authentication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326
+PHP Authentication . . . 326
 
-Authentication Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 327
+Authentication Variables . . . . 327
 
-Authentication Methodologies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 328
+Authentication Methodologies 328
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -714,75 +714,75 @@ Authentication Methodologies . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 ■CON TEN TS
 
-User Login Administration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+User Login Administration . . 337
 
-Password Designation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+Password Designation . 337
 
-Testing Password Guessability with the CrackLib Library . . . . . . . 339
+Testing Password Guessability with the CrackLib Library . . 339
 
-One-Time URLs and Password Recovery. . . . . . . . . . . . . . . . . . . . . 342
+One-Time URLs and Password Recovery. 342
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 344
+Summary . 344
 
-■**CHAPTER 15 Handling File Uploads** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+■**CHAPTER 15 Handling File Uploads** 345
 
-Uploading Files via the HTTP Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+Uploading Files via the HTTP Protocol . . 345
 
-Handling Uploads with PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 346
+Handling Uploads with PHP . 346
 
-PHP’s File Upload/Resource Directives . . . . . . . . . . . . . . . . . . . . . . 346
+PHP’s File Upload/Resource Directives . . 346
 
-The $_FILES Array . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 348
+The $_FILES Array . . . . 348
 
-PHP’s File-Upload Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+PHP’s File-Upload Functions . 349
 
-Upload Error Messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Upload Error Messages 350
 
-File-Upload Examples. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351
+File-Upload Examples. . 351
 
-Taking Advantage of PEAR: HTTP_Upload . . . . . . . . . . . . . . . . . . . . . . . . 355
+Taking Advantage of PEAR: HTTP_Upload . . . . 355
 
-Installing HTTP_Upload . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355
+Installing HTTP_Upload 355
 
-Learning More About an Uploaded File . . . . . . . . . . . . . . . . . . . . . . 355
+Learning More About an Uploaded File . . 355
 
-Moving an Uploaded File to the Final Destination . . . . . . . . . . . . . . 356
+Moving an Uploaded File to the Final Destination . . . . 356
 
-Uploading Multiple Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357
+Uploading Multiple Files 357
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 358
+Summary . 358
 
-■**CHAPTER 16 Networking** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 359
+■**CHAPTER 16 Networking** . 359
 
-DNS, Services, and Servers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 360
+DNS, Services, and Servers . 360
 
-DNS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 360
+DNS . 360
 
-Services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 364
+Services . . . 364
 
-Establishing Socket Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . 365
+Establishing Socket Connections . . 365
 
-Mail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 367
+Mail . 367
 
-Configuration Directives. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 367
+Configuration Directives367
 
-Sending a Plain-Text E-Mail . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369
+Sending a Plain-Text E-Mail . 369
 
-Sending an E-Mail with Additional Headers. . . . . . . . . . . . . . . . . . . 369
+Sending an E-Mail with Additional Headers. . . . 369
 
-Sending an E-Mail to Multiple Recipients . . . . . . . . . . . . . . . . . . . . 369
+Sending an E-Mail to Multiple Recipients 369
 
-Sending an HTML-Formatted E-Mail . . . . . . . . . . . . . . . . . . . . . . . . 370
+Sending an HTML-Formatted E-Mail . . . . 370
 
-Sending an Attachment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371
+Sending an Attachment 371
 
-IMAP, POP3, and NNTP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 372
+IMAP, POP3, and NNTP . . . . 372
 
-Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 373
+Requirements . . . 373
 
-Establishing and Closing a Connection . . . . . . . . . . . . . . . . . . . . . . 374
+Establishing and Closing a Connection . . 374
 
-Learning More About Mailboxes and Mail . . . . . . . . . . . . . . . . . . . . 375
+Learning More About Mailboxes and Mail 375
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -790,77 +790,77 @@ Learning More About Mailboxes and Mail . . . . . . . . . . . . . . . . . . . . 3
 
 **xv**
 
-Retrieving Messages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 378
+Retrieving Messages . . 378
 
-Composing a Message . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 386
+Composing a Message . 386
 
-Sending a Message . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387
+Sending a Message . . . 387
 
-Mailbox Administration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+Mailbox Administration. 388
 
-Message Administration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 389
+Message Administration . . . . 389
 
-Streams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390
+Streams . . 390
 
-Stream Wrappers and Contexts . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390
+Stream Wrappers and Contexts . . . 390
 
-Stream Filters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 391
+Stream Filters . . . 391
 
-Common Networking Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 393
+Common Networking Tasks 393
 
-Pinging a Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 394
+Pinging a Server . 394
 
-A Port Scanner . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 395
+A Port Scanner . . 395
 
-Subnet Converter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 395
+Subnet Converter 395
 
-Testing User Bandwidth . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 397
+Testing User Bandwidth 397
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 398
+Summary . 398
 
-■**CHAPTER 17 PHP and LDAP** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399
+■**CHAPTER 17 PHP and LDAP** . . . . 399
 
-An Introduction to LDAP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+An Introduction to LDAP . . . . 400
 
-Learning More About LDAP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 400
+Learning More About LDAP . . 400
 
-Using LDAP from PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+Using LDAP from PHP . 401
 
-Connecting to the LDAP Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 401
+Connecting to the LDAP Server . . . . 401
 
-Binding to the LDAP Server . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 402
+Binding to the LDAP Server . . 402
 
-Closing the LDAP Server Connection . . . . . . . . . . . . . . . . . . . . . . . . 403
+Closing the LDAP Server Connection . . . . 403
 
-Retrieving LDAP Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 404
+Retrieving LDAP Data . . 404
 
-Working with Entry Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 405
+Working with Entry Values . . . 405
 
-Counting Retrieved Entries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 407
+Counting Retrieved Entries . . 407
 
-Retrieving Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 407
+Retrieving Attributes . . . 407
 
-Sorting and Comparing LDAP Entries . . . . . . . . . . . . . . . . . . . . . . . . 410
+Sorting and Comparing LDAP Entries . . . . 410
 
-Working with Entries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 412
+Working with Entries . . 412
 
-Deallocating Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 415
+Deallocating Memory . . 415
 
-Inserting LDAP Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 415
+Inserting LDAP Data . . . 415
 
-Updating LDAP Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 417
+Updating LDAP Data . . . 417
 
-Deleting LDAP Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 417
+Deleting LDAP Data . . . 417
 
-Configuration Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 418
+Configuration Functions 418
 
-Character Encoding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 420
+Character Encoding . . . 420
 
-Working with the Distinguished Name . . . . . . . . . . . . . . . . . . . . . . . 421
+Working with the Distinguished Name . . . 421
 
-Error Handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 422
+Error Handling . . . 422
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+Summary . 423
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -868,71 +868,71 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CON TEN TS
 
-■**CHAPTER 18 Session Handlers** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+■**CHAPTER 18 Session Handlers** 425
 
-What Is Session Handling? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+What Is Session Handling? . 425
 
-Cookies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+Cookies . . . 426
 
-URL Rewriting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+URL Rewriting . . . 426
 
-The Session-Handling Process . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 426
+The Session-Handling Process . . . . 426
 
-Configuration Directives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427
+Configuration Directives . . . . 427
 
-Key Concepts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 432
+Key Concepts . . . 432
 
-Starting a Session. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 432
+Starting a Session432
 
-Destroying a Session . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 433
+Destroying a Session . . 433
 
-Retrieving and Setting the Session ID . . . . . . . . . . . . . . . . . . . . . . . 434
+Retrieving and Setting the Session ID . . . 434
 
-Creating and Deleting Session Variables . . . . . . . . . . . . . . . . . . . . . 434
+Creating and Deleting Session Variables . 434
 
-Encoding and Decoding Session Data . . . . . . . . . . . . . . . . . . . . . . . 435
+Encoding and Decoding Session Data . . . 435
 
-Practical Session-Handling Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Practical Session-Handling Examples . . 437
 
-Auto-Login . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 437
+Auto-Login . 437
 
-Recently Viewed Document Index. . . . . . . . . . . . . . . . . . . . . . . . . . . 439
+Recently Viewed Document Index. . 439
 
-Creating Custom Session Handlers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+Creating Custom Session Handlers 441
 
-Tying Custom Session Functions into PHP’s Logic . . . . . . . . . . . . . 441
+Tying Custom Session Functions into PHP’s Logic . . . 441
 
-Custom PostgreSQL-Based Session Handlers. . . . . . . . . . . . . . . . . 442
+Custom PostgreSQL-Based Session Handlers. . 442
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 446
+Summary . 446
 
-■**CHAPTER 19 Templating with Smarty** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 447
+■**CHAPTER 19 Templating with Smarty** . . . 447
 
-What’s a Templating Engine? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 447
+What’s a Templating Engine? . . . . 447
 
-Introducing Smarty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 449
+Introducing Smarty . . . 449
 
-Installing Smarty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 450
+Installing Smarty 450
 
-Using Smarty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 452
+Using Smarty . . . 452
 
-Smarty’s Presentational Logic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454
+Smarty’s Presentational Logic . . . . 454
 
-Comments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454
+Comments . 454
 
-Variable Modifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454
+Variable Modifiers 454
 
-Control Structures. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 457
+Control Structures457
 
-Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 462
+Statements 462
 
-Creating Configuration Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 465
+Creating Configuration Files 465
 
-config_load . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 465
+config_load 465
 
-Referencing Configuration Variables . . . . . . . . . . . . . . . . . . . . . . . . 466
+Referencing Configuration Variables . . . . 466
 
-Using CSS in Conjunction with Smarty . . . . . . . . . . . . . . . . . . . . . . . . . . . 467
+Using CSS in Conjunction with Smarty . . 467
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -940,79 +940,79 @@ Using CSS in Conjunction with Smarty . . . . . . . . . . . . . . . . . . . . . .
 
 **xvii**
 
-Caching . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 468
+Caching . . 468
 
-Working with the Cache Lifetime . . . . . . . . . . . . . . . . . . . . . . . . . . . 468
+Working with the Cache Lifetime . . 468
 
-Eliminating Processing Overhead with is_cached() . . . . . . . . . . . . 469
+Eliminating Processing Overhead with is_cached() . . 469
 
-Creating Multiple Caches per Template . . . . . . . . . . . . . . . . . . . . . . 470
+Creating Multiple Caches per Template . . 470
 
-Some Final Words About Caching. . . . . . . . . . . . . . . . . . . . . . . . . . . 471
+Some Final Words About Caching. . 471
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 471
+Summary . 471
 
-■**CHAPTER 20 Web Services** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473
+■**CHAPTER 20 Web Services** . . . . 473
 
-Why Web Services? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474
+Why Web Services? . . 474
 
-Real Simple Syndication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 476
+Real Simple Syndication . . . 476
 
-RSS Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478
+RSS Syntax 478
 
-MagpieRSS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 479
+MagpieRSS 479
 
-SimpleXML . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 486
+SimpleXML . . . . 486
 
-SimpleXML Functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 486
+SimpleXML Functions. . 486
 
-SimpleXML Methods. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 488
+SimpleXML Methods. . . 488
 
-SOAP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 491
+SOAP . . . . 491
 
-NuSOAP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 492
+NuSOAP . . . 492
 
-PHP 5’s SOAP Extension . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 502
+PHP 5’s SOAP Extension . . . . 502
 
-Using a C# Client with a PHP Web Service . . . . . . . . . . . . . . . . . . . . . . . 512
+Using a C# Client with a PHP Web Service . . . 512
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 514
+Summary . 514
 
-■**CHAPTER 21 Secure PHP Programming** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 515
+■**CHAPTER 21 Secure PHP Programming** . 515
 
-Configuring PHP Securely . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 516
+Configuring PHP Securely . . 516
 
-Safe Mode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 516
+Safe Mode . 516
 
-Other Security-Related Configuration Parameters . . . . . . . . . . . . . 518
+Other Security-Related Configuration Parameters . . . 518
 
-Hiding Configuration Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 520
+Hiding Configuration Details 520
 
-Hiding Apache and PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 520
+Hiding Apache and PHP 520
 
-Hiding Sensitive Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 522
+Hiding Sensitive Data . 522
 
-Take Heed of the Document Root . . . . . . . . . . . . . . . . . . . . . . . . . . . 523
+Take Heed of the Document Root . . 523
 
-Denying Access to Certain File Extensions . . . . . . . . . . . . . . . . . . . 523
+Denying Access to Certain File Extensions . . . . 523
 
-Sanitizing User Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 524
+Sanitizing User Data . . 524
 
-File Deletion. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 524
+File Deletion524
 
-Cross-Site Scripting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 524
+Cross-Site Scripting . . . 524
 
-Sanitizing User Input: The Solution . . . . . . . . . . . . . . . . . . . . . . . . . . 526
+Sanitizing User Input: The Solution . 526
 
-Data Encryption . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 528
+Data Encryption . 528
 
-PHP’s Encryption Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 528
+PHP’s Encryption Functions . . 528
 
-mhash . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 529
+mhash . . . . 529
 
-MCrypt . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 531
+MCrypt . . . . 531
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 532
+Summary . 532
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1020,69 +1020,69 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CON TEN TS
 
-■**CHAPTER 22 SQLite** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535
+■**CHAPTER 22 SQLite** . . 535
 
-Introduction to SQLite . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535
+Introduction to SQLite . 535
 
-Installing SQLite . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536
+Installing SQLite . 536
 
-Using the SQLite Command-Line Interface . . . . . . . . . . . . . . . . . . . 536
+Using the SQLite Command-Line Interface . . . . 536
 
-PHP’s SQLite Library . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+PHP’s SQLite Library . . 537
 
-SQLite Directives. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+SQLite Directives. 537
 
-Opening a Connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538
+Opening a Connection . 538
 
-Creating a Table in Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 539
+Creating a Table in Memory . 539
 
-Closing a Connection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 539
+Closing a Connection . . 539
 
-Querying a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 540
+Querying a Database . . 540
 
-Parsing Result Sets. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 541
+Parsing Result Sets. . . . 541
 
-Retrieving Result Set Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 544
+Retrieving Result Set Details . 544
 
-Manipulating the Result Set Pointer . . . . . . . . . . . . . . . . . . . . . . . . . 546
+Manipulating the Result Set Pointer 546
 
-Learning More About Table Schemas . . . . . . . . . . . . . . . . . . . . . . . 548
+Learning More About Table Schemas . . . 548
 
-Working with Binary Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 549
+Working with Binary Data . . . 549
 
-Creating and Overriding SQLite Functions . . . . . . . . . . . . . . . . . . . . 550
+Creating and Overriding SQLite Functions 550
 
-Creating Aggregate Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 551
+Creating Aggregate Functions 551
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 553
+Summary . 553
 
-■**CHAPTER 23 Introducing PDO** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 555
+■**CHAPTER 23 Introducing PDO** . 555
 
-Another Database Abstraction Layer? . . . . . . . . . . . . . . . . . . . . . . . . . . . 556
+Another Database Abstraction Layer? . . 556
 
-Using PDO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 557
+Using PDO 557
 
-Installing PDO . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 558
+Installing PDO . . . 558
 
-PDO’s Database Support . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 558
+PDO’s Database Support . . . . 558
 
-Connecting to a Database Server and Selecting a Database. . . . . 559
+Connecting to a Database Server and Selecting a Database559
 
-Getting and Setting Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 561
+Getting and Setting Attributes 561
 
-Error Handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 561
+Error Handling . . . 561
 
-Query Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 562
+Query Execution . 562
 
-Prepared Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 564
+Prepared Statements . . 564
 
-Retrieving Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 567
+Retrieving Data . . 567
 
-Setting Bound Columns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 570
+Setting Bound Columns 570
 
-Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+Transactions . . . . 571
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 572
+Summary . 572
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1090,79 +1090,79 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **xix**
 
-■**CHAPTER 24 Introducing PostgreSQL** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 573
+■**CHAPTER 24 Introducing PostgreSQL** . . . 573
 
-PostgreSQL’s Key Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+PostgreSQL’s Key Features . 574
 
-Data Integrity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Data Integrity . . . 574
 
-Highly Scalable . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Highly Scalable . . 574
 
-Feature-Complete . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Feature-Complete 574
 
-Extensible . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Extensible . 574
 
-Platform Support. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Platform Support. 574
 
-Flexible Security Options . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 575
+Flexible Security Options . . . . 575
 
-Global Development, Local Flavor. . . . . . . . . . . . . . . . . . . . . . . . . . . 575
+Global Development, Local Flavor. . 575
 
-Hassle-Free Licensing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 575
+Hassle-Free Licensing . 575
 
-Multiple Support Avenues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 576
+Multiple Support Avenues . . . 576
 
-Real-World Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 576
+Real-World Users . . . . 576
 
-Afilias Inc. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 576
+Afilias Inc. . 576
 
-The National Weather Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 577
+The National Weather Service 577
 
-WhitePages.com . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 577
+WhitePages.com . 577
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 577
+Summary 577
 
-■**CHAPTER 25 Installing PostgreSQL** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 579
+■**CHAPTER 25 Installing PostgreSQL** . 579
 
-PostgreSQL Licensing Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . 579
+PostgreSQL Licensing Requirements . . . 579
 
-Downloading PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 579
+Downloading PostgreSQL . . 579
 
-Downloading the Unix Version. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 580
+Downloading the Unix Version580
 
-Downloading the Windows Version . . . . . . . . . . . . . . . . . . . . . . . . . 580
+Downloading the Windows Version 580
 
-Downloading the Documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . 581
+Downloading the Documentation . . 581
 
-Installing PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 581
+Installing PostgreSQL . 581
 
-Installing PostgreSQL on Linux and Unix . . . . . . . . . . . . . . . . . . . . . 582
+Installing PostgreSQL on Linux and Unix . 582
 
-Installing PostgreSQL on Windows 2000, XP, and 2003 . . . . . . . . 585
+Installing PostgreSQL on Windows 2000, XP, and 2003 . . . 585
 
-Installing PostgreSQL on Windows 95, 98, and ME . . . . . . . . . . . . 589
+Installing PostgreSQL on Windows 95, 98, and ME . . 589
 
-Starting PostgreSQL for the First Time . . . . . . . . . . . . . . . . . . . . . . . . . . . 589
+Starting PostgreSQL for the First Time . . 589
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 591
+Summary . 591
 
-■**CHAPTER 26 PostgreSQL Administration** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 593
+■**CHAPTER 26 PostgreSQL Administration** 593
 
-Starting and Stopping the Server . . . . . . . . . . . . . . . . . . . . . . . . . . . 593
+Starting and Stopping the Server . . 593
 
-Tuning Your PostgreSQL Installation . . . . . . . . . . . . . . . . . . . . . . . . 596
+Tuning Your PostgreSQL Installation . . . . 596
 
-Working with Tablespaces. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601
+Working with Tablespaces. . . 601
 
-Vacuum and Analyze . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 602
+Vacuum and Analyze . . 602
 
-Autovacuum . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 604
+Autovacuum . . . . 604
 
-Backup and Recovery. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 605
+Backup and Recovery. . 605
 
-Upgrading Between Versions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 609
+Upgrading Between Versions 609
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 610
+Summary . 610
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1170,77 +1170,77 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CON TEN TS
 
-■**CHAPTER 27 The Many PostgreSQL Clients** . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+■**CHAPTER 27 The Many PostgreSQL Clients** . . 611
 
-What Is psql? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+What Is psql? . . . 611
 
-psql Options. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 612
+psql Options612
 
-Commonplace psql Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+Commonplace psql Tasks . . 613
 
-Logging Onto and Off the Server. . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+Logging Onto and Off the Server. . . 613
 
-psql Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+psql Commands . 613
 
-Storing psql Variables and Options . . . . . . . . . . . . . . . . . . . . . . . . . . 615
+Storing psql Variables and Options . 615
 
-Learning More About Supported SQL Commands . . . . . . . . . . . . . 617
+Learning More About Supported SQL Commands . . . 617
 
-Executing a Query. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 618
+Executing a Query618
 
-Modifying the psql Prompt. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 618
+Modifying the psql Prompt. . . 618
 
-Controlling the Command History . . . . . . . . . . . . . . . . . . . . . . . . . . . 619
+Controlling the Command History . . 619
 
-GUI-based Clients . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 620
+GUI-based Clients . . . . 620
 
-pgAdmin III. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 620
+pgAdmin III. 620
 
-phpPgAdmin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 621
+phpPgAdmin . . . . 621
 
-Navicat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 622
+Navicat . . . . 622
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 623
+Summary . 623
 
-■**CHAPTER 28 From Databases to Datatypes** . . . . . . . . . . . . . . . . . . . . . . . . . . . 625
+■**CHAPTER 28 From Databases to Datatypes** . . 625
 
-Working with Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 625
+Working with Databases . . . 625
 
-Default Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 625
+Default Databases . . . . 625
 
-Creating a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 626
+Creating a Database . . . 626
 
-Connecting to a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 626
+Connecting to a Database . . . 626
 
-Deleting a Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 626
+Deleting a Database . . . 626
 
-Modifying Existing Databases . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+Modifying Existing Databases 627
 
-Working with Schemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+Working with Schemas . . . . 627
 
-Creating Schemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+Creating Schemas . . . . 627
 
-Altering Schemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 628
+Altering Schemas 628
 
-Dropping Schemas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 628
+Dropping Schemas . . . . 628
 
-The Schema Search Path . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 628
+The Schema Search Path . . . 628
 
-Working with Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 629
+Working with Tables . . 629
 
-Creating a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 629
+Creating a Table . 629
 
-Copying a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 630
+Copying a Table . 630
 
-Creating a Temporary Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 630
+Creating a Temporary Table . 630
 
-Viewing a Database’s Available Tables . . . . . . . . . . . . . . . . . . . . . . 631
+Viewing a Database’s Available Tables . . 631
 
-Viewing Table Structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 631
+Viewing Table Structure 631
 
-Deleting a Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 632
+Deleting a Table . 632
 
-Altering a Table Structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 632
+Altering a Table Structure . . 632
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1248,75 +1248,75 @@ Altering a Table Structure . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 **xxi**
 
-Working with Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 633
+Working with Sequences . . . 633
 
-Creating a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 633
+Creating a Sequence . . 633
 
-Modifying Sequences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 633
+Modifying Sequences . . 633
 
-Sequence Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 634
+Sequence Functions . . . 634
 
-Deleting a Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 635
+Deleting a Sequence . . 635
 
-Datatypes and Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 635
+Datatypes and Attributes . . . 635
 
-Datatypes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 635
+Datatypes. . 635
 
-Datatype Attributes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 640
+Datatype Attributes . . . . 640
 
-Composite Datatypes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 644
+Composite Datatypes . 644
 
-Creating Composite Types. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 644
+Creating Composite Types. . . 644
 
-Altering Composite Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 645
+Altering Composite Types . . . 645
 
-Dropping Composite Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 645
+Dropping Composite Types . . 645
 
-Working with Domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 645
+Working with Domains 645
 
-Creating Domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 646
+Creating Domains 646
 
-Altering Domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 646
+Altering Domains 646
 
-Dropping Domains . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 647
+Dropping Domains . . . . 647
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 647
+Summary . 647
 
-■**CHAPTER 29 Securing PostgreSQL** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 649
+■**CHAPTER 29 Securing PostgreSQL** . 649
 
-What You Should Do First . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 649
+What You Should Do First . . 649
 
-Securing the PostgreSQL Daemon . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 651
+Securing the PostgreSQL Daemon 651
 
-The PostgreSQL Access Privilege System . . . . . . . . . . . . . . . . . . . . . . . . 651
+The PostgreSQL Access Privilege System . . . . 651
 
-How the Privilege System Works . . . . . . . . . . . . . . . . . . . . . . . . . . . 652
+How the Privilege System Works . . 652
 
-Where Is Access Information Stored?. . . . . . . . . . . . . . . . . . . . . . . . 652
+Where Is Access Information Stored?. . . . 652
 
-User and Privilege Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . 657
+User and Privilege Management . . . 657
 
-Secure PostgreSQL Connections. . . . . . . . . . . . . . . . . . . . . . . . . . . . 661
+Secure PostgreSQL Connections. . . 661
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 663
+Summary . . 663
 
-■**CHAPTER 30 PHP’s PostgreSQL Functionality** . . . . . . . . . . . . . . . . . . . . . . . . . 665
+■**CHAPTER 30 PHP’s PostgreSQL Functionality** 665
 
-Prerequisites . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665
+Prerequisites . . . 665
 
-Enabling PHP’s PostgreSQL Extension . . . . . . . . . . . . . . . . . . . . . . . 665
+Enabling PHP’s PostgreSQL Extension . . . 665
 
-PHP’s PostgreSQL Configuration Directives. . . . . . . . . . . . . . . . . . . 666
+PHP’s PostgreSQL Configuration Directives. . . . 666
 
-Sample Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 667
+Sample Data . . . . 667
 
-PHP’s PostgreSQL Commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 667
+PHP’s PostgreSQL Commands . . . 667
 
-Establishing and Closing a Connection . . . . . . . . . . . . . . . . . . . . . . 667
+Establishing and Closing a Connection . . 667
 
-Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 671
+Queries . . . 671
 
-Query Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 671
+Query Execution . 671
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1324,71 +1324,71 @@ Query Execution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CON TEN TS
 
-Retrieving Status and Error Information . . . . . . . . . . . . . . . . . . . . . . . . . . 673
+Retrieving Status and Error Information . 673
 
-Recuperating Query Memory. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 678
+Recuperating Query Memory. 678
 
-Retrieving and Displaying Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 678
+Retrieving and Displaying Data . . . . 678
 
-Rows Selected and Rows Affected . . . . . . . . . . . . . . . . . . . . . . . . . . 681
+Rows Selected and Rows Affected . 681
 
-Inserting, Modifying, and Deleting Data . . . . . . . . . . . . . . . . . . . . . . . . . . 682
+Inserting, Modifying, and Deleting Data . 682
 
-Inserting Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 682
+Inserting Data . . . 682
 
-Mass Inserts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 683
+Mass Inserts . . . . 683
 
-Modifying Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 684
+Modifying Data . . 684
 
-Deleting Data. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 685
+Deleting Data. . . . 685
 
-Prepared Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 685
+Prepared Statements . 685
 
-The Information Schema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 687
+The Information Schema . . . 687
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 688
+Summary . 688
 
-■**CHAPTER 31 Practical Database Queries** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 689
+■**CHAPTER 31 Practical Database Queries** 689
 
-Sample Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 689
+Sample Data . . . 689
 
-Creating a PostgreSQL Database Class . . . . . . . . . . . . . . . . . . . . . . . . . . 690
+Creating a PostgreSQL Database Class . 690
 
-Why Use the PostgreSQL Database Class? . . . . . . . . . . . . . . . . . . . 692
+Why Use the PostgreSQL Database Class? . . . . 692
 
-Executing a Simple Query . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 693
+Executing a Simple Query . . . 693
 
-Retrieving Multiple Rows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 694
+Retrieving Multiple Rows . . . . 694
 
-Counting Queries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 694
+Counting Queries 694
 
-Tabular Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 695
+Tabular Output . . 695
 
-Linking to a Detailed View . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 697
+Linking to a Detailed View . . 697
 
-Sorting Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 699
+Sorting Output . . . 699
 
-Creating Paged Output . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 701
+Creating Paged Output . 701
 
-Listing Page Numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 704
+Listing Page Numbers . 704
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 706
+Summary . 706
 
-■**CHAPTER 32 Views and Rules** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 707
+■**CHAPTER 32 Views and Rules** . 707
 
-Working with Views . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 707
+Working with Views . . 707
 
-The PostgreSQL Rule System . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 708
+The PostgreSQL Rule System . . . . 708
 
-Working with Rules. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 708
+Working with Rules. . . . 708
 
-Rule Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 710
+Rule Types . 710
 
-Making Views Interactive . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 711
+Making Views Interactive . . . 711
 
-Working with Views from Within PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . 716
+Working with Views from Within PHP . . . 716
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 717
+Summary . 717
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1396,75 +1396,75 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **xxiii**
 
-■**CHAPTER 33 PostgreSQL Functions** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 719
+■**CHAPTER 33 PostgreSQL Functions** 719
 
-Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 719
+Operators . 719
 
-Logical Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 719
+Logical Operators 719
 
-Comparison Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 720
+Comparison Operators . 720
 
-Mathematical Operators. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 721
+Mathematical Operators721
 
-String Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 721
+String Operators . 721
 
-Operator Precedence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 722
+Operator Precedence . . 722
 
-Internal Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 723
+Internal Functions . . . . 723
 
-Date and Time Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 723
+Date and Time Functions . . . . 723
 
-String Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 724
+String Functions . 724
 
-Aggregate Functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 724
+Aggregate Functions. . . 724
 
-Conditional Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 725
+Conditional Expressions 725
 
-More Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 727
+More Functions . . 727
 
-User-Defined Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 727
+User-Defined Functions . . . . 727
 
-Create Function Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 727
+Create Function Syntax 727
 
-SQL-Based Functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 728
+SQL-Based Functions. . 728
 
-PL/pgSQL-Based Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 730
+PL/pgSQL-Based Functions . . 730
 
-Other Procedural Languages . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 736
+Other Procedural Languages . 736
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 738
+Summary . 738
 
-■**CHAPTER 34 PostgreSQL Triggers** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 739
+■**CHAPTER 34 PostgreSQL Triggers** . . 739
 
-What Is a Trigger? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 739
+What Is a Trigger? . . . . 739
 
-Adding Triggers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 739
+Adding Triggers. . 739
 
-Modifying Triggers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 740
+Modifying Triggers . . . . 740
 
-Removing Triggers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 741
+Removing Triggers . . . . 741
 
-Writing Trigger Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 741
+Writing Trigger Functions . . . 741
 
-Example Trigger Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 742
+Example Trigger Functions . . 742
 
-Viewing Existing Triggers. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 746
+Viewing Existing Triggers. . . . 746
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 747
+Summary . 747
 
-■**CHAPTER 35 Indexes and Searching** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 749
+■**CHAPTER 35 Indexes and Searching** . . . . 749
 
-Database Indexing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 749
+Database Indexing . . . 749
 
-Primary Key Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 750
+Primary Key Indexes . . . 750
 
-Unique Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 750
+Unique Indexes . . 750
 
-Normal Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 751
+Normal Indexes . . 751
 
-Full-Text Indexes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 755
+Full-Text Indexes 755
 
-Indexing Best Practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 759
+Indexing Best Practices 759
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -1472,51 +1472,51 @@ Indexing Best Practices . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CON TEN TS
 
-Forms-Based Searches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 759
+Forms-Based Searches . . . . 759
 
-Performing a Simple Search . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 760
+Performing a Simple Search . 760
 
-Extending Search Capabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 761
+Extending Search Capabilities 761
 
-Performing a Full-Text Search . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 763
+Performing a Full-Text Search . . . . 763
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 764
+Summary . 764
 
-■**CHAPTER 36 Transactions** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 765
+■**CHAPTER 36 Transactions** 765
 
-What’s a Transaction? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 765
+What’s a Transaction? 765
 
-PostgreSQL’s Transactional Capabilities . . . . . . . . . . . . . . . . . . . . . . . . . 766
+PostgreSQL’s Transactional Capabilities 766
 
-Transaction Isolation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 766
+Transaction Isolation . . 766
 
-Sample Project . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 767
+Sample Project . . 767
 
-A Simple Example. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 768
+A Simple Example768
 
-Transaction Usage Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 771
+Transaction Usage Tips 771
 
-Building Transactional Applications with PHP . . . . . . . . . . . . . . . . . . . . . 771
+Building Transactional Applications with PHP . 771
 
-Beware of pg_query(). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 772
+Beware of pg_query(). . 772
 
-The Swap Meet Revisited . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 773
+The Swap Meet Revisited . . . 773
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 775
+Summary . 775
 
-■**CHAPTER 37 Importing and Exporting Data** . . . . . . . . . . . . . . . . . . . . . . . . . . . 777
+■**CHAPTER 37 Importing and Exporting Data** . . 777
 
-The COPY Command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 777
+The COPY Command . 777
 
-Copying Data to and from a Table . . . . . . . . . . . . . . . . . . . . . . . . . . 778
+Copying Data to and from a Table . 778
 
-Calling COPY from a PHP Script . . . . . . . . . . . . . . . . . . . . . . . . . . . . 782
+Calling COPY from a PHP Script . . . 782
 
-Importing and Exporting Data with phpPgAdmin . . . . . . . . . . . . . . . . . . 783
+Importing and Exporting Data with phpPgAdmin . . . 783
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 785
+Summary . 785
 
-■**INDEX** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 787
+■**INDEX** . . . 787
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 

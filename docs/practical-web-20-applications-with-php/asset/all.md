@@ -182,59 +182,59 @@ The source code for this book is available to readers at [http://www.apress.com.
 
 Contents at a Glance
 
-About the Author . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [. . xv](#index_split_000.html#p16)
+About the Author . . . . [. . xv](#index_split_000.html#p16)
 
-About the Technical Reviewer [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvi](#index_split_000.html#p17)
+About the Technical Reviewer [. . . . xvi](#index_split_000.html#p17)
 
-Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [. . . . . xvii](#index_split_000.html#p18)
+Introduction . . . . [xvii](#index_split_000.html#p18)
 
 ■**CHAPTER 1**
 
-Application Planning and Design . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [1](#index_split_000.html#p23)
+Application Planning and Design . [1](#index_split_000.html#p23)
 
 ■**CHAPTER 2**
 
-Setting Up the Application Framework [. . . . . . . . . . . . . . . . . . . . . . . . . . 9](#index_split_000.html#p31)
+Setting Up the Application Framework [. 9](#index_split_000.html#p31)
 
 ■**CHAPTER 3**
 
-User Authentication, Authorization, and Management [. . . . . . . . . . . . . 45](#index_split_001.html#p67)
+User Authentication, Authorization, and Management [. . . 45](#index_split_001.html#p67)
 
 ■**CHAPTER 4**
 
-User Registration, Login, and Logout [. . . . . . . . . . . . . . . . . . . . . . . . . . . 73](#index_split_002.html#p95)
+User Registration, Login, and Logout [. . 73](#index_split_002.html#p95)
 
 ■**CHAPTER 5**
 
-Introduction to Prototype and Scriptaculous [. . . . . . . . . . . . . . . . . . 123](#index_split_002.html#p145)
+Introduction to Prototype and Scriptaculous [. . . 123](#index_split_002.html#p145)
 
 ■**CHAPTER 6**
 
-Styling the Web Application [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171](#index_split_003.html#p193)
+Styling the Web Application [. . . . 171](#index_split_003.html#p193)
 
 ■**CHAPTER 7**
 
-Building the Blogging System [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219](#index_split_003.html#p241)
+Building the Blogging System [. . 219](#index_split_003.html#p241)
 
 ■**CHAPTER 8**
 
-Extending the Blog Manager [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265](#index_split_004.html#p287)
+Extending the Blog Manager [. . . . 265](#index_split_004.html#p287)
 
 ■**CHAPTER 9**
 
-Personalized User Areas [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297](#index_split_004.html#p319)
+Personalized User Areas [. . . 297](#index_split_004.html#p319)
 
-■**CHAPTER 10** Implementing Web 2.0 Features [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335](#index_split_005.html#p357)
+■**CHAPTER 10** Implementing Web 2.0 Features [335](#index_split_005.html#p357)
 
-■**CHAPTER 11** A Dynamic Image Gallery [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371](#index_split_005.html#p393)
+■**CHAPTER 11** A Dynamic Image Gallery [. . 371](#index_split_005.html#p393)
 
-■**CHAPTER 12** Implementing Site Search [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427](#index_split_006.html#p449)
+■**CHAPTER 12** Implementing Site Search [. 427](#index_split_006.html#p449)
 
-■**CHAPTER 13** Integrating Google Maps [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 469](#index_split_006.html#p491)
+■**CHAPTER 13** Integrating Google Maps [. . 469](#index_split_006.html#p491)
 
-■**CHAPTER 14** Deployment and Maintenance [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519](#index_split_007.html#p541)
+■**CHAPTER 14** Deployment and Maintenance [. . 519](#index_split_007.html#p541)
 
-■**INDEX** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [. . . . . . . 547](#index_split_007.html#p569)
+■**INDEX** . . . . [. . 547](#index_split_007.html#p569)
 
 [**iii**](#index_split_000.html#p4)
 
@@ -248,65 +248,65 @@ Personalized User Areas [. . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 Contents
 
-About the Author . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [. . xv](#index_split_000.html#p16)
+About the Author . . . . [. . xv](#index_split_000.html#p16)
 
-About the Technical Reviewer [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvi](#index_split_000.html#p17)
+About the Technical Reviewer [. . . . xvi](#index_split_000.html#p17)
 
-Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [. . . . . xvii](#index_split_000.html#p18)
+Introduction . . . . [xvii](#index_split_000.html#p18)
 
 ■**CHAPTER 1**
 
-**Application Planning and Design** . . . . . . . . . . . . . . . . . . . . . . . . . . [1](#index_split_000.html#p23)
+**Application Planning and Design** . [1](#index_split_000.html#p23)
 
-What Is Web 2.0? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [2](#index_split_000.html#p24)
+What Is Web 2.0? . . [2](#index_split_000.html#p24)
 
-Database Connectivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [2](#index_split_000.html#p24)
+Database Connectivity . . . [2](#index_split_000.html#p24)
 
-Web Site Templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [3](#index_split_000.html#p25)
+Web Site Templates . [3](#index_split_000.html#p25)
 
-Web Site Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [3](#index_split_000.html#p25)
+Web Site Features . . [3](#index_split_000.html#p25)
 
-Main Home Page and User Home Page . . . . . . . . . . . . . . . . . . . . . . . . [3](#index_split_000.html#p25)
+Main Home Page and User Home Page . . . . [3](#index_split_000.html#p25)
 
-User Registration [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4](#index_split_000.html#p26)
+User Registration [. . . 4](#index_split_000.html#p26)
 
-Account Login and Management [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4](#index_split_000.html#p26)
+Account Login and Management [4](#index_split_000.html#p26)
 
-User Blogs [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4](#index_split_000.html#p26)
+User Blogs [. . . . 4](#index_split_000.html#p26)
 
-Web Site Search [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4](#index_split_000.html#p26)
+Web Site Search [. . . . 4](#index_split_000.html#p26)
 
-Application Management [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+Application Management [. 5](#index_split_000.html#p27)
 
-Other Aspects of Development [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+Other Aspects of Development [. 5](#index_split_000.html#p27)
 
-Search-Engine Optimization [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+Search-Engine Optimization [. . . . 5](#index_split_000.html#p27)
 
-PHPDoc-Style Commenting [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5](#index_split_000.html#p27)
+PHPDoc-Style Commenting [. . . . 5](#index_split_000.html#p27)
 
-Security [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7](#index_split_000.html#p29)
+Security [. 7](#index_split_000.html#p29)
 
-Application Logging [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7](#index_split_000.html#p29)
+Application Logging [. 7](#index_split_000.html#p29)
 
-Maintainability and Extensibility [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7](#index_split_000.html#p29)
+Maintainability and Extensibility [. 7](#index_split_000.html#p29)
 
-Version Control and Unit Testing [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8](#index_split_000.html#p30)
+Version Control and Unit Testing [8](#index_split_000.html#p30)
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [8](#index_split_000.html#p30)
+Summary [8](#index_split_000.html#p30)
 
 ■**CHAPTER 2**
 
-**Setting Up the Application Framework** [. . . . . . . . . . . . . . . . . . . . 9](#index_split_000.html#p31)
+**Setting Up the Application Framework** [9](#index_split_000.html#p31)
 
-Web Server Setup [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9](#index_split_000.html#p31)
+Web Server Setup [. . . 9](#index_split_000.html#p31)
 
-Operating System [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10](#index_split_000.html#p32)
+Operating System [. . 10](#index_split_000.html#p32)
 
-Installing the Apache HTTP Server [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 10](#index_split_000.html#p32)
+Installing the Apache HTTP Server [. . . 10](#index_split_000.html#p32)
 
-Installing MySQL 5 [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11](#index_split_000.html#p33)
+Installing MySQL 5 [. 11](#index_split_000.html#p33)
 
-Installing PHP 5.2.3 [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11](#index_split_000.html#p33)
+Installing PHP 5.2.3 [11](#index_split_000.html#p33)
 
 [**v**](#index_split_000.html#p6)
 
@@ -318,83 +318,83 @@ Installing PHP 5.2.3 [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CONTENTS
 
-Application Filesystem Structure [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12](#index_split_000.html#p34)
+Application Filesystem Structure [. . . . 12](#index_split_000.html#p34)
 
-Web Root Directory [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12](#index_split_000.html#p34)
+Web Root Directory [. 12](#index_split_000.html#p34)
 
-Data Storage Directory [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12](#index_split_000.html#p34)
+Data Storage Directory [. . 12](#index_split_000.html#p34)
 
-PHP Classes Directory [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13](#index_split_000.html#p35)
+PHP Classes Directory [. . . 13](#index_split_000.html#p35)
 
-Templates Directory [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13](#index_split_000.html#p35)
+Templates Directory [13](#index_split_000.html#p35)
 
-Full Directory Structure [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13](#index_split_000.html#p35)
+Full Directory Structure [. . 13](#index_split_000.html#p35)
 
-Installing the Zend Framework [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14](#index_split_000.html#p36)
+Installing the Zend Framework [14](#index_split_000.html#p36)
 
-Configuring the Web Server [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15](#index_split_000.html#p37)
+Configuring the Web Server [. . . 15](#index_split_000.html#p37)
 
-Creating a Virtual Host in Linux [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15](#index_split_000.html#p37)
+Creating a Virtual Host in Linux [15](#index_split_000.html#p37)
 
-Creating a Virtual Host in Windows [. . . . . . . . . . . . . . . . . . . . . . . . . . . 17](#index_split_000.html#p39)
+Creating a Virtual Host in Windows [. . 17](#index_split_000.html#p39)
 
-Restarting Your Web Server [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17](#index_split_000.html#p39)
+Restarting Your Web Server [. . . . 17](#index_split_000.html#p39)
 
-Setting Up the Database [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17](#index_split_000.html#p39)
+Setting Up the Database [. 17](#index_split_000.html#p39)
 
-Using the Model-View-Controller Pattern [. . . . . . . . . . . . . . . . . . . . . . . . . . . 18](#index_split_000.html#p40)
+Using the Model-View-Controller Pattern [. . 18](#index_split_000.html#p40)
 
-Separating Application Logic from Presentation Logic [. . . . . . . . . . . 19](#index_split_000.html#p41)
+Separating Application Logic from Presentation Logic [. 19](#index_split_000.html#p41)
 
-Directing All Requests to index.php [. . . . . . . . . . . . . . . . . . . . . . . . . . . 21](#index_split_000.html#p43)
+Directing All Requests to index.php [. . 21](#index_split_000.html#p43)
 
-Introduction to the Zend_Controller Class [. . . . . . . . . . . . . . . . . . . . . 22](#index_split_000.html#p44)
+Introduction to the Zend_Controller Class [. 22](#index_split_000.html#p44)
 
-How Requests Work with Zend_Controller [. . . . . . . . . . . . . . . . . . . . . 23](#index_split_000.html#p45)
+How Requests Work with Zend_Controller [. 23](#index_split_000.html#p45)
 
-Creating the IndexController [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25](#index_split_001.html#p47)
+Creating the IndexController [. . . 25](#index_split_001.html#p47)
 
-Defining Application Settings [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27](#index_split_001.html#p49)
+Defining Application Settings [. . 27](#index_split_001.html#p49)
 
-Connecting to the Database [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29](#index_split_001.html#p51)
+Connecting to the Database [. . . 29](#index_split_001.html#p51)
 
-Testing the Database Connection [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 30](#index_split_001.html#p52)
+Testing the Database Connection [. . . 30](#index_split_001.html#p52)
 
-The Smarty Template Engine [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30](#index_split_001.html#p52)
+The Smarty Template Engine [. . 30](#index_split_001.html#p52)
 
-Why Not Use a Different Template Engine? [. . . . . . . . . . . . . . . . . . . . 33](#index_split_001.html#p55)
+Why Not Use a Different Template Engine? [33](#index_split_001.html#p55)
 
-Downloading and Installing Smarty [. . . . . . . . . . . . . . . . . . . . . . . . . . . 34](#index_split_001.html#p56)
+Downloading and Installing Smarty [. . 34](#index_split_001.html#p56)
 
-Automatic View Rendering with Zend_Controller [. . . . . . . . . . . . . . . 36](#index_split_001.html#p58)
+Automatic View Rendering with Zend_Controller [36](#index_split_001.html#p58)
 
-Integrating Smarty with the Web Site Controllers [. . . . . . . . . . . . . . . 39](#index_split_001.html#p61)
+Integrating Smarty with the Web Site Controllers [39](#index_split_001.html#p61)
 
-Adding Logging Capabilities [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41](#index_split_001.html#p63)
+Adding Logging Capabilities [. . . 41](#index_split_001.html#p63)
 
-Writing to the Log File [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43](#index_split_001.html#p65)
+Writing to the Log File [. . . 43](#index_split_001.html#p65)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44](#index_split_001.html#p66)
+Summary [. . . . 44](#index_split_001.html#p66)
 
 ■**CHAPTER 3**
 
-**User Authentication, Authorization, and Management** [. . . . . . 45](#index_split_001.html#p67)
+**User Authentication, Authorization, and Management** [. 45](#index_split_001.html#p67)
 
-Creating the User Database Table [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45](#index_split_001.html#p67)
+Creating the User Database Table [. . . 45](#index_split_001.html#p67)
 
-Timestamps [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47](#index_split_001.html#p69)
+Timestamps [. . 47](#index_split_001.html#p69)
 
-User Profiles [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48](#index_split_001.html#p70)
+User Profiles [. 48](#index_split_001.html#p70)
 
-Introduction to Zend_Auth [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49](#index_split_001.html#p71)
+Introduction to Zend_Auth [. . . . 49](#index_split_001.html#p71)
 
-Instantiating Zend_Auth [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50](#index_split_001.html#p72)
+Instantiating Zend_Auth [. 50](#index_split_001.html#p72)
 
-Authenticating with Zend_Auth [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52](#index_split_001.html#p74)
+Authenticating with Zend_Auth [52](#index_split_001.html#p74)
 
-Introduction to Zend_Acl [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54](#index_split_001.html#p76)
+Introduction to Zend_Acl [. 54](#index_split_001.html#p76)
 
-A Zend_Acl Example [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55](#index_split_001.html#p77)
+A Zend_Acl Example [. . . . 55](#index_split_001.html#p77)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -404,81 +404,81 @@ A Zend_Acl Example [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 [**vii**](#index_split_000.html#p8)
 
-Combining Zend_Auth, Zend_Acl, and Zend_Controller_Front [. . . . . . . . 57](#index_split_001.html#p79)
+Combining Zend_Auth, Zend_Acl, and Zend_Controller_Front [. . . 57](#index_split_001.html#p79)
 
-Managing User Records with DatabaseObject [. . . . . . . . . . . . . . . . . . . . . . 61](#index_split_001.html#p83)
+Managing User Records with DatabaseObject [. . 61](#index_split_001.html#p83)
 
-The DatabaseObject_User Class [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62](#index_split_001.html#p84)
+The DatabaseObject_User Class [. . . . 62](#index_split_001.html#p84)
 
-Using DatabaseObject_User [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64](#index_split_001.html#p86)
+Using DatabaseObject_User [. . . 64](#index_split_001.html#p86)
 
-Managing User Profiles [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66](#index_split_001.html#p88)
+Managing User Profiles [. . 66](#index_split_001.html#p88)
 
-Using Profile_User [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 67](#index_split_002.html#p89)
+Using Profile_User [. 67](#index_split_002.html#p89)
 
-Integrating Profile_User with DatabaseObject_User [. . . . . . . . . . . . 69](#index_split_002.html#p91)
+Integrating Profile_User with DatabaseObject_User [. . 69](#index_split_002.html#p91)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72](#index_split_002.html#p94)
+Summary [. . . . 72](#index_split_002.html#p94)
 
 ■**CHAPTER 4**
 
-**User Registration, Login, and Logout** [. . . . . . . . . . . . . . . . . . . . . 73](#index_split_002.html#p95)
+**User Registration, Login, and Logout** [. 73](#index_split_002.html#p95)
 
-Adding User Registration to the Application [. . . . . . . . . . . . . . . . . . . . . . . . 73](#index_split_002.html#p95)
+Adding User Registration to the Application [. . . . 73](#index_split_002.html#p95)
 
-Creating the Form Processor for User Registration [. . . . . . . . . . . . . 74](#index_split_002.html#p96)
+Creating the Form Processor for User Registration [. . . 74](#index_split_002.html#p96)
 
 Displaying the Registration Form and Processing Registrations [. . . 81](#index_split_002.html#p103)
 
-Adding CAPTCHA to the User Registration Form [. . . . . . . . . . . . . . . . 88](#index_split_002.html#p110)
+Adding CAPTCHA to the User Registration Form [. 88](#index_split_002.html#p110)
 
-Adding E-mail Functionality [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95](#index_split_002.html#p117)
+Adding E-mail Functionality [. . . 95](#index_split_002.html#p117)
 
-Implementing Account Login and Logout [. . . . . . . . . . . . . . . . . . . . . . . . . . 100](#index_split_002.html#p122)
+Implementing Account Login and Logout [. 100](#index_split_002.html#p122)
 
-Creating the Login Template [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101](#index_split_002.html#p123)
+Creating the Login Template [. . 101](#index_split_002.html#p123)
 
-Adding the Account Controller Login Action [. . . . . . . . . . . . . . . . . . . 102](#index_split_002.html#p124)
+Adding the Account Controller Login Action [. . . . 102](#index_split_002.html#p124)
 
-Logging Successful and Failed Login Attempts [. . . . . . . . . . . . . . . . 105](#index_split_002.html#p127)
+Logging Successful and Failed Login Attempts [. 105](#index_split_002.html#p127)
 
-Logging Users Out of Their Accounts [. . . . . . . . . . . . . . . . . . . . . . . . 107](#index_split_002.html#p129)
+Logging Users Out of Their Accounts [. . . . 107](#index_split_002.html#p129)
 
-Dealing with Forgotten Passwords [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108](#index_split_002.html#p130)
+Dealing with Forgotten Passwords [. 108](#index_split_002.html#p130)
 
-Resetting a User’s Password [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109](#index_split_002.html#p131)
+Resetting a User’s Password [. 109](#index_split_002.html#p131)
 
-Functions for Resetting Passwords [. . . . . . . . . . . . . . . . . . . . . . . . . . 112](#index_split_002.html#p134)
+Functions for Resetting Passwords [. 112](#index_split_002.html#p134)
 
-Implementing Account Management [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116](#index_split_002.html#p138)
+Implementing Account Management [. . . . 116](#index_split_002.html#p138)
 
-Creating the Account Home Page [. . . . . . . . . . . . . . . . . . . . . . . . . . . 116](#index_split_002.html#p138)
+Creating the Account Home Page [. . 116](#index_split_002.html#p138)
 
-Updating the Web Site Navigation [. . . . . . . . . . . . . . . . . . . . . . . . . . . 118](#index_split_002.html#p140)
+Updating the Web Site Navigation [. . 118](#index_split_002.html#p140)
 
-Allowing Users to Update Their Details [. . . . . . . . . . . . . . . . . . . . . . . 120](#index_split_002.html#p142)
+Allowing Users to Update Their Details [. . . 120](#index_split_002.html#p142)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121](#index_split_002.html#p143)
+Summary [. . . 121](#index_split_002.html#p143)
 
 ■**CHAPTER 5**
 
-**Introduction to Prototype and Scriptaculous** [. . . . . . . . . . . . 123](#index_split_002.html#p145)
+**Introduction to Prototype and Scriptaculous** [. . 123](#index_split_002.html#p145)
 
-Downloading and Installing Prototype [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 123](#index_split_002.html#p145)
+Downloading and Installing Prototype [. . . 123](#index_split_002.html#p145)
 
-Prototype Documentation [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124](#index_split_002.html#p146)
+Prototype Documentation [. . . . 124](#index_split_002.html#p146)
 
-Selecting Objects in the Document Object Model [. . . . . . . . . . . . . . . . . . . 124](#index_split_002.html#p146)
+Selecting Objects in the Document Object Model [. . . . 124](#index_split_002.html#p146)
 
-The $() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124](#index_split_002.html#p146)
+The $() Function [. . 124](#index_split_002.html#p146)
 
-The getElementsByClassName() Function [. . . . . . . . . . . . . . . . . . . . 125](#index_split_002.html#p147)
+The getElementsByClassName() Function [125](#index_split_002.html#p147)
 
-The $$() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128](#index_split_002.html#p150)
+The $$() Function [. 128](#index_split_002.html#p150)
 
-The getElementsBySelector() Function [. . . . . . . . . . . . . . . . . . . . . . . 129](#index_split_002.html#p151)
+The getElementsBySelector() Function [. . . 129](#index_split_002.html#p151)
 
-Prototype’s Hash Object [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129](#index_split_002.html#p151)
+Prototype’s Hash Object [129](#index_split_002.html#p151)
 
 [**vii**](#index_split_000.html#p8)
 
@@ -490,87 +490,87 @@ Prototype’s Hash Object [. . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 ■CONTENTS
 
-Other Element Extensions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130](#index_split_002.html#p152)
+Other Element Extensions [. . . . 130](#index_split_002.html#p152)
 
-Showing and Hiding Elements [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131](#index_split_002.html#p153)
+Showing and Hiding Elements [131](#index_split_002.html#p153)
 
-Retrieving Dimensions of Elements [. . . . . . . . . . . . . . . . . . . . . . 131](#index_split_002.html#p153)
+Retrieving Dimensions of Elements [. . 131](#index_split_002.html#p153)
 
-Managing Classes of Elements [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131](#index_split_002.html#p153)
+Managing Classes of Elements [. . . . 131](#index_split_002.html#p153)
 
-Manipulating Strings with Prototype [. . . . . . . . . . . . . . . . . . . . . . . . . 133](#index_split_002.html#p155)
+Manipulating Strings with Prototype [133](#index_split_002.html#p155)
 
-Ajax Operations in Prototype [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134](#index_split_002.html#p156)
+Ajax Operations in Prototype [. 134](#index_split_002.html#p156)
 
-Ajax Request Options [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134](#index_split_002.html#p156)
+Ajax Request Options [. . . 134](#index_split_002.html#p156)
 
-Ajax Callback Functions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135](#index_split_002.html#p157)
+Ajax Callback Functions [. 135](#index_split_002.html#p157)
 
-JavaScript Object Notation (JSON) [. . . . . . . . . . . . . . . . . . . . . . . . . . 138](#index_split_002.html#p160)
+JavaScript Object Notation (JSON) [. 138](#index_split_002.html#p160)
 
-An Ajax.Request Example [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140](#index_split_002.html#p162)
+An Ajax.Request Example [. . . . 140](#index_split_002.html#p162)
 
-Event Handling in Prototype [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145](#index_split_003.html#p167)
+Event Handling in Prototype [. . 145](#index_split_003.html#p167)
 
-Observing an Event [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145](#index_split_003.html#p167)
+Observing an Event [. . . . 145](#index_split_003.html#p167)
 
-Finding Out Which Element an Event Occurred On [. . . . . . . . . . . . . 146](#index_split_003.html#p168)
+Finding Out Which Element an Event Occurred On [. . . 146](#index_split_003.html#p168)
 
-Canceling an Event [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147](#index_split_003.html#p169)
+Canceling an Event [147](#index_split_003.html#p169)
 
-Creating JavaScript Classes in Prototype [. . . . . . . . . . . . . . . . . . . . . . . . . 147](#index_split_003.html#p169)
+Creating JavaScript Classes in Prototype [147](#index_split_003.html#p169)
 
-Creating a Class [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147](#index_split_003.html#p169)
+Creating a Class [. . 147](#index_split_003.html#p169)
 
-Binding Function Calls to Objects [. . . . . . . . . . . . . . . . . . . . . . . . . . . 148](#index_split_003.html#p170)
+Binding Function Calls to Objects [. . 148](#index_split_003.html#p170)
 
-From Prototype to Scriptaculous [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151](#index_split_003.html#p173)
+From Prototype to Scriptaculous [. . . 151](#index_split_003.html#p173)
 
-Prebuilt Controls [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151](#index_split_003.html#p173)
+Prebuilt Controls [. . 151](#index_split_003.html#p173)
 
-Drag and Drop [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152](#index_split_003.html#p174)
+Drag and Drop [. . . . 152](#index_split_003.html#p174)
 
-Visual Effects [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 152](#index_split_003.html#p174)
+Visual Effects [152](#index_split_003.html#p174)
 
-DOM Element Builder [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153](#index_split_003.html#p175)
+DOM Element Builder [. . . 153](#index_split_003.html#p175)
 
-JavaScript Unit Testing [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153](#index_split_003.html#p175)
+JavaScript Unit Testing [. 153](#index_split_003.html#p175)
 
-Downloading and Installing Scriptaculous [. . . . . . . . . . . . . . . . . . . . . . . . . 154](#index_split_003.html#p176)
+Downloading and Installing Scriptaculous [154](#index_split_003.html#p176)
 
 Combining Prototype, Scriptaculous, Ajax, and PHP
 
-in a Useful Example [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154](#index_split_003.html#p176)
+in a Useful Example [. 154](#index_split_003.html#p176)
 
-Creating the Main HTML Page: index.php [. . . . . . . . . . . . . . . . . . . . 156](#index_split_003.html#p178)
+Creating the Main HTML Page: index.php [156](#index_split_003.html#p178)
 
-Styling the Application: styles.css [. . . . . . . . . . . . . . . . . . . . . . . . . . . 157](#index_split_003.html#p179)
+Styling the Application: styles.css [. . 157](#index_split_003.html#p179)
 
-Creating and Populating the Database: schema.sql [. . . . . . . . . . . . 158](#index_split_003.html#p180)
+Creating and Populating the Database: schema.sql [. . 158](#index_split_003.html#p180)
 
-Managing the List Items on the Server Side: items.php [. . . . . . . . 159](#index_split_003.html#p181)
+Managing the List Items on the Server Side: items.php [. . . 159](#index_split_003.html#p181)
 
 Processing Ajax Requests on the Server Side: processor.php [. . . 161](#index_split_003.html#p183)
 
-Creating the Client-Side Application Logic: scripts.js [. . . . . . . . . . . 163](#index_split_003.html#p185)
+Creating the Client-Side Application Logic: scripts.js [. 163](#index_split_003.html#p185)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169](#index_split_003.html#p191)
+Summary [. . . 169](#index_split_003.html#p191)
 
 ■**CHAPTER 6**
 
-**Styling the Web Application** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171](#index_split_003.html#p193)
+**Styling the Web Application** [171](#index_split_003.html#p193)
 
-Adding Page Titles and Breadcrumbs [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171](#index_split_003.html#p193)
+Adding Page Titles and Breadcrumbs [. . . . 171](#index_split_003.html#p193)
 
-The Breadcrumbs Class [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172](#index_split_003.html#p194)
+The Breadcrumbs Class [. 172](#index_split_003.html#p194)
 
-Generating URLs [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174](#index_split_003.html#p196)
+Generating URLs [. . 174](#index_split_003.html#p196)
 
-Setting the Title and Trail for Each Controller Action [. . . . . . . . . . . . 178](#index_split_003.html#p200)
+Setting the Title and Trail for Each Controller Action [. . 178](#index_split_003.html#p200)
 
-Creating a Smarty Plug-In to Output Breadcrumbs [. . . . . . . . . . . . 180](#index_split_003.html#p202)
+Creating a Smarty Plug-In to Output Breadcrumbs [. . 180](#index_split_003.html#p202)
 
-Displaying the Page Title [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182](#index_split_003.html#p204)
+Displaying the Page Title [182](#index_split_003.html#p204)
 
 *809b8b6f91d5ff50033254241f3132ed*
 
@@ -582,81 +582,81 @@ Displaying the Page Title [. . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 [**ix**](#index_split_000.html#p10)
 
-Integrating the Design into the Application [. . . . . . . . . . . . . . . . . . . . . . . . 183](#index_split_003.html#p205)
+Integrating the Design into the Application [. . . . 183](#index_split_003.html#p205)
 
-Creating the Static HTML [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184](#index_split_003.html#p206)
+Creating the Static HTML [. . . . 184](#index_split_003.html#p206)
 
-Moving the HTML Markup into Smarty Templates [. . . . . . . . . . . . . 188](#index_split_003.html#p210)
+Moving the HTML Markup into Smarty Templates [. . . 188](#index_split_003.html#p210)
 
-Constructing the CSS [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 192](#index_split_003.html#p214)
+Constructing the CSS [. . . 192](#index_split_003.html#p214)
 
-Specifying Media Types and Loading the CSS File [. . . . . . . . . . . . . 192](#index_split_003.html#p214)
+Specifying Media Types and Loading the CSS File [. . . 192](#index_split_003.html#p214)
 
-Creating the Application CSS [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 193](#index_split_003.html#p215)
+Creating the Application CSS [. 193](#index_split_003.html#p215)
 
-Creating a Print-Only Style Sheet [. . . . . . . . . . . . . . . . . . . . . . . . . . . 198](#index_split_003.html#p220)
+Creating a Print-Only Style Sheet [. . 198](#index_split_003.html#p220)
 
-The Full Application Style Sheet [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201](#index_split_003.html#p223)
+The Full Application Style Sheet [. . . . 201](#index_split_003.html#p223)
 
-Styling the Application Web Forms [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 204](#index_split_003.html#p226)
+Styling the Application Web Forms [. 204](#index_split_003.html#p226)
 
-Loading Prototype and Scriptaculous [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207](#index_split_003.html#p229)
+Loading Prototype and Scriptaculous [. . . . 207](#index_split_003.html#p229)
 
-Implementing Client-Side Form Validation [. . . . . . . . . . . . . . . . . . . . . . . . . 208](#index_split_003.html#p230)
+Implementing Client-Side Form Validation [208](#index_split_003.html#p230)
 
-Adding JSON Support to CustomControllerAction [. . . . . . . . . . . . . . 209](#index_split_003.html#p231)
+Adding JSON Support to CustomControllerAction [. . . . 209](#index_split_003.html#p231)
 
-Modifying the Form Processor [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209](#index_split_003.html#p231)
+Modifying the Form Processor [209](#index_split_003.html#p231)
 
-Modifying the Registration Controller Action [. . . . . . . . . . . . . . . . . . 210](#index_split_003.html#p232)
+Modifying the Registration Controller Action [. . . 210](#index_split_003.html#p232)
 
-Creating the JavaScript Form Validator [. . . . . . . . . . . . . . . . . . . . . . . 212](#index_split_003.html#p234)
+Creating the JavaScript Form Validator [. . . 212](#index_split_003.html#p234)
 
-Loading the UserRegistrationForm Class [. . . . . . . . . . . . . . . . . . . . . 216](#index_split_003.html#p238)
+Loading the UserRegistrationForm Class [. 216](#index_split_003.html#p238)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 217](#index_split_003.html#p239)
+Summary [. . . 217](#index_split_003.html#p239)
 
 ■**CHAPTER 7**
 
-**Building the Blogging System** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 219](#index_split_003.html#p241)
+**Building the Blogging System** [. . . 219](#index_split_003.html#p241)
 
-Creating the Database Tables [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 219](#index_split_003.html#p241)
+Creating the Database Tables [. 219](#index_split_003.html#p241)
 
-Setting Up DatabaseObject and Profile Classes [. . . . . . . . . . . . . . . . . . . . 221](#index_split_003.html#p243)
+Setting Up DatabaseObject and Profile Classes [221](#index_split_003.html#p243)
 
-Creating the DatabaseObject_BlogPost Class [. . . . . . . . . . . . . . . . . 221](#index_split_003.html#p243)
+Creating the DatabaseObject_BlogPost Class [. . 221](#index_split_003.html#p243)
 
-Creating the Profile_BlogPost Class [. . . . . . . . . . . . . . . . . . . . . . . . . 223](#index_split_003.html#p245)
+Creating the Profile_BlogPost Class [223](#index_split_003.html#p245)
 
-Creating a Controller for Managing Blog Posts [. . . . . . . . . . . . . . . . . . . . . 223](#index_split_003.html#p245)
+Creating a Controller for Managing Blog Posts [. 223](#index_split_003.html#p245)
 
-Extending the Application Permissions [. . . . . . . . . . . . . . . . . . . . . . . 223](#index_split_003.html#p245)
+Extending the Application Permissions [. . . 223](#index_split_003.html#p245)
 
-The BlogmanagerController Actions [. . . . . . . . . . . . . . . . . . . . . . . . . 225](#index_split_003.html#p247)
+The BlogmanagerController Actions [225](#index_split_003.html#p247)
 
-Linking to Blog Manager [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 226](#index_split_003.html#p248)
+Linking to Blog Manager [226](#index_split_003.html#p248)
 
-Creating and Editing Blog Posts [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 228](#index_split_004.html#p250)
+Creating and Editing Blog Posts [. . . . 228](#index_split_004.html#p250)
 
-Creating the Blog Post Submission Form Template [. . . . . . . . . . . . 228](#index_split_004.html#p250)
+Creating the Blog Post Submission Form Template [. . 228](#index_split_004.html#p250)
 
-Instantiating FormProcessor_BlogPost in editAction() [. . . . . . . . . . 231](#index_split_004.html#p253)
+Instantiating FormProcessor_BlogPost in editAction() [231](#index_split_004.html#p253)
 
-Implementing the FormProcessor_BlogPost Class [. . . . . . . . . . . . . 233](#index_split_004.html#p255)
+Implementing the FormProcessor_BlogPost Class [. . . 233](#index_split_004.html#p255)
 
-Generating a Permanent Link to a Blog Post [. . . . . . . . . . . . . . . . . . 240](#index_split_004.html#p262)
+Generating a Permanent Link to a Blog Post [. . . 240](#index_split_004.html#p262)
 
-Filtering Submitted HTML [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 243](#index_split_004.html#p265)
+Filtering Submitted HTML [. . . . 243](#index_split_004.html#p265)
 
-Creating a New Blog Post [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247](#index_split_004.html#p269)
+Creating a New Blog Post [. . . . 247](#index_split_004.html#p269)
 
-Previewing Blog Posts [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 248](#index_split_004.html#p270)
+Previewing Blog Posts [. . 248](#index_split_004.html#p270)
 
-Creating the Preview Action [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249](#index_split_004.html#p271)
+Creating the Preview Action [. . 249](#index_split_004.html#p271)
 
-Implementing the Preview Template [. . . . . . . . . . . . . . . . . . . . . . . . . 249](#index_split_004.html#p271)
+Implementing the Preview Template [249](#index_split_004.html#p271)
 
-Requesting Confirmation for User Actions [. . . . . . . . . . . . . . . . . . . . 252](#index_split_004.html#p274)
+Requesting Confirmation for User Actions [252](#index_split_004.html#p274)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -666,85 +666,85 @@ Requesting Confirmation for User Actions [. . . . . . . . . . . . . . . . . . . 
 
 ■CONTENTS
 
-Updating the Status of a Blog Post [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254](#index_split_004.html#p276)
+Updating the Status of a Blog Post [. 254](#index_split_004.html#p276)
 
-Completing setstatusAction() [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254](#index_split_004.html#p276)
+Completing setstatusAction() [. 254](#index_split_004.html#p276)
 
-Notifying the User [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 256](#index_split_004.html#p278)
+Notifying the User [. 256](#index_split_004.html#p278)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 262](#index_split_004.html#p284)
+Summary [. . . 262](#index_split_004.html#p284)
 
 ■**CHAPTER 8**
 
-**Extending the Blog Manager** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265](#index_split_004.html#p287)
+**Extending the Blog Manager** [. . . . 265](#index_split_004.html#p287)
 
-Listing Blog Posts on the Blog Manager Index [. . . . . . . . . . . . . . . . . . . . . 265](#index_split_004.html#p287)
+Listing Blog Posts on the Blog Manager Index [. 265](#index_split_004.html#p287)
 
-Fetching Blog Posts from the Database [. . . . . . . . . . . . . . . . . . . . . . 266](#index_split_004.html#p288)
+Fetching Blog Posts from the Database [. . 266](#index_split_004.html#p288)
 
 Assigning Recent Posts and the Monthly Summary
 
-to the Template [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 274](#index_split_004.html#p296)
+to the Template [274](#index_split_004.html#p296)
 
-Displaying Recent Posts in the Template [. . . . . . . . . . . . . . . . . . . . . 276](#index_split_004.html#p298)
+Displaying Recent Posts in the Template [. 276](#index_split_004.html#p298)
 
-Displaying the Monthly Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . 279](#index_split_004.html#p301)
+Displaying the Monthly Summary [. . 279](#index_split_004.html#p301)
 
-Ajaxing the Blog Monthly Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 283](#index_split_004.html#p305)
+Ajaxing the Blog Monthly Summary [283](#index_split_004.html#p305)
 
-Creating the Ajax Request Output [. . . . . . . . . . . . . . . . . . . . . . . . . . . 284](#index_split_004.html#p306)
+Creating the Ajax Request Output [. . 284](#index_split_004.html#p306)
 
-The BlogMonthlySummary JavaScript Class [. . . . . . . . . . . . . . . . . . 285](#index_split_004.html#p307)
+The BlogMonthlySummary JavaScript Class [. . . 285](#index_split_004.html#p307)
 
-Installing the BlogMonthlySummary Class [. . . . . . . . . . . . . . . . . . . . 287](#index_split_004.html#p309)
+Installing the BlogMonthlySummary Class [287](#index_split_004.html#p309)
 
-Notifying the User About the Content Update [. . . . . . . . . . . . . . . . . . 287](#index_split_004.html#p309)
+Notifying the User About the Content Update [. . . 287](#index_split_004.html#p309)
 
-Integrating a WYSIWYG Editor [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 291](#index_split_004.html#p313)
+Integrating a WYSIWYG Editor [291](#index_split_004.html#p313)
 
-Downloading and Installing FCKeditor [. . . . . . . . . . . . . . . . . . . . . . . 292](#index_split_004.html#p314)
+Downloading and Installing FCKeditor [. . . 292](#index_split_004.html#p314)
 
-Configuring FCKeditor [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 293](#index_split_004.html#p315)
+Configuring FCKeditor [. . 293](#index_split_004.html#p315)
 
-Loading FCKeditor in the Blog Editing Page [. . . . . . . . . . . . . . . . . . . 294](#index_split_004.html#p316)
+Loading FCKeditor in the Blog Editing Page [. . . . 294](#index_split_004.html#p316)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296](#index_split_004.html#p318)
+Summary [. . . 296](#index_split_004.html#p318)
 
 ■**CHAPTER 9**
 
-**Personalized User Areas** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297](#index_split_004.html#p319)
+**Personalized User Areas** [. . . . 297](#index_split_004.html#p319)
 
-Controlling User Settings [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297](#index_split_004.html#p319)
+Controlling User Settings [297](#index_split_004.html#p319)
 
-Presenting Customizable Settings to Users [. . . . . . . . . . . . . . . . . . . 298](#index_split_004.html#p320)
+Presenting Customizable Settings to Users [. . . . 298](#index_split_004.html#p320)
 
-Processing Changes to User Settings [. . . . . . . . . . . . . . . . . . . . . . . . 299](#index_split_004.html#p321)
+Processing Changes to User Settings [. . . . 299](#index_split_004.html#p321)
 
-Creating Default User Settings [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301](#index_split_004.html#p323)
+Creating Default User Settings [301](#index_split_004.html#p323)
 
-The UserController Class [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302](#index_split_004.html#p324)
+The UserController Class [302](#index_split_004.html#p324)
 
-Routing Requests to UserController [. . . . . . . . . . . . . . . . . . . . . . . . . . 303](#index_split_004.html#p325)
+Routing Requests to UserController [. 303](#index_split_004.html#p325)
 
-Handling Requests to UserController [. . . . . . . . . . . . . . . . . . . . . . . . . 309](#index_split_004.html#p331)
+Handling Requests to UserController [309](#index_split_004.html#p331)
 
-Displaying the User’s Blog [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313](#index_split_005.html#p335)
+Displaying the User’s Blog [. . . 313](#index_split_005.html#p335)
 
-Displaying the Blog Index Page [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 313](#index_split_005.html#p335)
+Displaying the Blog Index Page [. . . . 313](#index_split_005.html#p335)
 
-Displaying Individual Blog Posts [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 318](#index_split_005.html#p340)
+Displaying Individual Blog Posts [. . . . 318](#index_split_005.html#p340)
 
-Generating Blog Archive Links [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 322](#index_split_005.html#p344)
+Generating Blog Archive Links [322](#index_split_005.html#p344)
 
-Displaying the Monthly Archive [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 324](#index_split_005.html#p346)
+Displaying the Monthly Archive [. . . . 324](#index_split_005.html#p346)
 
-Populating the Application Home Page [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 326](#index_split_005.html#p348)
+Populating the Application Home Page [. . . 326](#index_split_005.html#p348)
 
-Loading Recent Public Posts [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 326](#index_split_005.html#p348)
+Loading Recent Public Posts [. . 326](#index_split_005.html#p348)
 
-Implementing the Application Home Page [. . . . . . . . . . . . . . . . . . . . 327](#index_split_005.html#p349)
+Implementing the Application Home Page [327](#index_split_005.html#p349)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 333](#index_split_005.html#p355)
+Summary [. . . 333](#index_split_005.html#p355)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -754,75 +754,75 @@ Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 [**xi**](#index_split_000.html#p12)
 
-■**CHAPTER 10 Implementing Web 2.0 Features** [. . . . . . . . . . . . . . . . . . . . . . . . . . 335](#index_split_005.html#p357)
+■**CHAPTER 10 Implementing Web 2.0 Features** [. 335](#index_split_005.html#p357)
 
-Tags [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 336](#index_split_005.html#p358)
+Tags [. . 336](#index_split_005.html#p358)
 
-Implementing Tagging [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 336](#index_split_005.html#p358)
+Implementing Tagging [. . 336](#index_split_005.html#p358)
 
-Managing Blog Post Tags [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 340](#index_split_005.html#p362)
+Managing Blog Post Tags [. . . . 340](#index_split_005.html#p362)
 
-Displaying a User’s Tags on Their Blog [. . . . . . . . . . . . . . . . . . . . . . . 344](#index_split_005.html#p366)
+Displaying a User’s Tags on Their Blog [. . . 344](#index_split_005.html#p366)
 
-Displaying a Tag Space [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347](#index_split_005.html#p369)
+Displaying a Tag Space [. 347](#index_split_005.html#p369)
 
-Displaying Tags on Each Post [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351](#index_split_005.html#p373)
+Displaying Tags on Each Post [. 351](#index_split_005.html#p373)
 
-Web Feeds [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 351](#index_split_005.html#p373)
+Web Feeds [. . 351](#index_split_005.html#p373)
 
-Data Formats for Web Feeds [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 352](#index_split_005.html#p374)
+Data Formats for Web Feeds [. . 352](#index_split_005.html#p374)
 
-Creating an Atom Feed with Zend_Feed [. . . . . . . . . . . . . . . . . . . . . . 352](#index_split_005.html#p374)
+Creating an Atom Feed with Zend_Feed [. . 352](#index_split_005.html#p374)
 
-Adding the Feed to UserController [. . . . . . . . . . . . . . . . . . . . . . . . . . . 353](#index_split_005.html#p375)
+Adding the Feed to UserController [. . 353](#index_split_005.html#p375)
 
-Linking to Your Feed [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355](#index_split_005.html#p377)
+Linking to Your Feed [. . . . 355](#index_split_005.html#p377)
 
-Other Feed Options [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 357](#index_split_005.html#p379)
+Other Feed Options [357](#index_split_005.html#p379)
 
-Microformats [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 358](#index_split_005.html#p380)
+Microformats [358](#index_split_005.html#p380)
 
-An Example of Using Microformats [. . . . . . . . . . . . . . . . . . . . . . . . . . 358](#index_split_005.html#p380)
+An Example of Using Microformats [. 358](#index_split_005.html#p380)
 
-Why Use Microformats? [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 360](#index_split_005.html#p382)
+Why Use Microformats? [360](#index_split_005.html#p382)
 
-Microformatting Your Tags [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 362](#index_split_005.html#p384)
+Microformatting Your Tags [. . . . 362](#index_split_005.html#p384)
 
-Allowing Users to Create a Public Profile [. . . . . . . . . . . . . . . . . . . . . . . . . . 363](#index_split_005.html#p385)
+Allowing Users to Create a Public Profile [. 363](#index_split_005.html#p385)
 
-Allowing Users to Create a Public Profile [. . . . . . . . . . . . . . . . . . . . . 363](#index_split_005.html#p385)
+Allowing Users to Create a Public Profile [. 363](#index_split_005.html#p385)
 
-Displaying a User’s Profile [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 366](#index_split_005.html#p388)
+Displaying a User’s Profile [. . . . 366](#index_split_005.html#p388)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369](#index_split_005.html#p391)
+Summary [. . . 369](#index_split_005.html#p391)
 
-■**CHAPTER 11 A Dynamic Image Gallery** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371](#index_split_005.html#p393)
+■**CHAPTER 11 A Dynamic Image Gallery** [. . . 371](#index_split_005.html#p393)
 
-Storing Uploaded Files [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 372](#index_split_005.html#p394)
+Storing Uploaded Files [. . 372](#index_split_005.html#p394)
 
-Creating the Database Table for Image Data [. . . . . . . . . . . . . . . . . . 373](#index_split_005.html#p395)
+Creating the Database Table for Image Data [. . . 373](#index_split_005.html#p395)
 
-Controlling Uploaded Images with DatabaseObject [. . . . . . . . . . . . 373](#index_split_005.html#p395)
+Controlling Uploaded Images with DatabaseObject [. . 373](#index_split_005.html#p395)
 
-Uploading Files [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 374](#index_split_005.html#p396)
+Uploading Files [. . . 374](#index_split_005.html#p396)
 
-Setting the Form Encoding [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375](#index_split_005.html#p397)
+Setting the Form Encoding [. . . 375](#index_split_005.html#p397)
 
-Adding the Form [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375](#index_split_005.html#p397)
+Adding the Form [. . 375](#index_split_005.html#p397)
 
-Specifying the File Input Type [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 377](#index_split_005.html#p399)
+Specifying the File Input Type [. 377](#index_split_005.html#p399)
 
-Setting the Maximum File Size [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 378](#index_split_005.html#p400)
+Setting the Maximum File Size [378](#index_split_005.html#p400)
 
-Handling Uploaded Files [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379](#index_split_005.html#p401)
+Handling Uploaded Files [379](#index_split_005.html#p401)
 
-Sending Images [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 387](#index_split_005.html#p409)
+Sending Images [. . 387](#index_split_005.html#p409)
 
-Resizing Images [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390](#index_split_005.html#p412)
+Resizing Images [. . 390](#index_split_005.html#p412)
 
-Creating Thumbnails [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 390](#index_split_005.html#p412)
+Creating Thumbnails [. . . 390](#index_split_005.html#p412)
 
-Linking the Thumbnailer to the Image Action Handler [. . . . . . . . . . 395](#index_split_006.html#p417)
+Linking the Thumbnailer to the Image Action Handler [395](#index_split_006.html#p417)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -832,85 +832,85 @@ Linking the Thumbnailer to the Image Action Handler [. . . . . . . . . . 395](#i
 
 ■CONTENTS
 
-Managing Blog Post Images [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399](#index_split_006.html#p421)
+Managing Blog Post Images [. . 399](#index_split_006.html#p421)
 
-Automatically Loading Blog Post Images [. . . . . . . . . . . . . . . . . . . . . 399](#index_split_006.html#p421)
+Automatically Loading Blog Post Images [. 399](#index_split_006.html#p421)
 
-Displaying Images on the Post Preview [. . . . . . . . . . . . . . . . . . . . . . 401](#index_split_006.html#p423)
+Displaying Images on the Post Preview [. . 401](#index_split_006.html#p423)
 
-Deleting Blog Post Images [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 403](#index_split_006.html#p425)
+Deleting Blog Post Images [. . . 403](#index_split_006.html#p425)
 
-Using Scriptaculous and Ajax to Delete Images [. . . . . . . . . . . . . . . 406](#index_split_006.html#p428)
+Using Scriptaculous and Ajax to Delete Images [406](#index_split_006.html#p428)
 
-Deleting Images when Posts Are Deleted [. . . . . . . . . . . . . . . . . . . . . 411](#index_split_006.html#p433)
+Deleting Images when Posts Are Deleted [. 411](#index_split_006.html#p433)
 
-Reordering Blog Post Images [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 412](#index_split_006.html#p434)
+Reordering Blog Post Images [. 412](#index_split_006.html#p434)
 
-Displaying Images on User Blogs [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 417](#index_split_006.html#p439)
+Displaying Images on User Blogs [. . 417](#index_split_006.html#p439)
 
-Extending the GetPosts() Function [. . . . . . . . . . . . . . . . . . . . . . . . . . . 417](#index_split_006.html#p439)
+Extending the GetPosts() Function [. . 417](#index_split_006.html#p439)
 
-Displaying Thumbnail Images on Blog Index [. . . . . . . . . . . . . . . . . . 418](#index_split_006.html#p440)
+Displaying Thumbnail Images on Blog Index [. . . 418](#index_split_006.html#p440)
 
-Displaying Images on the Blog Details Page [. . . . . . . . . . . . . . . . . . 420](#index_split_006.html#p442)
+Displaying Images on the Blog Details Page [. . . 420](#index_split_006.html#p442)
 
-Displaying Larger Images with Lightbox [. . . . . . . . . . . . . . . . . . . . . . 422](#index_split_006.html#p444)
+Displaying Larger Images with Lightbox [. . 422](#index_split_006.html#p444)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425](#index_split_006.html#p447)
+Summary [. . . 425](#index_split_006.html#p447)
 
-■**CHAPTER 12 Implementing Site Search** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427](#index_split_006.html#p449)
+■**CHAPTER 12 Implementing Site Search** [. . 427](#index_split_006.html#p449)
 
-Introduction to Zend_Search_Lucene [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 427](#index_split_006.html#p449)
+Introduction to Zend_Search_Lucene [. . . . 427](#index_split_006.html#p449)
 
-Comparison to MySQL Full-Text Indexing [. . . . . . . . . . . . . . . . . . . . . 428](#index_split_006.html#p450)
+Comparison to MySQL Full-Text Indexing [. 428](#index_split_006.html#p450)
 
-Zend_Search_Lucene Field Types [. . . . . . . . . . . . . . . . . . . . . . . . . . . 429](#index_split_006.html#p451)
+Zend_Search_Lucene Field Types [. . 429](#index_split_006.html#p451)
 
-Field Naming [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430](#index_split_006.html#p452)
+Field Naming [430](#index_split_006.html#p452)
 
-Indexing Application Content [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430](#index_split_006.html#p452)
+Indexing Application Content [. 430](#index_split_006.html#p452)
 
-Indexing Multiple Types of Data [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431](#index_split_006.html#p453)
+Indexing Multiple Types of Data [. . . . 431](#index_split_006.html#p453)
 
-Creating a New Zend_Search_Lucene_Document [. . . . . . . . . . . . . 431](#index_split_006.html#p453)
+Creating a New Zend_Search_Lucene_Document [. . . 431](#index_split_006.html#p453)
 
-Retrieving the Index Location [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 433](#index_split_006.html#p455)
+Retrieving the Index Location [. 433](#index_split_006.html#p455)
 
-Building the Entire Index [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 434](#index_split_006.html#p456)
+Building the Entire Index [434](#index_split_006.html#p456)
 
-Indexing and Unindexing a Single Blog Post [. . . . . . . . . . . . . . . . . . 435](#index_split_006.html#p457)
+Indexing and Unindexing a Single Blog Post [. . . 435](#index_split_006.html#p457)
 
-Triggering Search Index Updates [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 439](#index_split_006.html#p461)
+Triggering Search Index Updates [. . . 439](#index_split_006.html#p461)
 
-Creating the Search Tool [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 442](#index_split_006.html#p464)
+Creating the Search Tool [442](#index_split_006.html#p464)
 
-Adding the Search Form [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 442](#index_split_006.html#p464)
+Adding the Search Form [442](#index_split_006.html#p464)
 
-Handling Search Requests [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 443](#index_split_006.html#p465)
+Handling Search Requests [. . . 443](#index_split_006.html#p465)
 
-Querying the Search Index [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 444](#index_split_006.html#p466)
+Querying the Search Index [. . . 444](#index_split_006.html#p466)
 
-Displaying Search Results [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 448](#index_split_006.html#p470)
+Displaying Search Results [. . . . 448](#index_split_006.html#p470)
 
-Types of Searches [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 451](#index_split_006.html#p473)
+Types of Searches [451](#index_split_006.html#p473)
 
-Adding Autocompletion to the Search Tool [. . . . . . . . . . . . . . . . . . . . . . . . 452](#index_split_006.html#p474)
+Adding Autocompletion to the Search Tool [. . . . 452](#index_split_006.html#p474)
 
-Providing Search Suggestions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 452](#index_split_006.html#p474)
+Providing Search Suggestions [452](#index_split_006.html#p474)
 
-Creating an Action Handler to Return Search Results [. . . . . . . . . . 453](#index_split_006.html#p475)
+Creating an Action Handler to Return Search Results [453](#index_split_006.html#p475)
 
-Retrieving Search Suggestions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454](#index_split_006.html#p476)
+Retrieving Search Suggestions [. . . . 454](#index_split_006.html#p476)
 
-Loading the SearchSuggestor Class [. . . . . . . . . . . . . . . . . . . . . . . . . 457](#index_split_006.html#p479)
+Loading the SearchSuggestor Class [457](#index_split_006.html#p479)
 
-Displaying Search Suggestions [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 457](#index_split_006.html#p479)
+Displaying Search Suggestions [. . . . 457](#index_split_006.html#p479)
 
-Adding Mouse Navigation to Results [. . . . . . . . . . . . . . . . . . . . . . . . . 460](#index_split_006.html#p482)
+Adding Mouse Navigation to Results [460](#index_split_006.html#p482)
 
-Adding Keyboard Navigation to Results [. . . . . . . . . . . . . . . . . . . . . . 462](#index_split_006.html#p484)
+Adding Keyboard Navigation to Results [. . 462](#index_split_006.html#p484)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 467](#index_split_006.html#p489)
+Summary [. . . 467](#index_split_006.html#p489)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -920,101 +920,101 @@ Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 [**xiii**](#index_split_000.html#p14)
 
-■**CHAPTER 13 Integrating Google Maps** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 469](#index_split_006.html#p491)
+■**CHAPTER 13 Integrating Google Maps** [. . . . 469](#index_split_006.html#p491)
 
-Google Maps Features [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 469](#index_split_006.html#p491)
+Google Maps Features [. . 469](#index_split_006.html#p491)
 
-Geocoding [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 469](#index_split_006.html#p491)
+Geocoding [. . 469](#index_split_006.html#p491)
 
-Displaying Maps [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 470](#index_split_006.html#p492)
+Displaying Maps [. . 470](#index_split_006.html#p492)
 
-Controlling Maps [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473](#index_split_006.html#p495)
+Controlling Maps [. . 473](#index_split_006.html#p495)
 
-Planning Integration [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473](#index_split_006.html#p495)
+Planning Integration [. . . . 473](#index_split_006.html#p495)
 
-Limitations of Google Maps [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473](#index_split_006.html#p495)
+Limitations of Google Maps [. . 473](#index_split_006.html#p495)
 
-Browser Compatibility [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474](#index_split_006.html#p496)
+Browser Compatibility [. . 474](#index_split_006.html#p496)
 
-Documentation and Resources [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 474](#index_split_006.html#p496)
+Documentation and Resources [. . . . 474](#index_split_006.html#p496)
 
-Creating a Google Maps API Key [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 474](#index_split_006.html#p496)
+Creating a Google Maps API Key [. . . 474](#index_split_006.html#p496)
 
-Adding Location Storage Capabilities [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 475](#index_split_006.html#p497)
+Adding Location Storage Capabilities [. . . . 475](#index_split_006.html#p497)
 
-Creating the Database Table [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 475](#index_split_006.html#p497)
+Creating the Database Table [. . 475](#index_split_006.html#p497)
 
-Creating the DatabaseObject_BlogPostLocation Class [. . . . . . . . . 475](#index_split_006.html#p497)
+Creating the DatabaseObject_BlogPostLocation Class [. . . . 475](#index_split_006.html#p497)
 
-Modifying Blog Posts to Load Locations [. . . . . . . . . . . . . . . . . . . . . . 477](#index_split_006.html#p499)
+Modifying Blog Posts to Load Locations [. . 477](#index_split_006.html#p499)
 
-Creating Our First Map [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 478](#index_split_006.html#p500)
+Creating Our First Map [. 478](#index_split_006.html#p500)
 
-Creating a New Blog Manager Controller Action [. . . . . . . . . . . . . . . 479](#index_split_006.html#p501)
+Creating a New Blog Manager Controller Action [479](#index_split_006.html#p501)
 
-Displaying Your First Google Map [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 481](#index_split_007.html#p503)
+Displaying Your First Google Map [. . . 481](#index_split_007.html#p503)
 
-Managing Locations on the Map [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 487](#index_split_007.html#p509)
+Managing Locations on the Map [. . . 487](#index_split_007.html#p509)
 
-Handling Location Management Ajax Requests [. . . . . . . . . . . . . . . 487](#index_split_007.html#p509)
+Handling Location Management Ajax Requests [487](#index_split_007.html#p509)
 
-Creating the Address Lookup Form [. . . . . . . . . . . . . . . . . . . . . . . . . . 492](#index_split_007.html#p514)
+Creating the Address Lookup Form [. 492](#index_split_007.html#p514)
 
-Extending the BlogLocationManager JavaScript Class [. . . . . . . . . 493](#index_split_007.html#p515)
+Extending the BlogLocationManager JavaScript Class [. . . . 493](#index_split_007.html#p515)
 
-Using BlogLocationManager [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 508](#index_split_007.html#p530)
+Using BlogLocationManager [. . 508](#index_split_007.html#p530)
 
-Displaying the Map on Users’ Public Blogs [. . . . . . . . . . . . . . . . . . . . . . . . 509](#index_split_007.html#p531)
+Displaying the Map on Users’ Public Blogs [. . . . 509](#index_split_007.html#p531)
 
-Outputting Locations Using the Geo Microformat [. . . . . . . . . . . . . . 509](#index_split_007.html#p531)
+Outputting Locations Using the Geo Microformat [. . . . 509](#index_split_007.html#p531)
 
-Creating the BlogLocations Class [. . . . . . . . . . . . . . . . . . . . . . . . . . . 511](#index_split_007.html#p533)
+Creating the BlogLocations Class [. . 511](#index_split_007.html#p533)
 
-Updating the Blog Post Display Template [. . . . . . . . . . . . . . . . . . . . . 514](#index_split_007.html#p536)
+Updating the Blog Post Display Template [. 514](#index_split_007.html#p536)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 516](#index_split_007.html#p538)
+Summary [. . . 516](#index_split_007.html#p538)
 
-■**CHAPTER 14 Deployment and Maintenance** [. . . . . . . . . . . . . . . . . . . . . . . . . . . . 519](#index_split_007.html#p541)
+■**CHAPTER 14 Deployment and Maintenance** [. . . 519](#index_split_007.html#p541)
 
-Application Logging [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519](#index_split_007.html#p541)
+Application Logging [. . . . 519](#index_split_007.html#p541)
 
-E-mailing Critical Errors to an Administrator [. . . . . . . . . . . . . . . . . . 519](#index_split_007.html#p541)
+E-mailing Critical Errors to an Administrator [. . . 519](#index_split_007.html#p541)
 
-Using Application Logs [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 523](#index_split_007.html#p545)
+Using Application Logs [. . 523](#index_split_007.html#p545)
 
-Site Error Handling [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 524](#index_split_007.html#p546)
+Site Error Handling [524](#index_split_007.html#p546)
 
-Objectives of Error Handling [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 526](#index_split_007.html#p548)
+Objectives of Error Handling [. . 526](#index_split_007.html#p548)
 
-Handling Predispatch Errors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 526](#index_split_007.html#p548)
+Handling Predispatch Errors [. . 526](#index_split_007.html#p548)
 
-Application Runtime Errors [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 531](#index_split_007.html#p553)
+Application Runtime Errors [. . . 531](#index_split_007.html#p553)
 
-Web Site Administration [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535](#index_split_007.html#p557)
+Web Site Administration [535](#index_split_007.html#p557)
 
-Administrator Section Features [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535](#index_split_007.html#p557)
+Administrator Section Features [. . . . 535](#index_split_007.html#p557)
 
-Implementing Administration [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536](#index_split_007.html#p558)
+Implementing Administration [. 536](#index_split_007.html#p558)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
 9063CH00CMP3 11/19/07 8:39 PM Page xiv
 
-Application Deployment [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538](#index_split_007.html#p560)
+Application Deployment [538](#index_split_007.html#p560)
 
-Different Configurations for Different Servers [. . . . . . . . . . . . . . . . . 538](#index_split_007.html#p560)
+Different Configurations for Different Servers [. . 538](#index_split_007.html#p560)
 
-Deploying Application Files with Rsync [. . . . . . . . . . . . . . . . . . . . . . . 542](#index_split_007.html#p564)
+Deploying Application Files with Rsync [. . . 542](#index_split_007.html#p564)
 
-Backup and Restore [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543](#index_split_007.html#p565)
+Backup and Restore [. . . . 543](#index_split_007.html#p565)
 
-Exporting a Database [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543](#index_split_007.html#p565)
+Exporting a Database [. . . 543](#index_split_007.html#p565)
 
-Importing a Database [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 544](#index_split_007.html#p566)
+Importing a Database [. . . 544](#index_split_007.html#p566)
 
-Summary [. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 545](#index_split_007.html#p567)
+Summary [. . . 545](#index_split_007.html#p567)
 
-■**INDEX** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [. . . . . . . 547](#index_split_007.html#p569)
+■**INDEX** . . . . [. . 547](#index_split_007.html#p569)
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 

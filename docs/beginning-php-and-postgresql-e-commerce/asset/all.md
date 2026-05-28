@@ -232,73 +232,73 @@ Download section.
 
 Contents at a Glance
 
-About the Authors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiii About the Technical Reviewer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xv Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii PART 1 ■ ■ ■ Phase 1 of Development
+About the Authors . . . . xiii About the Technical Reviewer . . . . xiv Acknowledgments . . . . xv Introduction . . . . xvii PART 1 ■ ■ ■ Phase 1 of Development
 
 ■**CHAPTER 1**
 
-Starting an E-Commerce Site . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Starting an E-Commerce Site 3
 
 ■**CHAPTER 2**
 
-Laying Out the Foundations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Laying Out the Foundations . 13
 
 ■**CHAPTER 3**
 
-Creating the Product Catalog: Part I . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Creating the Product Catalog: Part I . . . 57
 
 ■**CHAPTER 4**
 
-Creating the Product Catalog: Part II. . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+Creating the Product Catalog: Part II. . 107
 
 ■**CHAPTER 5**
 
-Searching the Catalog . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+Searching the Catalog 169
 
 ■**CHAPTER 6**
 
-Receiving Payments Using PayPal. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 189
+Receiving Payments Using PayPal. . . . 189
 
 ■**CHAPTER 7**
 
-Catalog Administration. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+Catalog Administration199
 
 PART 2 ■ ■ ■ Phase II of Development
 
 ■**CHAPTER 8**
 
-The Shopping Cart . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+The Shopping Cart . . . . 267
 
 ■**CHAPTER 9**
 
-Dealing with Customer Orders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+Dealing with Customer Orders . . 303
 
-■**CHAPTER 10** Product Recommendations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+■**CHAPTER 10** Product Recommendations 335
 
 PART 3 ■ ■ ■ Phase III of Development
 
-■**CHAPTER 11** Managing Customer Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+■**CHAPTER 11** Managing Customer Details 353
 
-■**CHAPTER 12** Storing Customer Orders. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+■**CHAPTER 12** Storing Customer Orders. . . 425
 
-■**CHAPTER 13** Implementing the Order Pipeline: Part I. . . . . . . . . . . . . . . . . . . . . . . . 453
+■**CHAPTER 13** Implementing the Order Pipeline: Part I. . . . 453
 
-■**CHAPTER 14** Implementing the Order Pipeline: Part II . . . . . . . . . . . . . . . . . . . . . . . 477
+■**CHAPTER 14** Implementing the Order Pipeline: Part II . . . 477
 
-■**CHAPTER 15** Credit Card Transactions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 505
+■**CHAPTER 15** Credit Card Transactions . . . 505
 
-■**CHAPTER 16** Product Reviews. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+■**CHAPTER 16** Product Reviews. 537
 
-■**CHAPTER 17** Connecting to Web Services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 547
+■**CHAPTER 17** Connecting to Web Services . . . . 547
 
 ■**APPENDIX A**
 
-Installing Apache, PHP, and PostgreSQL. . . . . . . . . . . . . . . . . . . . . . . . 571
+Installing Apache, PHP, and PostgreSQL. . . . 571
 
 ■**APPENDIX B**
 
-Project Management Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . 583
+Project Management Considerations . 583
 
-■**INDEX** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 593
+■**INDEX** . 593
 
 **iii**
 
@@ -312,57 +312,57 @@ Project Management Considerations . . . . . . . . . . . . . . . . . . . . . . . 
 
 Contents
 
-About the Authors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiii About the Technical Reviewer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xiv Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xv Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xvii PART 1 ■ ■ ■ **Phase 1 of Development**
+About the Authors . . . . xiii About the Technical Reviewer . . . . xiv Acknowledgments . . . . xv Introduction . . . . xvii PART 1 ■ ■ ■ **Phase 1 of Development**
 
 ■**CHAPTER 1**
 
-**Starting an E-Commerce Site** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+**Starting an E-Commerce Site** . 3
 
-Deciding Whether to Go Online . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Deciding Whether to Go Online . . 3
 
-Get More Customers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Get More Customers . 4
 
-Make Customers Spend More . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Make Customers Spend More . . . 4
 
-Reduce the Costs of Fulfilling Orders . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Reduce the Costs of Fulfilling Orders . . 5
 
-Let’s Make Money . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Let’s Make Money . . . 5
 
-Risks and Threats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Risks and Threats . . . 6
 
-Designing for Business. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Designing for Business. . . . 7
 
-Phase I: Getting a Site Up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+Phase I: Getting a Site Up . . 7
 
-Phase II: Creating Your Own Shopping Cart. . . . . . . . . . . . . . . . . . . . . . 8
+Phase II: Creating Your Own Shopping Cart. . 8
 
-Phase III: Processing Orders and Adding Features. . . . . . . . . . . . . . . . 8
+Phase III: Processing Orders and Adding Features. 8
 
-HatShop. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+HatShop. . 9
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Summary . . . . 11
 
 ■**CHAPTER 2**
 
-**Laying Out the Foundations** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+**Laying Out the Foundations** . . 13
 
-Designing for Growth . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+Designing for Growth . . . . 14
 
-Meeting Long-Term Requirements with Minimal Effort . . . . . . . . . . 14
+Meeting Long-Term Requirements with Minimal Effort 14
 
-The Magic of the Three-Tier Architecture . . . . . . . . . . . . . . . . . . . . . . 15
+The Magic of the Three-Tier Architecture . . 15
 
-Choosing Technologies and Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+Choosing Technologies and Tools . . . . 20
 
-Using PHP to Generate Dynamic Web Content . . . . . . . . . . . . . . . . . . 21
+Using PHP to Generate Dynamic Web Content . . . 21
 
-Using Smarty to Separate Layout from Code . . . . . . . . . . . . . . . . . . . 21
+Using Smarty to Separate Layout from Code . . . . 21
 
-Using PostgreSQL to Store Web Site Data . . . . . . . . . . . . . . . . . . . . . . 23
+Using PostgreSQL to Store Web Site Data . . 23
 
-PostgreSQL and the Three-Tier Architecture. . . . . . . . . . . . . . . . . . . . 26
+PostgreSQL and the Three-Tier Architecture26
 
-Choosing Naming and Coding Standards . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+Choosing Naming and Coding Standards . . 27
 
 **v**
 
@@ -374,83 +374,83 @@ Choosing Naming and Coding Standards . . . . . . . . . . . . . . . . . . . . . .
 
 ■CONTENTS
 
-Starting the HatShop Project . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+Starting the HatShop Project . . . 28
 
-Installing the Required Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+Installing the Required Software 28
 
-Getting a Code Editor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+Getting a Code Editor . . . . 29
 
-Preparing the hatshop Virtual Folder . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+Preparing the hatshop Virtual Folder . 29
 
-Installing Smarty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+Installing Smarty . . . 32
 
-Implementing the Site Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+Implementing the Site Skeleton 34
 
-Handling and Reporting Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44
+Handling and Reporting Errors . 44
 
-Preparing the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52
+Preparing the Database . . 52
 
-Downloading the Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+Downloading the Code . . . 55
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+Summary . . . . 55
 
 ■**CHAPTER 3**
 
-**Creating the Product Catalog: Part I** . . . . . . . . . . . . . . . . . . . . . . . 57
+**Creating the Product Catalog: Part I** . . . 57
 
-Showing Your Visitors What You’ve Got . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+Showing Your Visitors What You’ve Got . . . . 57
 
-What Does a Product Catalog Look Like? . . . . . . . . . . . . . . . . . . . . . . 58
+What Does a Product Catalog Look Like? . . 58
 
-Previewing the Product Catalog . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+Previewing the Product Catalog 58
 
-Roadmap for This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
+Roadmap for This Chapter 60
 
-Storing Catalog Information. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62
+Storing Catalog Information. . . . 62
 
-Understanding Data Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
+Understanding Data Tables . . . . 63
 
-Creating the department Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
+Creating the department Table . 70
 
-Communicating with the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+Communicating with the Database . . 74
 
-The Structured Query Language (SQL) . . . . . . . . . . . . . . . . . . . . . . . . 74
+The Structured Query Language (SQL) . . . . 74
 
-PostgreSQL Functions and Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+PostgreSQL Functions and Types . . . . 78
 
-Adding Logic to the Site . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Adding Logic to the Site . . 81
 
-Connecting to PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+Connecting to PostgreSQL 82
 
-Writing the Business Tier Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+Writing the Business Tier Code . 87
 
-Displaying the List of Departments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Displaying the List of Departments . . 95
 
-Using Smarty Plugins . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 96
+Using Smarty Plugins . . . . 96
 
-Planning Ahead for Secure Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+Planning Ahead for Secure Connections . . 103
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+Summary . . . 106
 
 ■**CHAPTER 4**
 
-**Creating the Product Catalog: Part II** . . . . . . . . . . . . . . . . . . . . . 107
+**Creating the Product Catalog: Part II** . 107
 
-Storing the New Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+Storing the New Data . . . 107
 
-What Makes a Relational Database . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+What Makes a Relational Database . 108
 
 Enforcing Table Relationships with the FOREIGN KEY
 
-Constraint. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+Constraint. 112
 
-Adding Categories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+Adding Categories . 113
 
-Adding Products. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+Adding Products. . . 118
 
-Relating Products to Categories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
+Relating Products to Categories . . . . 120
 
-Using Database Diagrams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
+Using Database Diagrams . . . . 121
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -460,85 +460,85 @@ Using Database Diagrams . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **vii**
 
-Querying the New Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+Querying the New Data . 122
 
-Getting Short Descriptions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
+Getting Short Descriptions . . . . 122
 
-Joining Data Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 123
+Joining Data Tables 123
 
-Showing Products Page by Page. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 125
+Showing Products Page by Page. . . . 125
 
-Writing the New Database Functions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Writing the New Database Functions126
 
-Completing the Business Tier Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+Completing the Business Tier Code . 135
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+Implementing the Presentation Tier . 142
 
-Displaying Department and Category Details . . . . . . . . . . . . . . . . . . 143
+Displaying Department and Category Details . . . 143
 
-Displaying the List of Categories. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Displaying the List of Categories. . . . 149
 
-Displaying Product Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+Displaying Product Lists . 153
 
-Displaying Front Page Contents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+Displaying Front Page Contents . . . . 162
 
-Showing Product Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+Showing Product Details 163
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+Summary . . . 167
 
 ■**CHAPTER 5**
 
-**Searching the Catalog** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+**Searching the Catalog** . . 169
 
-Choosing How to Search the Catalog. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 169
+Choosing How to Search the Catalog169
 
-Teaching the Database to Search Itself . . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+Teaching the Database to Search Itself . . . 171
 
-Searching Using WHERE and LIKE . . . . . . . . . . . . . . . . . . . . . . . . . . . 171
+Searching Using WHERE and LIKE . . 171
 
-Searching Using the PostgreSQL tsearch2 Module . . . . . . . . . . . . . 172
+Searching Using the PostgreSQL tsearch2 Module . . . 172
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 179
+Implementing the Business Tier . . . . 179
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181
+Implementing the Presentation Tier . 181
 
-Creating the Search Box. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 181
+Creating the Search Box. 181
 
-Displaying the Search Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184
+Displaying the Search Results . 184
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 188
+Summary . . . 188
 
 ■**CHAPTER 6**
 
-**Receiving Payments Using PayPal** . . . . . . . . . . . . . . . . . . . . . . . . 189
+**Receiving Payments Using PayPal** . . . . 189
 
-Considering Internet Payment Service Providers . . . . . . . . . . . . . . . . . . . . 190
+Considering Internet Payment Service Providers 190
 
-Getting Started with PayPal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 190
+Getting Started with PayPal . . . 190
 
-Integrating the PayPal Shopping Cart and Checkout. . . . . . . . . . . . . . . . . 192
+Integrating the PayPal Shopping Cart and Checkout. . 192
 
-Using the PayPal Single Item Purchases Feature. . . . . . . . . . . . . . . . . . . . 197
+Using the PayPal Single Item Purchases Feature197
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 198
+Summary . . . 198
 
 ■**CHAPTER 7**
 
-**Catalog Administration** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 199
+**Catalog Administration** . 199
 
-Previewing the Catalog Administration Page . . . . . . . . . . . . . . . . . . . . . . . 200
+Previewing the Catalog Administration Page . . . 200
 
-Setting Up the Catalog Administration Page . . . . . . . . . . . . . . . . . . . . . . . . 202
+Setting Up the Catalog Administration Page . . . . 202
 
-Using Secure Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 203
+Using Secure Connections . . . . 203
 
-Configuring HatShop for SSL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Configuring HatShop for SSL . . 205
 
-Obtaining an SSL Certificate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205
+Obtaining an SSL Certificate . . 205
 
-Enforcing SSL Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 206
+Enforcing SSL Connections . . . 206
 
-Authenticating Administrators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 207
+Authenticating Administrators . 207
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -546,73 +546,73 @@ Authenticating Administrators . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CONTENTS
 
-Administering Departments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215
+Administering Departments . . . 215
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 216
+Implementing the Presentation Tier . 216
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 222
+Implementing the Business Tier . . . . 222
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 224
+Implementing the Data Tier . . . 224
 
-Administering Categories and Products . . . . . . . . . . . . . . . . . . . . . . . . . . . 226
+Administering Categories and Products . . 226
 
-Administering Product Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 244
+Administering Product Details . 244
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 245
+Implementing the Presentation Tier . 245
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 254
+Implementing the Business Tier . . . . 254
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 257
+Implementing the Data Tier . . . 257
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 263
+Summary . . . 263
 
 PART 2 ■ ■ ■ **Phase II of Development**
 
 ■**CHAPTER 8**
 
-**The Shopping Cart** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 267
+**The Shopping Cart** . 267
 
-Designing the Shopping Cart. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Designing the Shopping Cart. . 270
 
-Storing Shopping Cart Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 270
+Storing Shopping Cart Information . . 270
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 271
+Implementing the Data Tier . . . 271
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277
+Implementing the Business Tier . . . . 277
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Implementing the Presentation Tier . 284
 
-Administering the Shopping Cart . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 296
+Administering the Shopping Cart . . . 296
 
-Deleting Products Residing in the Shopping Cart. . . . . . . . . . . . . . . 296
+Deleting Products Residing in the Shopping Cart296
 
-Building the Shopping Cart Admin Page . . . . . . . . . . . . . . . . . . . . . . 296
+Building the Shopping Cart Admin Page . . 296
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 301
+Summary . . . 301
 
 ■**CHAPTER 9**
 
-**Dealing with Customer Orders** . . . . . . . . . . . . . . . . . . . . . . . . . . . . 303
+**Dealing with Customer Orders** . . . 303
 
-Implementing an Order Placement System . . . . . . . . . . . . . . . . . . . . . . . . 303
+Implementing an Order Placement System . . . . 303
 
-Storing Orders in the Database . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 305
+Storing Orders in the Database 305
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 308
+Implementing the Data Tier . . . 308
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312
+Implementing the Business Tier . . . . 312
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 312
+Implementing the Presentation Tier . 312
 
-Administering Orders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 314
+Administering Orders . . . 314
 
-Setting Up the Orders Administration Page . . . . . . . . . . . . . . . . . . . . 316
+Setting Up the Orders Administration Page 316
 
-Displaying Pending Orders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 316
+Displaying Pending Orders . . . . 316
 
-Displaying Order Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 325
+Displaying Order Details . 325
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Summary . . . 334
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -622,69 +622,69 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **ix**
 
-■**CHAPTER 10 Product Recommendations**. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 335
+■**CHAPTER 10 Product Recommendations**. . 335
 
-Increasing Sales with Dynamic Recommendations. . . . . . . . . . . . . . . . . . 335
+Increasing Sales with Dynamic Recommendations. . . 335
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 337
+Implementing the Data Tier . . . 337
 
-Adding Product Recommendations. . . . . . . . . . . . . . . . . . . . . . . . . . . 342
+Adding Product Recommendations. . 342
 
-Adding Shopping Cart Recommendations . . . . . . . . . . . . . . . . . . . . . 344
+Adding Shopping Cart Recommendations . 344
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 346
+Implementing the Business Tier . . . . 346
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 347
+Implementing the Presentation Tier . 347
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350
+Summary . . . 350
 
 PART 3 ■ ■ ■ **Phase III of Development**
 
-■**CHAPTER 11 Managing Customer Details**. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 353
+■**CHAPTER 11 Managing Customer Details**. 353
 
-Storing Customer Accounts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 354
+Storing Customer Accounts . . . 354
 
-The HatShop Customer Account Scheme . . . . . . . . . . . . . . . . . . . . . 354
+The HatShop Customer Account Scheme . 354
 
-Creating customer and shipping_region Tables . . . . . . . . . . . . . . . . 355
+Creating customer and shipping_region Tables . 355
 
-Implementing the Security Classes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 356
+Implementing the Security Classes . 356
 
-Implementing Hashing Functionality in the Business Tier . . . . . . . 357
+Implementing Hashing Functionality in the Business Tier . . 357
 
 Implementing the Encryption Functionality in the Business Tier . . . 360
 
-Storing Credit Cart Information Using the SecureCard Class . . . . . 366
+Storing Credit Cart Information Using the SecureCard Class 366
 
-Adding Customer Accounts Functionality to HatShop . . . . . . . . . . . . . . . . 376
+Adding Customer Accounts Functionality to HatShop . 376
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 379
+Implementing the Data Tier . . . 379
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 383
+Implementing the Business Tier . . . . 383
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 388
+Implementing the Presentation Tier . 388
 
-Creating the Checkout Page . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 412
+Creating the Checkout Page . . 412
 
-Enforcing SSL Connections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 421
+Enforcing SSL Connections . . . 421
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 423
+Summary . . . 423
 
-■**CHAPTER 12 Storing Customer Orders** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+■**CHAPTER 12 Storing Customer Orders** . . . . 425
 
-Adding Orders to Customer Accounts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 425
+Adding Orders to Customer Accounts . . . . 425
 
-Administering Customer Orders . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 429
+Administering Customer Orders . . . . 429
 
-Handling Tax and Shipping Charges. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+Handling Tax and Shipping Charges. 441
 
-Tax Issues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 441
+Tax Issues . . . 441
 
-Shipping Issues . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 442
+Shipping Issues . . . 442
 
-Implementing Tax and Shipping Charges . . . . . . . . . . . . . . . . . . . . . 443
+Implementing Tax and Shipping Charges . 443
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 452
+Summary . . . 452
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -694,71 +694,71 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 ■CONTENTS
 
-■**CHAPTER 13 Implementing the Order Pipeline: Part I** . . . . . . . . . . . . . . . . . . 453
+■**CHAPTER 13 Implementing the Order Pipeline: Part I** . . . 453
 
-What Is an Order Pipeline? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 453
+What Is an Order Pipeline? . . . 453
 
-Designing the Order Pipeline. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 454
+Designing the Order Pipeline. . 454
 
-Laying the Groundwork . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 458
+Laying the Groundwork . 458
 
-Adding More Functionality to OrderProcessor . . . . . . . . . . . . . . . . . . . . . . 469
+Adding More Functionality to OrderProcessor . . 469
 
-Updating the Status of an Order . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 470
+Updating the Status of an Order . . . . 470
 
-Setting Credit Card Authentication Details . . . . . . . . . . . . . . . . . . . . 471
+Setting Credit Card Authentication Details 471
 
-Setting the Order Shipment Date . . . . . . . . . . . . . . . . . . . . . . . . . . . . 472
+Setting the Order Shipment Date . . . 472
 
-Sending Emails to Customers and Suppliers . . . . . . . . . . . . . . . . . . 473
+Sending Emails to Customers and Suppliers . . . 473
 
-Retrieving Order Details and the Customer Address . . . . . . . . . . . 473
+Retrieving Order Details and the Customer Address . 473
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 475
+Summary . . . 475
 
-■**CHAPTER 14 Implementing the Order Pipeline: Part II** . . . . . . . . . . . . . . . . . 477
+■**CHAPTER 14 Implementing the Order Pipeline: Part II** . . 477
 
-Implementing the Pipeline Sections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 477
+Implementing the Pipeline Sections . 477
 
-Testing the Pipeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 487
+Testing the Pipeline 487
 
-Updating the Checkout Page . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 495
+Updating the Checkout Page . . 495
 
-Updating the Orders Admin Page . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 498
+Updating the Orders Admin Page . . . 498
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 498
+Implementing the Data Tier . . . 498
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 500
+Implementing the Business Tier . . . . 500
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 500
+Implementing the Presentation Tier . 500
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 504
+Summary . . . 504
 
-■**CHAPTER 15 Credit Card Transactions** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 505
+■**CHAPTER 15 Credit Card Transactions** . . . . 505
 
-Credit Card Transaction Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . 505
+Credit Card Transaction Fundamentals . . . 505
 
-Working with Credit Card Payment Gateways . . . . . . . . . . . . . . . . . 506
+Working with Credit Card Payment Gateways . . 506
 
-Understanding Credit Card Transactions . . . . . . . . . . . . . . . . . . . . . . 507
+Understanding Credit Card Transactions . . 507
 
-Working with DataCash . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 508
+Working with DataCash . 508
 
-Working with Authorize.net . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 524
+Working with Authorize.net . . . 524
 
-Integrating Authorize.net with HatShop . . . . . . . . . . . . . . . . . . . . . . . 532
+Integrating Authorize.net with HatShop . . . 532
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 535
+Summary . . . 535
 
-■**CHAPTER 16 Product Reviews** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 537
+■**CHAPTER 16 Product Reviews** . . . 537
 
-Implementing the Data Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538
+Implementing the Data Tier . . 538
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 540
+Implementing the Business Tier . . . . 540
 
-Implementing the User Interface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 541
+Implementing the User Interface. . . . 541
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 545
+Summary . . . 545
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 
@@ -768,73 +768,73 @@ Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 
 **xi**
 
-■**CHAPTER 17 Connecting to Web Services** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 547
+■**CHAPTER 17 Connecting to Web Services** 547
 
-Accessing the Amazon E-Commerce Service. . . . . . . . . . . . . . . . . . . . . . . 549
+Accessing the Amazon E-Commerce Service. . . 549
 
-Creating Your Amazon E-Commerce Service Account. . . . . . . . . . . 549
+Creating Your Amazon E-Commerce Service Account. 549
 
-Obtaining an Amazon Associate ID . . . . . . . . . . . . . . . . . . . . . . . . . . . 550
+Obtaining an Amazon Associate ID . . 550
 
-Accessing Amazon E-Commerce Service Using REST . . . . . . . . . . 551
+Accessing Amazon E-Commerce Service Using REST 551
 
-Accessing Amazon E-Commerce Service Using SOAP . . . . . . . . . . 556
+Accessing Amazon E-Commerce Service Using SOAP 556
 
-Integrating Amazon E-Commerce Service with HatShop . . . . . . . . . . . . . 558
+Integrating Amazon E-Commerce Service with HatShop . . . 558
 
-Implementing the Business Tier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 559
+Implementing the Business Tier . . . . 559
 
-Implementing the Presentation Tier . . . . . . . . . . . . . . . . . . . . . . . . . . 564
+Implementing the Presentation Tier . 564
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 569
+Summary . . . 569
 
 ■**APPENDIX A**
 
-**Installing Apache, PHP, and PostgreSQL**. . . . . . . . . . . . . . . . . . 571
+**Installing Apache, PHP, and PostgreSQL**. . . 571
 
-Preparing Your Windows Playground . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+Preparing Your Windows Playground 571
 
-Installing SSL-Enabled Apache . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 571
+Installing SSL-Enabled Apache 571
 
-Installing Apache (No SSL) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 573
+Installing Apache (No SSL) . . . . 573
 
-Installing PHP 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574
+Installing PHP 5 . . . 574
 
-Installing PostgreSQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 576
+Installing PostgreSQL . . . 576
 
-Preparing Your Unix Playground . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 577
+Preparing Your Unix Playground . . . . 577
 
-Installing Apache 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 577
+Installing Apache 2 577
 
-Installing PostgreSQL 8\. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 578
+Installing PostgreSQL 8\. . 578
 
-Installing PHP 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 580
+Installing PHP 5 . . . 580
 
 ■**APPENDIX B**
 
-**Project Management Considerations** . . . . . . . . . . . . . . . . . . . . . 583
+**Project Management Considerations** . 583
 
-Developing Software Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 583
+Developing Software Solutions 583
 
-Considering the Theory Behind Project Management . . . . . . . . . . . . . . . . 584
+Considering the Theory Behind Project Management . 584
 
-The Waterfall (or Traditional) Method . . . . . . . . . . . . . . . . . . . . . . . . . 584
+The Waterfall (or Traditional) Method 584
 
-The Spiral Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 586
+The Spiral Method . 586
 
-The Rapid Application Development (RAD) Method . . . . . . . . . . . . . 588
+The Rapid Application Development (RAD) Method . . . 588
 
-Extreme Programming (XP) Methodology . . . . . . . . . . . . . . . . . . . . . 588
+Extreme Programming (XP) Methodology . 588
 
-Picking a Method. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 589
+Picking a Method. . 589
 
-Understanding the E-Commerce Project Cycle . . . . . . . . . . . . . . . . . . . . . 589
+Understanding the E-Commerce Project Cycle . 589
 
-Maintaining Relationships with Your Customers . . . . . . . . . . . . . . . . . . . . 591
+Maintaining Relationships with Your Customers 591
 
-Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 591
+Summary . . . 591
 
-■**INDEX** . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 593
+■**INDEX** . 593
 
 [www.it-ebooks.info](http://www.it-ebooks.info/)
 

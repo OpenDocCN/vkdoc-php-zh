@@ -1,0 +1,1 @@
+# 验证 PHP 对 PostgreSQL 的支持，666

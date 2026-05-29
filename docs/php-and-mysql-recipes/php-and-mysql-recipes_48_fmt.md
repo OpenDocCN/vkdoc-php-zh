@@ -1,0 +1,75 @@
+# D
+
+- 定义, 107
+
+- `each()` 和 `reset()` 函数, 88
+
+- `date_default_timezone_set()` 函数, 308
+
+- `json_decode()`, 107
+
+- 日期函数
+
+    - `date()` 函数, 112–113
+
+    - `gmmktime()`, 112
+
+- `json_encode()`, 107
+
+- `print_r()` 函数, 108
+
+- `range()` 函数, 81
+
+- RFC 2822 格式的字符串, 116
+
+- 移除元素, 81
+
+- 存储, 122–123
+
+- `serialize()`, 107
+
+- 周数, 117
+
+- 数组切片与拼接, 102, 104–105
+
+- `DateTime` 类, 118–122
+
+- 排序, 79
+
+    - `arsort()`, 90, 93
+
+    - `asort()`, 90, 93
+
+    - 不区分大小写的字符串排序, 91–92
+
+    - `krsort()`, 90
+
+    - `ksort()`, 90, 93
+
+    - `rsort()`, 90, 93
+
+    - `sort()` 函数, 93–96
+
+    - `SORT_LOCALE_STRING`, 96
+
+    - `SORT_NATURAL`, 92, 97
+
+    - `SORT_NUMERIC`, 96
+
+    - `SORT_STRING`, 96
+
+    - `usort()` 函数, 97–100
+
+- 栈, 100–101
+
+- 遍历过程, 88–90
+
+- `unserialize()`, 107
+
+- `array_slice()` 函数, 102–103
+
+- `array_splice()` 函数, 103–104
+
+- `define()` 函数, 219
+
+- `DeleteRows()` 函数, 238

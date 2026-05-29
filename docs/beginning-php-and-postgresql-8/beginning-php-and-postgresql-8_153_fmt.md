@@ -1,0 +1,3 @@
+# DROP TYPE 命令
+
+`DROP TYPE` 命令，645

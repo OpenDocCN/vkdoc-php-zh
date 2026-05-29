@@ -1,0 +1,3 @@
+# DROP RULE 命令
+
+`DROP RULE` 命令，709

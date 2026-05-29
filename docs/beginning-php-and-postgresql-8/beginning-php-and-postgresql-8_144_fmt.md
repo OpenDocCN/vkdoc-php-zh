@@ -1,0 +1,3 @@
+# DROP SCHEMA 命令
+
+`DROP SCHEMA` 命令，628

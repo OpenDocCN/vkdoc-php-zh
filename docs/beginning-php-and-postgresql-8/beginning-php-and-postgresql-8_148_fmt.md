@@ -1,0 +1,3 @@
+# DROP TABLE 语句
+
+`DROP TABLE` 语句，632

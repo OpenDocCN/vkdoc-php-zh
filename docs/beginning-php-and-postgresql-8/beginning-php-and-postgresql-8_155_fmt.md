@@ -1,0 +1,3 @@
+# DROP VIEW 命令
+
+`DROP VIEW` 命令，708

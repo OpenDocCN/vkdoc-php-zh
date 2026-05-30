@@ -1,0 +1,3 @@
+# Drupal 道场
+
+**Drupal 道场**（`DrupalDojo.com/about`）以其成功的系列免费每周网络研讨会而闻名。任何人都可以通过将自己的活动添加到 `groups.drupal.org/node/52023` 的“使用 Drupal 构建”节目单中，报名在道场中主持一个教育项目。其长期愿景包括将 `DrupalDojo.com` 从一个附带节目档案的虚拟会议场所转变为一个更加强大的 Drupal 学习资源中心，用于编目和引用 Drupal 学习材料。道场还支持诸如在 Freenode 的 `#Drupal-dojo` 频道定期举行 IRC 聊天、为培训举办的本地每周道场会议以及协作工作坊等教育项目的扩展。截至 2011 年 1 月，奥斯汀、波士顿和西雅图的 Drupal 用户组都已扩展其月度会议，将每周的 Drupal 道场培训或工作会议纳入其中。Drupal 道场小组是 `Groups.Drupal.org` 上最大的小组之一。

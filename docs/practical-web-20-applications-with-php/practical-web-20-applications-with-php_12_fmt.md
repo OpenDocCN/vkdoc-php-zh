@@ -1,0 +1,191 @@
+# `mkdir -p Templater/plugins`
+
+**提示：** `mkdir` 命令的 `-p` 参数会按需创建中间目录。也就是说，如果 `Templater` 目录不存在，系统会在创建 `plugins` 目录之前先创建它。
+
+现在我们可以创建 `Templater` 类，并在其中指定 `template_dir` 和 `compile_dir`。此外，我们必须告知 `Smarty` 除了它自己的插件目录外，还要在 `Templater/plugins/` 目录中查找插件。
+
+要实现这个类，我们必须实现几个关键方法，以便 `ViewRenderer` 能够与 `Smarty` 交互。其中最重要的方法如下：
+
+- `getEngine()`：该方法必须返回一个 `Smarty` 实例。由于此方法可能会被多次调用，我们应该缓存这个 `Smarty` 实例，使其只被创建一次。方法是在构造函数中创建 `Smarty` 对象。
+
+- `__set()`：该方法用于为模板分配变量。本质上，这意味着我们可以在任何控制器动作中用 `$this->view->foo = 'bar'` 替代 `$smarty->assign('foo', 'bar')`。
+
+- `__get()`：该方法用于返回先前已分配给模板的变量。
+
+- `render()`：该方法用于渲染一个模板。这实际上等同于调用 `$smarty->display()`，不同之处在于该方法应返回输出结果（而非直接显示），因此我们必须在 `Smarty` 对象上使用 `fetch()` 方法而不是 `display()` 方法。
+
+清单 2-11 展示了 `Templater.php` 的代码，按照 Zend Framework 的类命名结构，我们必须将该类存储在 `./include` 目录中。
+
+**清单 2-11.** *扩展 Smarty 以用于我们的 Web 应用程序（`Templater.php`）*
+
+```php
+<?php
+
+class Templater extends Zend_View_Abstract
+{
+    protected $_path;
+    protected $_engine;
+
+    public function __construct()
+    {
+        $config = Zend_Registry::get('config');
+        require_once('Smarty/Smarty.class.php');
+        $this->_engine = new Smarty();
+        $this->_engine->template_dir = $config->paths->templates;
+        $this->_engine->compile_dir = sprintf('%s/tmp/templates_c', $config->paths->data);
+        $this->_engine->plugins_dir = array($config->paths->base . '/include/Templater/plugins', 'plugins');
+    }
+
+    public function getEngine()
+    {
+        return $this->_engine;
+    }
+
+    public function __set($key, $val)
+    {
+        $this->_engine->assign($key, $val);
+    }
+
+    public function __get($key)
+    {
+        return $this->_engine->get_template_vars($key);
+    }
+
+    public function __isset($key)
+    {
+        return $this->_engine->get_template_vars($key) !== null;
+    }
+
+    public function __unset($key)
+    {
+        $this->_engine->clear_assign($key);
+    }
+
+    public function assign($spec, $value = null)
+    {
+        if (is_array($spec)) {
+            $this->_engine->assign($spec);
+            return;
+        }
+        $this->_engine->assign($spec, $value);
+    }
+
+    public function clearVars()
+    {
+        $this->_engine->clear_all_assign();
+    }
+
+    public function render($name)
+    {
+        return $this->_engine->fetch(strtolower($name));
+    }
+
+    public function _run()
+    { }
+}
+
+?>
+```
+
+#### 将 Smarty 与网站控制器集成
+
+最后，我们需要让 `Zend_Controller` 使用 `Templater` 类，而不是其默认的 `Zend_View` 类。为此，我们必须使用以下代码，稍后我们将把这些代码添加到应用程序的引导文件中：
+
+```php
+$vr = new Zend_Controller_Action_Helper_ViewRenderer();
+$vr->setView(new Templater());
+$vr->setViewSuffix('tpl');
+Zend_Controller_Action_HelperBroker::addHelper($vr);
+```
+
+请注意，我们必须调用 `setViewSuffix()` 来指示模板文件以 `.tpl` 扩展名结尾。默认情况下，`Zend_View` 会使用 `.phtml` 扩展名。清单 2-12 展示了添加这些代码后 `index.php` 中控制器部分的样子。
+
+**清单 2-12.** *告知 Zend_Controller 使用 Smarty 替代其默认视图渲染器（`index.php`）*
+
+```php
+<?php
+// ... 其他代码
+
+// 处理用户请求
+$controller = Zend_Controller_Front::getInstance();
+$controller->setControllerDirectory($config->paths->base . '/include/Controllers');
+
+// 设置视图渲染器
+$vr = new Zend_Controller_Action_Helper_ViewRenderer();
+$vr->setView(new Templater());
+$vr->setViewSuffix('tpl');
+Zend_Controller_Action_HelperBroker::addHelper($vr);
+
+$controller->dispatch();
+?>
+```
+
+**注意：** 现在访问网站仍会显示“网站主页”消息。然而，将会出现一个 Smarty 错误，因为我们尚未为索引控制器的索引动作创建相应的模板文件。
+
+现在，每当执行一个控制器动作时，`Zend_Controller` 将自动根据控制器和动作名称查找模板。让我们以索引控制器的索引动作为例，如清单 2-13 所示。
+
+**清单 2-13.** *我们的新索引控制器，现在输出 `index.tpl` 文件（`IndexController.php`）*
+
+```php
+<?php
+
+class IndexController extends CustomControllerAction
+{
+    public function indexAction()
+    {
+    }
+}
+
+?>
+```
+
+当你在浏览器中打开 `http://phpweb20` 时，清单 2-13 中的动作将被执行，我们刚创建的 `Templater` 类将自动渲染 `./templates/index/index.tpl` 中的模板。
+
+然而，由于 `index.tpl` 模板尚不存在，我们现在必须创建它。同样，我们将简单地输出“网站主页”消息，但同时我们也会创建页头（`header.tpl`）和页脚（`footer.tpl`）模板，这些模板将被包含在所有网站模板中。这样我们就可以在一处修改网站，并使修改应用到网站的所有页面。
+
+为了在 `index.tpl` 中包含 `header.tpl` 和 `footer.tpl` 模板，我们使用 Smarty 的 `{include}` 标签。清单 2-14 显示了 `index.tpl` 的内容，该文件位于 `./templates/index/index.tpl`。
+
+**清单 2-14.** 索引控制器索引动作的模板（`index.tpl`）
+
+```smarty
+{include file='header.tpl'}
+网站主页
+{include file='footer.tpl'}
+```
+
+如果你在不创建 `header.tpl` 和 `footer.tpl` 文件的情况下尝试在浏览器中查看此页面，将会出现错误，所以现在让我们来创建这些模板。清单 2-15 显示了 `header.tpl` 的内容，而清单 2-16 显示了 `footer.tpl`。这两个文件都存储在 `./templates` 目录中（不在子目录中，因为它们不属于特定的控制器）。
+
+**清单 2-15.** HTML 页头文件，指定文档类型为 XHTML 1.0 Strict（`header.tpl`）
+
+```html
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>标题</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body>
+<div>
+```
+
+**清单 2-16.** HTML 页脚文件，仅用于关闭页头中开启的标签（`footer.tpl`）
+
+```html
+</div>
+</body>
+</html>
+```
+
+如你所见，目前页头和页脚很简单。随着我们的进展，我们会进一步开发它们，例如添加样式表、JavaScript 代码以及相关的页面标题。这里包含了 `Content-Type` 的 `<meta>` 标签，因为如果没有它（使用 `http://validator.w3.org` 的 W3C 验证器）文档将无法正确验证。你可能需要根据你的区域设置指定一个与 `iso-8859-1` 不同的字符集。
+
+请注意，我指定了文档类型为 XHTML 1.0 Strict。本书中开发的所有 HTML 都将符合该标准。我们可以通过正确使用层叠样式表、包含 JavaScript 以及在 HTML 中正确转义用户提交的数据（本章前面介绍的 Smarty 转义修饰符就是一个例子）来实现这一点。
+
+如果你现在在 Web 浏览器中加载 `http://phpweb20` 地址，你将看到简单的“网站主页”消息。如果你查看此文档的源代码，你会看到该消息嵌套在 `header.tpl` 中的 `<div>` 开始标签和 `footer.tpl` 中的 `</div>` 结束标签之间。请注意，之所以包含 `<div>`，是因为将文本直接放在 `<body>` 标签内是违反标准的。
+
+### 添加日志记录功能
+
+本章我们要讨论的最后一件事是为我们的应用程序添加日志记录功能。为此，我们将使用 Zend Framework 的 `Zend_Log` 组件，我们将在应用程序的多个地方使用它。例如，每次会员区发生登录失败时，我们都会在日志中记录一条条目。
+
+虽然可以使用日志记录实现一些高级功能（例如将条目写入数据库，或向站点管理员发送电子邮件），但我们目前所做的只是创建一个单一的日志文件来保存日志条目。这个文件随后可用于调试在 Web 应用程序开发期间以及日常运行中可能出现的任何问题。我们将把日志文件存储在我们之前创建的 `/var/www/phpweb20/data/logs` 目录中。该目录必须可由 Web 服务器写入。
